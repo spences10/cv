@@ -1,6 +1,6 @@
 
-title: My Resume
-url: 'http://webjeda.com'
+title: My CV
+url: 'https://spences10.github.io/'
 baseurl: '/online-cv' #change it according to your repository name
 
 
@@ -13,15 +13,15 @@ baseurl: '/online-cv' #change it according to your repository name
 
 
 #Profile information
-name: Alan Doe
-tagline: Full Stack Developer
+name: Scott Spence
+tagline: Analyst Developer
 pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
 #sidebar links
 email: spences10apps@gmail.com.com
-phone: +44 7960 86 3382
+phone: 
 website: spences10.github.io #do not add http://
-linkedin: spences10
+linkedin: linkedinscottspence
 github: spences10
 twitter: '@ScottDevTweets'
 
