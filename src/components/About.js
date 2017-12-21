@@ -2,10 +2,7 @@ import React from 'react'
 
 const About = props => {
   return (
-    <section className="about">
-      <h2 className="text-uppercase">
-        <i className="fa fa-lg fa-user" /> About
-      </h2>
+    <section>
       <div>{props.aboutData}</div>
     </section>
   )
