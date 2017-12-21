@@ -1,6 +1,7 @@
 import React from 'react'
 
 import About from './About'
+import Work from './Work'
 
 const App = props => {
   const profileData = props.cvObj.basics
@@ -11,6 +12,7 @@ const App = props => {
   return (
     <div>
       <About aboutData={aboutData} />
+      <Work workData={workData} />
     </div>
   )
 }
