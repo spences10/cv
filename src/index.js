@@ -6,11 +6,9 @@ import registerServiceWorker from './registerServiceWorker'
 import App from './components/App'
 import './theme/globalStyle'
 
-const cv = require('./cv.json')
-
 ReactDOM.render(
   <div>
-    <App cvObj={cv} />
+    <App />
   </div>,
   document.getElementById('root')
 )
