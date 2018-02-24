@@ -1,5 +1,10 @@
 import React from 'react'
 import WorkItem from './WorkItem'
+import styled from 'styled-components'
+
+const WorkWrapper = styled.div`
+  grid-area: w;
+`
 
 const Work = props => {
   const getWorkExperience = () => {
@@ -10,7 +15,7 @@ const Work = props => {
     return workItems
   }
 
-  return <section>{getWorkExperience()}</section>
+  return <WorkWrapper>{getWorkExperience()}</WorkWrapper>
 }
 
 export default Work
