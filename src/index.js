@@ -1,15 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { ThemeProvider } from 'styled-components'
 
 import registerServiceWorker from './registerServiceWorker'
 
 import App from './components/App'
-import './theme/globalStyle'
+import { theme } from './theme/globalStyle'
 
 ReactDOM.render(
-  <div>
+  <ThemeProvider theme={theme}>
     <App />
-  </div>,
+  </ThemeProvider>,
   document.getElementById('root')
 )
 registerServiceWorker()

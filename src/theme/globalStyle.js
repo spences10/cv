@@ -1,101 +1,91 @@
-import styled, { injectGlobal } from 'styled-components'
+import { injectGlobal, css } from 'styled-components'
+
+export const theme = {
+  black: '#7d95b6',
+  white: '#ffffff',
+  dark: '#4e5c6e',
+  light: '#755f9f',
+  green: '#8ac3a9',
+  yellow: '#fcdeb6',
+  red: '#ff8463',
+  pink: '#ff0198', // hollywood cerise
+  mySinYellow: '#ffb617', // my sin
+  purple: '#6e27c5', // purple heart
+  orange: '#ff6600', // blaze orange
+  blue: '#01c1d6', // robin's egg blue
+  java: '#1cbcd2', // java
+  sun: '#fab319', // sun
+  affair: '#69479e', // affair
+  flamingo: '#f16623', // flamingo
+  minsk: '#2e2e86', // minsk
+  pomegranate: '#ee362c', // pomegranate
+  redViolet: '#eb238e', // red violet
+  sushi: '#7cc142', // sushi
+  bombay: '#adadaf', // Bombay
+  jsYellow: '#f7e018' // JS yellow
+}
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|VT323');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Bungee+Inline');
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
 
   body {
-    padding: 0;
     margin: 0;
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 20px;
-    line-height: 1.3125;
+    font-family: 'Roboto', georgia, serif;
+    word-wrap: break-word;
+    background-color: #fafafa;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Open Sans';
   }
 
   a {
     text-decoration: none;
   }
 
-  ul {
-    margin: 0 auto;
+  li {
+    list-style: none;  
   }
 
-  @media screen and (min-width: 360px) {
-    html {
-      font-size: 15px;
-    }
+  /* remove dotted line around links in Firefox */
+  a:active, a:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none
   }
 
-  @media screen and (min-width: 600px) {
-    html {
-      font-size: 16px;
-    }
+  :focus {
+    outline:none;
+  }
+
+  ::-moz-focus-inner {
+    border:0;
   }
 `
 
-export const theme = {
-  text: '#333',
-  white: '#fff',
-  primary: {
-    dark: '#453463',
-    light: '#755f9f'
-  },
-  secondary: {
-    green: '#8ac3a9',
-    yellow: '#fcdeb6',
-    red: '#ff8463'
-  },
-  shades: {
-    //add shades with progress
-  }
+const sizes = {
+  giant: 1170,
+  desktop: 992,
+  tablet: 768,
+  phone: 376
 }
 
-export const StyledH1 = styled.h1`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledH2 = styled.h2`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledH3 = styled.h3`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledH4 = styled.h4`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledH5 = styled.h5`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledH6 = styled.h6`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledP = styled.p`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledUl = styled.ul`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
-
-export const StyledLi = styled.li`
-  padding: 1.75rem;
-  margin: 0.5rem;
-  text-decoration: none;
-`
-
-export const StyledA = styled.a`
-  padding: 1.75rem;
-  margin: 0.5rem;
-`
+// iterate through the sizes and create a media template
+export const media = Object.keys(sizes).reduce(
+  (accumulator, label) => {
+    // use em in breakpoints to work properly cross-browser and support users
+    // changing their browsers font-size: https://zellwk.com/blog/media-query-units/
+    const emSize = sizes[label] / 16
+    accumulator[label] = (...args) => css`
+      @media (max-width: ${emSize}em) {
+        ${css(...args)};
+      }
+    `
+    return accumulator
+  },
+  {}
+)
