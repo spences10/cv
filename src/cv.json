@@ -1,0 +1,144 @@
+{
+  "basics": {
+    "name": "Scott Spence",
+    "label": "Analyst Programmer",
+    "picture":
+      "https://pbs.twimg.com/profile_images/697901266945646592/05jKr58e_400x400.jpg",
+    "email": "spences10apps@gmail.com",
+    "phone": "+44 7960 86 3382",
+    "website": "https://scottspence.me/",
+    "summary":
+      "I am experienced in a wide range of technologies, specializing primarily in Microsoft Office automation.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Swanley",
+      "countryCode": "UK",
+      "region": "Kent"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "spences10",
+        "url": "https://github.com/spences10"
+      },
+      {
+        "network": "Twitter",
+        "username": "ScottDevTweets",
+        "url": "https://twitter.com/ScottDevTweets"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "OES Technology",
+      "position": "Analyst Developer",
+      "website": "",
+      "startDate": "2016-11-01",
+      "endDate": "",
+      "summary":
+        "⇢\tWorking on new product development as part of the ACE Chubb merger.",
+      "highlights": [
+        "⇢\tExcel VBA, Word templating and coding, Cluster7 champion."
+      ]
+    },
+    {
+      "company": "Mansion House Consulting",
+      "position": "VBA Developer",
+      "website": "www.mansion-house.co.uk/",
+      "startDate": "2106-01-01",
+      "endDate": "2016-07-31",
+      "summary": "⇢\tPart of Insight framework development team.",
+      "highlights": [
+        "⇢\tDeveloped & maintained a reusable components repository.",
+        "⇢\tChampioned source code control integration for the product with Visual Studio Team Services."
+      ]
+    },
+    {
+      "company": "Fidelity",
+      "position": "Software Engineer",
+      "website": "https://www.fidelity.com",
+      "startDate": "2014-12-01",
+      "endDate": "2015-12-31",
+      "summary":
+        "⇢\tDelivering trading floor support and management reports.",
+      "highlights": [
+        "Excel VBA, Oracle, Access, Bloomberg API usage."
+      ]
+    },
+    {
+      "company": "Previous Experiences",
+      "position": "Analyst Developer",
+      "website": "",
+      "startDate": "2002",
+      "endDate": "2014",
+      "summary":
+        "⇢\tBarclays, MSCI and Deloitte, all as Analyst Developer in some shape or form.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "freeCodeCamp",
+      "area": "Fulls Stack Web Developer",
+      "studyType": "",
+      "startDate": "2016-01-01",
+      "endDate": "",
+      "gpa": "",
+      "courses": [
+        "Front End Development Certification",
+        "Data Visualization Certification",
+        "Back End Development Certification",
+        "Full Stack Development Certification"
+      ]
+    }
+  ],
+  "awards": [],
+  "publications": [
+    {
+      "name": "Easily set up your own Twitter bot",
+      "publisher": "freeCodeCamp on Medium",
+      "releaseDate": "2017-01-28",
+      "website":
+        "https://medium.freecodecamp.com/easily-set-up-your-own-twitter-bot-4aeed5e61f7f",
+      "summary":
+        "Set up your own simple Twitter bot in under 30 minutes"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "Javascript", "Node.js"]
+    },
+    {
+      "name": "Source Control",
+      "level": "Master",
+      "keywords": ["VSTS", "TFS", "Git", "GitHub", "VSS"]
+    },
+    {
+      "name": "Databases",
+      "level": "Master",
+      "keywords": ["SQL Server", "Oracle", "LevelDB"]
+    },
+    {
+      "name": "VBA",
+      "level": "Master",
+      "keywords": ["Excel", "Word", "Outlook", "PowerPoint", "Access"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [],
+  "references": [
+    {
+      "name": "",
+      "reference": "Available on request"
+    }
+  ]
+}
