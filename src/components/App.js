@@ -6,7 +6,7 @@ import Work from './Work'
 import Skills from './Skills'
 import Education from './Education'
 
-import cv from '../cv.json'
+import { fetchCvData } from '../util/helpers'
 
 const PageContainer = styled.div`
   display: grid;
@@ -20,12 +20,26 @@ const PageContainer = styled.div`
 `
 
 class App extends React.Component {
-  constructor() {
-    super()
+  state = {
+    cv: {
+      awards: [],
+      basics: {},
+      education: [],
+      interests: [],
+      languages: [],
+      publications: [],
+      references: [],
+      skills: [],
+      volunteer: [],
+      work: []
+    },
+    apiUrl: 'https://cvjson-giyxyxqqdu.now.sh/'
+  }
 
-    this.state = {
-      cv: cv
-    }
+  componentDidMount() {
+    fetchCvData(this.state.apiUrl).then(result => {
+      this.setState({ cv: result.data })
+    })
   }
 
   render() {
