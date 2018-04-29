@@ -5,25 +5,58 @@ const SkillsWrapper = styled.div`
   grid-area: s;
 `
 
-const Skills = props => {
-  const getSkills = props.skillsData[0].keywords.map(
-    (item, index) => {
-      return (
-        <li key={index}>
-          <span>{item}</span>
-        </li>
-      )
-    }
-  )
+class Skills extends React.Component {
+  componentDidMount() {}
 
-  return (
-    <SkillsWrapper>
-      <h2>
-        <i /> Skills
-      </h2>
-      <ul>{getSkills}</ul>
-    </SkillsWrapper>
-  )
+  render() {
+    const { skillsData } = this.props
+    return (
+      <SkillsWrapper>
+        {Object.keys(skillsData).map(key => {
+          console.log(skillsData[key].name)
+        })}
+        <h2>
+          <i /> Skills
+        </h2>
+        {/* <ul>{getSkills}</ul> */}
+      </SkillsWrapper>
+    )
+  }
 }
 
 export default Skills
+// const Skills = props => {
+//   componentDidMount(){
+//     console.log('=====================')
+//     console.log(props)
+//     console.log('=====================')
+//   }
+//   // const [webSkills] = this.props.skillsData
+
+//   // const getSkills = skillsData.map((item, index) => {
+//   //   return (
+//   //     <li>
+//   //       <span>{item.keywords}</span>
+//   //     </li>
+//   //   )
+//   // })
+//   // const getSkills = props.skillsData[0].keywords.map(
+//   //   (item, index) => {
+//   //     return (
+//   //       <li key={index}>
+//   //         <span>{item}</span>
+//   //       </li>
+//   //     )
+//   //   }
+//   // )
+//   return (
+//     <SkillsWrapper>
+//       <h2>
+//         <i /> Skills
+//       </h2>
+//       {/* <ul>{getSkills}</ul> */}
+//     </SkillsWrapper>
+//   )
+// }
+
+// export default Skills
