@@ -12,13 +12,14 @@ class Skills extends React.Component {
     const { skillsData } = this.props
     return (
       <SkillsWrapper>
-        {Object.keys(skillsData).map(key => {
-          console.log(skillsData[key].name)
-        })}
         <h2>
           <i /> Skills
         </h2>
-        {/* <ul>{getSkills}</ul> */}
+        {Object.keys(skillsData).map(key => {
+          return (
+          <ul>{skillsData[key].name}</ul>
+          <li>something</li>
+        )})}
       </SkillsWrapper>
     )
   }
