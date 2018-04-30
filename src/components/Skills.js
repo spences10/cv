@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import SkillsItem from './SkillsItem'
+
 const SkillsWrapper = styled.div`
   grid-area: s;
 `
@@ -10,16 +12,30 @@ class Skills extends React.Component {
 
   render() {
     const { skillsData } = this.props
+    // console.log('=====================')
+    // console.log(this.props)
+    // console.log('=====================')
     return (
       <SkillsWrapper>
         <h2>
           <i /> Skills
         </h2>
-        {Object.keys(skillsData).map(key => {
+        {Object.keys(skillsData).map((key, index) => {
           return (
-          <ul>{skillsData[key].name}</ul>
-          <li>something</li>
-        )})}
+            <React.Fragment key={index}>
+              <ul>{skillsData[key].name}</ul>
+              <li>
+                {/* <SkillsItem
+                  skillsKey={skillsData[key].name}
+                  skillsData={skillsData[key]}
+                /> */}
+                {skillsData[key].keywords.map(key => {
+                  return key
+                })}
+              </li>
+            </React.Fragment>
+          )
+        })}
       </SkillsWrapper>
     )
   }
