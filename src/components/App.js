@@ -47,7 +47,7 @@ class App extends React.Component {
 
     return (
       <PageContainer>
-        <About aboutData={basics.summary} />
+        <About aboutData={basics} />
         <Work workData={work} />
         <Skills skillsData={skills} />
         <Education educationData={education} />
