@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "0.18.0",
-    "moment": "2.20.1",
+    "dayjs": "1.5.16",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-scripts": "1.0.17",
