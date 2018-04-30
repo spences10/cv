@@ -1,4 +1,4 @@
-# Scott Spence
+# Scott Spence - under construction 👷‍♀️🛠
 
 CV using React ⚛️ (`create-react-app`) and [JSON Schema]
 
