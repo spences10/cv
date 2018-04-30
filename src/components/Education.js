@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment'
+import dayjs from 'dayjs'
 import styled from 'styled-components'
 
 const EducationWrapper = styled.div`
@@ -8,14 +8,12 @@ const EducationWrapper = styled.div`
 
 const Education = props => {
   const getEducation = props.educationData.map(function(item, index) {
-    const startdate = moment(item.startDate).format('MMM, YYYY')
-    let enddate = null
+    const startDate = dayjs(item.startDate).format('MMM, YYYY')
+    let endDate = null
     if (props.educationData.endDate !== '') {
-      enddate = moment(props.educationData.endDate).format(
-        'MMM, YYYY'
-      )
+      endDate = dayjs(props.educationData.endDate).format('MMM, YYYY')
     } else {
-      enddate = 'Present'
+      endDate = 'Present'
     }
     return (
       <div key={index}>
@@ -24,7 +22,7 @@ const Education = props => {
         </h3>
         <h4>{item.institution}</h4>
         <p>
-          Studied: {startdate} - {enddate}
+          Studied: {startDate} - {endDate}
         </p>
       </div>
     )
