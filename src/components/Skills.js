@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import SkillsItem from './SkillsItem'
-
 const SkillsWrapper = styled.div`
   grid-area: s;
 `
