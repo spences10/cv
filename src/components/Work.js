@@ -2,7 +2,9 @@ import React from 'react'
 import WorkItem from './WorkItem'
 import styled from 'styled-components'
 
-const WorkWrapper = styled.div`
+import { ItemWrapper as IW } from './shared/ItemWrapper'
+
+const WorkWrapper = IW.extend`
   grid-area: w;
 `
 

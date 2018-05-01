@@ -2,7 +2,9 @@ import React from 'react'
 import dayjs from 'dayjs'
 import styled from 'styled-components'
 
-const EducationWrapper = styled.div`
+import { ItemWrapper as IW } from './shared/ItemWrapper'
+
+const EducationWrapper = IW.extend`
   grid-area: e;
 `
 
