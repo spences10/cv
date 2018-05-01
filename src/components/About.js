@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Dump } from '../util/helpers'
+import { ItemWrapper as IW } from './shared/ItemWrapper'
 
-const AboutWrapper = styled.div`
+const AboutWrapper = IW.extend`
   grid-area: a;
 `
 
