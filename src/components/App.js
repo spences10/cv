@@ -33,7 +33,7 @@ class App extends React.Component {
       volunteer: [],
       work: []
     },
-    apiUrl: 'https://cvjson-vcouwbtqbp.now.sh/'
+    apiUrl: 'https://cvjson-tvjsvcrqyp.now.sh/'
   }
 
   componentDidMount() {
