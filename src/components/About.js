@@ -32,8 +32,8 @@ const StyledLabel = styled.p`
 const StyledImg = styled.img`
   grid-area: p;
   object-fit: cover;
-  margin: 1rem 0rem 1rem 0rem;
-  padding: 1rem 0rem 1rem 0rem;
+  margin: 1rem;
+  padding: 1rem;
   height: 60%;
   border-radius: 30%;
   background-image: url(${props => props.src};);
