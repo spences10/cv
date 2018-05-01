@@ -8,35 +8,35 @@ const AboutWrapper = styled.div`
 
 const NameLabelWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    'n n p '
-    'l l p ';
+    'n n n p p'
+    'l l l p p';
 `
 
 const StyledName = styled.p`
   grid-area: n;
   font-size: 3rem;
-  margin: 1rem 1rem 1rem 1rem;
-  border: 1rem;
-  padding: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0rem 1rem 0rem;
 `
 
 const StyledLabel = styled.p`
-  grid-area:l
+  grid-area: l;
   font-size: 1.8rem;
-  margin: 1rem;
-  border: 1rem;
-  padding: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0rem 1rem 0rem;
 `
 
 const StyledImg = styled.img`
   grid-area: p;
-  object-fit: 
+  object-fit: cover;
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 1rem 0rem 1rem 0rem;
+  height: 60%;
   border-radius: 30%;
   background-image: url(${props => props.src};);
-  height: 6rem;
 `
 
 const StyledEmail = styled.p``
