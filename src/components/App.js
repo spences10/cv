@@ -10,13 +10,13 @@ import { fetchCvData } from '../util/helpers'
 
 const PageContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    '. . a a . . '
-    '. . w w . . '
-    '. . s s . . '
-    '. . e e . . ';
+    '. . a a a a . . '
+    '. . w w w w . . '
+    '. . s s s s . . '
+    '. . e e e e . . ';
 `
 
 class App extends React.Component {
