@@ -18,15 +18,15 @@ const NameLabelWrapper = styled.div`
 const StyledName = styled.p`
   grid-area: n;
   font-size: 3rem;
-  margin: 1rem 0rem 1rem 0rem;
-  padding: 1rem 0rem 1rem 0rem;
+  margin: 1rem 0rem 0.1rem 0rem;
+  padding: 1rem 0rem 0.1rem 0rem;
 `
 
 const StyledLabel = styled.p`
   grid-area: l;
   font-size: 1.8rem;
-  margin: 1rem 0rem 1rem 0rem;
-  padding: 1rem 0rem 1rem 0rem;
+  margin: 0.1rem 0rem 1rem 0rem;
+  padding: 0.1rem 0rem 1rem 0rem;
 `
 
 const StyledImg = styled.img`
@@ -34,8 +34,8 @@ const StyledImg = styled.img`
   object-fit: cover;
   margin: 1rem;
   padding: 1rem;
-  height: 60%;
-  border-radius: 30%;
+  width: 70%;
+  border-radius: 50%;
   background-image: url(${props => props.src};);
 `
 
