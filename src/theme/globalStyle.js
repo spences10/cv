@@ -34,7 +34,7 @@ injectGlobal`
 
   body {
     margin: 0;
-    font-family: 'Roboto', georgia, serif;
+    font-family: 'Roboto', sans-serif;
     word-wrap: break-word;
     background-color: #fafafa;
   }
