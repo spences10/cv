@@ -27,7 +27,7 @@ injectGlobal`
     margin: 0;
     font-family: 'Roboto', sans-serif;
     word-wrap: break-word;
-    background-color: #fafafa;
+    background-color: ${props => props.theme.light};
   }
 
   h1, h2, h3 {
