@@ -26,8 +26,8 @@ class Skills extends React.Component {
                   skillsKey={skillsData[key].name}
                   skillsData={skillsData[key]}
                 /> */}
-              {skillsData[key].keywords.map(key => {
-                return <li>{key}</li>
+              {skillsData[key].keywords.map((key, index) => {
+                return <li key={key + index}>{key}</li>
               })}
             </React.Fragment>
           )
