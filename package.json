@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "loadCv": "now src/cvjson/",
+    "loadCv": "now src/cvjson/ && npm run aliasIt",
     "aliasIt": "now alias",
     "clearDeploys": "now rm cvjson --safe --yes"
   }
