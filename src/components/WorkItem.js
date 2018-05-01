@@ -2,6 +2,8 @@ import React from 'react'
 import dayjs from 'dayjs'
 import styled from 'styled-components'
 
+const WorkDates = styled.span``
+
 const WorkItemWrapper = styled.div``
 
 const WorkTitleLocation = styled.h3``
@@ -26,9 +28,9 @@ const WorkItem = props => {
     }
 
     return (
-      <span className="startdate">
+      <WorkDates>
         {startDate} - {endDate()}
-      </span>
+      </WorkDates>
     )
   }
 
