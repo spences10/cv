@@ -6,11 +6,36 @@ const AboutWrapper = styled.div`
   grid-area: a;
 `
 
-const StyledName = styled.h1``
+const NameLabelWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'n n n p p'
+    'l l l p p';
+`
 
-const StyledLabel = styled.h2``
+const StyledName = styled.p`
+  grid-area: n;
+  font-size: 3rem;
+  margin: 1rem 0rem 0.1rem 0rem;
+  padding: 1rem 0rem 0.1rem 0rem;
+`
+
+const StyledLabel = styled.p`
+  grid-area: l;
+  font-size: 1.8rem;
+  margin: 0.1rem 0rem 1rem 0rem;
+  padding: 0.1rem 0rem 1rem 0rem;
+`
 
 const StyledImg = styled.img`
+  grid-area: p;
+  object-fit: cover;
+  margin: 1rem;
+  padding: 1rem;
+  width: 70%;
+  border-radius: 50%;
   background-image: url(${props => props.src};);
 `
 
@@ -35,9 +60,11 @@ const About = props => {
 
   return (
     <AboutWrapper>
-      <StyledName>{name}</StyledName>
-      <StyledLabel>{label}</StyledLabel>
-      <StyledImg src={picture} />
+      <NameLabelWrapper>
+        <StyledName>{name}</StyledName>
+        <StyledLabel>{label}</StyledLabel>
+        <StyledImg src={picture} />
+      </NameLabelWrapper>
       <StyledEmail>{email}</StyledEmail>
       <StyledPhone>{phone}</StyledPhone>
       <StyledWebsite>{website}</StyledWebsite>

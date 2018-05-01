@@ -22,15 +22,13 @@ class Skills extends React.Component {
           return (
             <React.Fragment key={index}>
               <ul>{skillsData[key].name}</ul>
-              <li>
-                {/* <SkillsItem
+              {/* <SkillsItem
                   skillsKey={skillsData[key].name}
                   skillsData={skillsData[key]}
                 /> */}
-                {skillsData[key].keywords.map(key => {
-                  return key
-                })}
-              </li>
+              {skillsData[key].keywords.map((key, index) => {
+                return <li key={key + index}>{key}</li>
+              })}
             </React.Fragment>
           )
         })}
