@@ -5,7 +5,11 @@ export const theme1 = {
   secondary: '#01c1d6',
   danger: '#eb238e',
   light: '#f4f4f4',
-  dark: '#222'
+  dark: '#222',
+  background: '#f9f9fd',
+  foreground: '#fefefe',
+  border: '#fefefe',
+  font: 'Roboto'
 }
 
 export const theme2 = {
@@ -13,7 +17,11 @@ export const theme2 = {
   secondary: '#ffb617',
   danger: '#f16623',
   light: '#f4f4f4',
-  dark: '#222'
+  dark: '#222',
+  background: '',
+  foreground: '',
+  border: '',
+  font: 'Open Sans'
 }
 
 injectGlobal`
