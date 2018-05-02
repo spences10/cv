@@ -20,6 +20,7 @@ const AboutName = styled.p`
   font-size: 3rem;
   margin: 1rem 0rem 0.1rem 0rem;
   padding: 1rem 0rem 0.1rem 0rem;
+  font-family: ${props => props.theme.font};
 `
 
 const AboutLabel = styled.p`
