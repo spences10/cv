@@ -8,6 +8,20 @@ const EducationWrapper = IW.extend`
   grid-area: e;
 `
 
+const EducationTitle = styled.h2``
+
+const EducationItemWrapper = styled.div``
+
+const EducationItemType = styled.h3``
+
+const EducationItemTitle = styled.h4``
+
+const EducationItemDates = styled.p``
+
+const EducationItemSummary = styled.p``
+
+const WorkItemHighlights = styled.ul``
+
 const Education = props => {
   const getEducation = props.educationData.map((item, index) => {
     const educationStartDate = dayjs(item.startDate).format(
@@ -21,23 +35,21 @@ const Education = props => {
       }
     }
     return (
-      <div key={index}>
-        <h3>
+      <EducationItemWrapper key={index}>
+        <EducationItemType>
           {item.studyType} {item.area}
-        </h3>
-        <h4>{item.institution}</h4>
-        <p>
+        </EducationItemType>
+        <EducationItemTitle>{item.institution}</EducationItemTitle>
+        <EducationItemDates>
           Studied: {educationStartDate} - {educationEndDate()}
-        </p>
-      </div>
+        </EducationItemDates>
+      </EducationItemWrapper>
     )
   })
 
   return (
     <EducationWrapper>
-      <h2>
-        <i /> Education
-      </h2>
+      <EducationTitle>Education</EducationTitle>
       {getEducation}
     </EducationWrapper>
   )
