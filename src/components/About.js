@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { Dump } from '../util/helpers'
+import { ItemWrapper as IW } from './shared/ItemWrapper'
 
-const AboutWrapper = styled.div`
+const AboutWrapper = IW.extend`
   grid-area: a;
 `
 
-const NameLabelWrapper = styled.div`
+const AboutNameLabel = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
@@ -15,37 +15,38 @@ const NameLabelWrapper = styled.div`
     'l l l p p';
 `
 
-const StyledName = styled.p`
+const AboutName = styled.p`
   grid-area: n;
   font-size: 3rem;
   margin: 1rem 0rem 0.1rem 0rem;
   padding: 1rem 0rem 0.1rem 0rem;
+  font-family: ${props => props.theme.font};
 `
 
-const StyledLabel = styled.p`
+const AboutLabel = styled.p`
   grid-area: l;
   font-size: 1.8rem;
   margin: 0.1rem 0rem 1rem 0rem;
   padding: 0.1rem 0rem 1rem 0rem;
 `
 
-const StyledImg = styled.img`
+const AboutImg = styled.img`
   grid-area: p;
   object-fit: cover;
   margin: 1rem;
   padding: 1rem;
-  width: 70%;
+  width: 60%;
   border-radius: 50%;
   background-image: url(${props => props.src};);
 `
 
-const StyledEmail = styled.p``
+const AboutEmail = styled.p``
 
-const StyledPhone = styled.p``
+const AboutPhone = styled.p``
 
-const StyledWebsite = styled.p``
+const AboutWebsite = styled.p``
 
-const StyledSummary = styled.div``
+const AboutSummary = styled.div``
 
 const About = props => {
   const {
@@ -60,15 +61,15 @@ const About = props => {
 
   return (
     <AboutWrapper>
-      <NameLabelWrapper>
-        <StyledName>{name}</StyledName>
-        <StyledLabel>{label}</StyledLabel>
-        <StyledImg src={picture} />
-      </NameLabelWrapper>
-      <StyledEmail>{email}</StyledEmail>
-      <StyledPhone>{phone}</StyledPhone>
-      <StyledWebsite>{website}</StyledWebsite>
-      <StyledSummary>{summary}</StyledSummary>
+      <AboutNameLabel>
+        <AboutName>{name}</AboutName>
+        <AboutLabel>{label}</AboutLabel>
+        <AboutImg src={picture} />
+      </AboutNameLabel>
+      <AboutEmail>{email}</AboutEmail>
+      <AboutPhone>{phone}</AboutPhone>
+      <AboutWebsite>{website}</AboutWebsite>
+      <AboutSummary>{summary}</AboutSummary>
       {/* <Dump props={props} /> */}
     </AboutWrapper>
   )

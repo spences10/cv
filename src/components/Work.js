@@ -2,15 +2,17 @@ import React from 'react'
 import WorkItem from './WorkItem'
 import styled from 'styled-components'
 
-const WorkWrapper = styled.div`
+import { ItemWrapper as IW } from './shared/ItemWrapper'
+
+const WorkWrapper = IW.extend`
   grid-area: w;
 `
 
 const Work = props => {
   const getWorkExperience = () => {
     const workItems = []
-    props.workData.forEach((val, index) => {
-      workItems.push(<WorkItem key={index} workItemData={val} />)
+    props.workData.forEach((item, index) => {
+      workItems.push(<WorkItem key={index} workItemData={item} />)
     })
     return workItems
   }

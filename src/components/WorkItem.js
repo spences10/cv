@@ -6,22 +6,24 @@ const WorkDates = styled.span``
 
 const WorkItemWrapper = styled.div``
 
-const WorkTitleLocation = styled.h3``
+const WorkItemTitle = styled.h3``
 
-const StyledWorkDates = styled.p``
+const WorkItemDates = styled.p``
 
 const WorkItemSummary = styled.p``
 
-const StyledHighlights = styled.ul``
+const WorkItemHighlights = styled.ul``
 
 const WorkItem = props => {
+  const {
+    startDate: propsStartDate,
+    endDate: propsEndDate
+  } = props.workItemData
   const getWorkDates = () => {
-    const startDate = dayjs(props.workItemData.startDate).format(
-      'MMM, YYYY'
-    )
+    const startDate = dayjs(propsStartDate).format('MMM, YYYY')
     const endDate = () => {
-      if (props.workItemData.endDate !== '') {
-        return dayjs(props.workItemData.endDate).format('MMM, YYYY')
+      if (endDate !== '') {
+        return dayjs(propsEndDate).format('MMM, YYYY')
       } else {
         return 'Present'
       }
@@ -42,13 +44,13 @@ const WorkItem = props => {
 
   return (
     <WorkItemWrapper>
-      <WorkTitleLocation>
+      <WorkItemTitle>
         {props.workItemData.position},{' '}
         <span>{props.workItemData.company}</span>
-      </WorkTitleLocation>
-      <StyledWorkDates>{getWorkDates()}</StyledWorkDates>
+      </WorkItemTitle>
+      <WorkItemDates>{getWorkDates()}</WorkItemDates>
       <WorkItemSummary>{props.workItemData.summary}</WorkItemSummary>
-      <StyledHighlights>{getHighlights}</StyledHighlights>
+      <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
     </WorkItemWrapper>
   )
 }
