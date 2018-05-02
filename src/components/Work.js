@@ -11,8 +11,8 @@ const WorkWrapper = IW.extend`
 const Work = props => {
   const getWorkExperience = () => {
     const workItems = []
-    props.workData.forEach((val, index) => {
-      workItems.push(<WorkItem key={index} workItemData={val} />)
+    props.workData.forEach((item, index) => {
+      workItems.push(<WorkItem key={index} workItemData={item} />)
     })
     return workItems
   }
