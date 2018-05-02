@@ -9,13 +9,16 @@ const EducationWrapper = IW.extend`
 `
 
 const Education = props => {
-  const getEducation = props.educationData.map(function(item, index) {
-    const startDate = dayjs(item.startDate).format('MMM, YYYY')
-    let endDate = null
-    if (props.educationData.endDate !== '') {
-      endDate = dayjs(props.educationData.endDate).format('MMM, YYYY')
-    } else {
-      endDate = 'Present'
+  const getEducation = props.educationData.map((item, index) => {
+    const educationStartDate = dayjs(item.startDate).format(
+      'MMM, YYYY'
+    )
+    const educationEndDate = () => {
+      if (item.endDate !== '') {
+        return dayjs(item.endDate).format('MMM, YYYY')
+      } else {
+        return 'Present'
+      }
     }
     return (
       <div key={index}>
@@ -24,7 +27,7 @@ const Education = props => {
         </h3>
         <h4>{item.institution}</h4>
         <p>
-          Studied: {startDate} - {endDate}
+          Studied: {educationStartDate} - {educationEndDate()}
         </p>
       </div>
     )
