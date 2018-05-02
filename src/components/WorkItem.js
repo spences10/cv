@@ -15,13 +15,12 @@ const WorkItemSummary = styled.p``
 const WorkItemHighlights = styled.ul``
 
 const WorkItem = props => {
+  const { startDate, endDate } = props.workItemData
   const getWorkDates = () => {
-    const startDate = dayjs(props.workItemData.startDate).format(
-      'MMM, YYYY'
-    )
-    const endDate = () => {
-      if (props.workItemData.endDate !== '') {
-        return dayjs(props.workItemData.endDate).format('MMM, YYYY')
+    const sDate = dayjs(startDate).format('MMM, YYYY')
+    const eDate = () => {
+      if (endDate !== '') {
+        return dayjs(endDate).format('MMM, YYYY')
       } else {
         return 'Present'
       }
@@ -29,7 +28,7 @@ const WorkItem = props => {
 
     return (
       <WorkDates>
-        {startDate} - {endDate()}
+        {sDate} - {eDate()}
       </WorkDates>
     )
   }
