@@ -6,13 +6,13 @@ import styled from 'styled-components'
 
 export const Heading = styled.p`
   color: ${props => props.theme.dark};
-  font-family: ${props => props.theme.font};
+  font-family: ${props => props.theme.fontHeader};
   font-weight: 700;
 `
 
 export const UpperCaseHeading = Heading.extend`
   text-transform: uppercase;
-  font-family: ${props => props.theme.font};
+  font-family: ${props => props.theme.fontHeader};
   font-weight: 700;
   &:hover {
     letter-spacing: 0.15rem;
