@@ -21,7 +21,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, data } = this.props
+    const { children } = this.props
     return (
       <ThemeProvider theme={this.state.theme}>
         <React.Fragment>
