@@ -22,3 +22,7 @@ yarn-error.log*
 
 /cvjson
 cv.json
+
+.cache/
+
+public/
