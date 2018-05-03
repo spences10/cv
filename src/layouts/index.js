@@ -1,10 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import styled, { ThemeProvider } from 'styled-components'
-import { theme1, theme2 } from '../theme/globalStyle'
 
 import Header from '../components/header'
+
+import styled, { ThemeProvider } from 'styled-components'
+import { theme1, theme2 } from '../theme/globalStyle'
+import { siteMeta, nameContent } from '../constants'
+
 import './index.css'
 
 class Layout extends React.Component {
@@ -18,13 +21,13 @@ class Layout extends React.Component {
       <ThemeProvider theme={this.state.theme}>
         <div>
           <Helmet
-            title={data.site.siteMetadata.title}
+            title={nameContent}
             meta={[
               { name: 'description', content: 'Sample' },
               { name: 'keywords', content: 'sample, something' }
             ]}
           />
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header siteTitle={nameContent} />
           <div
             style={{
               margin: '0 auto',
@@ -45,13 +48,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
