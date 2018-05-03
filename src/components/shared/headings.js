@@ -12,8 +12,6 @@ export const Heading = styled.p`
 
 export const UpperCaseHeading = Heading.extend`
   text-transform: uppercase;
-  font-family: ${props => props.theme.fontHeader};
-  font-weight: 700;
   &:hover {
     letter-spacing: 0.15rem;
     transition: all 1s;
