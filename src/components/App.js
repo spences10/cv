@@ -20,6 +20,7 @@ const PageContainer = styled.div`
     '. . w w w w . . '
     '. . s s s s . . '
     '. . e e e e . . ';
+  background: ${props => props.theme.background};
 `
 
 class App extends React.Component {

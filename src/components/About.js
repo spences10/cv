@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ItemWrapper as IW } from './shared/ItemWrapper'
+import { Heading } from './shared/headings'
 
 const AboutWrapper = IW.extend`
   grid-area: a;
@@ -20,7 +21,7 @@ const AboutName = styled.p`
   font-size: 3rem;
   margin: 1rem 0rem 0.1rem 0rem;
   padding: 1rem 0rem 0.1rem 0rem;
-  font-family: ${props => props.theme.font};
+  font-family: ${props => props.theme.fontHeader};
 `
 
 const AboutLabel = styled.p`

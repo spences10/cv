@@ -8,24 +8,26 @@ export const theme1 = {
   dark: '#222',
   background: '#f9f9fd',
   foreground: '#fefefe',
-  border: '#fefefe',
-  font: 'Roboto'
+  border: '#044040',
+  fontHeader: '"Titillium Web", sans-serif',
+  fontBody: 'Open Sans, sans, sans-serif'
 }
 
 export const theme2 = {
   primary: '#6e27c5',
   secondary: '#ffb617',
   danger: '#f16623',
-  light: '#f4f4f4',
-  dark: '#222',
-  background: '',
-  foreground: '',
-  border: '',
-  font: 'Open Sans'
+  light: '#f5f5f5',
+  dark: '#040733',
+  background: '#e6e6e6',
+  foreground: '#f7f0f0',
+  border: '#054545',
+  fontHeader: 'Open Sans, sans, sans-serif',
+  fontBody: '"Titillium Web", sans-serif'
 }
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Bungee+Inline');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:400,700');
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -33,7 +35,7 @@ injectGlobal`
 
   body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     word-wrap: break-word;
   }
 
