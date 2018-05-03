@@ -8,7 +8,7 @@ export const theme1 = {
   dark: '#222',
   background: '#f9f9fd',
   foreground: '#fefefe',
-  border: '#fefefe',
+  border: '#044040',
   fontHeader: 'Roboto',
   fontBody: 'Roboto'
 }
@@ -17,11 +17,11 @@ export const theme2 = {
   primary: '#6e27c5',
   secondary: '#ffb617',
   danger: '#f16623',
-  light: '#f4f4f4',
-  dark: '#222',
-  background: '',
-  foreground: '',
-  border: '',
+  light: '#f5f5f5',
+  dark: '#040733',
+  background: 'e6e6e6',
+  foreground: '#e6cfcf',
+  border: '#054545',
   fontHeader: 'Open Sans',
   fontBody: 'Open Sans'
 }
