@@ -10,10 +10,7 @@
     "gatsby-plugin-react-helmet": "^2.0.10",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby",
-    "cv"
-  ],
+  "keywords": ["gatsby", "cv"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
