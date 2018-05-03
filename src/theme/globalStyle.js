@@ -10,7 +10,7 @@ export const theme1 = {
   foreground: '#fefefe',
   border: '#044040',
   fontHeader: 'Roboto',
-  fontBody: 'Roboto'
+  fontBody: 'Open Sans'
 }
 
 export const theme2 = {
@@ -23,11 +23,11 @@ export const theme2 = {
   foreground: '#e6cfcf',
   border: '#054545',
   fontHeader: 'Open Sans',
-  fontBody: 'Open Sans'
+  fontBody: 'Roboto'
 }
 
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Bungee+Inline');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:400,700');
 
   *, *:before, *:after {
     box-sizing: border-box;
