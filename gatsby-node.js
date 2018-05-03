@@ -19,7 +19,6 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
       // but it is required
     },
     children: [],
-
     ...res.data
   }
 
