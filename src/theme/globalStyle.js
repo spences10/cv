@@ -19,8 +19,8 @@ export const theme2 = {
   danger: '#f16623',
   light: '#f5f5f5',
   dark: '#040733',
-  background: 'e6e6e6',
-  foreground: '#e6cfcf',
+  background: '#e6e6e6',
+  foreground: '#f7f0f0',
   border: '#054545',
   fontHeader: 'Open Sans',
   fontBody: 'Roboto'
@@ -35,7 +35,7 @@ injectGlobal`
 
   body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
     word-wrap: break-word;
   }
 
