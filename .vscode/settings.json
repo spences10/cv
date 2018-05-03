@@ -8,6 +8,7 @@
     "cvjson",
     "dayjs",
     "quants",
-    "templating"
+    "templating",
+    "uppercase"
   ]
 }
