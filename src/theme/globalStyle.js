@@ -9,8 +9,8 @@ export const theme1 = {
   background: '#f9f9fd',
   foreground: '#fefefe',
   border: '#044040',
-  fontHeader: 'Roboto',
-  fontBody: 'Open Sans'
+  fontHeader: '"Titillium Web", sans-serif',
+  fontBody: 'Open Sans, sans, sans-serif'
 }
 
 export const theme2 = {
@@ -22,8 +22,8 @@ export const theme2 = {
   background: '#e6e6e6',
   foreground: '#f7f0f0',
   border: '#054545',
-  fontHeader: 'Open Sans',
-  fontBody: 'Roboto'
+  fontHeader: 'Open Sans, sans, sans-serif',
+  fontBody: '"Titillium Web", sans-serif'
 }
 
 injectGlobal`
