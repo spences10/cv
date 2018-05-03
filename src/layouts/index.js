@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import ThemeSelect from '../components/ThemeSelect'
 
 import styled, { ThemeProvider } from 'styled-components'
 import { theme1, theme2 } from '../theme/globalStyle'
@@ -13,14 +13,22 @@ class Layout extends React.Component {
     apiUrl: 'https://cvjson.now.sh/',
     theme: theme1
   }
+
+  handleThemeChange = e => {
+    let theme = e.target.value
+    theme === 'theme1' ? (theme = theme1) : (theme = theme2)
+    this.setState({ theme })
+  }
+
   render() {
     const { children, data } = this.props
     return (
       <ThemeProvider theme={this.state.theme}>
-        <div>
+        <React.Fragment>
           <Helmet title={nameContent} meta={siteMeta} />
           {children()}
-        </div>
+          <ThemeSelect handleThemeChange={this.handleThemeChange} />
+        </React.Fragment>
       </ThemeProvider>
     )
   }
