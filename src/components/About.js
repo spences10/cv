@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { ItemWrapper as IW } from './shared/ItemWrapper'
 import { Heading } from './shared/Headings'
-import { StyledLink as SL } from './shared/Links'
+import { StyledHyperLink as SHL } from './shared/Links'
 
 const AboutWrapper = IW.extend`
   grid-area: a;
@@ -49,15 +50,15 @@ const EmailPhoneSiteWrapper = styled.div`
   grid-template-areas: 'e p s';
 `
 
-const AboutEmail = SL.extend`
+const AboutEmail = SHL.extend`
   grid-area: e;
 `
 
-const AboutPhone = SL.extend`
+const AboutPhone = SHL.extend`
   grid-area: p;
 `
 
-const AboutWebsite = SL.extend`
+const AboutWebsite = SHL.extend`
   grid-area: s;
 `
 
@@ -82,9 +83,18 @@ const About = props => {
         <AboutImg src={picture} />
       </AboutNameLabel>
       <EmailPhoneSiteWrapper>
-        <AboutEmail>{email}</AboutEmail>
-        <AboutPhone>{phone}</AboutPhone>
-        <AboutWebsite>{website}</AboutWebsite>
+        <AboutEmail
+          href={`mailto:${email}?subject=Hi ${name} 👋`}
+          target="_blank"
+          rel="noopener">
+          {email}
+        </AboutEmail>
+        <AboutPhone href={phone} target="_blank" rel="noopener">
+          >{phone}
+        </AboutPhone>
+        <AboutWebsite href={website} target="_blank" rel="noopener">
+          >{website}
+        </AboutWebsite>
       </EmailPhoneSiteWrapper>
       <AboutSummary>{summary}</AboutSummary>
       {/* <Dump props={props} /> */}
