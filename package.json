@@ -13,20 +13,19 @@
     "react-helmet": "^5.2.0",
     "styled-components": "3.2.6"
   },
-  "keywords": [
-    "gatsby",
-    "cv"
-  ],
+  "keywords": ["gatsby", "cv"],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "clean": "rm -rf .cache/ && rm -rf cv/ && rm -rf public/",
+    "build": "gatsby build && mv public cv && npm run wellknown",
     "dev": "gatsby develop",
     "format": "pretty-quick",
     "precommit": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1",
     "loadCv": "now src/cvjson/ && npm run aliasIt",
     "aliasIt": "now alias",
-    "clearStale": "now rm cvjson --safe --yes"
+    "clearStale": "now rm cvjson --safe --yes",
+    "wellknown": "cp -r .well-known/ cv/"
   },
   "devDependencies": {
     "prettier": "^1.12.0",
