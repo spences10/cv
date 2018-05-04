@@ -1,6 +1,16 @@
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
+export const StyledDiv = styled.div`
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+`
+
+export const StyledP = styled.p`
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+`
+
 export const ItemWrapper = styled.div`
   /* border-top: 4px solid ${props => props.theme.primary}; */
   border-radius: 5px;
@@ -28,7 +38,7 @@ export const ItemWrapper = styled.div`
 // normal font weight 400-500
 // heavy font weight 600-700
 
-export const Heading = styled.p`
+export const Heading = StyledP.extend`
   color: ${props => props.theme.dark};
   font-family: ${props => props.theme.fontHeader};
   font-weight: 700;
