@@ -90,10 +90,10 @@ const About = props => {
           {email}
         </AboutEmail>
         <AboutPhone href={phone} target="_blank" rel="noopener">
-          >{phone}
+          {phone}
         </AboutPhone>
         <AboutWebsite href={website} target="_blank" rel="noopener">
-          >{website}
+          {website}
         </AboutWebsite>
       </EmailPhoneSiteWrapper>
       <AboutSummary>{summary}</AboutSummary>
