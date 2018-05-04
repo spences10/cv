@@ -9,7 +9,7 @@ import { theme1, theme2 } from '../theme/globalStyle'
 import { siteMeta, nameContent } from '../constants'
 
 const PageContainer = styled.div`
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
@@ -17,7 +17,7 @@ const PageContainer = styled.div`
     '. . w w w w . . '
     '. . s s s s . . '
     '. . e e e e . . ';
-  background: ${props => props.theme.background};
+  background: ${props => props.theme.background}; */
 `
 
 class Layout extends React.Component {
