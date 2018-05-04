@@ -1,6 +1,6 @@
 {
-  "name": "online-cv",
-  "description": "Online CV using Gatsby",
+  "name": "cv",
+  "description": "CV using Gatsby",
   "version": "1.0.0",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
@@ -13,23 +13,37 @@
     "react-helmet": "^5.2.0",
     "styled-components": "3.2.6"
   },
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-plugin-graphql": "2.1.1",
+    "eslint-plugin-react": "7.7.0",
+    "husky": "0.14.3",
+    "prettier": "^1.12.0",
+    "pretty-quick": "1.4.1"
+  },
   "keywords": [
     "gatsby",
     "cv"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "clean": "rm -rf .cache/ && rm -rf cv/ && rm -rf public/",
+    "build": "gatsby build && mv public cv && npm run wellknown",
     "dev": "gatsby develop",
     "format": "pretty-quick",
     "precommit": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1",
     "loadCv": "now src/cvjson/ && npm run aliasIt",
     "aliasIt": "now alias",
-    "clearStale": "now rm cvjson --safe --yes"
+    "clearStale": "now rm cvjson --safe --yes",
+    "wellknown": "cp -r .well-known/ cv/"
   },
-  "devDependencies": {
-    "prettier": "^1.12.0",
-    "pretty-quick": "1.4.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spences10/cv"
+  },
+  "bugs": {
+    "url": "https://github.com/spences10/cv/issues"
+  },
+  "homepage": "https://github.com/spences10/cv#readme"
 }

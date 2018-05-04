@@ -1,0 +1,81 @@
+==================================================================
+https://keybase.io/spences10
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://scottspence.me
+  * I am spences10 (https://keybase.io/spences10) on keybase.
+  * I have a public key with fingerprint B8C6 7F63 C1B8 1EDF 48BC  BDFD 28EE 1E46 7902 7FF6
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010189350b618c246df269567b796a631d5220371fa96b2799b39266db0a22e849570a",
+      "fingerprint": "b8c67f63c1b81edf48bcbdfd28ee1e4679027ff6",
+      "host": "keybase.io",
+      "key_id": "28ee1e4679027ff6",
+      "kid": "010189350b618c246df269567b796a631d5220371fa96b2799b39266db0a22e849570a",
+      "uid": "c7813e212a1d10f2fdd369e51cb45419",
+      "username": "spences10"
+    },
+    "merkle_root": {
+      "ctime": 1516452075,
+      "hash_meta": "e9bb47363a661f3c5889c83cd6385f743bd30af6a9619ae8f5f1b2beea3f1593",
+      "seqno": 1949344
+    },
+    "revoke": {
+      "sig_ids": [
+        "8f532498258ef5cc3a8c9006b794146d983536f934f2a10e13e34a4a36964e7d0f"
+      ]
+    },
+    "service": {
+      "hostname": "scottspence.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1516452114,
+  "expire_in": 157680000,
+  "prev": "3ceb16a0bee4424b3c67ec0b7dbfae0928deee8762e7c0aadd4860a3dfd48523",
+  "seqno": 43,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMLBAnicrVNdaB1FGL3RxthgUYpWEKG4jdrWmM7fzs6kD1rRh1btQ6VW0sh1Zvab
+3CXJ3ZvdzW1DEjSgCTWKUH/Rimkf1IK1Bkkx4kONpVVsK/Qn0Gq1XJoqSi2BEoRa
+dDZaUPDRfRl25nznO+fMNwcWXVtorGurWzay67OBH+q+nurrLbQZubjf03HY57X2
+e50wv0BXCGlW7IxCr9VDGGEhqY80x8IQxkNLuPR5oAPJFac49AlBNMBWSa5JIKWm
+knAeaqQIAcGkHyDlNXs2KndAUkmicuZotTA8sJwarAWG0DKhjQ5tSAQABsYDiUhg
+LXeFpTjNK5w4rVJoiWK3536K8/L+A/8/6+6dpzOBwBQIJgqHGFliw5ByCT42mvkM
+yxyYQlJW3eDQaQXKBlKMvMFmrxuSzi4oJnGc5emaLMox2Mec+QQFvnOo0lKxGzLl
+SkFqzQLKqeIcW2p8IaQR1IScCt8GjOqQImW5U42lAmF9izXRAIpa7EvqhKTQU45d
+B8kkZcwpSKAad0LePI06XG6p17rZc5WUMCmIL8D6xlAljESIu3wYdnFJQX3KraOw
+zjQCZ58yxZSzzRkEIbLek4N5s6QamXny/KKuBmDiLPsrhRa30exVkjiLTdzlzkpZ
+Vklb82SyvkoO3gK6+DdNUUfl0A2Kq6hCkkZx2flwyH+HhjFr9mBrJUqgGOUIP+AC
+uS/vA1VHSQ1ozBVyuTBGmKZu2sAgHYTaKkCSiBAARMAJBAYpFYZMcKSom0AmfPKP
+FBl1OlVH7inqKKusNwFvcGp/+4JCXWPhuvpr8hdUaFx409V3dfZgwx9rt33w9MSb
+xxvu3PTi0PSSk2dueRSdOzdwa+Mj1Vfu/W5jaW7ZW8MTx45WN06//O1Dtq902oxu
+vTRQ/PzI7Z9UFu8/VZ079MT2M+Mnvri8Y3v7nvWDS23/5YkN7bVFTaOl59evuWFn
+Mjb5U23v0D2zGyZnV3fWqmT15l0PrPn54tjhsS2/HFvZs+3Kxa8mXxubeXtyXb0Z
+annuwolV1fufWXr9irtXtjfdN7dH3LZj4cP6wY/2vnT+vZNHf3u/8O7hV2szU2t/
+vLL8qfHdL9z4YXWw7Y2RVbXXhx975+aD1fPPLmg40LRC4n0jlybvmvlyyW59/PfK
+Hetmvnncblp+tn523/SF6NT4x6Pf9xz69cinM6eH/wTZu4nb
+=PKbu
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/spences10
+
+==================================================================
