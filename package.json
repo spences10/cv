@@ -37,5 +37,13 @@
     "aliasIt": "now alias",
     "clearStale": "now rm cvjson --safe --yes",
     "wellknown": "cp -r .well-known/ cv/"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spences10/cv"
+  },
+  "bugs": {
+    "url": "https://github.com/spences10/cv/issues"
+  },
+  "homepage": "https://github.com/spences10/cv#readme"
 }
