@@ -4,14 +4,16 @@ import styled from 'styled-components'
 import {
   Heading,
   ItemWrapper as IW,
-  StyledHyperLink as SHL
+  StyledHyperLink as SHL,
+  StyledDiv as SD,
+  StyledP as SP
 } from './shared/SharedComponents'
 
 const AboutWrapper = IW.extend`
   grid-area: a;
 `
 
-const AboutNameLabel = styled.div`
+const AboutNameLabel = SD.extend`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
@@ -23,16 +25,16 @@ const AboutNameLabel = styled.div`
 const AboutName = styled.p`
   grid-area: n;
   font-size: 3rem;
-  margin: 1rem 0rem 0.1rem 0rem;
-  padding: 1rem 0rem 0.1rem 0rem;
   font-family: ${props => props.theme.fontHeader};
+  margin-bottom: 0.1rem;
+  padding-bottom: 0.1rem;
 `
-
+// top right bottom left
 const AboutLabel = styled.p`
   grid-area: l;
   font-size: 1.8rem;
-  margin: 0.1rem 0rem 1rem 0rem;
-  padding: 0.1rem 0rem 1rem 0rem;
+  margin-top: 0.1rem;
+  padding-top: 0.1rem;
 `
 
 const AboutImg = styled.img`
@@ -45,26 +47,34 @@ const AboutImg = styled.img`
   background-image: url(${props => props.src};);
 `
 
-const EmailPhoneSiteWrapper = styled.div`
+const EmailPhoneSiteWrapper = SD.extend`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: 'e p s';
+  grid-template-areas:
+    'e s'
+    'p .';
 `
 
 const AboutEmail = SHL.extend`
   grid-area: e;
+  padding: 0.25rem 0rem;
+  margin: 0.25rem 0rem;
 `
 
 const AboutPhone = SHL.extend`
   grid-area: p;
+  padding: 0.25rem 0rem;
+  margin: 0.25rem 0rem;
 `
 
 const AboutWebsite = SHL.extend`
   grid-area: s;
+  padding: 0.25rem 0rem;
+  margin: 0.25rem 0rem;
 `
 
-const AboutSummary = styled.div``
+const AboutSummary = SD.extend``
 
 const About = props => {
   const {
