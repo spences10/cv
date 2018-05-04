@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { ItemWrapper as IW } from './shared/ItemWrapper'
-import { Heading } from './shared/Headings'
-import { StyledHyperLink as SHL } from './shared/Links'
+import {
+  Heading,
+  ItemWrapper as IW,
+  StyledHyperLink as SHL
+} from './shared/SharedComponents'
 
 const AboutWrapper = IW.extend`
   grid-area: a;

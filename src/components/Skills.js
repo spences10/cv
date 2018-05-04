@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { ItemWrapper as IW } from './shared/ItemWrapper'
+import { ItemWrapper as IW } from './shared/SharedComponents'
 
 const SkillsWrapper = IW.extend`
   grid-area: s;
