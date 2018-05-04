@@ -2,15 +2,20 @@ import React from 'react'
 import dayjs from 'dayjs'
 import styled from 'styled-components'
 
+import {
+  StyledDiv as SD,
+  StyledP as SP
+} from './shared/SharedComponents'
+
 const WorkDates = styled.span``
 
-const WorkItemWrapper = styled.div``
+const WorkItemWrapper = SD.extend``
 
 const WorkItemTitle = styled.h3``
 
-const WorkItemDates = styled.p``
+const WorkItemDates = SP.extend``
 
-const WorkItemSummary = styled.p``
+const WorkItemSummary = SP.extend``
 
 const WorkItemHighlights = styled.ul``
 

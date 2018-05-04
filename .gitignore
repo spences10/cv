@@ -22,3 +22,11 @@ yarn-error.log*
 
 /cvjson
 cv.json
+
+.cache/
+
+public/
+
+# Build directory
+public/
+cv/
