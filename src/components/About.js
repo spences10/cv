@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ItemWrapper as IW } from './shared/ItemWrapper'
-import { Heading } from './shared/headings'
+import { Heading } from './shared/Headings'
+import { StyledLink as SL } from './shared/Links'
 
 const AboutWrapper = IW.extend`
   grid-area: a;
@@ -41,11 +42,24 @@ const AboutImg = styled.img`
   background-image: url(${props => props.src};);
 `
 
-const AboutEmail = styled.p``
+const EmailPhoneSiteWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'e p s';
+`
 
-const AboutPhone = styled.p``
+const AboutEmail = SL.extend`
+  grid-area: e;
+`
 
-const AboutWebsite = styled.p``
+const AboutPhone = SL.extend`
+  grid-area: p;
+`
+
+const AboutWebsite = SL.extend`
+  grid-area: s;
+`
 
 const AboutSummary = styled.div``
 
@@ -67,9 +81,11 @@ const About = props => {
         <AboutLabel>{label}</AboutLabel>
         <AboutImg src={picture} />
       </AboutNameLabel>
-      <AboutEmail>{email}</AboutEmail>
-      <AboutPhone>{phone}</AboutPhone>
-      <AboutWebsite>{website}</AboutWebsite>
+      <EmailPhoneSiteWrapper>
+        <AboutEmail>{email}</AboutEmail>
+        <AboutPhone>{phone}</AboutPhone>
+        <AboutWebsite>{website}</AboutWebsite>
+      </EmailPhoneSiteWrapper>
       <AboutSummary>{summary}</AboutSummary>
       {/* <Dump props={props} /> */}
     </AboutWrapper>
