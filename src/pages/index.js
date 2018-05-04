@@ -22,14 +22,20 @@ const PageContainer = styled.div`
 `
 
 const IndexPage = props => {
-  const { basics, work, skills, education } = props.data.allCv.edges
+  const {
+    basics,
+    work,
+    skills,
+    education
+  } = props.data.allCv.edges[0].node
   return (
     <PageContainer>
-      <Dump
-        props={props.data.allCv.edges}
+      {/* <Dump
+        props={basics}
+        props={props.data.allCv.edges[0].node}
         pageResources={props.pageResources}
-      />
-      {/* <About aboutData={basics} /> */}
+      /> */}
+      <About aboutData={basics} />
       {/* <Work workData={work} /> */}
       {/* <Skills skillsData={skills} /> */}
       {/* <Education educationData={education} /> */}
@@ -44,7 +50,6 @@ export const query = graphql`
     allCv {
       edges {
         node {
-          id
           basics {
             name
             label
