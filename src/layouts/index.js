@@ -8,6 +8,18 @@ import styled, { ThemeProvider } from 'styled-components'
 import { theme1, theme2 } from '../theme/globalStyle'
 import { siteMeta, nameContent } from '../constants'
 
+const PageContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    '. . a a a a . . '
+    '. . w w w w . . '
+    '. . s s s s . . '
+    '. . e e e e . . ';
+  background: ${props => props.theme.background};
+`
+
 class Layout extends React.Component {
   state = {
     apiUrl: 'https://cvjson.now.sh/',
@@ -24,11 +36,11 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <ThemeProvider theme={this.state.theme}>
-        <React.Fragment>
+        <PageContainer>
           <Helmet title={nameContent} meta={siteMeta} />
           {children()}
           <ThemeSelect handleThemeChange={this.handleThemeChange} />
-        </React.Fragment>
+        </PageContainer>
       </ThemeProvider>
     )
   }
