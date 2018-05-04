@@ -7,17 +7,32 @@ import {
   StyledP as SP
 } from './shared/SharedComponents'
 
-const WorkDates = styled.span``
+const WorkDates = styled.span`
+  margin: -1rem;
+  padding: -1rem;
+`
 
-const WorkItemWrapper = SD.extend``
+const WorkItemWrapper = SD.extend`
+  margin: 0.5rem;
+  padding: 0.5rem;
+`
 
-const WorkItemTitle = styled.h3``
+const WorkItemTitle = SP.extend`
+  margin: 0rem;
+  padding: 0rem;
+`
 
 const WorkItemDates = SP.extend``
 
-const WorkItemSummary = SP.extend``
+const WorkItemSummary = SP.extend`
+  margin: 0rem;
+  padding: 0rem;
+`
 
-const WorkItemHighlights = styled.ul``
+const WorkItemHighlights = styled.ul`
+  margin: 0rem;
+  padding: 0rem;
+`
 
 const WorkItem = props => {
   const {

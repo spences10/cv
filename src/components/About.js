@@ -26,8 +26,8 @@ const AboutName = styled.p`
   grid-area: n;
   font-size: 3rem;
   font-family: ${props => props.theme.fontHeader};
-  margin-bottom: 0.1rem;
-  padding-bottom: 0.1rem;
+  margin: 0.1rem 0rem 0.1rem 0rem;
+  padding: 0.1rem 0rem 0.1rem 0rem;
 `
 // top right bottom left
 const AboutLabel = styled.p`
