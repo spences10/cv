@@ -6,7 +6,7 @@ export const StyledHyperLink = styled.a`
   cursor: pointer;
   &:visited,
   &:active {
-    color: inherit;
+    color: ${props => props.theme.primary};
   }
   &:hover {
     color: ${props => props.theme.secondary};
