@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
-export const StyledLink = styled.a`
-  color: ${props => props.theme.primary};
+/* background: linear-gradient(0.25turn, #e66465, #9198e5); */
+export const StyledHyperLink = styled.a`
   cursor: pointer;
   &:visited,
   &:active {
@@ -10,4 +11,5 @@ export const StyledLink = styled.a`
   &:hover {
     color: ${props => props.theme.secondary};
   }
+  color: ${props => props.theme.primary};
 `

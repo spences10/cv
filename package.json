@@ -1,6 +1,6 @@
 {
-  "name": "online-cv",
-  "description": "Online CV using Gatsby",
+  "name": "cv",
+  "description": "CV using Gatsby",
   "version": "1.0.0",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
