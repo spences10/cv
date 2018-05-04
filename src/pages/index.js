@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-import { Dump } from '../util/helpers'
+// import { Dump } from '../util/helpers'
 import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
@@ -36,9 +36,9 @@ const IndexPage = props => {
         pageResources={props.pageResources}
       /> */}
       <About aboutData={basics} />
-      {/* <Work workData={work} /> */}
-      {/* <Skills skillsData={skills} /> */}
-      {/* <Education educationData={education} /> */}
+      <Work workData={work} />
+      <Skills skillsData={skills} />
+      <Education educationData={education} />
     </PageContainer>
   )
 }
