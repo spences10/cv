@@ -9,16 +9,63 @@ import Skills from '../components/Skills'
 import Education from '../components/Education'
 import ThemeSelect from '../components/ThemeSelect'
 
+import { media } from '../theme/globalStyle'
+
 const PageContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
+    '. . t . . . . . '
     '. . a a a a . . '
     '. . w w w w . . '
     '. . s s s s . . '
     '. . e e e e . . ';
   background: ${props => props.theme.background};
+  ${media.giant`
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      '. . t . . . . . '
+      '. . a a a a . . '
+      '. . w w w w . . '
+      '. . s s s s . . '
+      '. . e e e e . . ';
+      background: goldenrod;
+  `};
+  ${media.desktop`
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      '. . t . . . . . '
+      '. . a a a a . . '
+      '. . w w w w . . '
+      '. . s s s s . . '
+      '. . e e e e . . ';;
+      background: dodgerblue;
+  `};
+  ${media.tablet`
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      't . . . . . . .'
+      'a a a a a a a a'
+      'w w w w w w w w'
+      's s s s s s s s'
+      'e e e e e e e e';
+      background: mediumseagreen;
+  `};
+  ${media.phone`
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 8;
+    grid-template-areas:
+      't . . . . . . .'
+      'a a a a a a a a'
+      'w w w w w w w w'
+      's s s s s s s s'
+      'e e e e e e e e';
+      background: palevioletred;
+  `};
 `
 
 const IndexPage = props => {
@@ -30,6 +77,7 @@ const IndexPage = props => {
   } = props.data.allCv.edges[0].node
   return (
     <PageContainer>
+      {/* <ThemeSelect handleThemeChange={this.handleThemeChange} /> */}
       {/* <Dump
         props={basics}
         props={props.data.allCv.edges[0].node}
