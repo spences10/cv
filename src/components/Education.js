@@ -1,5 +1,5 @@
 import React from 'react'
-import dayjs from 'dayjs'
+import moment from 'moment'
 import styled from 'styled-components'
 
 import { ItemWrapper as IW } from './shared/SharedComponents'
@@ -24,12 +24,12 @@ const WorkItemHighlights = styled.ul``
 
 const Education = props => {
   const getEducation = props.educationData.map((item, index) => {
-    const educationStartDate = dayjs(item.startDate).format(
+    const educationStartDate = moment(item.startDate).format(
       'MMM, YYYY'
     )
     const educationEndDate = () => {
       if (item.endDate !== '') {
-        return dayjs(item.endDate).format('MMM, YYYY')
+        return moment(item.endDate).format('MMM, YYYY')
       } else {
         return 'Present'
       }
