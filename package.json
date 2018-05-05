@@ -38,7 +38,7 @@
     "clearStale": "now rm cvjson --safe --yes",
     "wellknown": "cp -r .well-known/ cv/",
     "deploy": "now cv/ --token $NOW_TOKEN",
-    "alias:dev": "now alias scottspence-cv.now.sh --token $NOW_TOKEN",
+    "alias:dev": "now alias cv-scottspence.now.sh --token $NOW_TOKEN",
     "alias:prod": "now alias cv.scottspence.me --token $NOW_TOKEN",
     "cleanup": "now rm cv --safe --yes --token $NOW_TOKEN"
   },
