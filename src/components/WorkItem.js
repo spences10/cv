@@ -1,5 +1,5 @@
 import React from 'react'
-import dayjs from 'dayjs'
+import moment from 'moment'
 import styled from 'styled-components'
 
 import {
@@ -7,17 +7,32 @@ import {
   StyledP as SP
 } from './shared/SharedComponents'
 
-const WorkDates = styled.span``
+const WorkDates = styled.span`
+  margin: -1rem;
+  padding: -1rem;
+`
 
-const WorkItemWrapper = SD.extend``
+const WorkItemWrapper = SD.extend`
+  margin: 0.5rem;
+  padding: 0.5rem;
+`
 
-const WorkItemTitle = styled.h3``
+const WorkItemTitle = SP.extend`
+  margin: 0rem;
+  padding: 0rem;
+`
 
 const WorkItemDates = SP.extend``
 
-const WorkItemSummary = SP.extend``
+const WorkItemSummary = SP.extend`
+  margin: 0rem;
+  padding: 0rem;
+`
 
-const WorkItemHighlights = styled.ul``
+const WorkItemHighlights = styled.ul`
+  margin: 0rem;
+  padding: 0rem;
+`
 
 const WorkItem = props => {
   const {
@@ -25,10 +40,10 @@ const WorkItem = props => {
     endDate: propsEndDate
   } = props.workItemData
   const getWorkDates = () => {
-    const startDate = dayjs(propsStartDate).format('MMM, YYYY')
+    const startDate = moment(propsStartDate).format('MMM, YYYY')
     const endDate = () => {
       if (endDate !== '') {
-        return dayjs(propsEndDate).format('MMM, YYYY')
+        return moment(propsEndDate).format('MMM, YYYY')
       } else {
         return 'Present'
       }

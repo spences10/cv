@@ -23,7 +23,7 @@ export const ItemWrapper = styled.div`
   background: ${props => props.theme.foreground};
   :before {
     border-radius: 5px 5px 0px 0px;
-    height: 4px;
+    height: 5px;
     display: block;
     background: linear-gradient(
       0.25turn, 

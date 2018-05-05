@@ -10,6 +10,7 @@
     "gatsby-link": "1.6.40",
     "gatsby-plugin-react-helmet": "2.0.10",
     "gatsby-plugin-react-next": "1.0.11",
+    "moment": "2.22.1",
     "react-helmet": "5.2.0",
     "styled-components": "3.2.6"
   },
@@ -33,10 +34,12 @@
     "format": "pretty-quick",
     "precommit": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "loadCv": "now src/cvjson/ && npm run aliasIt",
-    "aliasIt": "now alias",
     "clearStale": "now rm cvjson --safe --yes",
-    "wellknown": "cp -r .well-known/ cv/"
+    "wellknown": "cp -r .well-known/ cv/",
+    "deploy": "now cv/ --token $NOW_TOKEN",
+    "alias:dev": "now alias cv-scottspence.now.sh --token $NOW_TOKEN",
+    "alias:prod": "now alias cv.scottspence.me --token $NOW_TOKEN",
+    "cleanup": "now rm cv --safe --yes --token $NOW_TOKEN"
   },
   "repository": {
     "type": "git",

@@ -9,16 +9,79 @@ import Skills from '../components/Skills'
 import Education from '../components/Education'
 import ThemeSelect from '../components/ThemeSelect'
 
+import { media } from '../theme/globalStyle'
+
 const PageContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
+    '. . t . . . . . '
     '. . a a a a . . '
     '. . w w w w . . '
     '. . s s s s . . '
     '. . e e e e . . ';
   background: ${props => props.theme.background};
+  ${media.giant`
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      '. . t . . . . . '
+      '. . a a a a . . '
+      '. . w w w w . . '
+      '. . s s s s . . '
+      '. . e e e e . . ';
+    /* background: goldenrod; */
+    background: linear-gradient(
+      0.25turn, 
+      goldenrod, 
+      ${props => props.theme.secondary});
+  `};
+  ${media.desktop`
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      '. . t . . . . . '
+      '. . a a a a . . '
+      '. . w w w w . . '
+      '. . s s s s . . '
+      '. . e e e e . . ';;
+    /* background: dodgerblue; */
+    background: linear-gradient(
+      0.25turn, 
+      dodgerblue, 
+      ${props => props.theme.secondary});
+  `};
+  ${media.tablet`
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      't . . . . .'
+      'a a a a a a'
+      'w w w w w w'
+      's s s s s s'
+      'e e e e e e';
+    /* background: mediumseagreen; */
+    background: linear-gradient(
+      0.25turn, 
+      mediumseagreen, 
+      ${props => props.theme.secondary});
+  `};
+  ${media.phone`
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      't . . .'
+      'a a a a'
+      'w w w w'
+      's s s s'
+      'e e e e';
+    /* background: palevioletred; */
+    background: linear-gradient(
+      0.25turn, 
+      palevioletred, 
+      ${props => props.theme.secondary});
+  `};
 `
 
 const IndexPage = props => {
@@ -30,6 +93,7 @@ const IndexPage = props => {
   } = props.data.allCv.edges[0].node
   return (
     <PageContainer>
+      {/* <ThemeSelect handleThemeChange={this.handleThemeChange} /> */}
       {/* <Dump
         props={basics}
         props={props.data.allCv.edges[0].node}
