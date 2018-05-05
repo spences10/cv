@@ -34,8 +34,6 @@
     "format": "pretty-quick",
     "precommit": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "loadCv": "now src/cvjson/ && npm run aliasIt",
-    "aliasIt": "now alias",
     "clearStale": "now rm cvjson --safe --yes",
     "wellknown": "cp -r .well-known/ cv/",
     "deploy": "now cv/ --token $NOW_TOKEN",
