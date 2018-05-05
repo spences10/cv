@@ -10,7 +10,7 @@ notifications:
   email: false
 
 node_js:
-  - '10'
+  - '9'
 
 before_script:
   - npm prune
