@@ -31,7 +31,11 @@ const PageContainer = styled.div`
       '. . w w w w . . '
       '. . s s s s . . '
       '. . e e e e . . ';
-      background: goldenrod;
+    /* background: goldenrod; */
+    background: linear-gradient(
+      0.25turn, 
+      goldenrod, 
+      ${props => props.theme.secondary});
   `};
   ${media.desktop`
     grid-template-columns: repeat(8, 1fr);
@@ -42,29 +46,41 @@ const PageContainer = styled.div`
       '. . w w w w . . '
       '. . s s s s . . '
       '. . e e e e . . ';;
-      background: dodgerblue;
+    /* background: dodgerblue; */
+    background: linear-gradient(
+      0.25turn, 
+      dodgerblue, 
+      ${props => props.theme.secondary});
   `};
   ${media.tablet`
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      't . . . . . . .'
-      'a a a a a a a a'
-      'w w w w w w w w'
-      's s s s s s s s'
-      'e e e e e e e e';
-      background: mediumseagreen;
+      't . . . . .'
+      'a a a a a a'
+      'w w w w w w'
+      's s s s s s'
+      'e e e e e e';
+    /* background: mediumseagreen; */
+    background: linear-gradient(
+      0.25turn, 
+      mediumseagreen, 
+      ${props => props.theme.secondary});
   `};
   ${media.phone`
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 8;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
     grid-template-areas:
-      't . . . . . . .'
-      'a a a a a a a a'
-      'w w w w w w w w'
-      's s s s s s s s'
-      'e e e e e e e e';
-      background: palevioletred;
+      't . . .'
+      'a a a a'
+      'w w w w'
+      's s s s'
+      'e e e e';
+    /* background: palevioletred; */
+    background: linear-gradient(
+      0.25turn, 
+      palevioletred, 
+      ${props => props.theme.secondary});
   `};
 `
 
