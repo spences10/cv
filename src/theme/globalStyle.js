@@ -36,11 +36,7 @@ injectGlobal`
   body {
     margin: 0;
     font-family: sans-serif;
-    word-wrap: break-word;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Open Sans';
+    /* word-wrap: break-word; */
   }
 
   a {
