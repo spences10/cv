@@ -55,7 +55,7 @@ const Education = props => {
 }
 
 Education.propTypes = {
-  educationData: PropTypes.object
+  educationData: PropTypes.array
 }
 
 export default Education
