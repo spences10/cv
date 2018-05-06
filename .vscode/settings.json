@@ -8,6 +8,7 @@
     "mailto",
     "noopener",
     "templating",
-    "uppercase"
+    "uppercase",
+    "viewbox"
   ]
 }
