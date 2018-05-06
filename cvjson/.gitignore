@@ -20,10 +20,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.cache/
-
-.well-known/
-
-# Build directory
-public/
-cv/
