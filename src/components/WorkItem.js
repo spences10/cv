@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment'
+import dayjs from 'dayjs'
 import styled from 'styled-components'
 
 import {
@@ -40,10 +40,10 @@ const WorkItem = props => {
     endDate: propsEndDate
   } = props.workItemData
   const getWorkDates = () => {
-    const startDate = moment(propsStartDate).format('MMM, YYYY')
+    const startDate = dayjs(propsStartDate).format('MMM, YYYY')
     const endDate = () => {
       if (endDate !== '') {
-        return moment(propsEndDate).format('MMM, YYYY')
+        return dayjs(propsEndDate).format('MMM, YYYY')
       } else {
         return 'Present'
       }
