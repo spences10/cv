@@ -1,6 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { media } from '../theme/globalStyle'
+
+// import { Dump } from '../util/helpers'
 
 import {
   UpperCaseHeading as H,
@@ -11,6 +14,9 @@ import {
 } from './shared/SharedComponents'
 
 import defaultAvi from '../img/default_avatar.png'
+
+import { ICONS } from '../theme/constants'
+import Icon from '../components/Icon'
 
 const AboutWrapper = IW.extend`
   grid-area: a;
@@ -156,11 +162,17 @@ const About = props => {
         <AboutLabel>{label}</AboutLabel>
         <AboutImg src={picture || defaultAvi} />
       </AboutNameLabel>
+
       <EmailPhoneSiteWrapper>
         <AboutEmail
           href={`mailto:${email}?subject=Hi ${name} 👋`}
           target="_blank"
           rel="noopener">
+          <Icon
+            icon={ICONS.ENVELOPE}
+            size={25}
+            color={({ theme }) => theme.primary}
+          />
           {email}
         </AboutEmail>
         <AboutPhone href={phone} target="_blank" rel="noopener">
@@ -174,6 +186,10 @@ const About = props => {
       {/* <Dump props={props} /> */}
     </AboutWrapper>
   )
+}
+
+About.propTypes = {
+  aboutData: PropTypes.object
 }
 
 export default About
