@@ -47,7 +47,7 @@ export const UpperCaseHeading = Heading.extend`
   text-transform: uppercase;
   &:hover {
     letter-spacing: 0.15rem;
-    transition: all 1s;
+    transition: all 10s;
   }
 `
 

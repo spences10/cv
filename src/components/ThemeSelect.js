@@ -3,10 +3,12 @@ import styled from 'styled-components'
 
 const SelectWrapper = styled.div`
   grid-area: t;
+  margin: 0rem 0.5rem 0rem 0.25rem;
+  padding: 0rem 0.5rem 0rem 0.25rem;
 `
 
 const Select = styled.select`
-  margin: 2rem 0.5rem;
+  margin: 0.5rem 0.5rem;
   padding: 0rem 0.5rem;
 
   font-family: Roboto;
@@ -26,12 +28,12 @@ export const SelectOpt = styled.option`
 class ThemeSelect extends React.Component {
   render() {
     return (
-      <div>
+      <SelectWrapper>
         <Select onChange={e => this.props.handleThemeChange(e)}>
           <SelectOpt value="theme1">Theme 1</SelectOpt>
           <SelectOpt value="theme2">Theme 2</SelectOpt>
         </Select>
-      </div>
+      </SelectWrapper>
     )
   }
 }

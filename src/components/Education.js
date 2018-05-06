@@ -9,6 +9,11 @@ const EducationWrapper = IW.extend`
   grid-area: e;
 `
 
+const ContentWrapper = styled.div`
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.51rem;
+`
+
 const EducationTitle = styled.h2``
 
 const EducationItemWrapper = styled.div``
@@ -48,8 +53,10 @@ const Education = props => {
 
   return (
     <EducationWrapper>
-      <EducationTitle>Education</EducationTitle>
-      {getEducation}
+      <ContentWrapper>
+        <EducationTitle>Education</EducationTitle>
+        {getEducation}
+      </ContentWrapper>
     </EducationWrapper>
   )
 }

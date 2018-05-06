@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+import { media } from '../theme/globalStyle'
 
 import {
-  Heading,
+  UpperCaseHeading as H,
   ItemWrapper as IW,
   StyledHyperLink as SHL,
   StyledDiv as SD,
@@ -22,14 +23,42 @@ const AboutNameLabel = SD.extend`
   grid-template-areas:
     'n n n p p'
     'l l l p p';
+  ${media.giant`
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'n n n p p'
+      'l l l p p';
+  `};
+  ${media.desktop`
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'n n n p p'
+      'l l l p p';
+  `};
+  ${media.tablet`
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'n n n p p'
+      'l l l p p';
+  `};
+  ${media.phone`
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'n n p'
+      'l l p';
+  `};
 `
 
-const AboutName = styled.p`
+const AboutName = H.extend`
   grid-area: n;
-  /* font-size: 3rem; */
+  font-size: 3rem;
   font-family: ${props => props.theme.fontHeader};
-  /* margin: 0.1rem 0rem 0.1rem 0rem; */
-  /* padding: 0.1rem 0rem 0.1rem 0rem; */
+  margin: 0.1rem 0rem 0.1rem 0rem;
+  padding: 0.1rem 0rem 0.1rem 0rem;
 `
 // top right bottom left
 const AboutLabel = styled.p`
@@ -43,8 +72,8 @@ const AboutImg = styled.img`
   grid-area: p;
   object-fit: cover;
   margin: 1rem;
-  padding: 1rem;
-  width: 60%;
+  padding: 0rem;
+  width: 80%;
   border-radius: 50%;
   background-image: url(${props => props.src};);
 `
@@ -56,24 +85,55 @@ const EmailPhoneSiteWrapper = SD.extend`
   grid-template-areas:
     'e s'
     'p .';
+  ${media.giant`
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'e s'
+      'p .';
+  `};
+  ${media.desktop`
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'e'
+      's'
+      'p';
+  `};
+  ${media.tablet`
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'e' 
+      's'
+      'p';
+  `};
+  ${media.phone`
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'e'
+      's'
+      'p';
+  `};
 `
 
 const AboutEmail = SHL.extend`
   grid-area: e;
-  padding: 0.25rem 0rem;
-  margin: 0.25rem 0rem;
+  padding: 0.1rem 0rem;
+  margin: 0.1rem 0rem;
 `
 
 const AboutPhone = SHL.extend`
   grid-area: p;
-  padding: 0.25rem 0rem;
-  margin: 0.25rem 0rem;
+  padding: 0.1rem 0rem;
+  margin: 0.1rem 0rem;
 `
 
 const AboutWebsite = SHL.extend`
   grid-area: s;
-  padding: 0.25rem 0rem;
-  margin: 0.25rem 0rem;
+  padding: 0.1rem 0rem;
+  margin: 0.1rem 0rem;
 `
 
 const AboutSummary = SD.extend``

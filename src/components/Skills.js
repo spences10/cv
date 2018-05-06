@@ -8,7 +8,15 @@ const SkillsWrapper = IW.extend`
   grid-area: s;
 `
 
-const StyledList = styled.ul``
+const ContentWrapper = styled.div`
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.51rem;
+`
+
+const StyledList = styled.ul`
+  margin: 0rem;
+  padding: 0rem;
+`
 
 const StyledLi = styled.li``
 
@@ -22,21 +30,23 @@ class Skills extends React.Component {
     // console.log('=====================')
     return (
       <SkillsWrapper>
-        <h2>Skills</h2>
-        {Object.keys(skillsData).map((key, index) => {
-          return (
-            <React.Fragment key={index}>
-              <StyledList>{skillsData[key].name}</StyledList>
-              {/* <SkillsItem
+        <ContentWrapper>
+          <h2>Skills</h2>
+          {Object.keys(skillsData).map((key, index) => {
+            return (
+              <React.Fragment key={index}>
+                <StyledList>{skillsData[key].name}</StyledList>
+                {/* <SkillsItem
                   skillsKey={skillsData[key].name}
                   skillsData={skillsData[key]}
                 /> */}
-              {skillsData[key].keywords.map((key, index) => {
-                return <StyledLi key={key + index}>{key}</StyledLi>
-              })}
-            </React.Fragment>
-          )
-        })}
+                {skillsData[key].keywords.map((key, index) => {
+                  return <StyledLi key={key + index}>{key}</StyledLi>
+                })}
+              </React.Fragment>
+            )
+          })}
+        </ContentWrapper>
       </SkillsWrapper>
     )
   }
