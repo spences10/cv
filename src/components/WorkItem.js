@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import moment from 'moment'
 import styled from 'styled-components'
 
@@ -73,6 +74,10 @@ const WorkItem = props => {
       <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
     </WorkItemWrapper>
   )
+}
+
+WorkItem.propTypes = {
+  workItemData: PropTypes.object
 }
 
 export default WorkItem
