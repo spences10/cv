@@ -1,5 +1,6 @@
 {
   "name": "cvjson",
+  "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +9,15 @@
     "loadCv": "now cv.json && npm run aliasIt",
     "aliasIt": "now alias"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "truncate -s 0 cv.json"
+    }
+  },
   "keywords": [],
   "author": "Scott Spence <spences10apps@gmail.com> (https://blog.scottspence.me/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "0.14.3"
+  }
 }
