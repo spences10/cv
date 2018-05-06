@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import styled, { ThemeProvider } from 'styled-components'
 
 // import { Dump } from '../util/helpers'
 import About from '../components/About'
@@ -9,7 +9,7 @@ import Skills from '../components/Skills'
 import Education from '../components/Education'
 import ThemeSelect from '../components/ThemeSelect'
 
-import { media } from '../theme/globalStyle'
+import { theme1, theme2, media } from '../theme/globalStyle'
 
 const PageContainer = styled.div`
   display: grid;
@@ -84,27 +84,52 @@ const PageContainer = styled.div`
   `};
 `
 
-const IndexPage = props => {
-  const {
-    basics,
-    work,
-    skills,
-    education
-  } = props.data.allCv.edges[0].node
-  return (
-    <PageContainer>
-      {/* <ThemeSelect handleThemeChange={this.handleThemeChange} /> */}
-      {/* <Dump
-        props={basics}
-        props={props.data.allCv.edges[0].node}
-        pageResources={props.pageResources}
-      /> */}
-      <About aboutData={basics} />
-      <Work workData={work} />
-      <Skills skillsData={skills} />
-      <Education educationData={education} />
-    </PageContainer>
-  )
+class IndexPage extends React.Component {
+  // const IndexPage = props => {
+
+  state = {
+    apiUrl: 'https://cvjson.now.sh/',
+    theme: theme1
+  }
+
+  handleThemeChange = e => {
+    let theme = e.target.value
+    theme === 'theme1' ? (theme = theme1) : (theme = theme2)
+    this.setState({ theme })
+  }
+
+  render() {
+    const {
+      basics,
+      work,
+      skills,
+      education
+    } = this.props.data.allCv.edges[0].node
+    return (
+      <ThemeProvider theme={this.state.theme}>
+        <PageContainer>
+          <ThemeSelect handleThemeChange={this.handleThemeChange} />
+          {/* <Dump
+          props={basics}
+          props={props.data.allCv.edges[0].node}
+          pageResources={props.pageResources}
+        /> */}
+          <About aboutData={basics} />
+          <Work workData={work} />
+          <Skills skillsData={skills} />
+          <Education educationData={education} />
+        </PageContainer>
+      </ThemeProvider>
+    )
+  }
+}
+
+IndexPage.propTypes = {
+  data: PropTypes.object,
+  basics: PropTypes.object,
+  work: PropTypes.object,
+  skills: PropTypes.object,
+  education: PropTypes.object
 }
 
 export default IndexPage
