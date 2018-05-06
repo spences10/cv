@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'gatsby-link'
 
 export const StyledDiv = styled.div`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
