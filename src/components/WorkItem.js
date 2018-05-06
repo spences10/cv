@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import moment from 'moment'
+import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
 import {
@@ -41,10 +41,10 @@ const WorkItem = props => {
     endDate: propsEndDate
   } = props.workItemData
   const getWorkDates = () => {
-    const startDate = moment(propsStartDate).format('MMM, YYYY')
+    const startDate = format(propsStartDate, 'MMM, YYYY')
     const endDate = () => {
-      if (endDate !== '') {
-        return moment(propsEndDate).format('MMM, YYYY')
+      if (isValid(propsEndDate)) {
+        return format(propsEndDate, 'MMM YYYY')
       } else {
         return 'Present'
       }
