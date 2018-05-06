@@ -9,6 +9,8 @@ import {
   StyledP as SP
 } from './shared/SharedComponents'
 
+import defaultAvi from '../img/default_avatar.png'
+
 const AboutWrapper = IW.extend`
   grid-area: a;
 `
@@ -92,7 +94,7 @@ const About = props => {
       <AboutNameLabel>
         <AboutName>{name}</AboutName>
         <AboutLabel>{label}</AboutLabel>
-        <AboutImg src={picture} />
+        <AboutImg src={picture || defaultAvi} />
       </AboutNameLabel>
       <EmailPhoneSiteWrapper>
         <AboutEmail
