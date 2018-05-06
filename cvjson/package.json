@@ -7,11 +7,12 @@
   "scripts": {
     "pullCv": "curl https://cvjson.now.sh/ --output cv.json",
     "loadCv": "now cv.json && npm run aliasIt",
+    "killCv": "truncate -s 0 cv.json",
     "aliasIt": "now alias"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "truncate -s 0 cv.json"
+      "pre-commit": "npm run killCv"
     }
   },
   "keywords": [],
