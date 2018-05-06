@@ -5,6 +5,7 @@
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
+    "date-fns": "2.0.0-alpha.7",
     "gatsby": "1.9.247",
     "gatsby-link": "1.6.40",
     "gatsby-plugin-react-helmet": "2.0.10",
