@@ -5,7 +5,6 @@
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
-    "babel-plugin-styled-components": "1.5.1",
     "dayjs": "1.5.18",
     "gatsby": "1.9.247",
     "gatsby-link": "1.6.40",
