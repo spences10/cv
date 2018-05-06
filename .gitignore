@@ -23,6 +23,7 @@ yarn-error.log*
 .cache/
 
 .well-known/
+cv.json
 
 # Build directory
 public/
