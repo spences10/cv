@@ -20,12 +20,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/cvjson
-cv.json
-
 .cache/
 
-public/
+.well-known/
 
 # Build directory
 public/
