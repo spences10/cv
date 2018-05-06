@@ -1,0 +1,14 @@
+{
+  "name": "cvjson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pullCv": "curl https://cvjson.now.sh/ --output cv.json",
+    "loadCv": "now cv.json && npm run aliasIt",
+    "aliasIt": "now alias"
+  },
+  "keywords": [],
+  "author": "Scott Spence <spences10apps@gmail.com> (https://blog.scottspence.me/)",
+  "license": "MIT"
+}
