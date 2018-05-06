@@ -1,5 +1,6 @@
 import React from 'react'
 import moment from 'moment'
+import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
 import { ItemWrapper as IW } from './shared/SharedComponents'
@@ -24,12 +25,10 @@ const WorkItemHighlights = styled.ul``
 
 const Education = props => {
   const getEducation = props.educationData.map((item, index) => {
-    const educationStartDate = moment(item.startDate).format(
-      'MMM, YYYY'
-    )
+    const educationStartDate = format(item.startDate, 'MMM, YYYY')
     const educationEndDate = () => {
-      if (item.endDate !== '') {
-        return moment(item.endDate).format('MMM, YYYY')
+      if (isValid(item.endDate)) {
+        return format(item.endDate, 'MMM YYYY')
       } else {
         return 'Present'
       }
