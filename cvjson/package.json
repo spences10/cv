@@ -12,13 +12,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run killCv"
+      "pre-commit": "echo 'i log'"
     }
   },
   "keywords": [],
   "author": "Scott Spence <spences10apps@gmail.com> (https://blog.scottspence.me/)",
   "license": "MIT",
   "devDependencies": {
-    "husky": "0.14.3"
+    "husky": "1.0.0-rc.2"
   }
 }
