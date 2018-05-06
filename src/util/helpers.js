@@ -16,8 +16,7 @@ export const Dump = props => (
       border: '1px solid #efefef',
       padding: 10,
       background: 'white'
-    }}
-  >
+    }}>
     {Object.keys(props).map(prop => (
       <pre key={prop}>
         <strong style={{ color: 'white', background: 'red' }}>
