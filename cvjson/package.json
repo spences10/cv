@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "pullCv": "curl https://cvjson.now.sh/ --output cv.json",
-    "loadCv": "now cv.json && npm run aliasIt && npm run killCv",
+    "pushCv": "now cv.json && npm run aliasIt && npm run killCv",
     "killCv": "truncate -s 0 cv.json",
     "aliasIt": "now alias"
   },
