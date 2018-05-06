@@ -1,5 +1,5 @@
 import React from 'react'
-import moment from 'moment'
+import PropTypes from 'prop-types'
 import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
@@ -52,6 +52,10 @@ const Education = props => {
       {getEducation}
     </EducationWrapper>
   )
+}
+
+Education.propTypes = {
+  educationData: PropTypes.object
 }
 
 export default Education
