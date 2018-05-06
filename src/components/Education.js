@@ -1,11 +1,17 @@
 import React from 'react'
-import moment from 'moment'
+import PropTypes from 'prop-types'
+import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
 import { ItemWrapper as IW } from './shared/SharedComponents'
 
 const EducationWrapper = IW.extend`
   grid-area: e;
+`
+
+const ContentWrapper = styled.div`
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.51rem;
 `
 
 const EducationTitle = styled.h2``
@@ -24,12 +30,10 @@ const WorkItemHighlights = styled.ul``
 
 const Education = props => {
   const getEducation = props.educationData.map((item, index) => {
-    const educationStartDate = moment(item.startDate).format(
-      'MMM, YYYY'
-    )
+    const educationStartDate = format(item.startDate, 'MMM, YYYY')
     const educationEndDate = () => {
-      if (item.endDate !== '') {
-        return moment(item.endDate).format('MMM, YYYY')
+      if (isValid(item.endDate)) {
+        return format(item.endDate, 'MMM YYYY')
       } else {
         return 'Present'
       }
@@ -49,10 +53,16 @@ const Education = props => {
 
   return (
     <EducationWrapper>
-      <EducationTitle>Education</EducationTitle>
-      {getEducation}
+      <ContentWrapper>
+        <EducationTitle>Education</EducationTitle>
+        {getEducation}
+      </ContentWrapper>
     </EducationWrapper>
   )
+}
+
+Education.propTypes = {
+  educationData: PropTypes.array
 }
 
 export default Education

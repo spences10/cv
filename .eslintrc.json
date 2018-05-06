@@ -6,6 +6,7 @@
     "node": true
   },
   "extends": ["plugin:react/recommended", "eslint:recommended"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 2017,
     "ecmaFeatures": {

@@ -5,6 +5,8 @@
     "cleanup",
     "cvjson",
     "dayjs",
+    "mailto",
+    "noopener",
     "templating",
     "uppercase"
   ]
