@@ -5,32 +5,61 @@ import styled from 'styled-components'
 
 import {
   StyledDiv as SD,
-  StyledP as SP
+  StyledP as SP,
+  StyledSpan as SS
 } from './shared/SharedComponents'
 
-const WorkDates = styled.span`
-  margin: -1rem;
-  padding: -1rem;
-`
-
 const WorkItemWrapper = SD.extend`
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'comp comp pos pos date date'
+    'w    w    w   w   w    w   '
+    'h    h    h   h   h    h   ';
   margin: 0.5rem;
   padding: 0.5rem;
 `
 
-const WorkItemTitle = SP.extend`
-  margin: 0rem;
-  padding: 0rem;
+const WeightAndColour = SS.extend`
+  color: ${props => props.theme.fontDark};
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  &:hover {
+    letter-spacing: 0.5rem;
+    transition: all 10s;
+  }
 `
 
-const WorkItemDates = SP.extend``
+const Company = WeightAndColour.extend`
+  grid-area: comp;
+  margin-left: 0rem;
+  padding-left: 0rem;
+  padding-bottom: 0.125rem;
+  margin-bottom: 0.125rem;
+`
+const Position = WeightAndColour.extend`
+  grid-area: pos;
+  padding-bottom: 0.125rem;
+  margin-bottom: 0.125rem;
+`
+const Dates = WeightAndColour.extend`
+  grid-area: date;
+  padding-bottom: 0.125rem;
+  margin-bottom: 0.125rem;
+`
 
 const WorkItemSummary = SP.extend`
-  margin: 0rem;
-  padding: 0rem;
+  grid-area: w;
+  padding: 1rem 0rem 0rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
+  border-top: 2px solid ${props => props.theme.fontLight};
 `
 
 const WorkItemHighlights = styled.ul`
+  grid-area: h;
   margin: 0rem;
   padding: 0rem;
 `
@@ -38,7 +67,11 @@ const WorkItemHighlights = styled.ul`
 const WorkItem = props => {
   const {
     startDate: propsStartDate,
-    endDate: propsEndDate
+    endDate: propsEndDate,
+    highlights,
+    position,
+    company,
+    summary
   } = props.workItemData
   const getWorkDates = () => {
     const startDate = format(propsStartDate, 'MMM, YYYY')
@@ -50,27 +83,19 @@ const WorkItem = props => {
       }
     }
 
-    return (
-      <WorkDates>
-        {startDate} - {endDate()}
-      </WorkDates>
-    )
+    return `${startDate} - ${endDate()}`
   }
 
-  const getHighlights = props.workItemData.highlights.map(
-    (item, index) => {
-      return <li key={index}>{item}</li>
-    }
-  )
+  const getHighlights = highlights.map((item, index) => {
+    return <li key={index}>{item}</li>
+  })
 
   return (
     <WorkItemWrapper>
-      <WorkItemTitle>
-        {props.workItemData.position},{' '}
-        <span>{props.workItemData.company}</span>
-      </WorkItemTitle>
-      <WorkItemDates>{getWorkDates()}</WorkItemDates>
-      <WorkItemSummary>{props.workItemData.summary}</WorkItemSummary>
+      <Company>{company}</Company>
+      <Position>{position}</Position>
+      <Dates>{getWorkDates()}</Dates>
+      <WorkItemSummary>{summary}</WorkItemSummary>
       <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
     </WorkItemWrapper>
   )
