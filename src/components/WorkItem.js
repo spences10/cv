@@ -15,7 +15,9 @@ const WorkItemWrapper = SD.extend`
   grid-template-rows: auto;
   grid-template-areas:
     'comp comp pos pos date date'
+    'wh   wh   wh  wh  wh   wh  '
     'w    w    w   w   w    w   '
+    'hh   hh   hh  hh  hh   hh  '
     'h    h    h   h   h    h   ';
   margin: 0.5rem;
   padding: 0.5rem;
@@ -40,28 +42,45 @@ const Company = WeightAndColour.extend`
   padding-bottom: 0.125rem;
   margin-bottom: 0.125rem;
 `
+
 const Position = WeightAndColour.extend`
   grid-area: pos;
   padding-bottom: 0.125rem;
   margin-bottom: 0.125rem;
 `
+
 const Dates = WeightAndColour.extend`
   grid-area: date;
   padding-bottom: 0.125rem;
   margin-bottom: 0.125rem;
 `
 
+const ItemHeader = SS.extend`
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  padding: 0.25rem 0rem;
+  margin: 0.25rem 0rem;
+  border-top: 2px solid ${props => props.theme.fontLight};
+`
+
+const WorkItemHeader = ItemHeader.extend`
+  grid-area: wh;
+`
+
 const WorkItemSummary = SP.extend`
   grid-area: w;
-  padding: 1rem 0rem 0rem 0rem;
-  margin: 0rem 0rem 0rem 0rem;
-  border-top: 2px solid ${props => props.theme.fontLight};
+  padding: 0.125rem 0rem 0.125rem 0rem;
+  margin: 0.125rem 0rem 0.125rem 0rem;
+`
+
+const HighlightsHeader = ItemHeader.extend`
+  grid-area: hh;
 `
 
 const WorkItemHighlights = styled.ul`
   grid-area: h;
-  margin: 0rem;
   padding: 0rem;
+  margin: 0rem;
 `
 
 const WorkItem = props => {
@@ -95,7 +114,9 @@ const WorkItem = props => {
       <Company>{company}</Company>
       <Position>{position}</Position>
       <Dates>{getWorkDates()}</Dates>
+      <WorkItemHeader>summary</WorkItemHeader>
       <WorkItemSummary>{summary}</WorkItemSummary>
+      <HighlightsHeader>highlights</HighlightsHeader>
       <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
     </WorkItemWrapper>
   )
