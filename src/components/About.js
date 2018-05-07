@@ -125,47 +125,6 @@ const AboutImg = styled.img`
   /* filter: grayscale(100%); */
 `
 
-// const EmailPhoneSiteWrapper = SD.extend`
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr);
-//   grid-template-rows: auto;
-//   grid-template-areas:
-//     'e s'
-//     'p .';
-//   ${media.giant`
-//     grid-template-columns: repeat(1, 1fr);
-//     grid-template-rows: auto;
-//     grid-template-areas:
-//       'e'
-//       's'
-//       'p';
-//   `};
-//   ${media.desktop`
-//     grid-template-columns: repeat(1, 1fr);
-//     grid-template-rows: auto;
-//     grid-template-areas:
-//       'e'
-//       's'
-//       'p';
-//   `};
-//   ${media.tablet`
-//     grid-template-columns: repeat(1, 1fr);
-//     grid-template-rows: auto;
-//     grid-template-areas:
-//       'e'
-//       's'
-//       'p';
-//   `};
-//   ${media.phone`
-//     grid-template-columns: repeat(1, 1fr);
-//     grid-template-rows: auto;
-//     grid-template-areas:
-//       'e'
-//       's'
-//       'p';
-//   `};
-// `
-
 // start end centre stretch
 const AboutEmail = SHL.extend`
   grid-area: email;
@@ -187,8 +146,9 @@ const AboutWebsite = SHL.extend`
 
 const AboutSummary = SD.extend`
   grid-area: about;
-  padding: 0.1rem 0rem;
-  margin: 0.1rem 0rem;
+  border-top: 2px solid ${props => props.theme.light};
+  padding: 1rem 0rem 0rem 0rem;
+  margin: 2rem 0rem 0rem 0rem;
 `
 
 class About extends React.Component {
