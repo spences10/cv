@@ -144,7 +144,7 @@ const AboutWebsite = SHL.extend`
 
 const AboutSummary = SD.extend`
   grid-area: about;
-  border-top: 2px solid ${props => props.theme.light};
+  border-top: 2px solid ${props => props.theme.dark};
   padding: 1rem 0rem 0rem 0rem;
   margin: 2rem 0rem 0rem 0rem;
 `
