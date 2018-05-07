@@ -31,7 +31,6 @@ class Skills extends React.Component {
     return (
       <SkillsWrapper>
         <ContentWrapper>
-          <h2>Skills</h2>
           {Object.keys(skillsData).map((key, index) => {
             return (
               <React.Fragment key={index}>
