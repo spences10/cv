@@ -64,7 +64,8 @@ injectGlobal`
 `
 
 const sizes = {
-  giant: 1170,
+  monitor: 1800,
+  giant: 1500,
   desktop: 992,
   tablet: 768,
   phone: 376

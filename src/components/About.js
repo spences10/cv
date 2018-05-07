@@ -23,45 +23,72 @@ const AboutWrapper = IW.extend`
   grid-area: a;
 `
 
-const AboutNameLabel = SD.extend`
+const AboutLayout = SD.extend`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    'n n n p p'
-    'l l l p p';
+    'name  name  name  name  pic   pic  '
+    'label label label label pic   pic  '
+    'email email site  site  phone phone'
+    'about about about about about about';
+  ${media.monitor`
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      'name  name  name  name  pic   pic  '
+      'label label label label pic   pic  '
+      'email email site  site  phone phone'
+      'about about about about about about';
+  `};
   ${media.giant`
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'n n n p p'
-      'l l l p p';
+      'name  name  name  pic pic    '
+      'label label label pic pic    '
+      'email email email .   .      '
+      'site  site  site  .   .      '
+      'phone phone phone .   .      '
+      'about about about about about';
   `};
   ${media.desktop`
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'n n n p p'
-      'l l l p p';
+      'name  name  name  pic   pic  '
+      'label label label pic   pic  '
+      'email email email email .    '
+      'site  site  site  site  .    '
+      'phone phone phone phone .    '
+      'about about about about about';
   `};
   ${media.tablet`
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'n n n p p'
-      'l l l p p';
+      'name  name  pic   pic  '
+      'label label pic   pic  '
+      'email email email .    '
+      'site  site  site  .    '
+      'phone phone phone .    '
+      'about about about about';
   `};
   ${media.phone`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'n n p'
-      'l l p';
+      'name  pic   pic  '
+      'label pic   pic  '
+      'email email email'
+      'site  site  site '
+      'phone phone phone'
+      'about about about';
   `};
 `
 
 const AboutName = UH.extend`
-  grid-area: n;
+  grid-area: name;
   font-size: 3rem;
   font-family: ${props => props.theme.fontHeader};
   margin: 0.1rem 0rem 0.1rem 0rem;
@@ -69,87 +96,100 @@ const AboutName = UH.extend`
 `
 // top right bottom left
 const AboutLabel = H.extend`
-  grid-area: l;
+  grid-area: label;
   font-size: 1.8rem;
   margin: 0.1rem 0rem 0.1rem 0rem;
   padding: 0.1rem 0rem 0.1rem 0rem;
 `
 
 const AboutImg = styled.img`
-  grid-area: p;
+  grid-area: pic;
   object-fit: cover;
   margin: 1rem;
   padding: 0rem;
   width: 80%;
   border-radius: 50%;
   background-image: url(${props => props.src};);
-`
-
-const ImgButton = styled.`
-  
-`
-
-const EmailPhoneSiteWrapper = SD.extend`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    'e s'
-    'p .';
   ${media.giant`
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'e'
-      's'
-      'p';
+    width: 80%;
   `};
   ${media.desktop`
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'e'
-      's'
-      'p';
+    width: 80%;
   `};
   ${media.tablet`
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'e' 
-      's'
-      'p';
+    width: 80%;
   `};
   ${media.phone`
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'e'
-      's'
-      'p';
+    width: 80%;
   `};
+  /* filter: grayscale(100%); */
 `
+
+// const EmailPhoneSiteWrapper = SD.extend`
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   grid-template-rows: auto;
+//   grid-template-areas:
+//     'e s'
+//     'p .';
+//   ${media.giant`
+//     grid-template-columns: repeat(1, 1fr);
+//     grid-template-rows: auto;
+//     grid-template-areas:
+//       'e'
+//       's'
+//       'p';
+//   `};
+//   ${media.desktop`
+//     grid-template-columns: repeat(1, 1fr);
+//     grid-template-rows: auto;
+//     grid-template-areas:
+//       'e'
+//       's'
+//       'p';
+//   `};
+//   ${media.tablet`
+//     grid-template-columns: repeat(1, 1fr);
+//     grid-template-rows: auto;
+//     grid-template-areas:
+//       'e'
+//       's'
+//       'p';
+//   `};
+//   ${media.phone`
+//     grid-template-columns: repeat(1, 1fr);
+//     grid-template-rows: auto;
+//     grid-template-areas:
+//       'e'
+//       's'
+//       'p';
+//   `};
+// `
 
 // start end centre stretch
 const AboutEmail = SHL.extend`
-  grid-area: e;
+  grid-area: email;
   padding: 0.1rem 0rem;
   margin: 0.1rem 0rem;
 `
 
 const AboutPhone = SHL.extend`
-  grid-area: p;
+  grid-area: phone;
   padding: 0.1rem 0rem;
   margin: 0.1rem 0rem;
 `
 
 const AboutWebsite = SHL.extend`
-  grid-area: s;
+  grid-area: site;
   padding: 0.1rem 0rem;
   margin: 0.1rem 0rem;
 `
 
-const AboutSummary = SD.extend``
+const AboutSummary = SD.extend`
+  grid-area: about;
+  padding: 0.1rem 0rem;
+  margin: 0.1rem 0rem;
+`
 
 class About extends React.Component {
   // const About = props => {
@@ -168,13 +208,11 @@ class About extends React.Component {
 
     return (
       <AboutWrapper>
-        <AboutNameLabel>
+        <AboutLayout>
           <AboutName>{name}</AboutName>
           <AboutLabel>{label}</AboutLabel>
           <AboutImg src={picture || defaultAvi} />
-        </AboutNameLabel>
 
-        <EmailPhoneSiteWrapper>
           <AboutEmail
             href={`mailto:${email}?subject=Hi ${name} 👋`}
             target="_blank"
@@ -205,9 +243,9 @@ class About extends React.Component {
             />
             {website}
           </AboutWebsite>
-        </EmailPhoneSiteWrapper>
-        <AboutSummary>{summary}</AboutSummary>
-        {/* <Dump props={props} /> */}
+          <AboutSummary>{summary}</AboutSummary>
+          {/* <Dump props={props} /> */}
+        </AboutLayout>
       </AboutWrapper>
     )
   }
