@@ -10,7 +10,9 @@ export const theme1 = {
   foreground: '#fefefe',
   border: '#044040',
   fontHeader: '"Titillium Web", sans-serif',
-  fontBody: 'Open Sans, sans, sans-serif'
+  fontBody: 'Open Sans, sans, sans-serif',
+  fontDark: '#34434b',
+  fontLight: '#586368'
 }
 
 export const theme2 = {
@@ -23,7 +25,9 @@ export const theme2 = {
   foreground: '#f7f0f0',
   border: '#054545',
   fontHeader: 'Open Sans, sans, sans-serif',
-  fontBody: '"Titillium Web", sans-serif'
+  fontBody: '"Titillium Web", sans-serif',
+  fontDark: '#034544',
+  fontLight: '#596869'
 }
 
 injectGlobal`
@@ -64,7 +68,8 @@ injectGlobal`
 `
 
 const sizes = {
-  giant: 1170,
+  monitor: 1800,
+  giant: 1500,
   desktop: 992,
   tablet: 768,
   phone: 376

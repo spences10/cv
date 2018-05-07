@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 import WorkItem from './WorkItem'
-import styled from 'styled-components'
 
 import { ItemWrapper as IW } from './shared/SharedComponents'
 
@@ -18,6 +19,10 @@ const Work = props => {
   }
 
   return <WorkWrapper>{getWorkExperience()}</WorkWrapper>
+}
+
+Work.propTypes = {
+  workData: PropTypes.object
 }
 
 export default Work

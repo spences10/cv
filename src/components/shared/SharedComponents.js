@@ -10,6 +10,11 @@ export const StyledP = styled.p`
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
 `
 
+export const StyledSpan = styled.span`
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+`
+
 export const ItemWrapper = styled.div`
   /* border-top: 4px solid ${props => props.theme.primary}; */
   border-radius: 5px;
@@ -18,7 +23,7 @@ export const ItemWrapper = styled.div`
   padding: 0rem 0rem 1rem 0rem;
   font-family: ${props => props.theme.fontBody};
   font-weight: 400;
-  color: ${props => props.theme.dark};
+  color: ${props => props.theme.fontDark};
   background: ${props => props.theme.foreground};
   :before {
     border-radius: 5px 5px 0px 0px;
@@ -38,7 +43,7 @@ export const ItemWrapper = styled.div`
 // heavy font weight 600-700
 
 export const Heading = StyledP.extend`
-  color: ${props => props.theme.dark};
+  color: ${props => props.theme.fontDark};
   font-family: ${props => props.theme.fontHeader};
   font-weight: 700;
 `
