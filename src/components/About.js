@@ -10,8 +10,7 @@ import {
   Heading as H,
   ItemWrapper as IW,
   StyledHyperLink as SHL,
-  StyledDiv as SD,
-  StyledP as SP
+  StyledDiv as SD
 } from './shared/SharedComponents'
 
 import defaultAvi from '../img/default_avatar.png'
@@ -122,7 +121,6 @@ const AboutImg = styled.img`
   ${media.phone`
     width: 80%;
   `};
-  /* filter: grayscale(100%); */
 `
 
 // start end centre stretch
