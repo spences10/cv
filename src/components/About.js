@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { withTheme } from 'styled-components'
 import { media } from '../theme/globalStyle'
 
 // import { Dump } from '../util/helpers'
 
 import {
-  UpperCaseHeading as H,
+  UpperCaseHeading as UH,
+  Heading as H,
   ItemWrapper as IW,
   StyledHyperLink as SHL,
   StyledDiv as SD,
@@ -59,7 +60,7 @@ const AboutNameLabel = SD.extend`
   `};
 `
 
-const AboutName = H.extend`
+const AboutName = UH.extend`
   grid-area: n;
   font-size: 3rem;
   font-family: ${props => props.theme.fontHeader};
@@ -67,11 +68,11 @@ const AboutName = H.extend`
   padding: 0.1rem 0rem 0.1rem 0rem;
 `
 // top right bottom left
-const AboutLabel = styled.p`
+const AboutLabel = H.extend`
   grid-area: l;
-  /* font-size: 1.8rem; */
-  margin-top: 0.1rem;
-  padding-top: 0.1rem;
+  font-size: 1.8rem;
+  margin: 0.1rem 0rem 0.1rem 0rem;
+  padding: 0.1rem 0rem 0.1rem 0rem;
 `
 
 const AboutImg = styled.img`
@@ -84,6 +85,10 @@ const AboutImg = styled.img`
   background-image: url(${props => props.src};);
 `
 
+const ImgButton = styled.`
+  
+`
+
 const EmailPhoneSiteWrapper = SD.extend`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -92,11 +97,12 @@ const EmailPhoneSiteWrapper = SD.extend`
     'e s'
     'p .';
   ${media.giant`
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'e s'
-      'p .';
+      'e'
+      's'
+      'p';
   `};
   ${media.desktop`
     grid-template-columns: repeat(1, 1fr);
@@ -124,6 +130,7 @@ const EmailPhoneSiteWrapper = SD.extend`
   `};
 `
 
+// start end centre stretch
 const AboutEmail = SHL.extend`
   grid-area: e;
   padding: 0.1rem 0rem;
@@ -144,52 +151,71 @@ const AboutWebsite = SHL.extend`
 
 const AboutSummary = SD.extend``
 
-const About = props => {
-  const {
-    name,
-    label,
-    picture,
-    email,
-    phone,
-    website,
-    summary
-  } = props.aboutData
+class About extends React.Component {
+  // const About = props => {
+  render() {
+    const {
+      name,
+      label,
+      picture,
+      email,
+      phone,
+      website,
+      summary
+    } = this.props.aboutData
 
-  return (
-    <AboutWrapper>
-      <AboutNameLabel>
-        <AboutName>{name}</AboutName>
-        <AboutLabel>{label}</AboutLabel>
-        <AboutImg src={picture || defaultAvi} />
-      </AboutNameLabel>
+    const { theme } = this.props
 
-      <EmailPhoneSiteWrapper>
-        <AboutEmail
-          href={`mailto:${email}?subject=Hi ${name} 👋`}
-          target="_blank"
-          rel="noopener">
-          <Icon
-            icon={ICONS.ENVELOPE}
-            size={25}
-            color={({ theme }) => theme.primary}
-          />
-          {email}
-        </AboutEmail>
-        <AboutPhone href={phone} target="_blank" rel="noopener">
-          {phone}
-        </AboutPhone>
-        <AboutWebsite href={website} target="_blank" rel="noopener">
-          {website}
-        </AboutWebsite>
-      </EmailPhoneSiteWrapper>
-      <AboutSummary>{summary}</AboutSummary>
-      {/* <Dump props={props} /> */}
-    </AboutWrapper>
-  )
+    return (
+      <AboutWrapper>
+        <AboutNameLabel>
+          <AboutName>{name}</AboutName>
+          <AboutLabel>{label}</AboutLabel>
+          <AboutImg src={picture || defaultAvi} />
+        </AboutNameLabel>
+
+        <EmailPhoneSiteWrapper>
+          <AboutEmail
+            href={`mailto:${email}?subject=Hi ${name} 👋`}
+            target="_blank"
+            rel="noopener">
+            <Icon
+              icon={ICONS.ENVELOPE}
+              size={20}
+              color={theme.primary}
+              viewbox={'-5 0 32 32'}
+            />
+            {email}
+          </AboutEmail>
+          <AboutPhone href={phone} target="_blank" rel="noopener">
+            <Icon
+              icon={ICONS.PHONE}
+              size={20}
+              color={theme.primary}
+              viewbox={'-5 0 32 32'}
+            />
+            {phone}
+          </AboutPhone>
+          <AboutWebsite href={website} target="_blank" rel="noopener">
+            <Icon
+              icon={ICONS.GLOBE}
+              size={20}
+              color={theme.primary}
+              viewbox={'-5 0 32 32'}
+            />
+            {website}
+          </AboutWebsite>
+        </EmailPhoneSiteWrapper>
+        <AboutSummary>{summary}</AboutSummary>
+        {/* <Dump props={props} /> */}
+      </AboutWrapper>
+    )
+  }
 }
 
 About.propTypes = {
-  aboutData: PropTypes.object
+  aboutData: PropTypes.object,
+  theme: PropTypes.object
 }
 
-export default About
+export default withTheme(About)

@@ -3,24 +3,30 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const StyledIcon = styled.svg`
-  display: inline-block;
   path {
     fill: ${props => props.color};
     stroke: ${props => props.color};
     stroke-width: 0;
   }
+  display: inline-flex;
+  align-self: center;
+  top: 0.5rem;
+  position: relative;
 `
 
-const Icon = props => (
-  <StyledIcon
-    viewBox={props.viewbox}
-    width={props.size}
-    height={props.size}
-    color={props.color}
-    preserveAspectRatio="xMidYMid meet">
-    <path d={props.icon} />
-  </StyledIcon>
-)
+const Icon = props => {
+  const { color, icon, size, viewbox } = props
+  return (
+    <StyledIcon
+      viewBox={viewbox}
+      width={size}
+      height={size}
+      color={color}
+      preserveAspectRatio="xMidYMid meet">
+      <path d={icon} />
+    </StyledIcon>
+  )
+}
 
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,
@@ -31,7 +37,9 @@ Icon.propTypes = {
 
 Icon.defaultProps = {
   size: 100,
-  viewbox: '0 0 32 32'
+  viewbox: '0 0 32 32',
+  width: '100%',
+  height: '100%'
 }
 
 export default Icon
