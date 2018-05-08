@@ -14,11 +14,27 @@ const ContentWrapper = styled.div`
 `
 
 const StyledList = styled.ul`
-  margin: 0rem;
-  padding: 0rem;
+  margin: 0.5rem 0.0125rem;
+  padding: 0.5rem 0.0125rem;
 `
 
-const StyledLi = styled.li``
+const StyledLi = styled.li`
+  margin: 0.125rem 0.25rem 0.25rem 0.0125rem;
+  padding: 0.125rem 0.25rem 0.25rem 0.25rem;
+  color: 1px solid ${props => props.theme.fontLight};
+  display: inline;
+  border-radius: 10px;
+  border: 1px solid ${props => props.theme.primary};
+  &:hover {
+    background: linear-gradient(
+      0.25turn,
+      ${props => props.theme.primary},
+      ${props => props.theme.secondary}
+    );
+    color: ${props => props.theme.light};
+    border: 1px solid ${props => props.theme.background};
+  }
+`
 
 class Skills extends React.Component {
   componentDidMount() {}
@@ -31,7 +47,6 @@ class Skills extends React.Component {
     return (
       <SkillsWrapper>
         <ContentWrapper>
-          <h2>Skills</h2>
           {Object.keys(skillsData).map((key, index) => {
             return (
               <React.Fragment key={index}>

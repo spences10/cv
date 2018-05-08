@@ -17,8 +17,8 @@ const PageContainer = styled.div`
   grid-template-rows: auto;
   grid-template-areas:
     '. . a a a a . t'
-    '. . w w w w . .'
     '. . s s s s . .'
+    '. . w w w w . .'
     '. . e e e e . .';
   background: ${props => props.theme.background};
   ${media.monitor`
@@ -26,8 +26,8 @@ const PageContainer = styled.div`
     grid-template-rows: auto;
     grid-template-areas:
       '. . a a a a . t'
-      '. . w w w w . .'
       '. . s s s s . .'
+      '. . w w w w . .'
       '. . e e e e . .';
     /* background: goldenrod; */
     background: linear-gradient(
@@ -40,8 +40,8 @@ const PageContainer = styled.div`
     grid-template-rows: auto;
     grid-template-areas:
       '. . a a a a . t'
-      '. . w w w w . .'
       '. . s s s s . .'
+      '. . w w w w . .'
       '. . e e e e . .';
     /* background: goldenrod; */
     background: linear-gradient(
@@ -54,8 +54,8 @@ const PageContainer = styled.div`
     grid-template-rows: auto;
     grid-template-areas:
       '. . a a a a . t'
-      '. . w w w w . .'
       '. . s s s s . .'
+      '. . w w w w . .'
       '. . e e e e . .';
     /* background: dodgerblue; */
     background: linear-gradient(
@@ -68,8 +68,8 @@ const PageContainer = styled.div`
     grid-template-rows: auto;
     grid-template-areas:
       'a a a a a a'
-      'w w w w w w'
       's s s s s s'
+      'w w w w w w'
       'e e e e e e'
       't . . . . .';
     /* background: mediumseagreen; */
@@ -84,8 +84,8 @@ const PageContainer = styled.div`
     grid-template-areas:
       't . . .'
       'a a a a'
-      'w w w w'
       's s s s'
+      'w w w w'
       'e e e e';
     /* background: palevioletred; */
     background: linear-gradient(
@@ -126,8 +126,8 @@ class IndexPage extends React.Component {
           pageResources={props.pageResources}
         /> */}
           <About aboutData={basics} />
-          <Work workData={work} />
           <Skills skillsData={skills} />
+          <Work workData={work} />
           <Education educationData={education} />
         </PageContainer>
       </ThemeProvider>

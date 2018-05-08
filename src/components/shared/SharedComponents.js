@@ -37,6 +37,21 @@ export const ItemWrapper = styled.div`
   }
 `
 
+export const SectionHeader = styled.span`
+  margin:0.5rem;
+  padding:0.5rem;
+  color: ${props => props.theme.fontDark};
+  font-weight:700;
+  font-size:.9rem
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  &:hover {
+    letter-spacing: 0.5rem;
+    transition: all 10s;
+  }
+  text-decoration:underline;
+`
+
 // heading are uppercase with spacing
 
 // normal font weight 400-500
