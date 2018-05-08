@@ -1,8 +1,8 @@
 // SITE META ==================
 export const nameContent = 'Scott Spence - cv'
-const descriptionContent =
-  'Portfolio site of Scott Spence - web developer'
-const keywordsContent = 'cv, web developer, javascript'
+const descriptionContent = 'CV of Scott Spence - web developer'
+const keywordsContent =
+  'cv, web developer, javascript, html, css, react, node, gatsby, styled-components'
 const imageLink =
   'https://scottspence.me/favicons/firefox_app_512x512.png'
 
