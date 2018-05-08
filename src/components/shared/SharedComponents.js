@@ -15,6 +15,14 @@ export const StyledSpan = styled.span`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 `
 
+export const ItemHeader = StyledSpan.extend`
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  padding: 0.25rem 0rem;
+  margin: 0.25rem 0rem;
+  border-top: 2px solid ${props => props.theme.fontLight};
+`
+
 export const ItemWrapper = styled.div`
   /* border-top: 4px solid ${props => props.theme.primary}; */
   border-radius: 5px;
@@ -38,18 +46,18 @@ export const ItemWrapper = styled.div`
 `
 
 export const SectionHeader = styled.span`
-  margin:0.5rem;
-  padding:0.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   color: ${props => props.theme.fontDark};
-  font-weight:700;
-  font-size:.9rem
+  font-weight: 700;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   &:hover {
     letter-spacing: 0.5rem;
     transition: all 10s;
   }
-  text-decoration:underline;
+  text-decoration: underline;
 `
 
 // heading are uppercase with spacing

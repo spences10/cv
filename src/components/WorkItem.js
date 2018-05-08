@@ -4,6 +4,7 @@ import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
 import {
+  ItemHeader as IH,
   StyledDiv as SD,
   StyledP as SP,
   StyledSpan as SS
@@ -55,15 +56,7 @@ const Dates = WeightAndColour.extend`
   margin-bottom: 0.125rem;
 `
 
-const ItemHeader = SS.extend`
-  text-transform: uppercase;
-  font-size: 0.6rem;
-  padding: 0.25rem 0rem;
-  margin: 0.25rem 0rem;
-  border-top: 2px solid ${props => props.theme.fontLight};
-`
-
-const WorkItemHeader = ItemHeader.extend`
+const WorkItemHeader = IH.extend`
   grid-area: wh;
 `
 
@@ -73,7 +66,7 @@ const WorkItemSummary = SP.extend`
   margin: 0.5rem 0rem 0.125rem 0rem;
 `
 
-const HighlightsHeader = ItemHeader.extend`
+const HighlightsHeader = IH.extend`
   grid-area: hh;
 `
 
