@@ -69,8 +69,8 @@ const WorkItemHeader = ItemHeader.extend`
 
 const WorkItemSummary = SP.extend`
   grid-area: w;
-  padding: 0.125rem 0rem 0.125rem 0rem;
-  margin: 0.125rem 0rem 0.125rem 0rem;
+  padding: 0.5rem 0rem 0.125rem 0rem;
+  margin: 0.5rem 0rem 0.125rem 0rem;
 `
 
 const HighlightsHeader = ItemHeader.extend`
@@ -81,6 +81,12 @@ const WorkItemHighlights = styled.ul`
   grid-area: h;
   padding: 0rem;
   margin: 0rem;
+`
+
+const WorkItemLi = styled.li`
+  grid-area: h;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
 `
 
 const WorkItem = props => {
@@ -106,7 +112,7 @@ const WorkItem = props => {
   }
 
   const getHighlights = highlights.map((item, index) => {
-    return <li key={index}>{item}</li>
+    return <WorkItemLi key={index}>{item}</WorkItemLi>
   })
 
   return (
