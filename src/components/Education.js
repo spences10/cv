@@ -30,7 +30,7 @@ const WorkItemHighlights = styled.ul``
 
 const Education = props => {
   const getEducation = props.educationData.map((item, index) => {
-    const educationStartDate = format(item.startDate, 'MMM, YYYY')
+    const educationStartDate = format(item.startDate, 'MMM YYYY')
     const educationEndDate = () => {
       if (isValid(item.endDate)) {
         return format(item.endDate, 'MMM YYYY')
