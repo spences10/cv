@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 import {
   ItemWrapper as IW,
-  ItemHeader as IH,
   WeightAndColour as WC,
   StyledDiv as SD
 } from './shared/SharedComponents'
