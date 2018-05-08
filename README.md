@@ -5,29 +5,55 @@
 [![styled components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 [![Build Status](https://travis-ci.org/spences10/cv.svg?branch=master)](https://travis-ci.org/spences10/cv)
 
-CV using React ⚛️ (`create-react-app`) and [JSON Schema]
+## CV using React ⚛️ (`create-react-app`) and [JSON Schema]
 
-## Requirements
+Want to use this template with your data? Read on... 👀
+
+#### Requirements
 
 * Zeit now account
 * Your own [JSON Schema] CV
 
-If you want to use this for your own purposes you will need to create
-your own json CV via [JSON Schema] and create an alias for the cv.json
-in now.
+I made this to understand how Gatsby gets API data and uses it, you
+could probably do something statically with the data locally if you
+prefer.
 
-Add your cv.json and folder in src:
+If you want to use this for your own purposes you will need to create
+your own json CV via [JSON Schema] and create an alias for the
+`cv.json` file in `now`.
+
+In the folder `cvdata` there's some npm scripts to help manage the
+importing and exporting the CV data.
+
+In the `now.json` file you can add your preferred alias for where your
+CV data is going to live.
+
+Note that if you change the `"name"` value in the `now.json` file
+you'll also need to change the npm scripts in `cvdata/package.json`
+
+```json
+{
+  "name": "cvjson",
+  "alias": "cvjson.now.sh"
+}
+```
+
+Add your cv.json to the folder:
 
 ```sh
-src/cvjson/cv.json
+cvdata/cvjson/cv.json
 ```
 
 You can then upload to now with the npm scripts provided:
 
 ```sh
-npm run loadCv
-# remove stale versions with
-npm run clearStale
+npm run pushCv
+# pull data for editing
+npm run pullCv
+# after running pushCv the following scripts run
+npm run aliasIt # alias' the deployment
+npm run killCv # removes local cv data
+npm run cleanup # removes stale deploys
 ```
 
 <!-- Links -->

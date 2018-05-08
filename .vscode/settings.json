@@ -3,13 +3,14 @@
     "Titillium",
     "apps",
     "cleanup",
+    "cvdata",
     "cvjson",
+    "darkslateblue",
     "dayjs",
     "mailto",
     "noopener",
     "templating",
     "uppercase",
-    "viewbox",
-    "darkslateblue"
+    "viewbox"
   ]
 }
