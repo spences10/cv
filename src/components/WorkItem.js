@@ -4,9 +4,10 @@ import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
 import {
+  ItemHeader as IH,
   StyledDiv as SD,
   StyledP as SP,
-  StyledSpan as SS
+  WeightAndColour as WC
 } from './shared/SharedComponents'
 
 const WorkItemWrapper = SD.extend`
@@ -23,19 +24,7 @@ const WorkItemWrapper = SD.extend`
   padding: 0.5rem;
 `
 
-const WeightAndColour = SS.extend`
-  color: ${props => props.theme.fontDark};
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  &:hover {
-    letter-spacing: 0.5rem;
-    transition: all 10s;
-  }
-`
-
-const Company = WeightAndColour.extend`
+const Company = WC.extend`
   grid-area: comp;
   margin-left: 0rem;
   padding-left: 0rem;
@@ -43,27 +32,19 @@ const Company = WeightAndColour.extend`
   margin-bottom: 0.125rem;
 `
 
-const Position = WeightAndColour.extend`
+const Position = WC.extend`
   grid-area: pos;
   padding-bottom: 0.125rem;
   margin-bottom: 0.125rem;
 `
 
-const Dates = WeightAndColour.extend`
+const Dates = WC.extend`
   grid-area: date;
   padding-bottom: 0.125rem;
   margin-bottom: 0.125rem;
 `
 
-const ItemHeader = SS.extend`
-  text-transform: uppercase;
-  font-size: 0.6rem;
-  padding: 0.25rem 0rem;
-  margin: 0.25rem 0rem;
-  border-top: 2px solid ${props => props.theme.fontLight};
-`
-
-const WorkItemHeader = ItemHeader.extend`
+const WorkItemHeader = IH.extend`
   grid-area: wh;
 `
 
@@ -73,7 +54,7 @@ const WorkItemSummary = SP.extend`
   margin: 0.5rem 0rem 0.125rem 0rem;
 `
 
-const HighlightsHeader = ItemHeader.extend`
+const HighlightsHeader = IH.extend`
   grid-area: hh;
 `
 
