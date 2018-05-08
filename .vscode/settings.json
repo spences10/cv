@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "Startup",
     "Titillium",
     "apps",
     "cleanup",
@@ -7,10 +8,12 @@
     "cvjson",
     "darkslateblue",
     "dayjs",
+    "favicons",
     "mailto",
     "noopener",
     "templating",
     "uppercase",
-    "viewbox"
+    "viewbox",
+    "yandex"
   ]
 }
