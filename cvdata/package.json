@@ -5,10 +5,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pullCv": "curl https://cvjson.now.sh/ --output cvjson/cv.json",
-    "pushCv": "now cvjson/ && npm run aliasIt && npm run killCv",
-    "killCv": "truncate -s 0 cvjson/cv.json",
-    "aliasIt": "now alias"
+    "pullCv": "curl https://cvjson.now.sh/ --output ./cvjson/cv.json",
+    "pushCv": "now ./cvjson/ && npm run aliasIt && npm run killCv",
+    "killCv": "> ./cvjson/cv.json && npm run cleanup",
+    "aliasIt": "now alias",
+    "cleanup": "now rm cvjson --safe --yes"
   },
   "keywords": [],
   "author": "Scott Spence <spences10apps@gmail.com> (https://blog.scottspence.me/)",
