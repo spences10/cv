@@ -32,8 +32,8 @@ const StyledList = styled.ul`
 
 const StyledLi = styled.li`
   display: inline-block;
-  margin: 0.125rem 0.25rem 0.25rem 0.0125rem;
-  padding: 0.125rem 0.25rem 0.25rem 0.25rem;
+  margin: 0.25rem 0.25rem 0.25rem 0.25rem;
+  padding: 0.25rem 0.8rem 0.25rem 0.5rem;
   color: 1px solid ${props => props.theme.fontLight};
   border-radius: 15px;
   border: 1px solid ${props => props.theme.primary};
