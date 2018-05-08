@@ -16,14 +16,17 @@ const ContentWrapper = styled.div`
 const StyledList = styled.ul`
   margin: 0.5rem 0.0125rem;
   padding: 0.5rem 0.0125rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
 `
 
 const StyledLi = styled.li`
+  display: inline-block;
   margin: 0.125rem 0.25rem 0.25rem 0.0125rem;
   padding: 0.125rem 0.25rem 0.25rem 0.25rem;
   color: 1px solid ${props => props.theme.fontLight};
-  display: inline;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid ${props => props.theme.primary};
   &:hover {
     background: linear-gradient(
