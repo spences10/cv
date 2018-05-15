@@ -91,3 +91,15 @@ export const StyledHyperLink = styled.a`
   }
   color: ${props => props.theme.primary};
 `
+
+export const WeightAndColour = StyledSpan.extend`
+  color: ${props => props.theme.fontDark};
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  &:hover {
+    letter-spacing: 0.5rem;
+    transition: all 10s;
+  }
+`

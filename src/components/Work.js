@@ -22,7 +22,7 @@ const Work = props => {
 }
 
 Work.propTypes = {
-  workData: PropTypes.object
+  workData: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
 }
 
 export default Work
