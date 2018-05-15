@@ -4,7 +4,7 @@ const crypto = require('crypto')
 exports.sourceNodes = async ({ boundActionCreators }) => {
   const { createNode } = boundActionCreators
 
-  const fetchCvData = () => axios.get(`https://cvjson.now.sh/`)
+  const fetchCvData = () => axios.get('https://cvjson.now.sh/')
   // await for results
   const res = await fetchCvData()
 
@@ -12,9 +12,9 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
   const cvNode = {
     // Required fields
     id: '0',
-    parent: `__SOURCE__`,
+    parent: '__SOURCE__',
     internal: {
-      type: `CV` // name of the graphQL query --> allCv {}
+      type: 'CV' // name of the graphQL query --> allCv {}
       // contentDigest will be added just after
       // but it is required
     },
@@ -24,9 +24,9 @@ exports.sourceNodes = async ({ boundActionCreators }) => {
 
   // Get content digest of node. (Required field)
   const contentDigest = crypto
-    .createHash(`md5`)
+    .createHash('md5')
     .update(JSON.stringify(cvNode))
-    .digest(`hex`)
+    .digest('hex')
   // add it to userNode
   cvNode.internal.contentDigest = contentDigest
 
