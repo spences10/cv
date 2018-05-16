@@ -1,12 +1,14 @@
 import React from 'react'
 
-import Dump from '../util/helpers'
+import { Dump } from '../util/helpers'
 
 const Dashboard = props => {
   return (
     <React.Fragment>
+      {Object.keys(props).map(key => {
+        console.log(key)
+      })}
       <Dump props={props} />
-      <p>jsx goes here</p>
     </React.Fragment>
   )
 }
