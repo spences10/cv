@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 
-// import { Dump } from '../util/helpers'
+import { Dump } from '../util/helpers'
 import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
@@ -121,11 +121,11 @@ class IndexPage extends React.Component {
     return (
       <ThemeProvider theme={this.state.theme}>
         <PageContainer>
-          {/* <Dump
-          props={basics}
-          props={props.data.allCv.edges[0].node}
-          pageResources={props.pageResources}
-        /> */}
+          <Dump
+            props={this.props.data.allCv.edges[0].node}
+            // props={props.data.allCv.edges[0].node}
+            pageResources={this.props.pageResources}
+          />
           <About aboutData={basics} />
           <Skills skillsData={skills} />
           <Work workData={work} />
