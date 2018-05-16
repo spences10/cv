@@ -16,7 +16,7 @@ const PageContainer = styled.div`
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    '. . a a a a . t'
+    '. . a a a a . .'
     '. . s s s s . .'
     '. . w w w w . .'
     '. . e e e e . .';
@@ -25,7 +25,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . t'
+      '. . a a a a . .'
       '. . s s s s . .'
       '. . w w w w . .'
       '. . e e e e . .';
@@ -39,7 +39,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . t'
+      '. . a a a a . .'
       '. . s s s s . .'
       '. . w w w w . .'
       '. . e e e e . .';
@@ -53,7 +53,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . t'
+      '. . a a a a . .'
       '. . s s s s . .'
       '. . w w w w . .'
       '. . e e e e . .';
@@ -70,8 +70,7 @@ const PageContainer = styled.div`
       'a a a a a a'
       's s s s s s'
       'w w w w w w'
-      'e e e e e e'
-      't . . . . .';
+      'e e e e e e';
     /* background: mediumseagreen; */
     background: linear-gradient(
       0.25turn, 
@@ -82,7 +81,6 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      't . . .'
       'a a a a'
       's s s s'
       'w w w w'
@@ -94,7 +92,11 @@ const PageContainer = styled.div`
       ${props => props.theme.secondary});
   `};
 `
-
+const ThemeSelectWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+`
 class IndexPage extends React.Component {
   // const IndexPage = props => {
 
@@ -119,7 +121,6 @@ class IndexPage extends React.Component {
     return (
       <ThemeProvider theme={this.state.theme}>
         <PageContainer>
-          <ThemeSelect handleThemeChange={this.handleThemeChange} />
           {/* <Dump
           props={basics}
           props={props.data.allCv.edges[0].node}
@@ -129,6 +130,9 @@ class IndexPage extends React.Component {
           <Skills skillsData={skills} />
           <Work workData={work} />
           <Education educationData={education} />
+          <ThemeSelectWrapper>
+            <ThemeSelect handleThemeChange={this.handleThemeChange} />
+          </ThemeSelectWrapper>
         </PageContainer>
       </ThemeProvider>
     )
