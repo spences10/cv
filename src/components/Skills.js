@@ -45,6 +45,7 @@ const StyledLi = styled.li`
     );
     color: ${props => props.theme.light};
     border: 1px solid ${props => props.theme.background};
+    cursor: pointer;
   }
 `
 
