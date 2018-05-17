@@ -19,12 +19,6 @@ const ContentWrapper = styled.div`
   padding: 0.5rem 0.5rem 0.5rem 0.51rem;
 `
 
-const SkillHeader = styled.span`
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-`
-
 const StyledList = styled.ul`
   margin: 0.5rem 0.0125rem;
   padding: 0.5rem 0.0125rem;
