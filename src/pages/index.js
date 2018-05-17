@@ -18,7 +18,7 @@ const PageContainer = styled.div`
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    '. . a a a a . .'
+    'd . a a a a . .'
     '. . s s s s . .'
     '. . w w w w . .'
     '. . e e e e . .';
@@ -27,7 +27,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . .'
+      'd . a a a a . .'
       '. . s s s s . .'
       '. . w w w w . .'
       '. . e e e e . .';
@@ -41,7 +41,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . .'
+      'd . a a a a . .'
       '. . s s s s . .'
       '. . w w w w . .'
       '. . e e e e . .';
@@ -55,7 +55,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . .'
+      'd . a a a a . .'
       '. . s s s s . .'
       '. . w w w w . .'
       '. . e e e e . .';
@@ -69,6 +69,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
+      'd d . . . .'
       'a a a a a a'
       's s s s s s'
       'w w w w w w'
@@ -83,6 +84,7 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
+      'd d . .'
       'a a a a'
       's s s s'
       'w w w w'
@@ -121,10 +123,11 @@ class IndexPage extends React.Component {
       education
     } = this.props.data.allCv.edges[0].node
     const { node } = this.props.data.allCv.edges[0]
+    const dashboardItems = Object.keys(node)
     return (
       <ThemeProvider theme={this.state.theme}>
         <PageContainer>
-          <Dashboard props={node} />
+          <Dashboard sections={dashboardItems} />
           {/* <Dump
             props={this.props.data.allCv.edges[0].node}
             props={props.data.allCv.edges[0].node}
