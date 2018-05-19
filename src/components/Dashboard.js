@@ -5,6 +5,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
+import Checkbox from './Checkbox'
+
 import {
   ItemWrapper as IW,
   ItemHeader as IH
@@ -46,16 +48,22 @@ const StyledLi = styled.li`
   }
 `
 
+const Select = styled.input.attrs({
+  type: 'checkbox'
+})``
+
 const Dashboard = ({ sections }) => {
   return (
     <DashboardWrapper>
       <ContentWrapper>
-        <StyledList>
-          {sections.map((section, index) => {
-            return <StyledLi key={index}>{section}</StyledLi>
-          })}
-          {/* <Dump props={sections} /> */}
-        </StyledList>
+        {sections.map((section, index) => {
+          return (
+            <StyledLi key={index}>
+              <Checkbox>{section}</Checkbox>
+            </StyledLi>
+          )
+        })}
+        {/* <Dump props={sections} /> */}
       </ContentWrapper>
     </DashboardWrapper>
   )
