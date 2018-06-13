@@ -11,7 +11,6 @@ class Layout extends React.Component {
       <React.Fragment>
         <Helmet title={nameContent} meta={siteMeta} />
         {children()}
-        {/* <ThemeSelect handleThemeChange={this.handleThemeChange} /> */}
       </React.Fragment>
     )
   }
