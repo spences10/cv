@@ -16,21 +16,6 @@ export const theme1 = {
 }
 
 export const theme2 = {
-  primary: '#ff0198',
-  secondary: '#01c1d6',
-  danger: '#eb238e',
-  light: '#f4f4f4',
-  dark: '#4A4A4A',
-  background: '#f9f9fd',
-  foreground: '#fefefe',
-  border: '#044040',
-  fontHeader: '"Titillium Web", sans-serif',
-  fontBody: 'Open Sans, sans, sans-serif',
-  fontDark: '#34434b',
-  fontLight: '#586368'
-}
-
-export const theme3 = {
   primary: '#6e27c5',
   secondary: '#ffb617',
   danger: '#f16623',
@@ -43,6 +28,21 @@ export const theme3 = {
   fontBody: '"Titillium Web", sans-serif',
   fontDark: '#034544',
   fontLight: '#596869'
+}
+
+export const theme3 = {
+  primary: '#ff0198',
+  secondary: '#01c1d6',
+  danger: '#eb238e',
+  light: '#f4f4f4',
+  dark: '#4A4A4A',
+  background: '#f9f9fd',
+  foreground: '#fefefe',
+  border: '#044040',
+  fontHeader: '"Titillium Web", sans-serif',
+  fontBody: 'Open Sans, sans, sans-serif',
+  fontDark: '#34434b',
+  fontLight: '#586368'
 }
 
 injectGlobal`
