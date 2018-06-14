@@ -2,6 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 
+import {
+  CvThemeContext,
+  CvThemeProvider
+} from '../contexts/CvThemeContext'
+
 // import { Dump } from '../util/helpers'
 import About from '../components/About'
 import Work from '../components/Work'
@@ -9,7 +14,7 @@ import Skills from '../components/Skills'
 import Education from '../components/Education'
 import ThemeSelect from '../components/ThemeSelect'
 
-import { theme1, theme2, media } from '../theme/globalStyle'
+import { media } from '../theme/globalStyle'
 
 const PageContainer = styled.div`
   display: grid;
@@ -101,14 +106,7 @@ class IndexPage extends React.Component {
   // const IndexPage = props => {
 
   state = {
-    apiUrl: 'https://cvjson.now.sh/',
-    theme: theme1
-  }
-
-  handleThemeChange = e => {
-    let theme = e.target.value
-    theme === 'theme1' ? (theme = theme1) : (theme = theme2)
-    this.setState({ theme })
+    apiUrl: 'https://cvjson.now.sh/'
   }
 
   render() {
@@ -119,22 +117,30 @@ class IndexPage extends React.Component {
       education
     } = this.props.data.allCv.edges[0].node
     return (
-      <ThemeProvider theme={this.state.theme}>
-        <PageContainer>
-          {/* <Dump
-          props={basics}
-          props={props.data.allCv.edges[0].node}
-          pageResources={props.pageResources}
-        /> */}
-          <About aboutData={basics} />
-          <Skills skillsData={skills} />
-          <Work workData={work} />
-          <Education educationData={education} />
-          <ThemeSelectWrapper>
-            <ThemeSelect handleThemeChange={this.handleThemeChange} />
-          </ThemeSelectWrapper>
-        </PageContainer>
-      </ThemeProvider>
+      <CvThemeProvider>
+        <CvThemeContext.Consumer>
+          {({ theme }) => (
+            <ThemeProvider theme={theme}>
+              <PageContainer>
+                {/* <Dump
+                  props={basics}
+                  props={props.data.allCv.edges[0].node}
+                  pageResources={props.pageResources}
+                /> */}
+                <About aboutData={basics} />
+                <Skills skillsData={skills} />
+                <Work workData={work} />
+                <Education educationData={education} />
+                <ThemeSelectWrapper>
+                  <ThemeSelect
+                    handleThemeChange={this.handleThemeChange}
+                  />
+                </ThemeSelectWrapper>
+              </PageContainer>
+            </ThemeProvider>
+          )}
+        </CvThemeContext.Consumer>
+      </CvThemeProvider>
     )
   }
 }
