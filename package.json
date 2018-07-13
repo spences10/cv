@@ -1,11 +1,11 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
-    "date-fns": "2.0.0-alpha.7",
+    "date-fns": "2.0.0-alpha.11",
     "gatsby": "1.9.247",
     "gatsby-link": "1.6.40",
     "gatsby-plugin-favicon": "2.1.1",
