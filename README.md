@@ -11,8 +11,8 @@ Want to use this template with your data? Read on... 👀
 
 #### Requirements
 
-* Zeit now account
-* Your own [JSON Schema] CV
+- Zeit now account
+- Your own [JSON Schema] CV
 
 I made this to understand how Gatsby gets API data and uses it, you
 could probably do something statically with the data locally if you
