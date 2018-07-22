@@ -22,6 +22,18 @@ If you want to use this for your own purposes you will need to create
 your own json CV via [JSON Schema] and create an alias for the
 `cv.json` file in `now`.
 
+There's a [resume-cli] you can use to get started with your CV,
+navigate to where you want your `resume.json` file and use:
+
+```sh
+npx resume-cli init
+# I prefer to use npx over globally
+# installing and app I'll use rarely
+```
+
+This will create a bare bones `.json` file to use, you will be
+prompted for your name and email, the rest is filler.
+
 In the folder `cvdata` there's some npm scripts to help manage the
 importing and exporting the CV data.
 
@@ -59,3 +71,4 @@ npm run cleanup # removes stale deploys
 <!-- Links -->
 
 [json schema]: https://jsonresume.org/schema/
+[resume-cli]: https://github.com/jsonresume/resume-cli
