@@ -1,11 +1,11 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.14",
+  "version": "1.0.21",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
-    "date-fns": "2.0.0-alpha.11",
+    "date-fns": "2.0.0-alpha.16",
     "gatsby": "1.9.277",
     "gatsby-link": "1.6.46",
     "gatsby-plugin-favicon": "2.1.1",
@@ -15,15 +15,15 @@
     "gatsby-plugin-styled-components": "2.0.11",
     "prop-types": "15.6.2",
     "react-helmet": "5.2.0",
-    "styled-components": "3.3.3"
+    "styled-components": "3.4.2"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
-    "eslint": "5.2.0",
+    "eslint": "5.3.0",
     "eslint-plugin-graphql": "2.1.1",
     "eslint-plugin-react": "7.10.0",
     "husky": "0.14.3",
-    "prettier": "1.13.7",
+    "prettier": "1.14.0",
     "pretty-quick": "1.6.0"
   },
   "keywords": [
