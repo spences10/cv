@@ -1,11 +1,11 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.14",
+  "version": "1.0.21",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
-    "date-fns": "2.0.0-alpha.11",
+    "date-fns": "2.0.0-alpha.16",
     "gatsby": "1.9.277",
     "gatsby-link": "1.6.46",
     "gatsby-plugin-favicon": "2.1.1",
@@ -15,15 +15,15 @@
     "gatsby-plugin-styled-components": "2.0.11",
     "prop-types": "15.6.2",
     "react-helmet": "5.2.0",
-    "styled-components": "3.3.3"
+    "styled-components": "3.4.2"
   },
   "devDependencies": {
     "babel-eslint": "8.2.6",
-    "eslint": "5.2.0",
+    "eslint": "5.3.0",
     "eslint-plugin-graphql": "2.1.1",
     "eslint-plugin-react": "7.10.0",
     "husky": "0.14.3",
-    "prettier": "1.13.7",
+    "prettier": "1.14.0",
     "pretty-quick": "1.6.0"
   },
   "keywords": [
@@ -32,18 +32,14 @@
   ],
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf .cache/ && rm -rf cv/ && rm -rf public/",
-    "build": "gatsby build && mv public cv && npm run wellknown",
+    "clean": "rm -rf .cache/ && rm -rf public/",
+    "build": "gatsby build && npm run wellknown",
     "dev": "gatsby develop",
     "format": "pretty-quick",
     "precommit": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clearStale": "now rm cvjson --safe --yes",
-    "wellknown": "cp -r .well-known/ cv/",
-    "deploy": "now cv/ --token $NOW_TOKEN",
-    "alias:dev": "now alias cv-scottspence.now.sh --token $NOW_TOKEN",
-    "alias:prod": "now alias cv.scottspence.me --token $NOW_TOKEN",
-    "cleanup": "now rm cv --safe --yes --token $NOW_TOKEN"
+    "wellknown": "cp -r .well-known/ cv/"
   },
   "repository": {
     "type": "git",
