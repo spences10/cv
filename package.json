@@ -32,18 +32,14 @@
   ],
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf .cache/ && rm -rf cv/ && rm -rf public/",
-    "build": "gatsby build && mv public cv && npm run wellknown",
+    "clean": "rm -rf .cache/ && rm -rf public/",
+    "build": "gatsby build && npm run wellknown",
     "dev": "gatsby develop",
     "format": "pretty-quick",
     "precommit": "pretty-quick --staged",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clearStale": "now rm cvjson --safe --yes",
-    "wellknown": "cp -r .well-known/ cv/",
-    "deploy": "now cv/ --token $NOW_TOKEN",
-    "alias:dev": "now alias cv-scottspence.now.sh --token $NOW_TOKEN",
-    "alias:prod": "now alias cv.scottspence.me --token $NOW_TOKEN",
-    "cleanup": "now rm cv --safe --yes --token $NOW_TOKEN"
+    "wellknown": "cp -r .well-known/ cv/"
   },
   "repository": {
     "type": "git",
