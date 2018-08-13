@@ -5,13 +5,13 @@
 [![styled components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 [![Build Status](https://travis-ci.com/spences10/cv.svg?token=WDGHiW4Z8aNkuywpJ62W&branch=master)](https://travis-ci.com/spences10/cv)
 
-## CV using React ⚛️ (`create-react-app`) and [JSON Schema]
+## CV using Gatsby and [JSON Schema]
 
 Want to use this template with your data? Read on... 👀
 
 #### Requirements
 
-- Zeit now account
+- Zeit now account or somewhere to statically host your data
 - Your own [JSON Schema] CV
 
 I made this to understand how Gatsby gets API data and uses it, you
