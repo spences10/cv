@@ -157,69 +157,63 @@ export default IndexPage
 
 export const query = graphql`
   query CvQuery {
-    allCv {
-      edges {
-        node {
-          basics {
-            name
-            label
-            picture
-            email
-            phone
-            website
-            summary
-            location {
-              address
-              postalCode
-              city
-              countryCode
-              region
-            }
-            profiles {
-              network
-              username
-              url
-            }
-          }
-          work {
-            company
-            position
-            website
-            startDate
-            endDate
-            summary
-            highlights
-          }
-          education {
-            institution
-            area
-            studyType
-            startDate
-            endDate
-            gpa
-            courses
-          }
-          publications {
-            name
-            publisher
-            releaseDate
-            website
-            summary
-          }
-          skills {
-            name
-            level
-            keywords
-          }
-          languages {
-            language
-            fluency
-          }
-          references {
-            name
-            reference
-          }
+    cvDataCv {
+      basics {
+        name
+        label
+        picture
+        email
+        phone
+        website
+        summary
+        location {
+          address
+          postalCode
+          city
+          countryCode
+          region
         }
+        profiles {
+          network
+          username
+          url
+        }
+      }
+      work {
+        company
+        position
+        website
+        startDate
+        endDate
+        summary
+      }
+      education {
+        institution
+        area
+        studyType
+        startDate
+        endDate
+        gpa
+      }
+      publications {
+        name
+        publisher
+        releaseDate
+        website
+        summary
+      }
+      skills {
+        name
+        level
+        keywords
+      }
+      languages {
+        language
+        fluency
+      }
+      references {
+        name
+        reference
       }
     }
   }
