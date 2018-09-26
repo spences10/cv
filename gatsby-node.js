@@ -1,8 +1,8 @@
 const axios = require('axios')
 const crypto = require('crypto')
 
-exports.sourceNodes = async ({ boundActionCreators }) => {
-  const { createNode } = boundActionCreators
+exports.sourceNodes = async ({ actions }) => {
+  const { createNode } = actions
 
   const fetchCvData = () => axios.get('https://cvjson.now.sh/')
   // await for results
