@@ -8,7 +8,7 @@ import {
   CvThemeProvider
 } from '../contexts/CvThemeContext'
 
-// import { Dump } from '../util/helpers'
+import { Dump } from '../util/helpers'
 import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
@@ -116,22 +116,18 @@ class IndexPage extends React.Component {
       work,
       skills,
       education
-    } = this.props.data.allCv.edges[0].node
+    } = this.props.data.cvDataCv
     return (
       <CvThemeProvider>
         <CvThemeContext.Consumer>
           {({ theme }) => (
             <ThemeProvider theme={theme}>
               <PageContainer>
-                {/* <Dump
-                  props={basics}
-                  props={props.data.allCv.edges[0].node}
-                  pageResources={props.pageResources}
-                /> */}
+                {/* <Dump props={basics} /> */}
                 <About aboutData={basics} />
-                <Skills skillsData={skills} />
-                <Work workData={work} />
-                <Education educationData={education} />
+                {/* <Skills skillsData={skills} /> */}
+                {/* <Work workData={work} /> */}
+                {/* <Education educationData={education} /> */}
                 <ThemeSelectWrapper>
                   <ThemeSelect
                     handleThemeChange={this.handleThemeChange}
