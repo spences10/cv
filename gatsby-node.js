@@ -1,6 +1,12 @@
 const axios = require('axios')
 const crypto = require('crypto')
 
+const createNodeHelpers = require('gatsby-node-helpers').default
+
+const { createNodeFactory } = createNodeHelpers()
+
+const CV = createNodeFactory('CV')
+
 exports.sourceNodes = async ({ actions }) => {
   const { createNode } = actions
 
@@ -9,26 +15,7 @@ exports.sourceNodes = async ({ actions }) => {
   const res = await fetchCvData()
 
   // Create your node object
-  const cvNode = {
-    // Required fields
-    id: '0',
-    parent: '__SOURCE__',
-    internal: {
-      type: 'CV' // name of the graphQL query --> allCv {}
-      // contentDigest will be added just after
-      // but it is required
-    },
-    children: [],
-    ...res.data
-  }
-
-  // Get content digest of node. (Required field)
-  const contentDigest = crypto
-    .createHash('md5')
-    .update(JSON.stringify(cvNode))
-    .digest('hex')
-  // add it to userNode
-  cvNode.internal.contentDigest = contentDigest
+  const cvNode = CV(res.data)
 
   // Create node with the gatsby createNode() API
   createNode(cvNode)
