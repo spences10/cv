@@ -7,6 +7,7 @@
     "axios": "0.18.0",
     "date-fns": "2.0.0-alpha.16",
     "gatsby": "1.9.277",
+    "gatsby-node-helpers": "0.3.0",
     "gatsby-plugin-favicon": "2.1.1",
     "gatsby-plugin-google-analytics": "1.0.31",
     "gatsby-plugin-react-helmet": "2.0.11",
