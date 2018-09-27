@@ -123,11 +123,11 @@ class IndexPage extends React.Component {
           {({ theme }) => (
             <ThemeProvider theme={theme}>
               <PageContainer>
-                {/* <Dump props={basics} /> */}
+                {/* <Dump props={work} /> */}
                 <About aboutData={basics} />
-                {/* <Skills skillsData={skills} /> */}
-                {/* <Work workData={work} /> */}
-                {/* <Education educationData={education} /> */}
+                <Skills skillsData={skills} />
+                <Work workData={work} />
+                <Education educationData={education} />
                 <ThemeSelectWrapper>
                   <ThemeSelect
                     handleThemeChange={this.handleThemeChange}
@@ -183,6 +183,7 @@ export const query = graphql`
         startDate
         endDate
         summary
+        highlights
       }
       education {
         institution
