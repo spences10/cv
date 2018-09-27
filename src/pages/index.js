@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
 
 import {
@@ -7,7 +8,7 @@ import {
   CvThemeProvider
 } from '../contexts/CvThemeContext'
 
-// import { Dump } from '../util/helpers'
+import { Dump } from '../util/helpers'
 import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
@@ -115,18 +116,14 @@ class IndexPage extends React.Component {
       work,
       skills,
       education
-    } = this.props.data.allCv.edges[0].node
+    } = this.props.data.cvDataCv
     return (
       <CvThemeProvider>
         <CvThemeContext.Consumer>
           {({ theme }) => (
             <ThemeProvider theme={theme}>
               <PageContainer>
-                {/* <Dump
-                  props={basics}
-                  props={props.data.allCv.edges[0].node}
-                  pageResources={props.pageResources}
-                /> */}
+                {/* <Dump props={work} /> */}
                 <About aboutData={basics} />
                 <Skills skillsData={skills} />
                 <Work workData={work} />
@@ -157,69 +154,64 @@ export default IndexPage
 
 export const query = graphql`
   query CvQuery {
-    allCv {
-      edges {
-        node {
-          basics {
-            name
-            label
-            picture
-            email
-            phone
-            website
-            summary
-            location {
-              address
-              postalCode
-              city
-              countryCode
-              region
-            }
-            profiles {
-              network
-              username
-              url
-            }
-          }
-          work {
-            company
-            position
-            website
-            startDate
-            endDate
-            summary
-            highlights
-          }
-          education {
-            institution
-            area
-            studyType
-            startDate
-            endDate
-            gpa
-            courses
-          }
-          publications {
-            name
-            publisher
-            releaseDate
-            website
-            summary
-          }
-          skills {
-            name
-            level
-            keywords
-          }
-          languages {
-            language
-            fluency
-          }
-          references {
-            name
-            reference
-          }
+    cvDataCv {
+      basics {
+        name
+        label
+        picture
+        email
+        phone
+        website
+        summary
+        location {
+          address
+          postalCode
+          city
+          countryCode
+          region
         }
+        profiles {
+          network
+          username
+          url
+        }
+      }
+      work {
+        company
+        position
+        website
+        startDate
+        endDate
+        summary
+        highlights
+      }
+      education {
+        institution
+        area
+        studyType
+        startDate
+        endDate
+        gpa
+      }
+      publications {
+        name
+        publisher
+        releaseDate
+        website
+        summary
+      }
+      skills {
+        name
+        level
+        keywords
+      }
+      languages {
+        language
+        fluency
+      }
+      references {
+        name
+        reference
       }
     }
   }
