@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-87264973-4',
-        anonymize: true
+        trackingId: process.env.GATSBY_GA_TRACKING_ID, // add to netlify Build environment variables
+        anonymize: false
       }
     }
   ]
