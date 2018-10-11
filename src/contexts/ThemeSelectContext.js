@@ -6,9 +6,9 @@ import { themes } from '../theme/globalStyle'
 // Context is made up of two things
 // Provider - Single as close to top level as possible
 // Consumer - Multiple have multiple consumers
-export const CvThemeContext = React.createContext()
+export const ThemeSelectContext = React.createContext()
 
-export class CvThemeProvider extends React.Component {
+export class ThemeSelectProvider extends React.Component {
   state = {
     theme: themes['theme1']
   }
@@ -21,17 +21,17 @@ export class CvThemeProvider extends React.Component {
 
   render() {
     return (
-      <CvThemeContext.Provider
+      <ThemeSelectContext.Provider
         value={{
           ...this.state,
           handleThemeChange: this.handleThemeChange
         }}>
         {this.props.children}
-      </CvThemeContext.Provider>
+      </ThemeSelectContext.Provider>
     )
   }
 }
 
-CvThemeProvider.propTypes = {
+ThemeSelectProvider.propTypes = {
   children: PropTypes.any
 }
