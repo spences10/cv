@@ -4,13 +4,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
 
 import {
-  CvThemeContext,
-  CvThemeProvider
-} from '../contexts/CvThemeContext'
+  ThemeSelectContext,
+  ThemeSelectProvider
+} from '../contexts/ThemeSelectContext'
 
 // import { Dump } from '../util/helpers'
 
-import { media } from '../theme/globalStyle'
+import { media, GlobalStyle } from '../theme/globalStyle'
 
 const PageContainer = styled.div`
   display: grid;
@@ -100,11 +100,12 @@ const PageContainer = styled.div`
 // `
 
 const Layout = ({ children, data }) => (
-  <CvThemeProvider>
-    <CvThemeContext.Consumer>
+  <ThemeSelectProvider>
+    <ThemeSelectContext.Consumer>
       {({ theme }) => (
         <ThemeProvider theme={theme}>
           <PageContainer>
+            <GlobalStyle />
             siteTitle=
             {data.site.siteMetadata.title}
             {/* <Dump props={work} /> */}
@@ -112,8 +113,8 @@ const Layout = ({ children, data }) => (
           </PageContainer>
         </ThemeProvider>
       )}
-    </CvThemeContext.Consumer>
-  </CvThemeProvider>
+    </ThemeSelectContext.Consumer>
+  </ThemeSelectProvider>
 )
 
 Layout.propTypes = {

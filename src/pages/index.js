@@ -27,12 +27,11 @@ const IndexPage = ({ data }) => {
   const { basics, work, skills, education } = data.cvDataCv
   return (
     <Layout>
-      <GlobalStyle />
       {/* <Dump props={work} /> */}
       <About aboutData={basics} />
-      <Skills skillsData={skills} />
-      <Work workData={work} />
-      <Education educationData={education} />
+      {/* <Skills skillsData={skills} /> */}
+      {/* <Work workData={work} /> */}
+      {/* <Education educationData={education} /> */}
     </Layout>
   )
 }
