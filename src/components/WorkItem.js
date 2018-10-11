@@ -80,10 +80,10 @@ const WorkItem = props => {
     summary
   } = props.workItemData
   const getWorkDates = () => {
-    const startDate = format(propsStartDate, 'MMM YYYY')
+    const startDate = format(propsStartDate, 'MMM yyyy')
     const endDate = () => {
       if (isValid(propsEndDate)) {
-        return format(propsEndDate, 'MMM YYYY')
+        return format(propsEndDate, 'MMM yyyy')
       } else {
         return 'Present'
       }
