@@ -105,6 +105,8 @@ const Layout = ({ children, data }) => (
       {({ theme }) => (
         <ThemeProvider theme={theme}>
           <PageContainer>
+            siteTitle=
+            {data.site.siteMetadata.title}
             {/* <Dump props={work} /> */}
             {children}
           </PageContainer>
@@ -114,7 +116,7 @@ const Layout = ({ children, data }) => (
   </CvThemeProvider>
 )
 
-IndexPage.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node.isRequired
 }
 

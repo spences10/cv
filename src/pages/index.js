@@ -13,133 +13,26 @@ import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
 import Education from '../components/Education'
-import ThemeSelect from '../components/ThemeSelect'
+// import ThemeSelect from '../components/ThemeSelect'
+import Layout from '../components/layout'
 
-import { media } from '../theme/globalStyle'
+// const ThemeSelectWrapper = styled.div`
+//   position: fixed;
+//   bottom: 0;
+//   right: 0;
+// `
 
-const PageContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    '. . a a a a . .'
-    '. . s s s s . .'
-    '. . w w w w . .'
-    '. . e e e e . .';
-  background: ${props => props.theme.background};
-  ${media.monitor`
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      '. . a a a a . .'
-      '. . s s s s . .'
-      '. . w w w w . .'
-      '. . e e e e . .';
-    /* background: goldenrod; */
-    background: linear-gradient(
-      0.25turn, 
-      darkslateblue, 
-      ${props => props.theme.secondary});
-  `};
-  ${media.giant`
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      '. . a a a a . .'
-      '. . s s s s . .'
-      '. . w w w w . .'
-      '. . e e e e . .';
-    /* background: goldenrod; */
-    background: linear-gradient(
-      0.25turn, 
-      goldenrod, 
-      ${props => props.theme.secondary});
-  `};
-  ${media.desktop`
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      '. . a a a a . .'
-      '. . s s s s . .'
-      '. . w w w w . .'
-      '. . e e e e . .';
-    /* background: dodgerblue; */
-    background: linear-gradient(
-      0.25turn, 
-      dodgerblue, 
-      ${props => props.theme.secondary});
-  `};
-  ${media.tablet`
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'a a a a a a'
-      's s s s s s'
-      'w w w w w w'
-      'e e e e e e';
-    /* background: mediumseagreen; */
-    background: linear-gradient(
-      0.25turn, 
-      mediumseagreen, 
-      ${props => props.theme.secondary});
-  `};
-  ${media.phone`
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'a a a a'
-      's s s s'
-      'w w w w'
-      'e e e e';
-    /* background: palevioletred; */
-    background: linear-gradient(
-      0.25turn, 
-      palevioletred, 
-      ${props => props.theme.secondary});
-  `};
-`
-const ThemeSelectWrapper = styled.div`
-  position: fixed;
-  bottom: 0;
-  right: 0;
-`
-class IndexPage extends React.Component {
-  // const IndexPage = props => {
-
-  state = {
-    apiUrl: 'https://cvjson.now.sh/'
-  }
-
-  render() {
-    const {
-      basics,
-      work,
-      skills,
-      education
-    } = this.props.data.cvDataCv
-    return (
-      <CvThemeProvider>
-        <CvThemeContext.Consumer>
-          {({ theme }) => (
-            <ThemeProvider theme={theme}>
-              <PageContainer>
-                {/* <Dump props={work} /> */}
-                <About aboutData={basics} />
-                <Skills skillsData={skills} />
-                <Work workData={work} />
-                <Education educationData={education} />
-                <ThemeSelectWrapper>
-                  <ThemeSelect
-                    handleThemeChange={this.handleThemeChange}
-                  />
-                </ThemeSelectWrapper>
-              </PageContainer>
-            </ThemeProvider>
-          )}
-        </CvThemeContext.Consumer>
-      </CvThemeProvider>
-    )
-  }
+const IndexPage = ({ data }) => {
+  const { basics, work, skills, education } = data.cvDataCv
+  return (
+    <Layout>
+      {/* <Dump props={work} /> */}
+      <About aboutData={basics} />
+      <Skills skillsData={skills} />
+      <Work workData={work} />
+      <Education educationData={education} />
+    </Layout>
+  )
 }
 
 IndexPage.propTypes = {
