@@ -1,7 +1,9 @@
+const siteMetadata = {
+  title: 'Scott Spence - CV'
+}
+
 module.exports = {
-  siteMetadata: {
-    title: 'Gatsby Default Starter'
-  },
+  siteMetadata: siteMetadata,
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
@@ -26,7 +28,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: process.env.GATSBY_GA_TRACKING_ID, // add to netlify Build environment variables
+        // add to netlify Build environment variables
+        trackingId: process.env.GATSBY_GA_TRACKING_ID,
         anonymize: false
       }
     }
