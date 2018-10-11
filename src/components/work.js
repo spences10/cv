@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import WorkItem from './WorkItem'
+import WorkItem from './workItem'
 
 // import { Dump } from '../util/helpers'
 
