@@ -1,14 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import styled, { ThemeProvider } from 'styled-components'
+// import styled, { ThemeProvider } from 'styled-components'
 
-import {
-  CvThemeContext,
-  CvThemeProvider
-} from '../contexts/CvThemeContext'
+// import {
+//   CvThemeContext,
+//   CvThemeProvider
+// } from '../contexts/CvThemeContext'
 
 // import { Dump } from '../util/helpers'
+import { GlobalStyle } from '../theme/globalStyle'
 import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
@@ -26,6 +27,7 @@ const IndexPage = ({ data }) => {
   const { basics, work, skills, education } = data.cvDataCv
   return (
     <Layout>
+      <GlobalStyle />
       {/* <Dump props={work} /> */}
       <About aboutData={basics} />
       <Skills skillsData={skills} />
