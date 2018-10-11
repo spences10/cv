@@ -49,10 +49,10 @@ const EducationItemDates = styled.span`
 
 const Education = props => {
   const getEducation = props.educationData.map((item, index) => {
-    const educationStartDate = format(item.startDate, 'MMM YYYY')
+    const educationStartDate = format(item.startDate, 'MMM yyyy')
     const educationEndDate = () => {
       if (isValid(item.endDate)) {
-        return format(item.endDate, 'MMM YYYY')
+        return format(item.endDate, 'MMM yyyy')
       } else {
         return 'Present'
       }
