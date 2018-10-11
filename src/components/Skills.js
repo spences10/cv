@@ -2,10 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import {
-  ItemWrapper as IW,
-  ItemHeader as IH
-} from './shared/SharedComponents'
+import { ItemWrapper as IW, ItemHeader as IH } from './shared'
 
 const SkillsWrapper = styled(IW)`
   grid-area: s;

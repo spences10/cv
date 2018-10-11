@@ -11,7 +11,7 @@ import {
   ItemWrapper as IW,
   StyledHyperLink as SHL,
   StyledDiv as SD
-} from './shared/SharedComponents'
+} from './shared'
 
 import defaultAvi from '../img/default_avatar.png'
 

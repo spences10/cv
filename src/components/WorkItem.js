@@ -8,7 +8,7 @@ import {
   StyledDiv as SD,
   StyledP as SP,
   WeightAndColour as WC
-} from './shared/SharedComponents'
+} from './shared'
 
 const WorkItemWrapper = styled(SD)`
   display: grid;

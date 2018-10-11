@@ -7,7 +7,7 @@ import {
   ItemWrapper as IW,
   WeightAndColour as WC,
   StyledDiv as SD
-} from './shared/SharedComponents'
+} from './shared'
 
 const EducationWrapper = styled(IW)`
   grid-area: e;

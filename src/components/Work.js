@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import WorkItem from './WorkItem'
 
-import { ItemWrapper as IW } from './shared/SharedComponents'
+import { ItemWrapper as IW } from './shared'
 
 const WorkWrapper = styled(IW)`
   grid-area: w;
