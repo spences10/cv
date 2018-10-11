@@ -7,7 +7,7 @@ import {
   ItemHeader as IH
 } from './shared/SharedComponents'
 
-const SkillsWrapper = IW.extend`
+const SkillsWrapper = styled(IW)`
   grid-area: s;
 `
 

@@ -9,7 +9,7 @@ import {
   StyledDiv as SD
 } from './shared/SharedComponents'
 
-const EducationWrapper = IW.extend`
+const EducationWrapper = styled(IW)`
   grid-area: e;
 `
 
@@ -18,7 +18,7 @@ const ContentWrapper = styled.div`
   padding: 0.5rem 0.5rem 0.5rem 0.51rem;
 `
 
-const EducationTitle = WC.extend`
+const EducationTitle = styled(WC)`
   grid-area: comp;
   margin-left: 0rem;
   padding-left: 0rem;
@@ -26,7 +26,7 @@ const EducationTitle = WC.extend`
   margin-bottom: 0.125rem;
 `
 
-const EducationItemWrapper = SD.extend`
+const EducationItemWrapper = styled(SD)`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;

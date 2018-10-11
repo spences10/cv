@@ -10,7 +10,7 @@ import {
   WeightAndColour as WC
 } from './shared/SharedComponents'
 
-const WorkItemWrapper = SD.extend`
+const WorkItemWrapper = styled(SD)`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
@@ -24,7 +24,7 @@ const WorkItemWrapper = SD.extend`
   padding: 0.5rem;
 `
 
-const Company = WC.extend`
+const Company = styled(WC)`
   grid-area: comp;
   margin-left: 0rem;
   padding-left: 0rem;
@@ -32,29 +32,29 @@ const Company = WC.extend`
   margin-bottom: 0.125rem;
 `
 
-const Position = WC.extend`
+const Position = styled(WC)`
   grid-area: pos;
   padding-bottom: 0.125rem;
   margin-bottom: 0.125rem;
 `
 
-const Dates = WC.extend`
+const Dates = styled(WC)`
   grid-area: date;
   padding-bottom: 0.125rem;
   margin-bottom: 0.125rem;
 `
 
-const WorkItemHeader = IH.extend`
+const WorkItemHeader = styled(IH)`
   grid-area: wh;
 `
 
-const WorkItemSummary = SP.extend`
+const WorkItemSummary = styled(SP)`
   grid-area: w;
   padding: 0.5rem 0rem 0.125rem 0rem;
   margin: 0.5rem 0rem 0.125rem 0rem;
 `
 
-const HighlightsHeader = IH.extend`
+const HighlightsHeader = styled(IH)`
   grid-area: hh;
 `
 

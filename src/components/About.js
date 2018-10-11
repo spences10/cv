@@ -18,11 +18,11 @@ import defaultAvi from '../img/default_avatar.png'
 import { ICONS } from '../theme/constants'
 import Icon from '../components/Icon'
 
-const AboutWrapper = IW.extend`
+const AboutWrapper = styled(IW)`
   grid-area: a;
 `
 
-const AboutLayout = SD.extend`
+const AboutLayout = styled(SD)`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
@@ -86,7 +86,7 @@ const AboutLayout = SD.extend`
   `};
 `
 
-const AboutName = UH.extend`
+const AboutName = styled(UH)`
   grid-area: name;
   font-size: 3rem;
   font-family: ${props => props.theme.fontHeader};
@@ -94,7 +94,7 @@ const AboutName = UH.extend`
   padding: 0.1rem 0rem 0.1rem 0rem;
 `
 // top right bottom left
-const AboutLabel = H.extend`
+const AboutLabel = styled(H)`
   grid-area: label;
   font-size: 1.8rem;
   margin: 0.1rem 0rem 0.1rem 0rem;
@@ -124,25 +124,25 @@ const AboutImg = styled.img`
 `
 
 // start end centre stretch
-const AboutEmail = SHL.extend`
+const AboutEmail = styled(SHL)`
   grid-area: email;
   padding: 0.1rem 0rem;
   margin: 0.1rem 0rem;
 `
 
-const AboutPhone = SHL.extend`
+const AboutPhone = styled(SHL)`
   grid-area: phone;
   padding: 0.1rem 0rem;
   margin: 0.1rem 0rem;
 `
 
-const AboutWebsite = SHL.extend`
+const AboutWebsite = styled(SHL)`
   grid-area: site;
   padding: 0.1rem 0rem;
   margin: 0.1rem 0rem;
 `
 
-const AboutSummary = SD.extend`
+const AboutSummary = styled(SD)`
   grid-area: about;
   border-top: 2px solid ${props => props.theme.dark};
   padding: 1rem 0rem 0rem 0rem;

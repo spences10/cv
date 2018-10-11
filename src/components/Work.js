@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import WorkItem from './WorkItem'
 
 import { ItemWrapper as IW } from './shared/SharedComponents'
 
-const WorkWrapper = IW.extend`
+const WorkWrapper = styled(IW)`
   grid-area: w;
 `
 

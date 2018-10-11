@@ -8,7 +8,7 @@ import {
   CvThemeProvider
 } from '../contexts/CvThemeContext'
 
-import { Dump } from '../util/helpers'
+// import { Dump } from '../util/helpers'
 import About from '../components/About'
 import Work from '../components/Work'
 import Skills from '../components/Skills'
