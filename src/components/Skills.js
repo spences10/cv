@@ -1,6 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+
+import { Dump } from '../util/helpers'
 
 import { ItemWrapper as IW, ItemHeader as IH } from './shared'
 
@@ -46,41 +48,45 @@ const StyledLi = styled.li`
   cursor: pointer;
 `
 
-class Skills extends React.Component {
-  componentDidMount() {}
-
-  render() {
-    const { skillsData } = this.props
-    // console.log('=====================')
-    // console.log(this.props)
-    // console.log('=====================')
-    return (
-      <SkillsWrapper>
-        <ContentWrapper>
-          {Object.keys(skillsData).map((key, index) => {
-            return (
-              <React.Fragment key={index}>
-                <SkillHeader>
-                  <StyledList>{skillsData[key].name}</StyledList>
-                </SkillHeader>
-                {/* <SkillsItem
-                  skillsKey={skillsData[key].name}
-                  skillsData={skillsData[key]}
-                /> */}
-                {skillsData[key].keywords.map((key, index) => {
-                  return <StyledLi key={key + index}>{key}</StyledLi>
-                })}
-              </React.Fragment>
-            )
-          })}
-        </ContentWrapper>
-      </SkillsWrapper>
-    )
-  }
+const Skills = ({ data }) => {
+  const { skills } = data.cvDataCv
+  // console.log('=====================')
+  // console.log(this.props)
+  // console.log('=====================')
+  return (
+    <SkillsWrapper>
+      <ContentWrapper>
+        {/* <Dump props={skills} /> */}
+        {Object.keys(skills).map((key, index) => {
+          return (
+            <React.Fragment key={index}>
+              <SkillHeader>
+                <StyledList>{skills[key].name}</StyledList>
+              </SkillHeader>
+              {skills[key].keywords.map((key, index) => {
+                return <StyledLi key={key + index}>{key}</StyledLi>
+              })}
+            </React.Fragment>
+          )
+        })}
+      </ContentWrapper>
+    </SkillsWrapper>
+  )
 }
 
-Skills.propTypes = {
-  skillsData: PropTypes.array
-}
-
-export default Skills
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query Skills {
+        cvDataCv {
+          skills {
+            name
+            level
+            keywords
+          }
+        }
+      }
+    `}
+    render={data => <Skills data={data} {...props} />}
+  />
+)
