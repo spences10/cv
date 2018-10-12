@@ -175,7 +175,7 @@ const About = ({ data }) => {
           <Icon
             icon={ICONS.ENVELOPE}
             size={20}
-            color={({ theme }) => theme.primary}
+            // color={({ theme }) => theme.primary}
             viewbox={'-5 0 32 32'}
           />
           {email}
@@ -184,7 +184,7 @@ const About = ({ data }) => {
           <Icon
             icon={ICONS.PHONE}
             size={20}
-            color={({ theme }) => theme.primary}
+            // color={({ theme }) => theme.primary}
             viewbox={'-5 0 32 32'}
           />
           {phone}
@@ -193,7 +193,7 @@ const About = ({ data }) => {
           <Icon
             icon={ICONS.GLOBE}
             size={20}
-            color={({ theme }) => theme.primary}
+            // color={({ theme }) => theme.primary}
             viewbox={'-5 0 32 32'}
           />
           {website}

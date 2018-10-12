@@ -1,7 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
 import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
+
+// import { Dump } from '../util/helpers'
 
 import {
   ItemWrapper as IW,
@@ -47,8 +49,10 @@ const EducationItemDates = styled.span`
   grid-area: date;
 `
 
-const Education = props => {
-  const getEducation = props.educationData.map((item, index) => {
+const Education = ({ data }) => {
+  const { education } = data.cvDataCv
+  // return <Dump data={data} />
+  const getEducation = education.map((item, index) => {
     const educationStartDate = format(item.startDate, 'MMM yyyy')
     const educationEndDate = () => {
       if (isValid(item.endDate)) {
@@ -80,8 +84,22 @@ const Education = props => {
   )
 }
 
-Education.propTypes = {
-  educationData: PropTypes.array
-}
-
-export default Education
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query Education {
+        cvDataCv {
+          education {
+            institution
+            area
+            studyType
+            startDate
+            endDate
+            gpa
+          }
+        }
+      }
+    `}
+    render={data => <Education data={data} {...props} />}
+  />
+)
