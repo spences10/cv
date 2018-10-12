@@ -1,25 +1,19 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
-// import styled, { ThemeProvider } from 'styled-components'
-
-// import {
-//   CvThemeContext,
-//   CvThemeProvider
-// } from '../contexts/CvThemeContext'
+import styled from 'styled-components'
 
 // import { Dump } from '../util/helpers'
+import Layout from '../components/layout'
 import About from '../components/about'
 import Work from '../components/work'
 import Skills from '../components/skills'
 import Education from '../components/education'
-// import ThemeSelect from '../components/ThemeSelect'
-import Layout from '../components/layout'
+import ThemeSelect from '../components/themeSelect'
 
-// const ThemeSelectWrapper = styled.div`
-//   position: fixed;
-//   bottom: 0;
-//   right: 0;
-// `
+const ThemeSelectWrapper = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+`
 
 const IndexPage = () => (
   <Layout>
@@ -28,11 +22,15 @@ const IndexPage = () => (
     <Skills />
     <Work />
     <Education />
+    <ThemeSelectWrapper>
+      <ThemeSelect />
+    </ThemeSelectWrapper>
   </Layout>
 )
 
 export default IndexPage
 
+// TODO: components for publications, languages and references
 // export const query = graphql`
 //   query CvQuery {
 //     cvDataCv {
