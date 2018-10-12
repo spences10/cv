@@ -10,6 +10,8 @@ import Education from '../components/education'
 import ThemeSelect from '../components/themeSelect'
 
 const ThemeSelectWrapper = styled.div`
+  margin: 0.5rem;
+  padding: 0.5rem;
   position: fixed;
   bottom: 0;
   right: 0;
