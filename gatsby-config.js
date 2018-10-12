@@ -2,17 +2,17 @@ const siteMetadata = {
   title: 'Scott Spence - CV',
   firstName: 'Scott',
   lastName: 'Spence',
-  siteUrl: 'https://scottspence.me',
-  title: 'scottspence.me',
-  titleTemplate: '%s | scottspence.me',
+  siteUrl: 'https://cv.scottspence.me',
+  title: 'CV',
+  titleTemplate: '%s | cv.scottspence.me',
   description:
     'Scott Spence, Father, husband 👨‍👩‍👧 Full stack web developer in the making 👨‍💻 Just In Time learner 👌 Byproduct of: coffee+excess carbs+lack of sleep. He/Him',
   twitterUsername: '@ScottDevTweets',
   facebookAppID: '',
-  faviconPng: './src/images/favicon.png',
+  faviconPng: './src/img/favicon.png',
   backgroundColour: '#663399', // this is for favicon and manifest
   themeColour: '#755f9f', // this is for favicon and manifest
-  nameContent: 'Scott Spence - portfolio',
+  nameContent: 'Scott Spence - cv/resume',
   developerName: 'Scott Spence',
   developerUrl: 'https.scottspence.me',
   descriptionContent: 'Scott Spence - web developer',

@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
+import Helmet from 'react-helmet'
+
+import SEO from './seo'
 
 import {
   ThemeSelectContext,
@@ -99,23 +102,37 @@ const PageContainer = styled.div`
 //   right: 0;
 // `
 
-const Layout = ({ children, data }) => (
-  <ThemeSelectProvider>
-    <ThemeSelectContext.Consumer>
-      {({ theme }) => (
-        <ThemeProvider theme={theme}>
-          <PageContainer>
-            <GlobalStyle />
-            siteTitle=
-            {data.site.siteMetadata.title}
-            {/* <Dump props={work} /> */}
-            {children}
-          </PageContainer>
-        </ThemeProvider>
-      )}
-    </ThemeSelectContext.Consumer>
-  </ThemeSelectProvider>
-)
+const Layout = ({ children, data }) => {
+  const {
+    title,
+    description,
+    imageLink,
+    siteLanguage
+  } = data.site.siteMetadata
+  return (
+    <ThemeSelectProvider>
+      <ThemeSelectContext.Consumer>
+        {({ theme }) => (
+          <ThemeProvider theme={theme}>
+            <PageContainer>
+              <GlobalStyle />
+              <SEO
+                title={title}
+                description={description || 'nothin’'}
+                image={imageLink}
+              />
+              <Helmet>
+                <html lang={siteLanguage} />
+              </Helmet>
+              {/* <Dump props={data.site.siteMetadata.siteLanguage} /> */}
+              {children}
+            </PageContainer>
+          </ThemeProvider>
+        )}
+      </ThemeSelectContext.Consumer>
+    </ThemeSelectProvider>
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
@@ -128,6 +145,7 @@ export default props => (
         site {
           siteMetadata {
             title
+            siteLanguage
           }
         }
       }
