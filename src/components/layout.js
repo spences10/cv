@@ -146,6 +146,8 @@ export default props => (
           siteMetadata {
             title
             siteLanguage
+            description
+            imageLink
           }
         }
       }
