@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import ReactTooltip from 'react-tooltip'
 
 // import { Dump } from '../util/helpers'
 
@@ -61,7 +62,9 @@ const Skills = ({ data }) => {
           return (
             <React.Fragment key={index}>
               <SkillHeader>
-                <StyledList>{skills[key].name}</StyledList>
+                <StyledList data-tip="Skills Detail">
+                  {skills[key].name}
+                </StyledList>
               </SkillHeader>
               {skills[key].keywords.map((key, index) => {
                 return <StyledLi key={key + index}>{key}</StyledLi>
@@ -70,6 +73,7 @@ const Skills = ({ data }) => {
           )
         })}
       </ContentWrapper>
+      <ReactTooltip />
     </SkillsWrapper>
   )
 }
