@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import WorkItem from './workItem'
 
-// import { Dump } from '../util/helpers'
+import { Dump } from '../util/helpers'
 
 import { ItemWrapper as IW } from './shared'
 
@@ -13,17 +13,15 @@ const WorkWrapper = styled(IW)`
 `
 
 const Work = ({ data }) => {
-  // return <Dump props={data} />
   const { work } = data.cvDataCv
-  const getWorkExperience = () => {
-    const workItems = []
-    work.forEach((item, index) => {
-      workItems.push(<WorkItem key={index} workItemData={item} />)
-    })
-    return workItems
-  }
-
-  return <WorkWrapper>{getWorkExperience()}</WorkWrapper>
+  // return <Dump props={work} />
+  return (
+    <WorkWrapper>
+      {work.map((item, index) => {
+        return <WorkItem key={index} workItemData={item} />
+      })}
+    </WorkWrapper>
+  )
 }
 
 export default props => (
