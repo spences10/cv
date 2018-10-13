@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import { media } from '../theme/globalStyle'
-import { Dump } from '../util/helpers'
+// import { Dump } from '../util/helpers'
 
 import {
   UpperCaseHeading as UH,
