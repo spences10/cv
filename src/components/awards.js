@@ -66,6 +66,7 @@ const Awards = ({ data }) => {
         <AwardItemTitle>{item.title}</AwardItemTitle>
         <AwardItemAwarder>{item.awarder}</AwardItemAwarder>
         <AwardItemDate>{awardDate}</AwardItemDate>
+        {/* TODO: add spacer here */}
         <AwardItemSummary>{item.summary}</AwardItemSummary>
       </AwardsItemWrapper>
     )
