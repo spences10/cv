@@ -2,9 +2,8 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+// import { Dump } from '../util/helpers'
 import WorkItem from './workItem'
-
-import { Dump } from '../util/helpers'
 
 import { ItemWrapper as IW } from './shared'
 
