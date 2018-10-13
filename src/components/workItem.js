@@ -78,6 +78,7 @@ const WorkItem = props => {
     highlights,
     position,
     company,
+    organization,
     summary
   } = props.workItemData
   const getWorkDates = () => {
@@ -99,13 +100,14 @@ const WorkItem = props => {
 
   return (
     <WorkItemWrapper>
-      <Company>{company}</Company>
+      <Company
+        data-tip={company ? 'Employer' : 'Volunteering Organisation'}>
+        {company ? company : organization}
+      </Company>
       <Position>{position}</Position>
       <Dates>{getWorkDates()}</Dates>
       <WorkItemHeader>summary</WorkItemHeader>
-      <WorkItemSummary data-tip="Employment History Detail">
-        {summary}
-      </WorkItemSummary>
+      <WorkItemSummary>{summary}</WorkItemSummary>
       <HighlightsHeader>highlights</HighlightsHeader>
       <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
       <ReactTooltip />
