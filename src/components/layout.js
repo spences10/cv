@@ -20,19 +20,23 @@ const PageContainer = styled.div`
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    '. . a a a a . .'
-    '. . s s s s . .'
-    '. . w w w w . .'
-    '. . e e e e . .';
+    '. . ab ab ab ab . .' /* about */
+    '. . sk sk sk sk . .' /* skills */
+    '. . wo wo wo wo . .' /* work */
+    '. . vo vo vo vo . .' /* volunteer */
+    '. . ed ed ed ed . .' /* education */
+    '. . aw aw aw aw . .'; /* awards */
   background: ${props => props.theme.background};
   ${media.monitor`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . .'
-      '. . s s s s . .'
-      '. . w w w w . .'
-      '. . e e e e . .';
+      '. . ab ab ab ab . .'
+      '. . sk sk sk sk . .'
+      '. . wo wo wo wo . .'
+      '. . vo vo vo vo . .'
+      '. . ed ed ed ed . .'
+      '. . aw aw aw aw . .';
     /* background: goldenrod; */
     background: linear-gradient(
       0.25turn, 
@@ -43,10 +47,12 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . .'
-      '. . s s s s . .'
-      '. . w w w w . .'
-      '. . e e e e . .';
+      '. . ab ab ab ab . .'
+      '. . sk sk sk sk . .'
+      '. . wo wo wo wo . .'
+      '. . vo vo vo vo . .'
+      '. . ed ed ed ed . .'
+      '. . aw aw aw aw . .';
     /* background: goldenrod; */
     background: linear-gradient(
       0.25turn, 
@@ -57,10 +63,12 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      '. . a a a a . .'
-      '. . s s s s . .'
-      '. . w w w w . .'
-      '. . e e e e . .';
+      '. . ab ab ab ab . .'
+      '. . sk sk sk sk . .'
+      '. . wo wo wo wo . .'
+      '. . vo vo vo vo . .'
+      '. . ed ed ed ed . .'
+      '. . aw aw aw aw . .';
     /* background: dodgerblue; */
     background: linear-gradient(
       0.25turn, 
@@ -71,10 +79,12 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'a a a a a a'
-      's s s s s s'
-      'w w w w w w'
-      'e e e e e e';
+      'ab ab ab ab ab ab' 
+      'sk sk sk sk sk sk' 
+      'wo wo wo wo wo wo' 
+      'vo vo vo vo vo vo' 
+      'ed ed ed ed ed ed' 
+      'aw aw aw aw aw aw';
     /* background: mediumseagreen; */
     background: linear-gradient(
       0.25turn, 
@@ -85,10 +95,12 @@ const PageContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'a a a a'
-      's s s s'
-      'w w w w'
-      'e e e e';
+      'ab ab ab ab'
+      'sk sk sk sk'
+      'wo wo wo wo'
+      'vo vo vo vo'
+      'ed ed ed ed'
+      'aw aw aw aw';
     /* background: palevioletred; */
     background: linear-gradient(
       0.25turn, 

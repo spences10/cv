@@ -8,7 +8,7 @@ import ReactTooltip from 'react-tooltip'
 import { ItemWrapper as IW, ItemHeader as IH } from './shared'
 
 const SkillsWrapper = styled(IW)`
-  grid-area: s;
+  grid-area: sk;
 `
 
 const ContentWrapper = styled.div`

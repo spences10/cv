@@ -20,7 +20,7 @@ import { ICONS } from '../theme/constants'
 import Icon from '../components/Icon'
 
 const AboutWrapper = styled(IW)`
-  grid-area: a;
+  grid-area: ab;
 `
 
 const AboutLayout = styled(SD)`

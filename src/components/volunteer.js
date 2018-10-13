@@ -8,7 +8,7 @@ import WorkItem from './workItem'
 import { ItemWrapper as IW } from './shared'
 
 const VolunteerWrapper = styled(IW)`
-  grid-area: v;
+  grid-area: vo;
 `
 
 const Volunteer = ({ data }) => {

@@ -12,7 +12,7 @@ import {
 } from './shared'
 
 const EducationWrapper = styled(IW)`
-  grid-area: e;
+  grid-area: ed;
 `
 
 const ContentWrapper = styled.div`
