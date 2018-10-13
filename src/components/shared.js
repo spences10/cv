@@ -15,7 +15,7 @@ export const StyledSpan = styled.span`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 `
 
-export const ItemHeader = StyledSpan.extend`
+export const ItemHeader = styled(StyledSpan)`
   text-transform: uppercase;
   font-size: 0.6rem;
   padding: 0.25rem 0rem;
@@ -65,13 +65,13 @@ export const SectionHeader = styled.span`
 // normal font weight 400-500
 // heavy font weight 600-700
 
-export const Heading = StyledP.extend`
+export const Heading = styled(StyledP)`
   color: ${props => props.theme.fontDark};
   font-family: ${props => props.theme.fontHeader};
   font-weight: 700;
 `
 
-export const UpperCaseHeading = Heading.extend`
+export const UpperCaseHeading = styled(Heading)`
   text-transform: uppercase;
   &:hover {
     letter-spacing: 0.15rem;
@@ -92,7 +92,7 @@ export const StyledHyperLink = styled.a`
   color: ${props => props.theme.primary};
 `
 
-export const WeightAndColour = StyledSpan.extend`
+export const WeightAndColour = styled(StyledSpan)`
   color: ${props => props.theme.fontDark};
   font-weight: 700;
   font-size: 0.8rem;

@@ -1,4 +1,4 @@
-import { injectGlobal, css } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 export const themes = {
   theme1: {
@@ -47,7 +47,7 @@ export const themes = {
   }
 }
 
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:400,700|Nunito:400,700|Poppins:400,700');
 
   *, *:before, *:after {
