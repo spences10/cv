@@ -147,6 +147,14 @@ const AboutSummary = styled(SD)`
   border-top: 2px solid ${props => props.theme.dark};
   padding: 1rem 0rem 0rem 0rem;
   margin: 2rem 0rem 0rem 0rem;
+  ul {
+    padding: 0rem;
+    margin: 0rem;
+    li {
+      padding-top: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
 `
 
 const About = ({ data }) => {
@@ -198,7 +206,13 @@ const About = ({ data }) => {
           />
           {website}
         </AboutWebsite>
-        <AboutSummary>{summary}</AboutSummary>
+        <AboutSummary>
+          <ul>
+            {summary.map((line, index) => {
+              return <li>{line}</li>
+            })}
+          </ul>
+        </AboutSummary>
       </AboutLayout>
     </AboutWrapper>
   )
