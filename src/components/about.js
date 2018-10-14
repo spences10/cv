@@ -258,11 +258,15 @@ const About = ({ data }) => {
         </AboutWebsite>
         <SummaryHeader>about</SummaryHeader>
         <AboutSummary>
-          <ul>
-            {summary.map((line, index) => {
-              return <li key={index}>{line}</li>
-            })}
-          </ul>
+          {typeof summary === 'string' ? (
+            summary
+          ) : (
+            <ul>
+              {summary.map((line, index) => {
+                return <li key={index}>{line}</li>
+              })}
+            </ul>
+          )}
         </AboutSummary>
         <LocationHeader>location</LocationHeader>
         <Location>
