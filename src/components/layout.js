@@ -25,7 +25,8 @@ const PageContainer = styled.div`
     '. . wo wo wo wo . .' /* work */
     '. . vo vo vo vo . .' /* volunteer */
     '. . ed ed ed ed . .' /* education */
-    '. . aw aw aw aw . .'; /* awards */
+    '. . aw aw aw aw . .' /* awards */
+    '. . pu pu pu pu . .'; /* publications */
   background: ${props => props.theme.background};
   ${media.monitor`
     grid-template-columns: repeat(8, 1fr);
@@ -36,7 +37,9 @@ const PageContainer = styled.div`
       '. . wo wo wo wo . .'
       '. . vo vo vo vo . .'
       '. . ed ed ed ed . .'
-      '. . aw aw aw aw . .';
+      '. . aw aw aw aw . .'
+      '. . pu pu pu pu . .'
+      ;
     /* background: goldenrod; */
     background: linear-gradient(
       0.25turn, 
@@ -52,7 +55,9 @@ const PageContainer = styled.div`
       '. . wo wo wo wo . .'
       '. . vo vo vo vo . .'
       '. . ed ed ed ed . .'
-      '. . aw aw aw aw . .';
+      '. . aw aw aw aw . .'
+      '. . pu pu pu pu . .'
+      ;
     /* background: goldenrod; */
     background: linear-gradient(
       0.25turn, 
@@ -68,7 +73,9 @@ const PageContainer = styled.div`
       '. . wo wo wo wo . .'
       '. . vo vo vo vo . .'
       '. . ed ed ed ed . .'
-      '. . aw aw aw aw . .';
+      '. . aw aw aw aw . .'
+      '. . pu pu pu pu . .'
+      ;
     /* background: dodgerblue; */
     background: linear-gradient(
       0.25turn, 
@@ -84,7 +91,9 @@ const PageContainer = styled.div`
       'wo wo wo wo wo wo' 
       'vo vo vo vo vo vo' 
       'ed ed ed ed ed ed' 
-      'aw aw aw aw aw aw';
+      'aw aw aw aw aw aw'
+      'pu pu pu pu pu pu'
+      ;
     /* background: mediumseagreen; */
     background: linear-gradient(
       0.25turn, 
@@ -100,7 +109,9 @@ const PageContainer = styled.div`
       'wo wo wo wo'
       'vo vo vo vo'
       'ed ed ed ed'
-      'aw aw aw aw';
+      'aw aw aw aw'
+      'pu pu pu pu'
+      ;
     /* background: palevioletred; */
     background: linear-gradient(
       0.25turn, 
