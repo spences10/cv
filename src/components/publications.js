@@ -99,7 +99,7 @@ const Publications = ({ data }) => {
 
   return (
     <React.Fragment>
-      {typeof publications[0].name === 'undefined' ? null : (
+      {publications[0].name.length === 0 ? null : (
         <PublicationsWrapper>
           {/* <Dump a={publications} /> */}
           <ContentWrapper>
