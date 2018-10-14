@@ -16,7 +16,7 @@ const Volunteer = ({ data }) => {
   return (
     <React.Fragment>
       {/* <Dump s={organization} /> */}
-      {typeof volunteer.organization === 'undefined' ? null : (
+      {typeof volunteer[0].organization === 'undefined' ? null : (
         <VolunteerWrapper>
           {volunteer.map((item, index) => {
             return <WorkItem key={index} workItemData={item} />

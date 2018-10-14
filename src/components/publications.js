@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
-// import { Dump } from '../util/helpers'
+import { Dump } from '../util/helpers'
 
 import {
   ItemWrapper as IW,
@@ -97,12 +97,17 @@ const Publications = ({ data }) => {
   })
 
   return (
-    <PublicationsWrapper>
-      <ContentWrapper>
-        <PublicationsTitle>Publications</PublicationsTitle>
-        {getPublications}
-      </ContentWrapper>
-    </PublicationsWrapper>
+    <React.Fragment>
+      {typeof publications[0].name === 'undefined' ? null : (
+        <PublicationsWrapper>
+          {/* <Dump a={publications} /> */}
+          <ContentWrapper>
+            <PublicationsTitle>Publications</PublicationsTitle>
+            {getPublications}
+          </ContentWrapper>
+        </PublicationsWrapper>
+      )}
+    </React.Fragment>
   )
 }
 
