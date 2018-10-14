@@ -68,7 +68,7 @@ const Education = ({ data }) => {
           {item.studyType} {item.area}
         </EducationItemType>
         <EducationItemDates>
-          Studied: {educationStartDate} - {educationEndDate()}
+          {educationStartDate} - {educationEndDate()}
         </EducationItemDates>
       </EducationItemWrapper>
     )
