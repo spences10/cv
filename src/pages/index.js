@@ -11,6 +11,8 @@ import Education from '../components/education'
 import ThemeSelect from '../components/themeSelect'
 import Awards from '../components/awards'
 import Publications from '../components/publications'
+import Languages from '../components/languages'
+import languages from '../components/languages'
 
 const ThemeSelectWrapper = styled.div`
   margin: 0.5rem;
@@ -30,6 +32,7 @@ const IndexPage = () => (
     <Education />
     <Awards />
     <Publications />
+    <Languages />
     <ThemeSelectWrapper>
       <ThemeSelect />
     </ThemeSelectWrapper>
