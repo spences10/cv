@@ -3,12 +3,13 @@ import { StaticQuery, graphql } from 'gatsby'
 import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
 
-import { Dump } from '../util/helpers'
+// import { Dump } from '../util/helpers'
 
 import {
   ItemWrapper as IW,
   WeightAndColour as WC,
-  StyledDiv as SD
+  StyledDiv as SD,
+  ItemHeader as IH
 } from './shared'
 
 const AwardsWrapper = styled(IW)`
@@ -34,6 +35,7 @@ const AwardsItemWrapper = styled(SD)`
   grid-template-rows: auto;
   grid-template-areas:
     'ti ti aw aw date date'
+    'sh sh sh sh sh   sh  '
     'su su su su su   su  ';
   margin: 0.5rem 0rem;
   padding: 0.5rem 0rem;
@@ -49,6 +51,10 @@ const AwardItemAwarder = styled.span`
 
 const AwardItemDate = styled.span`
   grid-area: date;
+`
+
+const AwardItemHeader = styled(IH)`
+  grid-area: sh;
 `
 
 const AwardItemSummary = styled.span`
@@ -67,6 +73,7 @@ const Awards = ({ data }) => {
         <AwardItemAwarder>{item.awarder}</AwardItemAwarder>
         <AwardItemDate>{awardDate}</AwardItemDate>
         {/* TODO: add spacer here */}
+        <AwardItemHeader>summary</AwardItemHeader>
         <AwardItemSummary>{item.summary}</AwardItemSummary>
       </AwardsItemWrapper>
     )
