@@ -13,6 +13,7 @@ import Awards from '../components/awards'
 import Publications from '../components/publications'
 import Languages from '../components/languages'
 import Interests from '../components/interests'
+import References from '../components/references'
 
 const ThemeSelectWrapper = styled.div`
   margin: 0.5rem;
@@ -34,6 +35,7 @@ const IndexPage = () => (
     <Publications />
     <Languages />
     <Interests />
+    <References />
     <ThemeSelectWrapper>
       <ThemeSelect />
     </ThemeSelectWrapper>
