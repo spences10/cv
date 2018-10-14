@@ -271,7 +271,13 @@ const About = ({ data }) => {
         <LocationHeader>location</LocationHeader>
         <Location>
           {Object.values(location).map((line, index) => {
-            return <span key={index}>{line}</span>
+            return (
+              <React.Fragment>
+                {line.length === 0 ? null : (
+                  <span key={index}>{line}</span>
+                )}
+              </React.Fragment>
+            )
           })}
         </Location>
         {/* <Profiles>
