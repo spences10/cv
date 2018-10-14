@@ -46,6 +46,7 @@ const ReferenceItemTitle = styled.span`
 `
 
 const Quote = styled.span`
+  grid-area: ty;
   font-weight: 900;
 `
 
@@ -56,9 +57,11 @@ const References = ({ data }) => {
     return (
       <ReferenceItemWrapper key={index}>
         <ReferenceItemTitle>{item.name}</ReferenceItemTitle>
-        <Quote>"</Quote>
-        <ReferenceItemType>{item.reference}</ReferenceItemType>
-        <Quote>"</Quote>
+        <ReferenceItemType>
+          <Quote>"</Quote>
+          {item.reference}
+          <Quote>"</Quote>
+        </ReferenceItemType>
       </ReferenceItemWrapper>
     )
   })
