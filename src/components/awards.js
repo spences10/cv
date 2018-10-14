@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import { format, isValid } from 'date-fns'
+import { format } from 'date-fns'
 import styled from 'styled-components'
 
 // import { Dump } from '../util/helpers'
