@@ -27,7 +27,8 @@ const PageContainer = styled.div`
     '. . ed ed ed ed . .' /* education */
     '. . aw aw aw aw . .' /* awards */
     '. . pu pu pu pu . .' /* publications */
-    '. . la la la la . .' /* languages */;
+    '. . la la la la . .' /* languages */
+    '. . in in in in . .' /* interests */;
   background: ${props => props.theme.background};
   ${media.monitor`
     grid-template-columns: repeat(8, 1fr);
@@ -41,6 +42,7 @@ const PageContainer = styled.div`
       '. . aw aw aw aw . .'
       '. . pu pu pu pu . .'
       '. . la la la la . .'
+      '. . in in in in . .'
       ;
     /* background: goldenrod; */
     background: linear-gradient(
@@ -60,6 +62,7 @@ const PageContainer = styled.div`
       '. . aw aw aw aw . .'
       '. . pu pu pu pu . .'
       '. . la la la la . .'
+      '. . in in in in . .'
       ;
     /* background: goldenrod; */
     background: linear-gradient(
@@ -79,6 +82,7 @@ const PageContainer = styled.div`
       '. . aw aw aw aw . .'
       '. . pu pu pu pu . .'
       '. . la la la la . .'
+      '. . in in in in . .'
       ;
     /* background: dodgerblue; */
     background: linear-gradient(
@@ -98,6 +102,7 @@ const PageContainer = styled.div`
       'aw aw aw aw aw aw'
       'pu pu pu pu pu pu'
       'la la la la la la'
+      'in in in in in in'
       ;
     /* background: mediumseagreen; */
     background: linear-gradient(
@@ -117,6 +122,7 @@ const PageContainer = styled.div`
       'aw aw aw aw'
       'pu pu pu pu'
       'la la la la'
+      'in in in in'
       ;
     /* background: palevioletred; */
     background: linear-gradient(
