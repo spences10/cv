@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-// import { Dump } from '../util/helpers'
+import { Dump } from '../util/helpers'
 import WorkItem from './workItem'
 
 import { ItemWrapper as IW } from './shared'
@@ -15,8 +15,7 @@ const Volunteer = ({ data }) => {
   const { volunteer } = data.cvDataCv
   return (
     <React.Fragment>
-      {/* <Dump s={organization} /> */}
-      {typeof volunteer[0].organization === 'undefined' ? null : (
+      {volunteer[0].organization.length === 0 ? null : (
         <VolunteerWrapper>
           {volunteer.map((item, index) => {
             return <WorkItem key={index} workItemData={item} />
