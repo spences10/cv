@@ -79,12 +79,17 @@ const Awards = ({ data }) => {
   })
 
   return (
-    <AwardsWrapper>
-      <ContentWrapper>
-        <AwardsTitle>awards</AwardsTitle>
-        {getAwards}
-      </ContentWrapper>
-    </AwardsWrapper>
+    <React.Fragment>
+      {/* <Dump awards={awards.title} /> */}
+      {typeof awards.title === 'undefined' ? null : (
+        <AwardsWrapper>
+          <ContentWrapper>
+            <AwardsTitle>awards</AwardsTitle>
+            {getAwards}
+          </ContentWrapper>
+        </AwardsWrapper>
+      )}
+    </React.Fragment>
   )
 }
 
