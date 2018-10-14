@@ -46,6 +46,7 @@ const PublicationsItemWrapper = styled(SD)`
 
 const PublicationName = styled.span`
   grid-area: ti;
+  font-weight: 900;
 `
 
 const Publisher = styled.span`
@@ -82,7 +83,7 @@ const Publications = ({ data }) => {
     return (
       <PublicationsItemWrapper key={index}>
         <PublicationName>{item.name}</PublicationName>
-        <Publisher>{item.awarder}</Publisher>
+        <Publisher>{item.publisher}</Publisher>
         <PublicationReleaseDate>
           {publicationDate}
         </PublicationReleaseDate>
