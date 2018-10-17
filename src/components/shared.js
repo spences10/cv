@@ -54,6 +54,33 @@ export const StyledSpan = styled.span`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 `
 
+export const StyledLi = styled.li`
+  display: inline-block;
+  margin: 0.25rem 0.25rem 0.25rem 0.25rem;
+  padding: 0.25rem 0.8rem 0.25rem 0.5rem;
+  color: 1px solid ${props => props.theme.fontLight};
+  border-radius: 15px;
+  border: 1px solid ${props => props.theme.primary};
+  &:hover {
+    background: linear-gradient(
+      0.25turn,
+      ${props => props.theme.primary},
+      ${props => props.theme.secondary}
+    );
+    color: ${props => props.theme.light};
+    border: 1px solid ${props => props.theme.background};
+  }
+  cursor: pointer;
+`
+
+export const StyledList = styled.ul`
+  margin: 0.5rem 0.0125rem;
+  padding: 0.5rem 0.0125rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+`
+
 export const ItemHeader = styled(StyledSpan)`
   text-transform: uppercase;
   font-size: 0.6rem;
