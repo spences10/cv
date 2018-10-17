@@ -1,5 +1,44 @@
 import styled from 'styled-components'
 
+export const MainTemplateArea = `
+  '. . ab ab ab ab . .' /* about */
+  '. . sk sk sk sk . .' /* skills */
+  '. . wo wo wo wo . .' /* work */
+  '. . vo vo vo vo . .' /* volunteer */
+  '. . ed ed ed ed . .' /* education */
+  '. . aw aw aw aw . .' /* awards */
+  '. . pu pu pu pu . .' /* publications */
+  '. . la la la la . .' /* languages */
+  '. . in in in in . .' /* interests */
+  '. . re re re re . .' /* references */
+`
+
+export const TabletTemplateArea = `
+  'ab ab ab ab ab ab' 
+  'sk sk sk sk sk sk' 
+  'wo wo wo wo wo wo' 
+  'vo vo vo vo vo vo' 
+  'ed ed ed ed ed ed' 
+  'aw aw aw aw aw aw'
+  'pu pu pu pu pu pu'
+  'la la la la la la'
+  'in in in in in in'
+  're re re re re re'
+`
+
+export const PhoneTemplateArea = `
+  'ab ab ab ab'
+  'sk sk sk sk'
+  'wo wo wo wo'
+  'vo vo vo vo'
+  'ed ed ed ed'
+  'aw aw aw aw'
+  'pu pu pu pu'
+  'la la la la'
+  'in in in in'
+  're re re re'
+`
+
 export const StyledDiv = styled.div`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
