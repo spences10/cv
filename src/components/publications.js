@@ -35,7 +35,7 @@ const PublicationsItemWrapper = styled(SD)`
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    'ti ti pu pu date date'
+    'ti ti ps ps date date'
     'wh wh wh wh wh   wh  '
     'ws ws ws ws ws   ws  '
     'sh sh sh sh sh   sh  '
@@ -50,7 +50,7 @@ const PublicationName = styled.span`
 `
 
 const Publisher = styled.span`
-  grid-area: pu;
+  grid-area: ps;
 `
 
 const PublicationReleaseDate = styled.span`

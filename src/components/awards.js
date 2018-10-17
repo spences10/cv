@@ -34,7 +34,7 @@ const AwardsItemWrapper = styled(SD)`
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    'ti ti aw aw date date'
+    'ti ti ad ad date date'
     'sh sh sh sh sh   sh  '
     'su su su su su   su  ';
   margin: 0.5rem 0rem;
@@ -46,7 +46,7 @@ const AwardItemTitle = styled.span`
 `
 
 const AwardItemAwarder = styled.span`
-  grid-area: aw;
+  grid-area: ad;
 `
 
 const AwardItemDate = styled.span`
