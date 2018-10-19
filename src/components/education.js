@@ -12,7 +12,7 @@ import {
 } from './shared'
 
 const EducationWrapper = styled(IW)`
-  grid-area: e;
+  grid-area: ed;
 `
 
 const ContentWrapper = styled.div`
@@ -68,7 +68,7 @@ const Education = ({ data }) => {
           {item.studyType} {item.area}
         </EducationItemType>
         <EducationItemDates>
-          Studied: {educationStartDate} - {educationEndDate()}
+          {educationStartDate} - {educationEndDate()}
         </EducationItemDates>
       </EducationItemWrapper>
     )

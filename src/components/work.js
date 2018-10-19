@@ -2,28 +2,25 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import WorkItem from './workItem'
-
 // import { Dump } from '../util/helpers'
+import WorkItem from './workItem'
 
 import { ItemWrapper as IW } from './shared'
 
 const WorkWrapper = styled(IW)`
-  grid-area: w;
+  grid-area: wo;
 `
 
 const Work = ({ data }) => {
-  // return <Dump props={data} />
   const { work } = data.cvDataCv
-  const getWorkExperience = () => {
-    const workItems = []
-    work.forEach((item, index) => {
-      workItems.push(<WorkItem key={index} workItemData={item} />)
-    })
-    return workItems
-  }
-
-  return <WorkWrapper>{getWorkExperience()}</WorkWrapper>
+  // return <Dump props={work} />
+  return (
+    <WorkWrapper>
+      {work.map((item, index) => {
+        return <WorkItem key={index} workItemData={item} />
+      })}
+    </WorkWrapper>
+  )
 }
 
 export default props => (

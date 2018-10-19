@@ -9,6 +9,7 @@ import {
   UpperCaseHeading as UH,
   Heading as H,
   ItemWrapper as IW,
+  ItemHeader as IH,
   StyledHyperLink as SHL,
   StyledDiv as SD
 } from './shared'
@@ -19,7 +20,7 @@ import { ICONS } from '../theme/constants'
 import Icon from '../components/Icon'
 
 const AboutWrapper = styled(IW)`
-  grid-area: a;
+  grid-area: ab;
 `
 
 const AboutLayout = styled(SD)`
@@ -27,62 +28,74 @@ const AboutLayout = styled(SD)`
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    'name  name  name  name  pic   pic  '
-    'label label label label pic   pic  '
-    'email email site  site  phone phone'
-    'about about about about about about';
+    'name     name     name     name     pic      pic     '
+    'label    label    label    label    pic      pic     '
+    'email    email    site     site     phone    phone   '
+    'about    about    about    about    about    about   '
+    'location location location location location location'
+    'profiles profiles profiles profiles profiles profiles';
   ${media.monitor`
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'name  name  name  name  pic   pic  '
-      'label label label label pic   pic  '
-      'email email site  site  phone phone'
-      'about about about about about about';
+      'name     name     name     name     pic      pic     '
+      'label    label    label    label    pic      pic     '
+      'email    email    site     site     phone    phone   '
+      'about    about    about    about    about    about   '
+      'location location location location location location'
+      'profiles profiles profiles profiles profiles profiles';
   `};
   ${media.giant`
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'name  name  name  pic pic    '
-      'label label label pic pic    '
-      'email email email .   .      '
-      'site  site  site  .   .      '
-      'phone phone phone .   .      '
-      'about about about about about';
+      'name     name     name     pic      pic     '
+      'label    label    label    pic      pic     '
+      'email    email    email    .        .       '
+      'site     site     site     .        .       '
+      'phone    phone    phone    .        .       '
+      'about    about    about    about    about   '
+      'location location location location location'
+      'profiles profiles profiles profiles profiles';
   `};
   ${media.desktop`
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'name  name  name  pic   pic  '
-      'label label label pic   pic  '
-      'email email email email .    '
-      'site  site  site  site  .    '
-      'phone phone phone phone .    '
-      'about about about about about';
+      'name     name     name     pic      pic     '
+      'label    label    label    pic      pic     '
+      'email    email    email    email    .       '
+      'site     site     site     site     .       '
+      'phone    phone    phone    phone    .       '
+      'about    about    about    about    about   '
+      'location location location location location'
+      'profiles profiles profiles profiles profiles';
   `};
   ${media.tablet`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'name  name  pic   pic  '
-      'label label pic   pic  '
-      'email email email .    '
-      'site  site  site  .    '
-      'phone phone phone .    '
-      'about about about about';
+      'name     name     pic      pic     '
+      'label    label    pic      pic     '
+      'email    email    email    .       '
+      'site     site     site     .       '
+      'phone    phone    phone    .       '
+      'about    about    about    about   '
+      'location location location location'
+      'profiles profiles profiles profiles';
   `};
   ${media.phone`
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
-      'name  pic   pic  '
-      'label pic   pic  '
-      'email email email'
-      'site  site  site '
-      'phone phone phone'
-      'about about about';
+      'name     pic      pic  '
+      'label    pic      pic  '
+      'email    email    email'
+      'site     site     site '
+      'phone    phone    phone'
+      'about    about    about'
+      'location location location'
+      'profiles profiles profiles';
   `};
 `
 
@@ -142,12 +155,56 @@ const AboutWebsite = styled(SHL)`
   margin: 0.1rem 0rem;
 `
 
+const SummaryHeader = styled(IH)`
+  grid-area: about;
+`
+
 const AboutSummary = styled(SD)`
   grid-area: about;
-  border-top: 2px solid ${props => props.theme.dark};
   padding: 1rem 0rem 0rem 0rem;
-  margin: 2rem 0rem 0rem 0rem;
+  margin: 0.75rem 0rem 0rem 0rem;
+  ul {
+    padding: 0rem;
+    margin: 0rem;
+    li {
+      padding-top: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
 `
+
+const LocationHeader = styled(IH)`
+  grid-area: location;
+`
+
+const Location = styled(SD)`
+  grid-area: location;
+  padding: 1rem 0rem 0rem 0rem;
+  margin: 0.75rem 0rem 0rem 0rem;
+  span {
+    &:not(:last-child)::after {
+      margin-top: 0.5rem;
+      display: inline-block;
+      white-space: pre;
+      content: ', ';
+    }
+  }
+`
+
+// const Profiles = styled(SD)`
+//   grid-area: profiles;
+//   border-top: 2px solid ${props => props.theme.dark};
+//   padding: 1rem 0rem 0rem 0rem;
+//   margin: 2rem 0rem 0rem 0rem;
+//   ul {
+//     padding: 0rem;
+//     margin: 0rem;
+//     li {
+//       padding-top: 0.5rem;
+//       margin-top: 0.5rem;
+//     }
+//   }
+// `
 
 const About = ({ data }) => {
   const {
@@ -157,7 +214,9 @@ const About = ({ data }) => {
     email,
     phone,
     website,
-    summary
+    summary,
+    location,
+    profiles
   } = data.cvDataCv.basics
 
   return (
@@ -167,7 +226,6 @@ const About = ({ data }) => {
         <AboutName>{name}</AboutName>
         <AboutLabel>{label}</AboutLabel>
         <AboutImg src={picture || defaultAvi} />
-
         <AboutEmail
           href={`mailto:${email}?subject=Hi ${name} 👋`}
           target="_blank"
@@ -198,7 +256,39 @@ const About = ({ data }) => {
           />
           {website}
         </AboutWebsite>
-        <AboutSummary>{summary}</AboutSummary>
+        <SummaryHeader>about</SummaryHeader>
+        <AboutSummary>
+          {typeof summary === 'string' ? (
+            summary
+          ) : (
+            <ul>
+              {summary.map((line, index) => {
+                return <li key={index}>{line}</li>
+              })}
+            </ul>
+          )}
+        </AboutSummary>
+        <LocationHeader>location</LocationHeader>
+        <Location>
+          {Object.values(location).map((line, index) => {
+            return (
+              <React.Fragment>
+                {line.length === 0 ? null : (
+                  <span key={index}>{line}</span>
+                )}
+              </React.Fragment>
+            )
+          })}
+        </Location>
+        {/* <Profiles>
+          TODO: fix this!
+          <ul>
+            {profiles.map((line, index) => {
+              // return <Dump props={line} />
+              // return <li key={index}>{line}</li>
+            })}
+          </ul>
+        </Profiles> */}
       </AboutLayout>
     </AboutWrapper>
   )
