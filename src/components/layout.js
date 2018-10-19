@@ -5,11 +5,6 @@ import styled, { ThemeProvider } from 'styled-components'
 import Helmet from 'react-helmet'
 
 import SEO from './seo'
-import {
-  MainTemplateArea,
-  TabletTemplateArea,
-  PhoneTemplateArea
-} from './shared'
 
 import {
   ThemeSelectContext,
@@ -24,12 +19,20 @@ const PageContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: ${MainTemplateArea};
+  grid-template-areas:
+    '. . a a a a . .'
+    '. . s s s s . .'
+    '. . w w w w . .'
+    '. . e e e e . .';
   background: ${props => props.theme.background};
   ${media.monitor`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:${MainTemplateArea};
+    grid-template-areas:
+      '. . a a a a . .'
+      '. . s s s s . .'
+      '. . w w w w . .'
+      '. . e e e e . .';
     /* background: goldenrod; */
     background: linear-gradient(
       0.25turn, 
@@ -39,7 +42,11 @@ const PageContainer = styled.div`
   ${media.giant`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: ${MainTemplateArea};
+    grid-template-areas:
+      '. . a a a a . .'
+      '. . s s s s . .'
+      '. . w w w w . .'
+      '. . e e e e . .';
     /* background: goldenrod; */
     background: linear-gradient(
       0.25turn, 
@@ -49,7 +56,11 @@ const PageContainer = styled.div`
   ${media.desktop`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:${MainTemplateArea};
+    grid-template-areas:
+      '. . a a a a . .'
+      '. . s s s s . .'
+      '. . w w w w . .'
+      '. . e e e e . .';
     /* background: dodgerblue; */
     background: linear-gradient(
       0.25turn, 
@@ -59,7 +70,11 @@ const PageContainer = styled.div`
   ${media.tablet`
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: ${TabletTemplateArea}
+    grid-template-areas:
+      'a a a a a a'
+      's s s s s s'
+      'w w w w w w'
+      'e e e e e e';
     /* background: mediumseagreen; */
     background: linear-gradient(
       0.25turn, 
@@ -69,7 +84,11 @@ const PageContainer = styled.div`
   ${media.phone`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: ${PhoneTemplateArea};
+    grid-template-areas:
+      'a a a a'
+      's s s s'
+      'w w w w'
+      'e e e e';
     /* background: palevioletred; */
     background: linear-gradient(
       0.25turn, 

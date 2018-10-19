@@ -5,15 +5,9 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import About from '../components/about'
 import Work from '../components/work'
-import Volunteer from '../components/volunteer'
 import Skills from '../components/skills'
 import Education from '../components/education'
 import ThemeSelect from '../components/themeSelect'
-import Awards from '../components/awards'
-import Publications from '../components/publications'
-import Languages from '../components/languages'
-import Interests from '../components/interests'
-import References from '../components/references'
 
 const ThemeSelectWrapper = styled.div`
   margin: 0.5rem;
@@ -29,13 +23,7 @@ const IndexPage = () => (
     <About />
     <Skills />
     <Work />
-    <Volunteer />
     <Education />
-    <Awards />
-    <Publications />
-    <Languages />
-    <Interests />
-    <References />
     <ThemeSelectWrapper>
       <ThemeSelect />
     </ThemeSelectWrapper>

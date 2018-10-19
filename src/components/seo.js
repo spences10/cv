@@ -1,11 +1,35 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
 
-const SEO = ({ title, description, image, pathname, article }) => (
+import Twitter from './twitter'
+import Facebook from './facebook'
+
+// import { Dump } from '../util/helpers'
+
+const SEO = ({
+  title = null,
+  description = null,
+  image = null,
+  pathname = null,
+  article = false
+}) => (
   <StaticQuery
-    query={query}
+    query={graphql`
+      query SEOQuery {
+        site {
+          siteMetadata {
+            defaultTitle: title
+            titleTemplate
+            defaultDescription: description
+            siteUrl
+            defaultImage: imageLink
+            twitterUsername
+            facebookAppID
+          }
+        }
+      }
+    `}
     render={({
       site: {
         siteMetadata: {
@@ -14,7 +38,8 @@ const SEO = ({ title, description, image, pathname, article }) => (
           defaultDescription,
           siteUrl,
           defaultImage,
-          twitterUsername
+          twitterUsername,
+          facebookAppID
         }
       }
     }) => {
@@ -30,42 +55,21 @@ const SEO = ({ title, description, image, pathname, article }) => (
           <Helmet title={seo.title} titleTemplate={titleTemplate}>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
-            {seo.url && <meta property="og:url" content={seo.url} />}
-            {(article ? true : null) && (
-              <meta property="og:type" content="article" />
-            )}
-            {seo.title && (
-              <meta property="og:title" content={seo.title} />
-            )}
-            {seo.description && (
-              <meta
-                property="og:description"
-                content={seo.description}
-              />
-            )}
-            {seo.image && (
-              <meta property="og:image" content={seo.image} />
-            )}
-            <meta name="twitter:card" content="summary_large_image" />
-            {twitterUsername && (
-              <meta
-                name="twitter:creator"
-                content={twitterUsername}
-              />
-            )}
-            {seo.title && (
-              <meta name="twitter:title" content={seo.title} />
-            )}
-            {seo.description && (
-              <meta
-                name="twitter:description"
-                content={seo.description}
-              />
-            )}
-            {seo.image && (
-              <meta name="twitter:image" content={seo.image} />
-            )}
           </Helmet>
+          <Facebook
+            pageUrl={seo.url}
+            type={article ? 'article' : null}
+            title={seo.title}
+            description={seo.description}
+            image={seo.image}
+            appID={facebookAppID}
+          />
+          <Twitter
+            username={twitterUsername}
+            title={seo.title}
+            description={seo.description}
+            image={seo.image}
+          />
         </>
       )
     }}
@@ -73,34 +77,3 @@ const SEO = ({ title, description, image, pathname, article }) => (
 )
 
 export default SEO
-
-SEO.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  pathname: PropTypes.string,
-  article: PropTypes.bool
-}
-
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  pathname: null,
-  article: false
-}
-
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        title
-        titleTemplate
-        description
-        siteUrl
-        imageLink
-        twitterUsername
-      }
-    }
-  }
-`
