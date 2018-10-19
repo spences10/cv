@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
-import ReactTooltip from 'react-tooltip'
 
 import {
   ItemHeader as IH,
@@ -78,7 +77,6 @@ const WorkItem = props => {
     highlights,
     position,
     company,
-    organization,
     summary
   } = props.workItemData
   const getWorkDates = () => {
@@ -100,17 +98,13 @@ const WorkItem = props => {
 
   return (
     <WorkItemWrapper>
-      <Company
-        data-tip={company ? 'Employer' : 'Volunteering Organisation'}>
-        {company ? company : organization}
-      </Company>
+      <Company>{company}</Company>
       <Position>{position}</Position>
       <Dates>{getWorkDates()}</Dates>
       <WorkItemHeader>summary</WorkItemHeader>
       <WorkItemSummary>{summary}</WorkItemSummary>
       <HighlightsHeader>highlights</HighlightsHeader>
       <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
-      <ReactTooltip />
     </WorkItemWrapper>
   )
 }
