@@ -1,4 +1,4 @@
-# CV
+# CV Me!
 
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -9,7 +9,7 @@
 
 Want to use this template with your data? Read on... 👀
 
-#### Requirements
+### Requirements
 
 - Zeit now account or somewhere to statically host your data
 - Your own [JSON Schema] CV
@@ -43,6 +43,8 @@ CV data is going to live.
 Note that if you change the `"name"` value in the `now.json` file
 you'll also need to change the npm scripts in `cvdata/package.json`
 
+I've claimed this one so go get your own! 😛
+
 ```json
 {
   "name": "cvjson",
@@ -67,6 +69,15 @@ npm run aliasIt # alias' the deployment
 npm run killCv # removes local cv data
 npm run cleanup # removes stale deploys
 ```
+
+## Alternatives to Now
+
+If you are not keen on using Zeit's now then you can add your CV json
+to a GitHub gist and use the Raw button to access the json that way.
+This can also use a secret Gist as well.
+
+Like I mentioned earlier if you want to keep your json with your code
+then you can transform the data locally.
 
 <!-- Links -->
 
