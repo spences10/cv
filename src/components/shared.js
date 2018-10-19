@@ -1,44 +1,5 @@
 import styled from 'styled-components'
 
-export const MainTemplateArea = `
-  '. . ab ab ab ab . .' /* about */
-  '. . sk sk sk sk . .' /* skills */
-  '. . wo wo wo wo . .' /* work */
-  '. . vo vo vo vo . .' /* volunteer */
-  '. . ed ed ed ed . .' /* education */
-  '. . aw aw aw aw . .' /* awards */
-  '. . pu pu pu pu . .' /* publications */
-  '. . la la la la . .' /* languages */
-  '. . in in in in . .' /* interests */
-  '. . re re re re . .' /* references */
-`
-
-export const TabletTemplateArea = `
-  'ab ab ab ab ab ab' 
-  'sk sk sk sk sk sk' 
-  'wo wo wo wo wo wo' 
-  'vo vo vo vo vo vo' 
-  'ed ed ed ed ed ed' 
-  'aw aw aw aw aw aw'
-  'pu pu pu pu pu pu'
-  'la la la la la la'
-  'in in in in in in'
-  're re re re re re'
-`
-
-export const PhoneTemplateArea = `
-  'ab ab ab ab'
-  'sk sk sk sk'
-  'wo wo wo wo'
-  'vo vo vo vo'
-  'ed ed ed ed'
-  'aw aw aw aw'
-  'pu pu pu pu'
-  'la la la la'
-  'in in in in'
-  're re re re'
-`
-
 export const StyledDiv = styled.div`
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -52,33 +13,6 @@ export const StyledP = styled.p`
 export const StyledSpan = styled.span`
   margin: 0.5rem 0.5rem 0.5rem 0.5rem;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-`
-
-export const StyledLi = styled.li`
-  display: inline-block;
-  margin: 0.25rem 0.25rem 0.25rem 0.25rem;
-  padding: 0.25rem 0.8rem 0.25rem 0.5rem;
-  color: 1px solid ${props => props.theme.fontLight};
-  border-radius: 15px;
-  border: 1px solid ${props => props.theme.primary};
-  &:hover {
-    background: linear-gradient(
-      0.25turn,
-      ${props => props.theme.primary},
-      ${props => props.theme.secondary}
-    );
-    color: ${props => props.theme.light};
-    border: 1px solid ${props => props.theme.background};
-  }
-  cursor: pointer;
-`
-
-export const StyledList = styled.ul`
-  margin: 0.5rem 0.0125rem;
-  padding: 0.5rem 0.0125rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
 `
 
 export const ItemHeader = styled(StyledSpan)`
