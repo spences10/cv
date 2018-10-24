@@ -10,7 +10,7 @@ import {
   WeightAndColour as WC,
   StyledDiv as SD,
   ItemHeader as IH,
-  StyledHyperLink as SH
+  StyledHyperLink as SHL
 } from './shared'
 
 const PublicationsWrapper = styled(IW)`
@@ -35,9 +35,8 @@ const PublicationsItemWrapper = styled(SD)`
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    'ti ti ps ps date date'
-    'wh wh wh wh wh   wh  '
-    'ws ws ws ws ws   ws  '
+    'ti ti ti ti date date'
+    'ps ps ps ps ps   ps  '
     'sh sh sh sh sh   sh  '
     'su su su su su   su  ';
   margin: 0.5rem 0rem;
@@ -57,13 +56,8 @@ const PublicationReleaseDate = styled.span`
   grid-area: date;
 `
 
-const PublicationWebsiteHeader = styled(IH)`
-  grid-area: wh;
-`
-
-const WebsiteLink = styled(SH)`
-  grid-area: ws;
-  padding-top: 0.5rem;
+const WebsiteLink = styled(SHL)`
+  grid-area: ti;
 `
 
 const PublicationItemHeader = styled(IH)`
@@ -82,13 +76,16 @@ const Publications = ({ data }) => {
     const publicationDate = format(item.releaseDate, 'MMM yyyy')
     return (
       <PublicationsItemWrapper key={index}>
-        <PublicationName>{item.name}</PublicationName>
+        <WebsiteLink
+          href={item.website}
+          target="_blank"
+          rel="noopener">
+          <PublicationName>{item.name}</PublicationName>
+        </WebsiteLink>
         <Publisher>{item.publisher}</Publisher>
         <PublicationReleaseDate>
           {publicationDate}
         </PublicationReleaseDate>
-        <PublicationWebsiteHeader>website</PublicationWebsiteHeader>
-        <WebsiteLink>{item.website}</WebsiteLink>
         <PublicationItemHeader>summary</PublicationItemHeader>
         <PublicationItemSummary>
           {item.summary}
