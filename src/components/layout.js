@@ -29,7 +29,7 @@ const PageContainer = styled.div`
   ${media.monitor`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
-    grid-template-areas:${MainTemplateArea};
+    grid-template-areas: ${MainTemplateArea};
     /* background: goldenrod; */
     background: linear-gradient(
       0.25turn, 
@@ -59,7 +59,7 @@ const PageContainer = styled.div`
   ${media.tablet`
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: ${TabletTemplateArea}
+    grid-template-areas: ${TabletTemplateArea};
     /* background: mediumseagreen; */
     background: linear-gradient(
       0.25turn, 
