@@ -7,13 +7,14 @@ import ReactTooltip from 'react-tooltip'
 
 import {
   ItemWrapper as IW,
+  WeightAndColour as WC,
   StyledList as SL,
   StyledLi as LI,
   StyledSpan as SS
 } from './shared'
 
-const SkillsWrapper = styled(IW)`
-  grid-area: sk;
+const InterestsWrapper = styled(IW)`
+  grid-area: in;
 `
 
 const ContentWrapper = styled.div`
@@ -21,7 +22,14 @@ const ContentWrapper = styled.div`
   padding: 0.5rem 0.5rem 0.5rem 0.51rem;
 `
 
-const SkillHeader = styled(SS)`
+const InterestsTitle = styled(WC)`
+  margin-left: 0rem;
+  padding-left: 0rem;
+  padding-bottom: 0.125rem;
+  margin-bottom: 0.125rem;
+`
+
+const InterestHeader = styled(SS)`
   margin: 0rem;
   padding: 0rem;
   font-size: 0.8rem;
@@ -33,24 +41,25 @@ const StyledList = styled(SL)``
 
 const StyledLi = styled(LI)``
 
-const Skills = ({ data }) => {
-  const { skills } = data.cvDataCv
+const Interests = ({ data }) => {
+  const { interests } = data.cvDataCv
   // console.log('=====================')
   // console.log(this.props)
   // console.log('=====================')
   return (
-    <SkillsWrapper>
+    <InterestsWrapper>
       <ContentWrapper>
-        {/* <Dump props={skills} /> */}
-        {Object.keys(skills).map((key, index) => {
+        <InterestsTitle>interests</InterestsTitle>
+        {/* <Dump props={Interests} /> */}
+        {Object.keys(interests).map((key, index) => {
           return (
             <React.Fragment key={index}>
-              <SkillHeader>
-                <StyledList data-tip="Skills Detail">
-                  {skills[key].name}
+              <InterestHeader>
+                <StyledList data-tip="Interests Detail">
+                  {interests[key].name}
                 </StyledList>
-              </SkillHeader>
-              {skills[key].keywords.map((key, index) => {
+              </InterestHeader>
+              {interests[key].keywords.map((key, index) => {
                 return <StyledLi key={key + index}>{key}</StyledLi>
               })}
             </React.Fragment>
@@ -58,23 +67,22 @@ const Skills = ({ data }) => {
         })}
       </ContentWrapper>
       <ReactTooltip />
-    </SkillsWrapper>
+    </InterestsWrapper>
   )
 }
 
 export default props => (
   <StaticQuery
     query={graphql`
-      query Skills {
+      query Interests {
         cvDataCv {
-          skills {
+          interests {
             name
-            level
             keywords
           }
         }
       }
     `}
-    render={data => <Skills data={data} {...props} />}
+    render={data => <Interests data={data} {...props} />}
   />
 )
