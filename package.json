@@ -17,6 +17,7 @@
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-helmet": "5.2.0",
+    "react-spring": "6.1.8",
     "react-tooltip": "3.9.0",
     "styled-components": "4.1.1"
   },
