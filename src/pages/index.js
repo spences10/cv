@@ -14,6 +14,7 @@ import Publications from '../components/publications'
 import Languages from '../components/languages'
 import Interests from '../components/interests'
 import References from '../components/references'
+import { Spring } from 'react-spring'
 
 const ThemeSelectWrapper = styled.div`
   margin: 0.5rem;
@@ -26,6 +27,13 @@ const ThemeSelectWrapper = styled.div`
 const IndexPage = () => (
   <Layout>
     {/* <Dump props={work} /> */}
+    <Spring delay={1000} from={{ opacity: 0 }} to={{ opacity: 1 }}>
+      {({ height, opacity }) => (
+        <div style={{ height, opacity }}>
+          <Publications />
+        </div>
+      )}
+    </Spring>
     <About />
     <Skills />
     <Work />
