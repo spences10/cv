@@ -1,11 +1,11 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.131",
+  "version": "1.0.132",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
-    "babel-plugin-styled-components": "1.9.4",
+    "babel-plugin-styled-components": "1.10.0",
     "date-fns": "2.0.0-alpha.26",
     "gatsby": "2.0.67",
     "gatsby-node-helpers": "0.3.0",
