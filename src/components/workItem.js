@@ -1,9 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { format, isValid } from 'date-fns'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import React from 'react'
 import ReactTooltip from 'react-tooltip'
-
+import styled from 'styled-components'
 import {
   ItemHeader as IH,
   StyledDiv as SD,
@@ -82,10 +81,10 @@ const WorkItem = props => {
     summary
   } = props.workItemData
   const getWorkDates = () => {
-    const startDate = format(propsStartDate, 'MMM yyyy')
+    const startDate = format(new Date(propsStartDate), 'MMM yyyy')
     const endDate = () => {
-      if (isValid(propsEndDate)) {
-        return format(propsEndDate, 'MMM yyyy')
+      if (isValid(new Date(propsEndDate))) {
+        return format(new Date(propsEndDate), 'MMM yyyy')
       } else {
         return 'Present'
       }
