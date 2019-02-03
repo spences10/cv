@@ -6,7 +6,8 @@
   "dependencies": {
     "axios": "0.18.0",
     "babel-plugin-styled-components": "1.10.0",
-    "date-fns": "2.0.0-alpha.26",
+    "date-fns": "2.0.0-alpha.27",
+    "gatsby": "2.0.91",
     "gatsby": "2.0.111",
     "gatsby-node-helpers": "0.3.0",
     "gatsby-plugin-favicon": "3.1.5",
