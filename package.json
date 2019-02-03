@@ -39,9 +39,8 @@
     "build": "gatsby build && npm run wellknown",
     "dev": "gatsby develop --verbose --p 8080 --open",
     "format": "pretty-quick",
-    "serve": "gatsby serve -9000",
+    "serve": "gatsby serve",
     "precommit": "pretty-quick --staged",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "clearStale": "now rm cvjson --safe --yes",
     "wellknown": "cp -r .well-known/ cv/"
   },
