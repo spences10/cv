@@ -51,10 +51,13 @@ const Education = ({ data }) => {
   const { education } = data.cvDataCv
   // return <Dump data={data} />
   const getEducation = education.map((item, index) => {
-    const educationStartDate = format(item.startDate, 'MMM yyyy')
+    const educationStartDate = format(
+      new Date(item.startDate),
+      'MMM yyyy'
+    )
     const educationEndDate = () => {
-      if (isValid(item.endDate)) {
-        return format(item.endDate, 'MMM yyyy')
+      if (isValid(new Date(item.endDate))) {
+        return format(new Date(item.endDate), 'MMM yyyy')
       } else {
         return 'Present'
       }
