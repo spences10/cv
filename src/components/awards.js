@@ -1,15 +1,13 @@
+import { format, isValid } from 'date-fns'
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { format } from 'date-fns'
 import styled from 'styled-components'
-
 // import { Dump } from '../util/helpers'
-
 import {
+  ItemHeader as IH,
   ItemWrapper as IW,
-  WeightAndColour as WC,
   StyledDiv as SD,
-  ItemHeader as IH
+  WeightAndColour as WC
 } from './shared'
 
 const AwardsWrapper = styled(IW)`
@@ -66,12 +64,19 @@ const Awards = ({ data }) => {
   const { awards } = data.cvDataCv
 
   const getAwards = awards.map((item, index) => {
-    const awardDate = format(item.date, 'MMM yyyy')
+    const awardDate = () => {
+      if (isValid(new Date(item.date))) {
+        return format(new Date(item.date), 'MMM yyyy')
+      } else {
+        return null
+      }
+    }
+
     return (
       <AwardsItemWrapper key={index}>
         <AwardItemTitle>{item.title}</AwardItemTitle>
         <AwardItemAwarder>{item.awarder}</AwardItemAwarder>
-        <AwardItemDate>{awardDate}</AwardItemDate>
+        <AwardItemDate>{awardDate()}</AwardItemDate>
         <AwardItemHeader>summary</AwardItemHeader>
         <AwardItemSummary>{item.summary}</AwardItemSummary>
       </AwardsItemWrapper>
