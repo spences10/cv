@@ -70,7 +70,10 @@ const Publications = ({ data }) => {
   const { publications } = data.cvDataCv
 
   const getPublications = publications.map((item, index) => {
-    const publicationDate = format(item.releaseDate, 'MMM yyyy')
+    const publicationDate = format(
+      new Date(item.releaseDate),
+      'MMM yyyy'
+    )
     return (
       <PublicationsItemWrapper key={index}>
         <WebsiteLink

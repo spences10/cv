@@ -64,7 +64,7 @@ const Awards = ({ data }) => {
   const { awards } = data.cvDataCv
 
   const getAwards = awards.map((item, index) => {
-    const awardDate = format(item.date, 'MMM yyyy')
+    const awardDate = format(new Date(item.date), 'MMM yyyy')
     return (
       <AwardsItemWrapper key={index}>
         <AwardItemTitle>{item.title}</AwardItemTitle>
