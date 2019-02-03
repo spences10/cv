@@ -1,9 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { format, isValid } from 'date-fns'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import React from 'react'
 import ReactTooltip from 'react-tooltip'
-
+import styled from 'styled-components'
 import {
   ItemHeader as IH,
   StyledDiv as SD,
