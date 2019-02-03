@@ -5,6 +5,8 @@
 [![styled components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
 [![Build Status](https://travis-ci.com/spences10/cv.svg?token=WDGHiW4Z8aNkuywpJ62W&branch=master)](https://travis-ci.com/spences10/cv)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c681317e-e8ed-44ac-878e-2ef018ea8a45/deploy-status)](https://app.netlify.com/sites/cv-scottspence/deploys)
+
 ## CV using Gatsby and [JSON Schema]
 
 Want to use this template with your data? Read on... 👀
