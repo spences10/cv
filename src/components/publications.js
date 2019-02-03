@@ -1,16 +1,13 @@
+import { format } from 'date-fns'
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
-
-import { Dump } from '../util/helpers'
-
 import {
-  ItemWrapper as IW,
-  WeightAndColour as WC,
-  StyledDiv as SD,
   ItemHeader as IH,
-  StyledHyperLink as SHL
+  ItemWrapper as IW,
+  StyledDiv as SD,
+  StyledHyperLink as SHL,
+  WeightAndColour as WC
 } from './shared'
 
 const PublicationsWrapper = styled(IW)`
@@ -73,7 +70,10 @@ const Publications = ({ data }) => {
   const { publications } = data.cvDataCv
 
   const getPublications = publications.map((item, index) => {
-    const publicationDate = format(item.releaseDate, 'MMM yyyy')
+    const publicationDate = format(
+      new Date(item.releaseDate),
+      'MMM yyyy'
+    )
     return (
       <PublicationsItemWrapper key={index}>
         <WebsiteLink
