@@ -1,15 +1,13 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import { format } from 'date-fns'
+import { graphql, StaticQuery } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
-
 // import { Dump } from '../util/helpers'
-
 import {
+  ItemHeader as IH,
   ItemWrapper as IW,
-  WeightAndColour as WC,
   StyledDiv as SD,
-  ItemHeader as IH
+  WeightAndColour as WC
 } from './shared'
 
 const AwardsWrapper = styled(IW)`

@@ -1,14 +1,12 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import { format, isValid } from 'date-fns'
+import { graphql, StaticQuery } from 'gatsby'
+import React from 'react'
 import styled from 'styled-components'
-
 // import { Dump } from '../util/helpers'
-
 import {
   ItemWrapper as IW,
-  WeightAndColour as WC,
-  StyledDiv as SD
+  StyledDiv as SD,
+  WeightAndColour as WC
 } from './shared'
 
 const EducationWrapper = styled(IW)`
