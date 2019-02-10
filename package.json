@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.201",
+  "version": "1.0.203",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
