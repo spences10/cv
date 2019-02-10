@@ -42,7 +42,7 @@
     "serve": "gatsby serve",
     "precommit": "pretty-quick --staged",
     "clearStale": "now rm cvjson --safe --yes",
-    "wellknown": "cp -r .well-known/ cv/"
+    "wellknown": "cp -r .well-known/ public/"
   },
   "repository": {
     "type": "git",
