@@ -7,8 +7,7 @@
     "axios": "0.18.0",
     "babel-plugin-styled-components": "1.10.0",
     "date-fns": "2.0.0-alpha.27",
-    "gatsby": "2.0.91",
-    "gatsby": "2.0.118",
+    "gatsby": "2.0.116",
     "gatsby-node-helpers": "0.3.0",
     "gatsby-plugin-favicon": "3.1.5",
     "gatsby-plugin-google-analytics": "2.0.13",
@@ -43,7 +42,7 @@
     "serve": "gatsby serve",
     "precommit": "pretty-quick --staged",
     "clearStale": "now rm cvjson --safe --yes",
-    "wellknown": "cp -r .well-known/ cv/"
+    "wellknown": "cp -r .well-known/ public/"
   },
   "repository": {
     "type": "git",
