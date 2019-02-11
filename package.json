@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.203",
+  "version": "1.0.205",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "dependencies": {
     "axios": "0.18.0",
@@ -13,7 +13,7 @@
     "gatsby-plugin-google-analytics": "2.0.13",
     "gatsby-plugin-react-helmet": "3.0.6",
     "gatsby-plugin-styled-components": "3.0.5",
-    "prop-types": "15.6.2",
+    "prop-types": "15.7.1",
     "react": "16.8.1",
     "react-dom": "16.8.1",
     "react-helmet": "5.2.0",
