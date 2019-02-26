@@ -59,6 +59,11 @@ const useCvData = () => {
             name
             reference
           }
+          skills {
+            name
+            level
+            keywords
+          }
         }
       }
     `
