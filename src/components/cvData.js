@@ -44,6 +44,10 @@ const useCvData = () => {
             name
             keywords
           }
+          languages {
+            language
+            fluency
+          }
         }
       }
     `
