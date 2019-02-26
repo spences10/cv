@@ -48,6 +48,13 @@ const useCvData = () => {
             language
             fluency
           }
+          publications {
+            name
+            publisher
+            releaseDate
+            website
+            summary
+          }
         }
       }
     `
