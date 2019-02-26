@@ -55,6 +55,10 @@ const useCvData = () => {
             website
             summary
           }
+          references {
+            name
+            reference
+          }
         }
       }
     `
