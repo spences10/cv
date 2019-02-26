@@ -1,7 +1,7 @@
 import { format, isValid } from 'date-fns'
-import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
 import {
   ItemHeader as IH,
@@ -61,7 +61,7 @@ const AwardItemSummary = styled.span`
 `
 
 const Awards = ({ data }) => {
-  const { awards } = data.cvDataCv
+  const { awards } = useCvData()
 
   const getAwards = awards.map((item, index) => {
     const awardDate = () => {
@@ -98,20 +98,4 @@ const Awards = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Awards {
-        cvDataCv {
-          awards {
-            title
-            date
-            awarder
-            summary
-          }
-        }
-      }
-    `}
-    render={data => <Awards data={data} {...props} />}
-  />
-)
+export default Awards

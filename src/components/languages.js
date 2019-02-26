@@ -1,6 +1,6 @@
-import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
 import {
   ItemWrapper as IW,
@@ -41,8 +41,9 @@ const LanguagesItemFluency = styled.span`
   grid-area: fl;
 `
 
-const Languages = ({ data }) => {
-  const { languages } = data.cvDataCv
+const Languages = () => {
+  const { languages } = useCvData()
+
   // return <Dump data={data} />
   const getLanguages = languages.map((item, index) => {
     return (
@@ -63,18 +64,4 @@ const Languages = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Languages {
-        cvDataCv {
-          languages {
-            language
-            fluency
-          }
-        }
-      }
-    `}
-    render={data => <Languages data={data} {...props} />}
-  />
-)
+export default Languages

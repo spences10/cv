@@ -1,6 +1,6 @@
-import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
 import {
   ItemWrapper as IW,
@@ -47,8 +47,8 @@ const Quote = styled.span`
   font-weight: 900;
 `
 
-const References = ({ data }) => {
-  const { references } = data.cvDataCv
+const References = () => {
+  const { references } = useCvData()
   // return <Dump data={data} />
   const getReference = references.map((item, index) => {
     return (
@@ -77,18 +77,4 @@ const References = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query References {
-        cvDataCv {
-          references {
-            name
-            reference
-          }
-        }
-      }
-    `}
-    render={data => <References data={data} {...props} />}
-  />
-)
+export default References

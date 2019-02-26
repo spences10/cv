@@ -1,14 +1,12 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 import ReactTooltip from 'react-tooltip'
-
+import styled from 'styled-components'
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
-
 import {
   ItemWrapper as IW,
-  StyledList as SL,
   StyledLi as LI,
+  StyledList as SL,
   StyledSpan as SS
 } from './shared'
 
@@ -33,8 +31,8 @@ const StyledList = styled(SL)``
 
 const StyledLi = styled(LI)``
 
-const Skills = ({ data }) => {
-  const { skills } = data.cvDataCv
+const Skills = () => {
+  const { skills } = useCvData()
   // console.log('=====================')
   // console.log(this.props)
   // console.log('=====================')
@@ -62,19 +60,4 @@ const Skills = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Skills {
-        cvDataCv {
-          skills {
-            name
-            level
-            keywords
-          }
-        }
-      }
-    `}
-    render={data => <Skills data={data} {...props} />}
-  />
-)
+export default Skills
