@@ -40,6 +40,10 @@ const useCvData = () => {
             endDate
             gpa
           }
+          interests {
+            name
+            keywords
+          }
         }
       }
     `
