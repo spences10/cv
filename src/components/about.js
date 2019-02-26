@@ -1,23 +1,19 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-
-import { media } from '../theme/globalStyle'
-// import { Dump } from '../util/helpers'
-
-import {
-  UpperCaseHeading as UH,
-  Heading as H,
-  ItemWrapper as IW,
-  ItemHeader as IH,
-  StyledHyperLink as SHL,
-  StyledDiv as SD
-} from './shared'
-
-import defaultAvi from '../img/default_avatar.png'
-
-import { ICONS } from '../theme/constants'
 import Icon from '../components/Icon'
+import defaultAvi from '../img/default_avatar.png'
+import { ICONS } from '../theme/constants'
+import { media } from '../theme/globalStyle'
+import useCvData from './cvData'
+// import { Dump } from '../util/helpers'
+import {
+  Heading as H,
+  ItemHeader as IH,
+  ItemWrapper as IW,
+  StyledDiv as SD,
+  StyledHyperLink as SHL,
+  UpperCaseHeading as UH
+} from './shared'
 
 const AboutWrapper = styled(IW)`
   grid-area: ab;
@@ -206,7 +202,7 @@ const Location = styled(SD)`
 //   }
 // `
 
-const About = ({ data }) => {
+const About = () => {
   const {
     name,
     label,
@@ -215,10 +211,8 @@ const About = ({ data }) => {
     phone,
     website,
     summary,
-    location,
-    profiles
-  } = data.cvDataCv.basics
-
+    location
+  } = useCvData().basics
   return (
     <AboutWrapper>
       {/* <Dump props={({ theme }) => theme.primary} /> */}
@@ -294,35 +288,4 @@ const About = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Basics {
-        cvDataCv {
-          basics {
-            name
-            label
-            picture
-            email
-            phone
-            website
-            summary
-            location {
-              address
-              postalCode
-              city
-              countryCode
-              region
-            }
-            profiles {
-              network
-              username
-              url
-            }
-          }
-        }
-      }
-    `}
-    render={data => <About data={data} {...props} />}
-  />
-)
+export default About
