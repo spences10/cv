@@ -64,6 +64,15 @@ const useCvData = () => {
             level
             keywords
           }
+          volunteer {
+            organization
+            position
+            website
+            startDate
+            endDate
+            summary
+            highlights
+          }
         }
       }
     `
