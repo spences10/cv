@@ -1,11 +1,8 @@
+import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-
-import { Dump } from '../util/helpers'
-import WorkItem from './workItem'
-
 import { ItemWrapper as IW } from './shared'
+import WorkItem from './workItem'
 
 const VolunteerWrapper = styled(IW)`
   grid-area: vo;
