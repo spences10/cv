@@ -1,7 +1,7 @@
 import { format } from 'date-fns'
-import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import useCvData from './cvData'
 import {
   ItemHeader as IH,
   ItemWrapper as IW,
@@ -66,8 +66,8 @@ const PublicationItemSummary = styled.span`
   padding-top: 0.5rem;
 `
 
-const Publications = ({ data }) => {
-  const { publications } = data.cvDataCv
+const Publications = () => {
+  const { publications } = useCvData()
 
   const getPublications = publications.map((item, index) => {
     const publicationDate = format(
@@ -109,21 +109,4 @@ const Publications = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Publications {
-        cvDataCv {
-          publications {
-            name
-            publisher
-            releaseDate
-            website
-            summary
-          }
-        }
-      }
-    `}
-    render={data => <Publications data={data} {...props} />}
-  />
-)
+export default Publications
