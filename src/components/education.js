@@ -1,8 +1,8 @@
 import { format, isValid } from 'date-fns'
-import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 // import { Dump } from '../util/helpers'
+import useCvData from './cvData'
 import {
   ItemWrapper as IW,
   StyledDiv as SD,
@@ -47,8 +47,9 @@ const EducationItemDates = styled.span`
   grid-area: date;
 `
 
-const Education = ({ data }) => {
-  const { education } = data.cvDataCv
+const Education = () => {
+  const { education } = useCvData()
+
   // return <Dump data={data} />
   const getEducation = education.map((item, index) => {
     const educationStartDate = format(
@@ -85,22 +86,4 @@ const Education = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Education {
-        cvDataCv {
-          education {
-            institution
-            area
-            studyType
-            startDate
-            endDate
-            gpa
-          }
-        }
-      }
-    `}
-    render={data => <Education data={data} {...props} />}
-  />
-)
+export default Education
