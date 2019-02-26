@@ -1,6 +1,6 @@
-import { graphql, StaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
+import useCvData from './cvData'
 import { ItemWrapper as IW } from './shared'
 // import { Dump } from '../util/helpers'
 import WorkItem from './workItem'
@@ -9,8 +9,9 @@ const WorkWrapper = styled(IW)`
   grid-area: wo;
 `
 
-const Work = ({ data }) => {
-  const { work } = data.cvDataCv
+const Work = () => {
+  const { work } = useCvData()
+
   // return <Dump props={work} />
   return (
     <WorkWrapper>
@@ -21,23 +22,4 @@ const Work = ({ data }) => {
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Work {
-        cvDataCv {
-          work {
-            company
-            position
-            website
-            startDate
-            endDate
-            summary
-            highlights
-          }
-        }
-      }
-    `}
-    render={data => <Work data={data} {...props} />}
-  />
-)
+export default Work
