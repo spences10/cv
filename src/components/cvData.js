@@ -32,6 +32,14 @@ const useCvData = () => {
             awarder
             summary
           }
+          education {
+            institution
+            area
+            studyType
+            startDate
+            endDate
+            gpa
+          }
         }
       }
     `
