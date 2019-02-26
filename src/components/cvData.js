@@ -26,6 +26,12 @@ const useCvData = () => {
               url
             }
           }
+          awards {
+            title
+            date
+            awarder
+            summary
+          }
         }
       }
     `
