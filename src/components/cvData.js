@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
-const useSiteMetadata = () => {
+const useCvData = () => {
   const { cvDataCv } = useStaticQuery(
     graphql`
       query SITE_CV_DATA {
@@ -33,4 +33,4 @@ const useSiteMetadata = () => {
   return cvDataCv
 }
 
-export default useSiteMetadata
+export default useCvData
