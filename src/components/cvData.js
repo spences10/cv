@@ -73,6 +73,15 @@ const useCvData = () => {
             summary
             highlights
           }
+          work {
+            company
+            position
+            website
+            startDate
+            endDate
+            summary
+            highlights
+          }
         }
       }
     `
