@@ -3,6 +3,17 @@
   "description": "CV using Gatsby",
   "version": "1.0.243",
   "author": "Scott Spence <spences10apps@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf .cache/ && rm -rf public/",
+    "build": "gatsby build && npm run wellknown",
+    "dev": "gatsby develop --verbose --p 8080 --open",
+    "format": "pretty-quick",
+    "serve": "gatsby serve",
+    "precommit": "pretty-quick --staged",
+    "clearStale": "now rm cvjson --safe --yes",
+    "wellknown": "cp -r .well-known/ public/"
+  },
   "dependencies": {
     "axios": "0.18.0",
     "babel-plugin-styled-components": "1.10.0",
@@ -33,17 +44,6 @@
     "gatsby",
     "cv"
   ],
-  "license": "MIT",
-  "scripts": {
-    "clean": "rm -rf .cache/ && rm -rf public/",
-    "build": "gatsby build && npm run wellknown",
-    "dev": "gatsby develop --verbose --p 8080 --open",
-    "format": "pretty-quick",
-    "serve": "gatsby serve",
-    "precommit": "pretty-quick --staged",
-    "clearStale": "now rm cvjson --safe --yes",
-    "wellknown": "cp -r .well-known/ public/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spences10/cv"
