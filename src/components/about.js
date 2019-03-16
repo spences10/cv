@@ -212,6 +212,7 @@ const About = () => {
     website,
     summary,
     location
+    // profiles
   } = useCvData().basics
   return (
     <AboutWrapper>
@@ -275,11 +276,17 @@ const About = () => {
           })}
         </Location>
         {/* <Profiles>
-          TODO: fix this!
           <ul>
             {profiles.map((line, index) => {
+              // TODO: fix this! 
               // return <Dump props={line} />
-              // return <li key={index}>{line}</li>
+              // return (
+              //   <>
+              //     <li key={index}>{line.network}</li>
+              //     <li key={index}>{line.username}</li>
+              //     <li key={index}>{line.url}</li>
+              //   </>
+              // )
             })}
           </ul>
         </Profiles> */}
