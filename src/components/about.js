@@ -211,8 +211,8 @@ const About = () => {
     phone,
     website,
     summary,
-    location,
-    profiles
+    location
+    // profiles
   } = useCvData().basics
   return (
     <AboutWrapper>
