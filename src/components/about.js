@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Icon from '../components/Icon'
-import defaultAvi from '../img/default_avatar.png'
 import { ICONS } from '../theme/constants'
 import { media } from '../theme/globalStyle'
+import { AboutImage } from './aboutImage'
 import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
 import {
@@ -110,7 +110,7 @@ const AboutLabel = styled(H)`
   padding: 0.1rem 0rem 0.1rem 0rem;
 `
 
-const AboutImg = styled.img`
+const AboutFace = styled.div`
   grid-area: pic;
   object-fit: cover;
   margin: 1rem;
@@ -206,7 +206,6 @@ const About = () => {
   const {
     name,
     label,
-    picture,
     email,
     phone,
     website,
@@ -220,7 +219,9 @@ const About = () => {
       <AboutLayout>
         <AboutName>{name}</AboutName>
         <AboutLabel>{label}</AboutLabel>
-        <AboutImg src={picture || defaultAvi} />
+        <AboutFace>
+          <AboutImage />
+        </AboutFace>
         <AboutEmail
           href={`mailto:${email}?subject=Hi ${name} 👋`}
           target="_blank"
@@ -267,11 +268,11 @@ const About = () => {
         <Location>
           {Object.values(location).map((line, index) => {
             return (
-              <React.Fragment>
+              <>
                 {line.length === 0 ? null : (
                   <span key={index}>{line}</span>
                 )}
-              </React.Fragment>
+              </>
             )
           })}
         </Location>
