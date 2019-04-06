@@ -1,24 +1,20 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
-import styled, { ThemeProvider } from 'styled-components'
+import React from 'react'
 import Helmet from 'react-helmet'
-
-import SEO from './seo'
-import {
-  MainTemplateArea,
-  TabletTemplateArea,
-  PhoneTemplateArea
-} from './shared'
-
+import styled, { ThemeProvider } from 'styled-components'
 import {
   ThemeSelectContext,
   ThemeSelectProvider
 } from '../contexts/ThemeSelectContext'
-
 // import { Dump } from '../util/helpers'
-
-import { media, GlobalStyle } from '../theme/globalStyle'
+import { GlobalStyle, media } from '../theme/globalStyle'
+import SEO from './seo'
+import {
+  MainTemplateArea,
+  PhoneTemplateArea,
+  TabletTemplateArea
+} from './shared'
+import { useSiteMetadata } from './siteMetadata'
 
 const PageContainer = styled.div`
   display: grid;
@@ -83,13 +79,13 @@ const PageContainer = styled.div`
 //   right: 0;
 // `
 
-const Layout = ({ children, data }) => {
+const Layout = ({ children }) => {
   const {
     title,
     description,
     imageLink,
     siteLanguage
-  } = data.site.siteMetadata
+  } = useSiteMetadata()
   return (
     <ThemeSelectProvider>
       <ThemeSelectContext.Consumer>
@@ -119,20 +115,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query LayoutData {
-        site {
-          siteMetadata {
-            title
-            siteLanguage
-            description
-            imageLink
-          }
-        }
-      }
-    `}
-    render={data => <Layout data={data} {...props} />}
-  />
-)
+export default Layout
