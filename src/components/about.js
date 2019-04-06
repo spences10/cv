@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Icon from '../components/Icon'
-import defaultAvi from '../img/default_avatar.png'
 import { ICONS } from '../theme/constants'
 import { media } from '../theme/globalStyle'
+import { AboutImage } from './aboutImage'
 import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
 import {
@@ -132,6 +132,28 @@ const AboutImg = styled.img`
   `};
 `
 
+const AboutFace = styled.div`
+  grid-area: pic;
+  object-fit: cover;
+  margin: 1rem;
+  padding: 0rem;
+  width: 80%;
+  border-radius: 50%;
+  background-image: url(${props => props.src};);
+  ${media.giant`
+    width: 80%;
+  `};
+  ${media.desktop`
+    width: 80%;
+  `};
+  ${media.tablet`
+    width: 80%;
+  `};
+  ${media.phone`
+    width: 80%;
+  `};
+`
+
 // start end centre stretch
 const AboutEmail = styled(SHL)`
   grid-area: email;
@@ -206,7 +228,6 @@ const About = () => {
   const {
     name,
     label,
-    picture,
     email,
     phone,
     website,
@@ -220,7 +241,9 @@ const About = () => {
       <AboutLayout>
         <AboutName>{name}</AboutName>
         <AboutLabel>{label}</AboutLabel>
-        <AboutImg src={picture || defaultAvi} />
+        <AboutFace>
+          <AboutImage />
+        </AboutFace>
         <AboutEmail
           href={`mailto:${email}?subject=Hi ${name} 👋`}
           target="_blank"
@@ -267,11 +290,11 @@ const About = () => {
         <Location>
           {Object.values(location).map((line, index) => {
             return (
-              <React.Fragment>
+              <>
                 {line.length === 0 ? null : (
                   <span key={index}>{line}</span>
                 )}
-              </React.Fragment>
+              </>
             )
           })}
         </Location>
