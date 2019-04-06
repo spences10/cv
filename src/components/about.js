@@ -110,28 +110,6 @@ const AboutLabel = styled(H)`
   padding: 0.1rem 0rem 0.1rem 0rem;
 `
 
-const AboutImg = styled.img`
-  grid-area: pic;
-  object-fit: cover;
-  margin: 1rem;
-  padding: 0rem;
-  width: 80%;
-  border-radius: 50%;
-  background-image: url(${props => props.src};);
-  ${media.giant`
-    width: 80%;
-  `};
-  ${media.desktop`
-    width: 80%;
-  `};
-  ${media.tablet`
-    width: 80%;
-  `};
-  ${media.phone`
-    width: 80%;
-  `};
-`
-
 const AboutFace = styled.div`
   grid-area: pic;
   object-fit: cover;
