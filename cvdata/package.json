@@ -5,13 +5,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pullCv": "curl https://cvjson.now.sh/ --output ./cvjson/cv.json",
-    "pushCv": "now ./cvjson/ && npm run aliasIt",
-    "killCv": "> ./cvjson/cv.json && npm run cleanup",
+    "pullCv": "curl https://cvjson.now.sh/cv.json --output ./cvjson/cv.json",
+    "pushCv": "now ./cvjson && yarn aliasIt",
+    "killCv": "> ./cvjson/cv.json && yarn cleanup",
     "aliasIt": "now alias",
     "cleanup": "now rm cvjson --safe --yes"
   },
   "keywords": [],
   "author": "Scott Spence <spences10apps@gmail.com> (https://blog.scottspence.me/)",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "now": "15.5.0"
+  }
 }
