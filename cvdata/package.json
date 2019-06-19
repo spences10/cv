@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pullCv": "curl https://cvjson.now.sh/ --output ./cvjson/cv.json",
+    "pullCv": "curl https://cvjson.now.sh/cv.json --output ./cvjson/cv.json",
     "pushCv": "now ./cvjson/ && npm run aliasIt",
     "killCv": "> ./cvjson/cv.json && npm run cleanup",
     "aliasIt": "now alias",
