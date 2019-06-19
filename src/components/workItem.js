@@ -1,4 +1,4 @@
-import { format, isValid } from 'date-fns'
+import { differenceInMonths, format, isValid } from 'date-fns'
 import PropTypes from 'prop-types'
 import React from 'react'
 import ReactTooltip from 'react-tooltip'
@@ -90,7 +90,21 @@ const WorkItem = props => {
       }
     }
 
-    return `${startDate} - ${endDate()}`
+    const time = differenceInMonths(
+      propsEndDate ? new Date(propsEndDate) : new Date(),
+      new Date(propsStartDate)
+    )
+
+    const years = (time / 12) | 0
+    const months = (time % 12) + 1 // JS months start at 0 🤦‍♂
+    const timeThere =
+      years > 0
+        ? `${
+            years > 1 ? `${years} years` : `${years} year`
+          }, ${months} months`
+        : `${months} months`
+
+    return `${startDate} - ${endDate()} (${timeThere})`
   }
 
   const getHighlights = highlights.map((item, index) => {
