@@ -67,21 +67,6 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style: none;  
   }
-
-  /* remove dotted line around links in Firefox */
-  a:active, a:focus {
-    outline: 0;
-    border: none;
-    -moz-outline-style: none
-  }
-
-  :focus {
-    outline:none;
-  }
-
-  ::-moz-focus-inner {
-    border:0;
-  }
 `
 
 const sizes = {
