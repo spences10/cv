@@ -10,13 +10,9 @@
     "dev": "gatsby develop --verbose --p 8080 --open",
     "format": "pretty-quick",
     "serve": "gatsby serve",
+    "precommit": "pretty-quick --staged",
     "clearStale": "now rm cvjson --safe --yes",
     "wellknown": "cp -r .well-known/ public/"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   },
   "dependencies": {
     "axios": "0.19.0",
