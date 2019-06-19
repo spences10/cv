@@ -47,8 +47,18 @@ export const themes = {
   }
 }
 
+const fonts = () => {
+  const list = [
+    'Open+Sans:400,700|',
+    'Titillium+Web:400,700|',
+    'Nunito:400,700|',
+    'Poppins:400,700'
+  ]
+  return list.join('')
+}
+
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:400,700|Nunito:400,700|Poppins:400,700');
+  @import url('https://fonts.googleapis.com/css?family=${fonts}');
 
   *, *:before, *:after {
     box-sizing: border-box;
