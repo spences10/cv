@@ -92,7 +92,7 @@ export const ItemHeader = styled(StyledSpan)`
     background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.75),
+      ${props => props.theme.secondary},
       rgba(0, 0, 0, 0)
     );
   }
