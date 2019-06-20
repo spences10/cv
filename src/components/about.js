@@ -99,8 +99,9 @@ const AboutName = styled(UH)`
   grid-area: name;
   font-size: 3rem;
   font-family: ${props => props.theme.fontHeader};
-  margin: 0.1rem 0rem 0.1rem 0rem;
-  padding: 0.1rem 0rem 0.1rem 0rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 `
 // top right bottom left
 const AboutLabel = styled(H)`
@@ -157,8 +158,8 @@ const SummaryHeader = styled(IH)`
 
 const AboutSummary = styled(SD)`
   grid-area: about;
-  padding: 1rem 0rem 0rem 0rem;
-  margin: 0.75rem 0rem 0rem 0rem;
+  padding: 1rem 0rem;
+  margin: 1rem 0rem;
   ul {
     padding: 0rem;
     margin: 0rem;
@@ -252,7 +253,10 @@ const About = () => {
           />
           {website}
         </AboutWebsite>
-        <SummaryHeader>about</SummaryHeader>
+        <SummaryHeader>
+          about
+          <hr />
+        </SummaryHeader>
         <AboutSummary>
           {typeof summary === 'string' ? (
             summary
@@ -264,7 +268,10 @@ const About = () => {
             </ul>
           )}
         </AboutSummary>
-        <LocationHeader>location</LocationHeader>
+        <LocationHeader>
+          location
+          <hr />
+        </LocationHeader>
         <Location>
           {Object.values(location).map((line, index) => {
             return (
