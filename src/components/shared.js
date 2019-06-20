@@ -162,7 +162,7 @@ export const WeightAndColour = styled(StyledSpan)`
   color: ${props => props.theme.fontDark};
   font-weight: 700;
   font-size: 0.8rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.15rem;
   &:hover {
     letter-spacing: 0.5rem;
