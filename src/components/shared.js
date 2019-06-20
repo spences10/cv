@@ -40,18 +40,18 @@ export const PhoneTemplateArea = `
 `
 
 export const StyledDiv = styled.div`
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 `
 
 export const StyledP = styled.p`
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0;
+  margin: 0;
 `
 
 export const StyledSpan = styled.span`
-  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 `
 
 export const StyledLi = styled.li`
@@ -84,9 +84,18 @@ export const StyledList = styled.ul`
 export const ItemHeader = styled(StyledSpan)`
   text-transform: uppercase;
   font-size: 0.6rem;
-  padding: 0.25rem 0rem;
-  margin: 0.25rem 0rem;
-  border-top: 2px solid ${props => props.theme.fontLight};
+  padding: 0;
+  margin: 0;
+  hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0)
+    );
+  }
 `
 
 export const ItemWrapper = styled.div`
