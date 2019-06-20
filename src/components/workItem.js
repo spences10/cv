@@ -59,8 +59,6 @@ const WorkItemSummary = styled(SP)`
 
 const HighlightsHeader = styled(IH)`
   grid-area: hh;
-  font-size: 1rem;
-  font-weight: 700;
 `
 
 const WorkItemHighlights = styled.ul`
@@ -124,9 +122,15 @@ const WorkItem = props => {
         {company ? company : organization}
       </Company>
       <Dates>{getWorkDates()}</Dates>
-      <WorkItemHeader>summary</WorkItemHeader>
+      <WorkItemHeader>
+        summary
+        <hr />
+      </WorkItemHeader>
       <WorkItemSummary>{summary}</WorkItemSummary>
-      <HighlightsHeader>highlights</HighlightsHeader>
+      <HighlightsHeader>
+        highlights
+        <hr />
+      </HighlightsHeader>
       <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
       <ReactTooltip />
     </WorkItemWrapper>
