@@ -36,7 +36,6 @@ const Position = styled(WC)`
 const Company = styled(WC)`
   grid-area: comp;
   font-size: 1.1rem;
-  font-weight: 700;
   margin: 0;
   padding: 0;
 `
@@ -45,6 +44,7 @@ const Dates = styled(WC)`
   grid-area: date;
   margin: 0;
   padding: 0;
+  color: ${props => props.theme.fontLight};
 `
 
 const WorkItemHeader = styled(IH)`
