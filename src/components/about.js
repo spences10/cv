@@ -179,7 +179,7 @@ const LocationHeader = styled(IH)`
 const Location = styled(SD)`
   grid-area: location;
   padding: 1rem 0rem 0rem 0rem;
-  margin: 0.75rem 0rem 0rem 0rem;
+  margin: 1.5rem 0rem 0rem 0rem;
   span {
     &:not(:last-child)::after {
       margin-top: 0.5rem;
