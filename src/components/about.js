@@ -36,7 +36,9 @@ const AboutLayout = styled(SD)`
     grid-template-areas:
       'name     name     name     name     pic      pic     '
       'label    label    label    label    pic      pic     '
-      'email    email    site     site     phone    phone   '
+      'email    email    email    .        .        .       '
+      'site     site     site     .        .        .       '
+      'phone    phone    phone    .        .        .       '
       'about    about    about    about    about    about   '
       'location location location location location location'
       'profiles profiles profiles profiles profiles profiles';
@@ -114,7 +116,7 @@ const AboutLabel = styled(H)`
 const AboutFace = styled.div`
   grid-area: pic;
   object-fit: cover;
-  margin: 1rem;
+  margin: 0 0 1rem 1rem;
   padding: 0rem;
   width: 80%;
   border-radius: 50%;
