@@ -36,7 +36,9 @@ const AboutLayout = styled(SD)`
     grid-template-areas:
       'name     name     name     name     pic      pic     '
       'label    label    label    label    pic      pic     '
-      'email    email    site     site     phone    phone   '
+      'email    email    email    .        .        .       '
+      'site     site     site     .        .        .       '
+      'phone    phone    phone    .        .        .       '
       'about    about    about    about    about    about   '
       'location location location location location location'
       'profiles profiles profiles profiles profiles profiles';
@@ -99,8 +101,9 @@ const AboutName = styled(UH)`
   grid-area: name;
   font-size: 3rem;
   font-family: ${props => props.theme.fontHeader};
-  margin: 0.1rem 0rem 0.1rem 0rem;
-  padding: 0.1rem 0rem 0.1rem 0rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 `
 // top right bottom left
 const AboutLabel = styled(H)`
@@ -113,7 +116,7 @@ const AboutLabel = styled(H)`
 const AboutFace = styled.div`
   grid-area: pic;
   object-fit: cover;
-  margin: 1rem;
+  margin: 0 0 1rem 1rem;
   padding: 0rem;
   width: 80%;
   border-radius: 50%;
@@ -157,8 +160,8 @@ const SummaryHeader = styled(IH)`
 
 const AboutSummary = styled(SD)`
   grid-area: about;
-  padding: 1rem 0rem 0rem 0rem;
-  margin: 0.75rem 0rem 0rem 0rem;
+  padding: 1rem 0rem;
+  margin: 1rem 0rem;
   ul {
     padding: 0rem;
     margin: 0rem;
@@ -176,7 +179,7 @@ const LocationHeader = styled(IH)`
 const Location = styled(SD)`
   grid-area: location;
   padding: 1rem 0rem 0rem 0rem;
-  margin: 0.75rem 0rem 0rem 0rem;
+  margin: 1.5rem 0rem 0rem 0rem;
   span {
     &:not(:last-child)::after {
       margin-top: 0.5rem;
@@ -252,7 +255,10 @@ const About = () => {
           />
           {website}
         </AboutWebsite>
-        <SummaryHeader>about</SummaryHeader>
+        <SummaryHeader>
+          about
+          <hr />
+        </SummaryHeader>
         <AboutSummary>
           {typeof summary === 'string' ? (
             summary
@@ -264,7 +270,10 @@ const About = () => {
             </ul>
           )}
         </AboutSummary>
-        <LocationHeader>location</LocationHeader>
+        <LocationHeader>
+          location
+          <hr />
+        </LocationHeader>
         <Location>
           {Object.values(location).map((line, index) => {
             return (

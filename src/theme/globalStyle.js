@@ -68,6 +68,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: sans-serif;
     /* word-wrap: break-word; */
+    line-height: 1.85rem;
+    letter-spacing: 0.06rem;
   }
 
   a {

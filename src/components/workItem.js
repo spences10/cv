@@ -15,33 +15,36 @@ const WorkItemWrapper = styled(SD)`
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    'comp comp pos pos date date'
+    'pos  pos  pos  pos  pos  pos '
+    'comp comp comp comp comp comp'
+    'date date date date date date '
+    'dur  dur  dur  dur  dur  dur '
     'wh   wh   wh  wh  wh   wh  '
     'w    w    w   w   w    w   '
     'hh   hh   hh  hh  hh   hh  '
     'h    h    h   h   h    h   ';
-  margin: 0.5rem;
-  padding: 0.5rem;
-`
-
-const Company = styled(WC)`
-  grid-area: comp;
-  margin-left: 0rem;
-  padding-left: 0rem;
-  padding-bottom: 0.125rem;
-  margin-bottom: 0.125rem;
 `
 
 const Position = styled(WC)`
   grid-area: pos;
-  padding-bottom: 0.125rem;
-  margin-bottom: 0.125rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+`
+
+const Company = styled(WC)`
+  grid-area: comp;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
 `
 
 const Dates = styled(WC)`
   grid-area: date;
-  padding-bottom: 0.125rem;
-  margin-bottom: 0.125rem;
+  margin: 0;
+  padding: 0;
+  color: ${props => props.theme.fontLight};
 `
 
 const WorkItemHeader = styled(IH)`
@@ -50,8 +53,6 @@ const WorkItemHeader = styled(IH)`
 
 const WorkItemSummary = styled(SP)`
   grid-area: w;
-  padding: 0.5rem 0rem 0.125rem 0rem;
-  margin: 0.5rem 0rem 0.125rem 0rem;
 `
 
 const HighlightsHeader = styled(IH)`
@@ -99,10 +100,10 @@ const WorkItem = props => {
     const months = (time % 12) + 1 // JS months start at 0 🤦‍♂
     const timeThere =
       years > 0
-        ? `${
-            years > 1 ? `${years} years` : `${years} year`
-          }, ${months} months`
-        : `${months} months`
+        ? `${years > 1 ? `${years}yrs` : `${years}yr`} ${
+            months > 1 ? `${months}mos` : `${months}mo`
+          }`
+        : `${months > 1 ? `${months}mos` : `${months}mo`}`
 
     return `${startDate} - ${endDate()} (${timeThere})`
   }
@@ -113,15 +114,21 @@ const WorkItem = props => {
 
   return (
     <WorkItemWrapper>
+      <Position>{position}</Position>
       <Company
         data-tip={company ? 'Employer' : 'Volunteering Organisation'}>
         {company ? company : organization}
       </Company>
-      <Position>{position}</Position>
       <Dates>{getWorkDates()}</Dates>
-      <WorkItemHeader>summary</WorkItemHeader>
+      <WorkItemHeader>
+        summary
+        <hr />
+      </WorkItemHeader>
       <WorkItemSummary>{summary}</WorkItemSummary>
-      <HighlightsHeader>highlights</HighlightsHeader>
+      <HighlightsHeader>
+        highlights
+        <hr />
+      </HighlightsHeader>
       <WorkItemHighlights>{getHighlights}</WorkItemHighlights>
       <ReactTooltip />
     </WorkItemWrapper>
