@@ -45,8 +45,8 @@ export const StyledDiv = styled.div`
 `
 
 export const StyledP = styled.p`
-  padding: 0;
-  margin: 0;
+  padding: 0.5rem 0rem;
+  margin: 0.5rem 0rem;
 `
 
 export const StyledSpan = styled.span`

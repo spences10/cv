@@ -53,8 +53,6 @@ const WorkItemHeader = styled(IH)`
 
 const WorkItemSummary = styled(SP)`
   grid-area: w;
-  margin: 0;
-  padding: 0;
 `
 
 const HighlightsHeader = styled(IH)`
