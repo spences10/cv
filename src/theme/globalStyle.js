@@ -58,7 +58,7 @@ const fonts = () => {
 }
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=${fonts}');
+  @import url('https://fonts.googleapis.com/css?family=${fonts()}');
 
   *, *:before, *:after {
     box-sizing: border-box;
