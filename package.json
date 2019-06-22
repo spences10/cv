@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.385",
+  "version": "1.0.386",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "babel-eslint": "10.0.2",
-    "eslint": "5.16.0",
+    "eslint": "6.0.0",
     "eslint-plugin-graphql": "3.0.3",
     "eslint-plugin-react": "7.13.0",
     "husky": "2.4.1",
