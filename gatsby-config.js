@@ -4,19 +4,17 @@ const siteMetadata = {
   lastName: `Spence`,
   siteUrl: `https://cv.scottspence.me`,
   titleTemplate: `%s | cv.scottspence.me`,
-  description:
-    `Scott Spence, Father, husband 👨‍👩‍👧 Full stack web developer in the making 👨‍💻 Just In Time learner 👌 Byproduct of: coffee+excess carbs+lack of sleep. He/Him`,
+  description: `Scott Spence, Father, husband 👨‍👩‍👧 Full stack web developer in the making 👨‍💻 Just In Time learner 👌 Byproduct of: coffee+excess carbs+lack of sleep. He/Him`,
   twitterUsername: `@ScottDevTweets`,
   facebookAppID: ``,
-  faviconPng: `./src/img/favicon.png`,
+  faviconPng: `./src/images/favicon.png`,
   backgroundColour: `#663399`, // this is for favicon and manifest
   themeColour: `#755f9f`, // this is for favicon and manifest
   nameContent: `Scott Spence - cv/resume`,
   developerName: `Scott Spence`,
   developerUrl: `https.scottspence.me`,
   descriptionContent: `Scott Spence - web developer`,
-  keywordsContent:
-    `web developer, javascript, react, cv/resmue, information`,
+  keywordsContent: `web developer, javascript, react, cv/resmue, information`,
   imageLink: `https://scottspence.me/icons/icon-512x512.png`,
   siteLanguage: `en-GB`
 }
@@ -28,7 +26,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/img`
+        path: `${__dirname}/src/images`
       }
     },
     `gatsby-transformer-sharp`,
