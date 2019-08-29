@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.510",
+  "version": "1.0.511",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -32,7 +32,7 @@
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-helmet": "5.2.1",
-    "react-tooltip": "3.10.0",
+    "react-tooltip": "3.11.0",
     "styled-components": "4.3.2"
   },
   "devDependencies": {
