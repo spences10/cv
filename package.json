@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.604",
+  "version": "1.0.605",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -29,8 +29,8 @@
     "gatsby-source-filesystem": "2.1.36",
     "gatsby-transformer-sharp": "2.3.4",
     "prop-types": "15.7.2",
-    "react": "16.11.0",
-    "react-dom": "16.11.0",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
     "react-helmet": "5.2.1",
     "react-tooltip": "3.11.1",
     "styled-components": "4.4.1"
