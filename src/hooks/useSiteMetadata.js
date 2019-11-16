@@ -20,6 +20,7 @@ export const useSiteMetadata = () => {
             keywordsContent
             imageLink
             siteLanguage
+            siteLocale
           }
         }
       }
