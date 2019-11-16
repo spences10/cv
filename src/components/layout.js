@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Helmet from 'react-helmet'
 import SEO from 'react-seo-component'
 import styled, { ThemeProvider } from 'styled-components'
 import {
@@ -104,10 +103,6 @@ const Layout = ({ children }) => {
                 siteLocale={siteLocale}
                 twitterUsername={twitterUsername}
               />
-              <Helmet>
-                <html lang={siteLanguage} />
-              </Helmet>
-              {/* <Dump props={data.site.siteMetadata.siteLanguage} /> */}
               {children}
             </PageContainer>
           </ThemeProvider>
