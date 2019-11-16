@@ -1,20 +1,19 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import Helmet from 'react-helmet'
+import SEO from 'react-seo-component'
 import styled, { ThemeProvider } from 'styled-components'
 import {
   ThemeSelectContext,
   ThemeSelectProvider
 } from '../contexts/ThemeSelectContext'
-// import { Dump } from '../util/helpers'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { GlobalStyle, media } from '../theme/globalStyle'
-import SEO from './seo'
 import {
   MainTemplateArea,
   PhoneTemplateArea,
   TabletTemplateArea
 } from './shared'
-import { useSiteMetadata } from './siteMetadata'
 
 const PageContainer = styled.div`
   display: grid;
@@ -83,8 +82,11 @@ const Layout = ({ children }) => {
   const {
     title,
     description,
+    siteUrl,
     imageLink,
-    siteLanguage
+    siteLanguage,
+    siteLocale,
+    twitterUsername
   } = useSiteMetadata()
   return (
     <ThemeSelectProvider>
@@ -95,8 +97,12 @@ const Layout = ({ children }) => {
               <GlobalStyle />
               <SEO
                 title={title}
-                description={description || 'nothin’'}
-                image={imageLink}
+                description={description || `nothin’`}
+                image={`${siteUrl}${imageLink}`}
+                pathname={siteUrl}
+                siteLanguage={siteLanguage}
+                siteLocale={siteLocale}
+                twitterUsername={twitterUsername}
               />
               <Helmet>
                 <html lang={siteLanguage} />

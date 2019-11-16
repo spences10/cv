@@ -16,7 +16,8 @@ const siteMetadata = {
   descriptionContent: `Scott Spence - web developer`,
   keywordsContent: `web developer, javascript, react, cv/resmue, information`,
   imageLink: `/favicon.png`,
-  siteLanguage: `en-GB`
+  siteLanguage: `en-GB`,
+  siteLocale: `en_gb`
 }
 
 module.exports = {

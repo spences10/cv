@@ -1465,6 +1465,14 @@
     "@webassemblyjs/wast-parser" "1.8.5"
     "@xtuc/long" "4.2.2"
 
+"@wesbos/dump@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@wesbos/dump/-/dump-0.1.1.tgz#d08863ebea93e7c7f023110549acd459b77b04db"
+  integrity sha512-vK+nN5nxt8xM1U3sbl+C7vYMdlpa1npqFCu8qjaHBAvEK5sn6VjXbfaQ3h5ye8f9MwCAcet5/LrjrRRwQsKLPw==
+  dependencies:
+    react "16.11.0"
+    react-dom "16.11.0"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -9959,6 +9967,16 @@ react-reconciler@^0.21.0:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.15.0"
+
+react-seo-component@0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/react-seo-component/-/react-seo-component-0.1.10.tgz#fbfd7fe907f6ec765182adfcaa9b846935a5c386"
+  integrity sha512-zOeOZfe8XKZFeU1ctyHVNf5Jv4vKOS3f4dHn2KbTE7AMfFx6SqJYEcp+R7W04iRecRJPbiZnQ3WwjFRBqDBF+Q==
+  dependencies:
+    prop-types "15.7.2"
+    react "16.11.0"
+    react-dom "16.11.0"
+    react-helmet "5.2.1"
 
 react-side-effect@^1.1.0:
   version "1.2.0"
