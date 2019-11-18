@@ -1,7 +1,7 @@
 {
   "name": "cvjson",
   "private": true,
-  "version": "1.0.24",
+  "version": "1.0.27",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,6 @@
   "author": "Scott Spence <spences10apps@gmail.com> (https://blog.scottspence.me/)",
   "license": "MIT",
   "devDependencies": {
-    "now": "16.4.3"
+    "now": "16.5.2"
   }
 }
