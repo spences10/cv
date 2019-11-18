@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.609",
+  "version": "1.0.610",
   "author": "Scott Spence <spences10apps@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -24,7 +24,7 @@
     "gatsby-plugin-favicon": "3.1.6",
     "gatsby-plugin-google-analytics": "2.1.27",
     "gatsby-plugin-react-helmet": "3.1.15",
-    "gatsby-plugin-sharp": "2.3.0",
+    "gatsby-plugin-sharp": "2.3.1",
     "gatsby-plugin-styled-components": "3.1.13",
     "gatsby-source-filesystem": "2.1.37",
     "gatsby-transformer-sharp": "2.3.5",
