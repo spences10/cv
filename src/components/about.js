@@ -205,7 +205,7 @@ const Location = styled(SD)`
 //   }
 // `
 
-const About = () => {
+export const About = () => {
   const {
     name,
     label,
@@ -253,7 +253,7 @@ const About = () => {
             // color={({ theme }) => theme.primary}
             viewbox={'-5 0 32 32'}
           />
-          {website}
+          {website.replace(/(^\w+:|^)\/\//, '')}
         </AboutWebsite>
         <SummaryHeader>
           about
@@ -304,5 +304,3 @@ const About = () => {
     </AboutWrapper>
   )
 }
-
-export default About
