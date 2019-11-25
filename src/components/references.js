@@ -47,7 +47,7 @@ const Quote = styled.span`
   font-weight: 900;
 `
 
-const References = () => {
+export const References = () => {
   const { references } = useCvData()
   // return <Dump data={data} />
   const getReference = references.map((item, index) => {
@@ -76,5 +76,3 @@ const References = () => {
     </React.Fragment>
   )
 }
-
-export default References
