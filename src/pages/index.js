@@ -1,3 +1,5 @@
+import Dump from '@wesbos/dump'
+import { useStaticQuery } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import About from '../components/about'
@@ -5,7 +7,6 @@ import Awards from '../components/awards'
 import Education from '../components/education'
 import Interests from '../components/interests'
 import Languages from '../components/languages'
-// import { Dump } from '../util/helpers'
 import Layout from '../components/layout'
 import Publications from '../components/publications'
 import References from '../components/references'
@@ -22,46 +23,40 @@ const ThemeSelectWrapper = styled.div`
   right: 0;
 `
 
-const IndexPage = () => (
-  <Layout>
-    {/* <Dump props={work} /> */}
-    <About />
-    <Skills />
-    <Work />
-    <Volunteer />
-    <Education />
-    <Awards />
-    <Publications />
-    <Languages />
-    <Interests />
-    <References />
-    <ThemeSelectWrapper>
-      <ThemeSelect />
-    </ThemeSelectWrapper>
-  </Layout>
-)
-
-export default IndexPage
-
-// TODO: components for publications, languages and references
-// export const query = graphql`
-//   query CvQuery {
-//     cvDataCv {
-//       publications {
-//         name
-//         publisher
-//         releaseDate
-//         website
-//         summary
-//       }
-//       languages {
-//         language
-//         fluency
-//       }
-//       references {
-//         name
-//         reference
-//       }
-//     }
-//   }
-// `
+export default () => {
+  const {
+    title
+    //   description,
+    //   imageLink,
+    //   siteUrl,
+    //   siteLanguage,
+    //   siteLocale,
+    //   twitterUsername
+  } = useStaticQuery()
+  return (
+    <Layout>
+      <Dump
+      // title={title}
+      // description={description}
+      // image={imageLink}
+      // pathname={siteUrl}
+      // siteLanguage={siteLanguage}
+      // siteLocale={siteLocale}
+      // twitterUsername={twitterUsername}
+      />
+      <About />
+      <Skills />
+      <Work />
+      <Volunteer />
+      <Education />
+      <Awards />
+      <Publications />
+      <Languages />
+      <Interests />
+      <References />
+      <ThemeSelectWrapper>
+        <ThemeSelect />
+      </ThemeSelectWrapper>
+    </Layout>
+  )
+}

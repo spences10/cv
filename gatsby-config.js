@@ -5,7 +5,7 @@ const siteMetadata = {
   siteUrl: `https://cv.scottspence.me`,
   titleTemplate: `%s | cv.scottspence.me`,
   description: `Scott Spence, Father, husband 👨‍👩‍👧 Full stack web developer in the making 👨‍💻 Just In Time learner 👌 Byproduct of: coffee+excess carbs+lack of sleep. He/Him`,
-  twitterUsername: `@ScottDevTweets`,
+  twitterUsername: `@spences10`,
   facebookAppID: ``,
   faviconPng: `./static/favicon.png`,
   backgroundColour: `#663399`, // this is for favicon and manifest
@@ -45,8 +45,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Cheat Sheets`,
-        short_name: `Cheat Sheets`,
+        name: `Scott Spence - CV`,
+        short_name: `Scott Spence - CV`,
         start_url: `/`,
         background_color: siteMetadata.backgroundColour,
         theme_color: siteMetadata.themeColour,
