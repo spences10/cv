@@ -2,7 +2,7 @@
   "name": "cv",
   "description": "CV using Gatsby",
   "version": "1.0.619",
-  "author": "Scott Spence <spences10apps@gmail.com>",
+  "author": "Scott Spence <yo@scottspence.dev>",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf .cache/ && rm -rf public/",
