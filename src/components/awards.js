@@ -60,7 +60,7 @@ const AwardItemSummary = styled.span`
   padding-top: 0.5rem;
 `
 
-const Awards = ({ data }) => {
+export const Awards = ({ data }) => {
   const { awards } = useCvData()
 
   const getAwards = awards.map((item, index) => {
@@ -97,5 +97,3 @@ const Awards = ({ data }) => {
     </React.Fragment>
   )
 }
-
-export default Awards

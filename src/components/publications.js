@@ -66,7 +66,7 @@ const PublicationItemSummary = styled.span`
   padding-top: 0.5rem;
 `
 
-const Publications = () => {
+export const Publications = () => {
   const { publications } = useCvData()
 
   const getPublications = publications.map((item, index) => {
@@ -108,5 +108,3 @@ const Publications = () => {
     </React.Fragment>
   )
 }
-
-export default Publications

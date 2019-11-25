@@ -39,7 +39,7 @@ const StyledList = styled(SL)``
 
 const StyledLi = styled(LI)``
 
-const Interests = () => {
+export const Interests = () => {
   const { interests } = useCvData()
   // console.log('=====================')
   // console.log(this.props)
@@ -68,5 +68,3 @@ const Interests = () => {
     </InterestsWrapper>
   )
 }
-
-export default Interests

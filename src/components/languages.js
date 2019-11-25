@@ -41,7 +41,7 @@ const LanguagesItemFluency = styled.span`
   grid-area: fl;
 `
 
-const Languages = () => {
+export const Languages = () => {
   const { languages } = useCvData()
 
   // return <Dump data={data} />
@@ -63,5 +63,3 @@ const Languages = () => {
     </LanguagesWrapper>
   )
 }
-
-export default Languages

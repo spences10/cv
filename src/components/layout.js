@@ -77,7 +77,7 @@ const PageContainer = styled.div`
 //   right: 0;
 // `
 
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   const {
     title,
     description,
@@ -115,5 +115,3 @@ const Layout = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired
 }
-
-export default Layout
