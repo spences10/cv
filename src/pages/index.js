@@ -1,6 +1,5 @@
-import Dump from '@wesbos/dump'
-import { useStaticQuery } from 'gatsby'
 import React from 'react'
+import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import About from '../components/about'
 import Awards from '../components/awards'
@@ -14,6 +13,7 @@ import Skills from '../components/skills'
 import ThemeSelect from '../components/themeSelect'
 import Volunteer from '../components/volunteer'
 import Work from '../components/work'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
 const ThemeSelectWrapper = styled.div`
   margin: 0.5rem;
@@ -25,24 +25,24 @@ const ThemeSelectWrapper = styled.div`
 
 export default () => {
   const {
-    title
-    //   description,
-    //   imageLink,
-    //   siteUrl,
-    //   siteLanguage,
-    //   siteLocale,
-    //   twitterUsername
-  } = useStaticQuery()
+    title,
+    description,
+    siteUrl,
+    imageLink,
+    siteLanguage,
+    siteLocale,
+    twitterUsername
+  } = useSiteMetadata()
   return (
     <Layout>
-      <Dump
-      // title={title}
-      // description={description}
-      // image={imageLink}
-      // pathname={siteUrl}
-      // siteLanguage={siteLanguage}
-      // siteLocale={siteLocale}
-      // twitterUsername={twitterUsername}
+      <SEO
+        title={title}
+        description={description}
+        image={`${siteUrl}${imageLink}`}
+        pathname={siteUrl}
+        siteLanguage={siteLanguage}
+        siteLocale={siteLocale}
+        twitterUsername={twitterUsername}
       />
       <About />
       <Skills />
