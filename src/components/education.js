@@ -47,7 +47,7 @@ const EducationItemDates = styled.span`
   grid-area: date;
 `
 
-const Education = () => {
+export const Education = () => {
   const { education } = useCvData()
 
   // return <Dump data={data} />
@@ -85,5 +85,3 @@ const Education = () => {
     </EducationWrapper>
   )
 }
-
-export default Education

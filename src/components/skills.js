@@ -31,7 +31,7 @@ const StyledList = styled(SL)``
 
 const StyledLi = styled(LI)``
 
-const Skills = () => {
+export const Skills = () => {
   const { skills } = useCvData()
   // console.log('=====================')
   // console.log(this.props)
@@ -59,5 +59,3 @@ const Skills = () => {
     </SkillsWrapper>
   )
 }
-
-export default Skills

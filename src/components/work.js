@@ -9,7 +9,7 @@ const WorkWrapper = styled(IW)`
   grid-area: wo;
 `
 
-const Work = () => {
+export const Work = () => {
   const { work } = useCvData()
 
   // return <Dump props={work} />
@@ -21,5 +21,3 @@ const Work = () => {
     </WorkWrapper>
   )
 }
-
-export default Work

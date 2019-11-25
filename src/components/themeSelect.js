@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 import styled from 'styled-components'
-
 import { ThemeSelectContext } from '../contexts/ThemeSelectContext'
-import { themes, media } from '../theme/globalStyle'
+import { media, themes } from '../theme/globalStyle'
 
 const SelectWrapper = styled.div`
   grid-area: t;
@@ -29,7 +28,7 @@ export const SelectOpt = styled.option`
   font-family: ${({ theme }) => theme.fontBody};
 `
 
-const ThemeSelect = () => {
+export const ThemeSelect = () => {
   return (
     <ThemeSelectContext.Consumer>
       {({ handleThemeChange }) => (
@@ -52,5 +51,3 @@ const ThemeSelect = () => {
 ThemeSelect.propTypes = {
   handleThemeChange: PropTypes.func
 }
-
-export default ThemeSelect

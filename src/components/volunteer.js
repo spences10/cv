@@ -8,7 +8,7 @@ const VolunteerWrapper = styled(IW)`
   grid-area: vo;
 `
 
-const Volunteer = () => {
+export const Volunteer = () => {
   const { volunteer } = useCvData()
 
   return (
@@ -23,5 +23,3 @@ const Volunteer = () => {
     </React.Fragment>
   )
 }
-
-export default Volunteer
