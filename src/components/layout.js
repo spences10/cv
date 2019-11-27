@@ -85,7 +85,9 @@ export const Layout = ({ children }) => {
     imageLink,
     siteLanguage,
     siteLocale,
-    twitterUsername
+    twitterUsername,
+    firstName,
+    lastName
   } = useSiteMetadata()
   return (
     <ThemeSelectProvider>
@@ -102,6 +104,10 @@ export const Layout = ({ children }) => {
                 siteLanguage={siteLanguage}
                 siteLocale={siteLocale}
                 twitterUsername={twitterUsername}
+                author={`${firstName} ${lastName}`}
+                article={true}
+                publishedDate={'2019-11-25T20:48:58.859Z'}
+                modifiedDate={new Date(Date.now()).toISOString()}
               />
               {children}
             </PageContainer>
