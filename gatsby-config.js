@@ -37,8 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-fathom`,
       options: {
-        siteId:
-          process.env.GATSBY_FATHOM_TRACKING_ID_CV_SCOTT_SPENCE_ME
+        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CV
       }
     },
     {
