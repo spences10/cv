@@ -2,8 +2,8 @@ const siteMetadata = {
   title: `Scott Spence - CV`,
   firstName: `Scott`,
   lastName: `Spence`,
-  siteUrl: `https://cv.scottspence.me`,
-  titleTemplate: `%s | cv.scottspence.me`,
+  siteUrl: `https://mecv.xyz`,
+  titleTemplate: `%s | mecv.xyz`,
   description: `Scott Spence, JavaScript, React and Gatsby JS developer. He/Him`,
   twitterUsername: `@spences10`,
   facebookAppID: ``,
@@ -37,8 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-fathom`,
       options: {
-        siteId:
-          process.env.GATSBY_FATHOM_TRACKING_ID_CV_SCOTT_SPENCE_ME
+        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CV
       }
     },
     {
