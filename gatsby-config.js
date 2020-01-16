@@ -52,6 +52,19 @@ module.exports = {
         icon: siteMetadata.faviconPng
       }
     },
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [
+            `Open Sans:400,700`,
+            `Titillium Web:400,700`,
+            `Nunito:400,700`,
+            `Poppins:400,700`
+          ]
+        }
+      }
+    }
   ]
 }
