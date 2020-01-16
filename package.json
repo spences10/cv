@@ -5,14 +5,17 @@
   "author": "Scott Spence <yo@scottspence.dev>",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf .cache/ && rm -rf public/",
-    "build": "gatsby build && npm run wellknown",
+    "clean": "gatsby clean",
+    "build": "gatsby build",
     "dev": "gatsby develop -p 8080 -o",
     "format": "pretty-quick",
     "serve": "gatsby serve",
-    "precommit": "pretty-quick --staged",
-    "clearStale": "now rm cvjson --safe --yes",
-    "wellknown": "cp -r .well-known/ public/"
+    "clearStale": "now rm cvjson --safe --yes"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "dependencies": {
     "@wesbos/dump": "0.1.1",
@@ -41,10 +44,6 @@
     "styled-components": "5.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "10.0.3",
-    "eslint": "6.8.0",
-    "eslint-plugin-graphql": "3.1.1",
-    "eslint-plugin-react": "7.18.0",
     "husky": "4.0.10",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1"
