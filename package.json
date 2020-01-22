@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.661",
+  "version": "1.0.662",
   "author": "Scott Spence <yo@scottspence.dev>",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@wesbos/dump": "0.1.1",
-    "axios": "0.19.1",
+    "axios": "0.19.2",
     "babel-plugin-styled-components": "1.10.6",
     "date-fns": "2.9.0",
     "gatsby": "2.19.1",
