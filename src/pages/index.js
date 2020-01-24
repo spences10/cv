@@ -36,7 +36,8 @@ export default () => {
   return (
     <Layout>
       <SEO
-        title={title}
+        title={`cv`}
+        titleTemplate={title}
         description={description}
         image={`${siteUrl}${imageLink}`}
         pathname={siteUrl}
