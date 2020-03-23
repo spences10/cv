@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-now@17.1.0:
-  version "17.1.0"
-  resolved "https://registry.yarnpkg.com/now/-/now-17.1.0.tgz#1564d20cbb3896fb2249544180bf288c0a79dbc5"
-  integrity sha512-1ZJNAZDVuFu0aCUzWYrOgUQ6mgZLH4mADf4JqbUWH7qkKREB5KTbOElRsVFcvehFon9PICLPEFCiOrwiD9sBKw==
+now@17.1.1:
+  version "17.1.1"
+  resolved "https://registry.yarnpkg.com/now/-/now-17.1.1.tgz#5e5fade17c3f9c3b7e3900be3febf7c21c7d6935"
+  integrity sha512-Hmh8eMSt4FxS1YBwaLrdJuzEVm6ZtS4JCY0AZE+JTnTtDGHVaQMUI85FaPvasSIhKLa+7xf6v7lmTgM39VW/8w==
