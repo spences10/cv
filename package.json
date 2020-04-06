@@ -1,7 +1,7 @@
 {
   "name": "cv",
   "description": "CV using Gatsby",
-  "version": "1.0.748",
+  "version": "1.0.749",
   "author": "Scott Spence <yo@scottspence.dev>",
   "license": "MIT",
   "scripts": {
@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "husky": "4.2.3",
-    "prettier": "2.0.3",
+    "prettier": "2.0.4",
     "pretty-quick": "2.0.1"
   },
   "keywords": [
