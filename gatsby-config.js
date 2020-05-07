@@ -1,5 +1,5 @@
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${process.env.NODE_ENV}`,
 })
 
 const siteMetadata = {
@@ -21,7 +21,7 @@ const siteMetadata = {
   keywordsContent: `web developer, javascript, react, cv/resmue, information`,
   imageLink: `/favicon.png`,
   siteLanguage: `en-GB`,
-  siteLocale: `en_gb`
+  siteLocale: `en_gb`,
 }
 
 module.exports = {
@@ -33,18 +33,12 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
-      }
-    },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-fathom`,
       options: {
-        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CV
-      }
+        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CV,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -55,22 +49,8 @@ module.exports = {
         background_color: siteMetadata.backgroundColour,
         theme_color: siteMetadata.themeColour,
         display: `standalone`,
-        icon: siteMetadata.faviconPng
-      }
-    },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: [
-            `Open Sans:400,700`,
-            `Titillium Web:400,700`,
-            `Nunito:400,700`,
-            `Poppins:400,700`
-          ]
-        }
-      }
+        icon: siteMetadata.faviconPng,
+      },
     },
     {
       resolve: `gatsby-plugin-zeit-now`,
@@ -85,9 +65,9 @@ module.exports = {
           'x-frame-options': 'DENY',
           'x-xss-protection': '1; mode=block',
           'x-content-type-options': 'nosniff',
-          'x-download-options': 'noopen'
-        }
-      }
-    }
-  ]
+          'x-download-options': 'noopen',
+        },
+      },
+    },
+  ],
 }
