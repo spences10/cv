@@ -16,7 +16,7 @@ const siteMetadata = {
   themeColour: `#755f9f`, // this is for favicon and manifest
   nameContent: `Scott Spence - cv/resume`,
   developerName: `Scott Spence`,
-  developerUrl: `https.scottspence.me`,
+  developerUrl: `https://scottspence.me`,
   descriptionContent: `Scott Spence - web developer`,
   keywordsContent: `web developer, javascript, react, cv/resmue, information`,
   imageLink: `/favicon.png`,

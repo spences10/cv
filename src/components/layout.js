@@ -6,6 +6,7 @@ const PageStyle = styled.main`
   margin: 0 auto;
   padding: 0 20px;
   font-size: 1.25rem;
+  word-break: break-word;
 `
 
 export const Layout = ({ children }) => {
