@@ -1,7 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
+import { defaults } from './default-config'
 
-export const theme = {}
+export const theme = {
+  ...defaults,
+}
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
