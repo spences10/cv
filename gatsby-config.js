@@ -36,12 +36,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-mdx`,
     {
-      resolve: `gatsby-plugin-fathom`,
-      options: {
-        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CV,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Scott Spence - CV`,
