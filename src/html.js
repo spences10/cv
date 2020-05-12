@@ -5,7 +5,7 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <script
-        src={`${process.env.GATSBY_FATHOM_TRACKING_ID_CV}/script.js`}
+        src={`${process.env.GATSBY_FATHOM_TRACKING_URL_CV}/script.js`}
         spa="auto"
         site={process.env.GATSBY_FATHOM_TRACKING_ID_CV}
         defer
