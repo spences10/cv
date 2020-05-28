@@ -1,7 +1,9 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { Layout } from './src/components/layout'
+import { Basics } from './components/basics'
+import { DateDistance } from './components/date-distance'
+import { Layout } from './components/layout'
 import {
   A,
   H1,
@@ -11,8 +13,10 @@ import {
   H5,
   H6,
   P,
-} from './src/components/page-elements'
-import { GlobalStyle, theme } from './src/theme/global-style'
+} from './components/page-elements'
+import { WorkHeader } from './components/work'
+import { GlobalStyle, theme } from './theme/global-style'
+
 const components = {
   a: props => <A {...props} />,
   h1: props => <H1 {...props} />,
@@ -22,6 +26,9 @@ const components = {
   h5: props => <H5 {...props} />,
   h6: props => <H6 {...props} />,
   p: props => <P {...props} />,
+  Basics,
+  DateDistance,
+  WorkHeader,
 }
 
 export const wrapPageElement = ({ element }) => (
