@@ -1,5 +1,6 @@
 import { css } from 'linaria'
 import { defaults } from './default-config'
+import { reset } from './reset'
 
 export const theme = {
   ...defaults,
@@ -24,6 +25,7 @@ export const globals = css`
       background: #fafafa;
       color: #222;
       -webkit-font-smoothing: antialiased;
+      ${reset}
     }
   }
 `

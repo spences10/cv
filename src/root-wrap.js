@@ -1,8 +1,12 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Basics } from './components/basics'
-import { DateDistance } from './components/date-distance'
+import {
+  Basics,
+  DateDistance,
+  Specifics,
+  WorkHeader,
+} from './components'
 import { Layout } from './components/layout'
 import {
   A,
@@ -14,7 +18,6 @@ import {
   H6,
   P,
 } from './components/page-elements'
-import { WorkHeader } from './components/work'
 import { globals, theme } from './theme/global-style'
 import { ThemeProvider } from './theme/theme-provider'
 
@@ -30,6 +33,7 @@ const components = {
   Basics,
   DateDistance,
   WorkHeader,
+  Specifics,
 }
 
 export const wrapPageElement = ({ element }) => (
