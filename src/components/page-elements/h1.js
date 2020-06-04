@@ -1,5 +1,6 @@
+import { styled } from 'linaria/react'
 import React from 'react'
-import styled from 'styled-components'
+import { useTheme } from '../../theme/theme-provider'
 
 const StyledText = styled.h1`
   font-size: ${({ theme }) => theme.fontSize['4xl']};
@@ -9,5 +10,10 @@ const StyledText = styled.h1`
 `
 
 export const H1 = props => {
-  return <StyledText {...props}>{props.children}</StyledText>
+  const theme = useTheme()
+  return (
+    <StyledText theme={theme} {...props}>
+      {props.children}
+    </StyledText>
+  )
 }

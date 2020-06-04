@@ -1,6 +1,5 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
 import { Basics } from './components/basics'
 import { DateDistance } from './components/date-distance'
 import { Layout } from './components/layout'
@@ -15,7 +14,8 @@ import {
   P,
 } from './components/page-elements'
 import { WorkHeader } from './components/work'
-import { GlobalStyle, theme } from './theme/global-style'
+import { globals, theme } from './theme/global-style'
+import { ThemeProvider } from './theme/theme-provider'
 
 const components = {
   a: props => <A {...props} />,
@@ -32,8 +32,7 @@ const components = {
 }
 
 export const wrapPageElement = ({ element }) => (
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
+  <ThemeProvider theme={theme} className={globals}>
     <MDXProvider components={components}>
       <Layout>{element}</Layout>
     </MDXProvider>

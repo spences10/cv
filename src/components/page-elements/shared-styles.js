@@ -1,4 +1,4 @@
-import { css } from 'styled-components'
+import { css } from 'linaria/react'
 import { theme } from '../../theme/global-style'
 
 export const sharedHeaderStyle = css`

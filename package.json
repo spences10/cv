@@ -25,12 +25,13 @@
     "proseWrap": "always"
   },
   "dependencies": {
+    "@callstack/react-theme-provider": "^2.1.0",
     "@mdx-js/mdx": "1.6.1",
     "@mdx-js/react": "1.6.1",
-    "babel-plugin-styled-components": "1.10.7",
     "date-fns": "2.12.0",
     "gatsby": "2.20.36",
     "gatsby-image": "2.3.5",
+    "gatsby-plugin-linaria": "^2.0.0",
     "gatsby-plugin-manifest": "2.3.7",
     "gatsby-plugin-mdx": "1.2.6",
     "gatsby-plugin-offline": "3.1.5",
@@ -38,15 +39,13 @@
     "gatsby-plugin-robots-txt": "1.5.0",
     "gatsby-plugin-sharp": "2.5.7",
     "gatsby-plugin-sitemap": "2.4.2",
-    "gatsby-plugin-styled-components": "3.2.4",
     "gatsby-plugin-zeit-now": "0.3.0",
     "gatsby-transformer-sharp": "2.4.7",
+    "linaria": "^2.0.0-alpha.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.0.0",
-    "react-seo-component": "2.0.0",
-    "styled-components": "5.1.0",
-    "styled-reset": "4.1.4"
+    "react-seo-component": "2.0.0"
   },
   "devDependencies": {
     "husky": "4.2.5",

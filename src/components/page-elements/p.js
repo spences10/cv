@@ -1,5 +1,6 @@
+import { styled } from 'linaria/react'
 import React from 'react'
-import styled from 'styled-components'
+import { useTheme } from '../../theme/theme-provider'
 
 const StyledText = styled.p`
   margin-bottom: 1.5rem;
@@ -9,9 +10,15 @@ const StyledText = styled.p`
   em {
     font-style: italic;
   }
+  font-family: ${({ theme }) => theme.fontFamily.sans};
 `
 
 export const P = props => {
+  const theme = useTheme()
   const { children, ...rest } = props
-  return <StyledText {...rest}>{children}</StyledText>
+  return (
+    <StyledText theme={theme} {...rest}>
+      {children}
+    </StyledText>
+  )
 }

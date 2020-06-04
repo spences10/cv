@@ -21,6 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 .cache/
+.linaria-cache
 
 .well-known/
 cv.json

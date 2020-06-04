@@ -1,5 +1,5 @@
+import { styled } from 'linaria/react'
 import React from 'react'
-import styled from 'styled-components'
 
 const PageStyle = styled.main`
   max-width: 640px;
