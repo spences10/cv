@@ -1,5 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Basics } from './components/basics'
 import { DateDistance } from './components/date-distance'
 import { Layout } from './components/layout'
@@ -32,9 +33,19 @@ const components = {
 }
 
 export const wrapPageElement = ({ element }) => (
-  <ThemeProvider theme={theme} className={globals}>
-    <MDXProvider components={components}>
-      <Layout>{element}</Layout>
-    </MDXProvider>
-  </ThemeProvider>
+  <>
+    <Helmet>
+      <script
+        src={`${process.env.GATSBY_FATHOM_TRACKING_URL_CV}/script.js`}
+        spa="auto"
+        site={process.env.GATSBY_FATHOM_TRACKING_ID_CV}
+        defer
+      ></script>
+    </Helmet>
+    <ThemeProvider theme={theme} className={globals}>
+      <MDXProvider components={components}>
+        <Layout>{element}</Layout>
+      </MDXProvider>
+    </ThemeProvider>
+  </>
 )
