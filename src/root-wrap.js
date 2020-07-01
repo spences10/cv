@@ -4,6 +4,10 @@ import { Helmet } from 'react-helmet'
 import {
   Basics,
   DateDistance,
+  Education,
+  Interests,
+  References,
+  Skills,
   Specifics,
   WorkHeader,
 } from './components'
@@ -32,8 +36,12 @@ const components = {
   p: props => <P {...props} />,
   Basics,
   DateDistance,
-  WorkHeader,
+  Education,
+  Interests,
+  References,
   Specifics,
+  Skills,
+  WorkHeader,
 }
 
 export const wrapPageElement = ({ element }) => (
