@@ -5,6 +5,4 @@ const theme = {
   ...defaults,
 }
 
-export const { ThemeProvider, withTheme, useTheme } = createTheming(
-  theme
-)
+export const { useTheme } = createTheming(theme)

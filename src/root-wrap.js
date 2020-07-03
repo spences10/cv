@@ -8,6 +8,7 @@ import {
   Interests,
   References,
   Skills,
+  Slider,
   Specifics,
   WorkHeader,
 } from './components'
@@ -22,8 +23,6 @@ import {
   H6,
   P,
 } from './components/page-elements'
-import { globals, theme } from './theme/global-style'
-import { ThemeProvider } from './theme/theme-provider'
 
 const components = {
   a: props => <A {...props} />,
@@ -39,8 +38,9 @@ const components = {
   Education,
   Interests,
   References,
-  Specifics,
   Skills,
+  Slider,
+  Specifics,
   WorkHeader,
 }
 
@@ -54,10 +54,8 @@ export const wrapPageElement = ({ element }) => (
         defer
       ></script>
     </Helmet>
-    <ThemeProvider theme={theme} className={globals}>
-      <MDXProvider components={components}>
-        <Layout>{element}</Layout>
-      </MDXProvider>
-    </ThemeProvider>
+    <MDXProvider components={components}>
+      <Layout>{element}</Layout>
+    </MDXProvider>
   </>
 )
