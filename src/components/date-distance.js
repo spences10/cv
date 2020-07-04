@@ -1,6 +1,6 @@
 import { formatDistance, toDate } from 'date-fns'
-import { styled } from 'linaria/react'
 import React from 'react'
+import styled from 'styled-components'
 
 const StyledDate = styled.span``
 

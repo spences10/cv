@@ -1,6 +1,5 @@
-import { styled } from 'linaria/react'
 import React from 'react'
-import { useTheme } from '../theme/theme-provider'
+import styled from 'styled-components'
 
 const StyledSkills = styled.article`
   display: grid;
@@ -10,10 +9,9 @@ const StyledSkills = styled.article`
 `
 
 export const Skills = ({ children }) => {
-  const theme = useTheme()
   return (
     <>
-      <StyledSkills theme={theme}>{children}</StyledSkills>
+      <StyledSkills>{children}</StyledSkills>
     </>
   )
 }

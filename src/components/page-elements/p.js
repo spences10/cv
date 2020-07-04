@@ -1,6 +1,5 @@
-import { styled } from 'linaria/react'
 import React from 'react'
-import { useTheme } from '../../theme/theme-provider'
+import styled from 'styled-components'
 
 const StyledText = styled.p`
   margin-bottom: 1.5rem;
@@ -14,11 +13,6 @@ const StyledText = styled.p`
 `
 
 export const P = props => {
-  const theme = useTheme()
   const { children, ...rest } = props
-  return (
-    <StyledText theme={theme} {...rest}>
-      {children}
-    </StyledText>
-  )
+  return <StyledText {...rest}>{children}</StyledText>
 }

@@ -1,6 +1,7 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { ThemeProvider } from 'styled-components'
 import {
   Basics,
   DateDistance,
@@ -23,6 +24,8 @@ import {
   H6,
   P,
 } from './components/page-elements'
+import { theme } from './theme'
+import { GlobalStyle } from './theme/global-style'
 
 const components = {
   a: props => <A {...props} />,
@@ -54,8 +57,11 @@ export const wrapPageElement = ({ element }) => (
         defer
       ></script>
     </Helmet>
-    <MDXProvider components={components}>
-      <Layout>{element}</Layout>
-    </MDXProvider>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <MDXProvider components={components}>
+        <Layout>{element}</Layout>
+      </MDXProvider>
+    </ThemeProvider>
   </>
 )
