@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Slider } from '../components'
-import Long from '../copy/long'
-import Medium from '../copy/medium'
-import Short from '../copy/short'
+import Long from '../copy/index-long'
+import Medium from '../copy/index-medium'
+import Short from '../copy/index-short'
 
 const Wrapper = styled.main``
 
