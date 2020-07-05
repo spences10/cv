@@ -18,12 +18,12 @@ const LongWrapper = styled.article`
 `
 
 export default () => {
-  const [copySize, copySizeSet] = useState(0)
+  const [copySize, copySizeSet] = useState(`0`)
 
   const copy = {
-    0: 'Short',
-    1: 'Medium',
-    2: 'Long',
+    '0': 'Short',
+    '1': 'Medium',
+    '2': 'Long',
   }
 
   return (
