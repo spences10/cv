@@ -1,5 +1,6 @@
 import React from 'react'
+import { Container } from 'theme-ui'
 
 export const Layout = ({ children }) => {
-  return <div style={{ backgroundColor: 'red' }}>{children}</div>
+  return <Container>{children}</Container>
 }

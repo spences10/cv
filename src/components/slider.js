@@ -1,23 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Slider } from 'theme-ui'
 
-export const Slider = ({ copySizeSet }) => {
-  const [sliderValue, sliderValueSet] = useState(0)
-
+export const MrSlider = ({ copySizeSet }) => {
   const handleChange = e => {
     const { value } = e.target
-    sliderValueSet(value)
+
     copySizeSet(value)
   }
 
   return (
     <>
-      <input
-        type="range"
-        min={0}
-        max={2}
-        value={sliderValue}
-        onChange={e => handleChange(e)}
-      />
+      <Slider min={0} max={2} onChange={e => handleChange(e)} />
     </>
   )
 }
