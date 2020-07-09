@@ -27,14 +27,11 @@ const siteMetadata = {
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -47,22 +44,6 @@ module.exports = {
         icon: siteMetadata.faviconPng,
       },
     },
-    {
-      resolve: `gatsby-plugin-zeit-now`,
-      options: {
-        globalHeaders: {
-          'referrer-policy': 'same-origin',
-          'feature-policy':
-            "geolocation 'self'; microphone 'self'; camera 'self'",
-          'expect-ct': 'max-age=604800, enforce',
-          'strict-transport-security':
-            'max-age=31536000; includeSubDomains',
-          'x-frame-options': 'DENY',
-          'x-xss-protection': '1; mode=block',
-          'x-content-type-options': 'nosniff',
-          'x-download-options': 'noopen',
-        },
-      },
-    },
+    // `gatsby-plugin-offline`,
   ],
 }
