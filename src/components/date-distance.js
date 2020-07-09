@@ -1,8 +1,6 @@
 import { formatDistance, toDate } from 'date-fns'
 import React from 'react'
-import styled from 'styled-components'
-
-const StyledDate = styled.span``
+import { Box } from 'theme-ui'
 
 export const DateDistance = ({ from, to }) => {
   const dateFrom = toDate(new Date(from))
@@ -12,5 +10,5 @@ export const DateDistance = ({ from, to }) => {
 
   const distance = formatDistance(dateTo, dateFrom)
 
-  return <StyledDate>{distance}</StyledDate>
+  return <Box as="span">{distance}</Box>
 }

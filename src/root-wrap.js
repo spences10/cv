@@ -1,7 +1,7 @@
-import { MDXProvider } from '@mdx-js/react'
+import { MDXProvider } from 'gatsby-plugin-mdx'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
+import * as themeUiComponents from 'theme-ui'
 import {
   Basics,
   DateDistance,
@@ -14,28 +14,8 @@ import {
   WorkHeader,
 } from './components'
 import { Layout } from './components/layout'
-import {
-  A,
-  H1,
-  H2,
-  H3,
-  H4,
-  H5,
-  H6,
-  P,
-} from './components/page-elements'
-import { theme } from './theme'
-import { GlobalStyle } from './theme/global-style'
 
 const components = {
-  a: props => <A {...props} />,
-  h1: props => <H1 {...props} />,
-  h2: props => <H2 {...props} />,
-  h3: props => <H3 {...props} />,
-  h4: props => <H4 {...props} />,
-  h5: props => <H5 {...props} />,
-  h6: props => <H6 {...props} />,
-  p: props => <P {...props} />,
   Basics,
   DateDistance,
   Education,
@@ -45,6 +25,7 @@ const components = {
   Slider,
   Specifics,
   WorkHeader,
+  ...themeUiComponents,
 }
 
 export const wrapPageElement = ({ element }) => (
@@ -57,11 +38,8 @@ export const wrapPageElement = ({ element }) => (
         defer
       ></script>
     </Helmet>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <MDXProvider components={components}>
-        <Layout>{element}</Layout>
-      </MDXProvider>
-    </ThemeProvider>
+    <MDXProvider components={components}>
+      <Layout>{element}</Layout>
+    </MDXProvider>
   </>
 )

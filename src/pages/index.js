@@ -1,21 +1,9 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import { Box } from 'theme-ui'
 import { Slider } from '../components'
 import Long from '../copy/index-long'
 import Medium from '../copy/index-medium'
 import Short from '../copy/index-short'
-
-const Wrapper = styled.main``
-
-const ShortWrapper = styled.article`
-  display: ${({ visible }) => visible};
-`
-const MediumWrapper = styled.article`
-  display: ${({ visible }) => visible};
-`
-const LongWrapper = styled.article`
-  display: ${({ visible }) => visible};
-`
 
 export default () => {
   const [copySize, copySizeSet] = useState(`0`)
@@ -27,19 +15,28 @@ export default () => {
   }
 
   return (
-    <Wrapper>
+    <Box as="main">
       <Slider copySizeSet={copySizeSet} />
       <h1>{copy[copySize]}</h1>
 
-      <ShortWrapper visible={copySize === '0' ? `block` : `none`}>
+      <Box
+        as="article"
+        sx={{ display: copySize === '0' ? `block` : `none` }}
+      >
         <Short />
-      </ShortWrapper>
-      <MediumWrapper visible={copySize === '1' ? `block` : `none`}>
+      </Box>
+      <Box
+        as="article"
+        sx={{ display: copySize === '1' ? `block` : `none` }}
+      >
         <Medium />
-      </MediumWrapper>
-      <LongWrapper visible={copySize === '2' ? `block` : `none`}>
+      </Box>
+      <Box
+        as="article"
+        sx={{ display: copySize === '2' ? `block` : `none` }}
+      >
         <Long />
-      </LongWrapper>
-    </Wrapper>
+      </Box>
+    </Box>
   )
 }

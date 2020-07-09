@@ -1,17 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Box } from 'theme-ui'
 
-const StyledSkills = styled.article`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  background-color: ${({ theme }) => theme.colors.blue[500]};
-`
+// const StyledSkills = styled.article`
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-template-rows: auto;
+// `
 
 export const Skills = ({ children }) => {
   return (
     <>
-      <StyledSkills>{children}</StyledSkills>
+      <Box as="article">{children}</Box>
     </>
   )
 }
