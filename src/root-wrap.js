@@ -1,7 +1,8 @@
-import { MDXProvider } from 'gatsby-plugin-mdx'
 import React from 'react'
+import { MDXProvider } from '@mdx-js/react'
 import { Helmet } from 'react-helmet'
 import * as themeUiComponents from 'theme-ui'
+
 import {
   Basics,
   DateDistance,
@@ -9,7 +10,7 @@ import {
   Interests,
   References,
   Skills,
-  Slider,
+  MrSlider,
   Specifics,
   WorkHeader,
 } from './components'
@@ -22,24 +23,25 @@ const components = {
   Interests,
   References,
   Skills,
-  Slider,
+  MrSlider,
   Specifics,
   WorkHeader,
   ...themeUiComponents,
 }
 
-export const wrapPageElement = ({ element }) => (
+export const RootWrap = ({ children }) => (
   <>
     <Helmet>
       <script
+        // This causes the error in console "Uncaught SyntaxError: Unexpected token '<'"
         src={`${process.env.GATSBY_FATHOM_TRACKING_URL_CV}/script.js`}
         spa="auto"
         site={process.env.GATSBY_FATHOM_TRACKING_ID_CV}
         defer
-      ></script>
+      />
     </Helmet>
     <MDXProvider components={components}>
-      <Layout>{element}</Layout>
+      <Layout>{children}</Layout>
     </MDXProvider>
   </>
 )

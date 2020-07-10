@@ -1,3 +1,6 @@
-import { wrapPageElement as wrap } from './src/root-wrap'
+import React from 'react'
+import { RootWrap } from './src/root-wrap'
 
-export const wrapPageElement = wrap
+export const wrapPageElement = ({ element }) => {
+  return <RootWrap>{element}</RootWrap>
+}

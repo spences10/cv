@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Box } from 'theme-ui'
-import { Slider } from '../components'
+import { Box, Heading } from 'theme-ui'
+import { MrSlider } from '../components'
 import Long from '../copy/index-long'
 import Medium from '../copy/index-medium'
 import Short from '../copy/index-short'
@@ -16,8 +16,10 @@ export default () => {
 
   return (
     <Box as="main">
-      <Slider copySizeSet={copySizeSet} />
-      <h1>{copy[copySize]}</h1>
+      <MrSlider copySizeSet={copySizeSet} />
+      <Heading as="h1" variant="styles.h1">
+        {copy[copySize]}
+      </Heading>
 
       <Box
         as="article"
