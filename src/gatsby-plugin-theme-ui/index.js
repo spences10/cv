@@ -5,7 +5,7 @@ export default {
   colors: {
     text: '#282a36',
     background: '#ffffff',
-    primary: '#ff79c6',
+    primary: '#663399',
     secondary: '#8be9fd',
     muted: '#8394ca',
     highlight: '#50fa7b',
@@ -26,10 +26,10 @@ export default {
     },
   },
   forms: {
-    slider: {
-      color: 'primary',
-      backgroundColor: 'darken',
-    },
+    // slider: {
+    //   color: 'primary',
+    //   backgroundColor: 'darken',
+    // },
   },
 
   styles: {

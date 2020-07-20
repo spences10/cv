@@ -1,8 +1,7 @@
-import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
 import * as themeUiComponents from 'theme-ui'
-
 import {
   Basics,
   DateDistance,
@@ -10,7 +9,6 @@ import {
   Interests,
   References,
   Skills,
-  MrSlider,
   Specifics,
   WorkHeader,
 } from './components'
@@ -23,7 +21,6 @@ const components = {
   Interests,
   References,
   Skills,
-  MrSlider,
   Specifics,
   WorkHeader,
   ...themeUiComponents,
