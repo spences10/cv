@@ -8,13 +8,13 @@ export default () => {
   const [copySize, copySizeSet] = useState('0')
 
   const copy = {
-    '0': 'Short',
-    '1': 'Medium',
-    '2': 'Long',
+    0: 'Short',
+    1: 'Medium',
+    2: 'Long',
   }
 
   return (
-    <Box as="main">
+    <Box as="main" sx={{ maxWidth: '640px', margin: '0 auto' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Button onClick={() => copySizeSet('0')}>Short</Button>
         <Button onClick={() => copySizeSet('1')}>Medium</Button>
