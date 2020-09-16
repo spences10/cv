@@ -15,7 +15,13 @@ export default () => {
 
   return (
     <Box as="main" sx={{ maxWidth: '640px', margin: '0 auto' }}>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          marginTop: '1rem',
+        }}
+      >
         <Button onClick={() => copySizeSet('0')}>Short</Button>
         <Button onClick={() => copySizeSet('1')}>Medium</Button>
         <Button onClick={() => copySizeSet('2')}>Long</Button>
