@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box } from 'theme-ui'
+import { Grid } from 'theme-ui'
 
 // const StyledSkills = styled.article`
 //   display: grid;
@@ -9,8 +9,15 @@ import { Box } from 'theme-ui'
 
 export const Skills = ({ children }) => {
   return (
-    <>
-      <Box as="article">{children}</Box>
-    </>
+    <Grid
+      as="article"
+      columns={[2, '1fr 1fr']}
+      sx={{
+        display: 'grid',
+        gridGap: 3,
+      }}
+    >
+      {children}
+    </Grid>
   )
 }

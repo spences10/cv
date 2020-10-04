@@ -1,9 +1,19 @@
 import React from 'react'
+import { Grid } from 'theme-ui'
 
-export const Education = () => {
+export const Education = ({ children }) => {
   return (
     <>
-      <h1>YO!</h1>
+      <Grid
+        as="article"
+        columns={[2, '1fr 1fr']}
+        sx={{
+          display: 'grid',
+          gridGap: 3,
+        }}
+      >
+        {children}
+      </Grid>
     </>
   )
 }
