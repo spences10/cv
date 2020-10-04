@@ -8,7 +8,7 @@ import {
   StyledLi as LI,
   StyledList as SL,
   StyledSpan as SS,
-  WeightAndColour as WC
+  WeightAndColour as WC,
 } from './shared'
 
 const InterestsWrapper = styled(IW)`

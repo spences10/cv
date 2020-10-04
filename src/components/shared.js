@@ -58,17 +58,17 @@ export const StyledLi = styled.li`
   display: inline-block;
   margin: 0.25rem 0.25rem 0.25rem 0.25rem;
   padding: 0.25rem 0.8rem 0.25rem 0.5rem;
-  color: 1px solid ${props => props.theme.fontLight};
+  color: 1px solid ${(props) => props.theme.fontLight};
   border-radius: 15px;
-  border: 1px solid ${props => props.theme.primary};
+  border: 1px solid ${(props) => props.theme.primary};
   &:hover {
     background: linear-gradient(
       0.25turn,
-      ${props => props.theme.primary},
-      ${props => props.theme.secondary}
+      ${(props) => props.theme.primary},
+      ${(props) => props.theme.secondary}
     );
-    color: ${props => props.theme.light};
-    border: 1px solid ${props => props.theme.background};
+    color: ${(props) => props.theme.light};
+    border: 1px solid ${(props) => props.theme.background};
   }
   cursor: pointer;
 `
@@ -92,30 +92,31 @@ export const ItemHeader = styled(StyledSpan)`
     background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0),
-      ${props => props.theme.secondary},
+      ${(props) => props.theme.secondary},
       rgba(0, 0, 0, 0)
     );
   }
 `
 
 export const ItemWrapper = styled.div`
-  /* border-top: 4px solid ${props => props.theme.primary}; */
+  /* border-top: 4px solid ${(props) => props.theme.primary}; */
   border-radius: 5px;
   box-shadow: 0 13px 20px rgba(0, 0, 0, 0.3);
   margin: 1rem;
   padding: 0rem 0rem 1rem 0rem;
-  font-family: ${props => props.theme.fontBody};
+  font-family: ${(props) => props.theme.fontBody};
   font-weight: 400;
-  color: ${props => props.theme.fontDark};
-  background: ${props => props.theme.foreground};
+  color: ${(props) => props.theme.fontDark};
+  background: ${(props) => props.theme.foreground};
   :before {
     border-radius: 5px 5px 0px 0px;
     height: 5px;
     display: block;
     background: linear-gradient(
-      0.25turn, 
-      ${props => props.theme.primary}, 
-      ${props => props.theme.secondary});
+      0.25turn,
+      ${(props) => props.theme.primary},
+      ${(props) => props.theme.secondary}
+    );
     content: '';
   }
 `
@@ -123,7 +124,7 @@ export const ItemWrapper = styled.div`
 export const SectionHeader = styled.span`
   margin: 0.5rem;
   padding: 0.5rem;
-  color: ${props => props.theme.fontDark};
+  color: ${(props) => props.theme.fontDark};
   font-weight: 700;
   font-size: 0.9rem;
   text-transform: uppercase;
@@ -141,8 +142,8 @@ export const SectionHeader = styled.span`
 // heavy font weight 600-700
 
 export const Heading = styled(StyledP)`
-  color: ${props => props.theme.fontDark};
-  font-family: ${props => props.theme.fontHeader};
+  color: ${(props) => props.theme.fontDark};
+  font-family: ${(props) => props.theme.fontHeader};
   font-weight: 700;
 `
 
@@ -159,16 +160,16 @@ export const StyledHyperLink = styled.a`
   cursor: pointer;
   &:visited,
   &:active {
-    color: ${props => props.theme.primary};
+    color: ${(props) => props.theme.primary};
   }
   &:hover {
-    color: ${props => props.theme.secondary};
+    color: ${(props) => props.theme.secondary};
   }
-  color: ${props => props.theme.primary};
+  color: ${(props) => props.theme.primary};
 `
 
 export const WeightAndColour = styled(StyledSpan)`
-  color: ${props => props.theme.fontDark};
+  color: ${(props) => props.theme.fontDark};
   font-weight: 700;
   font-size: 0.8rem;
   /* text-transform: uppercase; */

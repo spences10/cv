@@ -31,7 +31,7 @@ export default () => {
     imageLink,
     siteLanguage,
     siteLocale,
-    twitterUsername
+    twitterUsername,
   } = useSiteMetadata()
   return (
     <Layout>

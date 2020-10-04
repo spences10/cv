@@ -7,7 +7,7 @@ import {
   ItemHeader as IH,
   ItemWrapper as IW,
   StyledDiv as SD,
-  WeightAndColour as WC
+  WeightAndColour as WC,
 } from './shared'
 
 const AwardsWrapper = styled(IW)`

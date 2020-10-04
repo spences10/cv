@@ -2,7 +2,7 @@ const axios = require('axios')
 const createNodeHelpers = require('gatsby-node-helpers').default
 
 const { createNodeFactory } = createNodeHelpers({
-  typePrefix: 'cvData'
+  typePrefix: 'cvData',
 })
 
 const CV = createNodeFactory('CV')

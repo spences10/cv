@@ -12,7 +12,7 @@ import {
   ItemWrapper as IW,
   StyledDiv as SD,
   StyledHyperLink as SHL,
-  UpperCaseHeading as UH
+  UpperCaseHeading as UH,
 } from './shared'
 
 const AboutWrapper = styled(IW)`
@@ -100,7 +100,7 @@ const AboutLayout = styled(SD)`
 const AboutName = styled(UH)`
   grid-area: name;
   font-size: 3rem;
-  font-family: ${props => props.theme.fontHeader};
+  font-family: ${(props) => props.theme.fontHeader};
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -120,7 +120,7 @@ const AboutFace = styled.div`
   padding: 0rem;
   width: 80%;
   border-radius: 50%;
-  background-image: url(${props => props.src};);
+  background-image: url(${(props) => props.src};);
   ${media.giant`
     width: 80%;
   `};
@@ -213,7 +213,7 @@ export const About = () => {
     phone,
     website,
     summary,
-    location
+    location,
     // profiles
   } = useCvData().basics
   return (
@@ -228,7 +228,8 @@ export const About = () => {
         <AboutEmail
           href={`mailto:${email}?subject=Hi ${name} 👋`}
           target="_blank"
-          rel="noopener">
+          rel="noopener"
+        >
           <Icon
             icon={ICONS.ENVELOPE}
             size={20}

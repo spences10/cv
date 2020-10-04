@@ -7,7 +7,7 @@ import {
   ItemWrapper as IW,
   StyledDiv as SD,
   StyledHyperLink as SHL,
-  WeightAndColour as WC
+  WeightAndColour as WC,
 } from './shared'
 
 const PublicationsWrapper = styled(IW)`
@@ -79,7 +79,8 @@ export const Publications = () => {
         <WebsiteLink
           href={item.website}
           target="_blank"
-          rel="noopener">
+          rel="noopener"
+        >
           <PublicationName>{item.name}</PublicationName>
         </WebsiteLink>
         <Publisher>{item.publisher}</Publisher>

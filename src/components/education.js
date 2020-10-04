@@ -6,7 +6,7 @@ import useCvData from './cvData'
 import {
   ItemWrapper as IW,
   StyledDiv as SD,
-  WeightAndColour as WC
+  WeightAndColour as WC,
 } from './shared'
 
 const EducationWrapper = styled(IW)`

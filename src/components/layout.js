@@ -4,14 +4,14 @@ import SEO from 'react-seo-component'
 import styled, { ThemeProvider } from 'styled-components'
 import {
   ThemeSelectContext,
-  ThemeSelectProvider
+  ThemeSelectProvider,
 } from '../contexts/ThemeSelectContext'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { GlobalStyle, media } from '../theme/globalStyle'
 import {
   MainTemplateArea,
   PhoneTemplateArea,
-  TabletTemplateArea
+  TabletTemplateArea,
 } from './shared'
 
 const PageContainer = styled.div`
@@ -19,7 +19,7 @@ const PageContainer = styled.div`
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas: ${MainTemplateArea};
-  background: ${props => props.theme.background};
+  background: ${(props) => props.theme.background};
   ${media.monitor`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
@@ -28,7 +28,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       darkslateblue, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.giant`
     grid-template-columns: repeat(8, 1fr);
@@ -38,7 +38,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       goldenrod, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.desktop`
     grid-template-columns: repeat(8, 1fr);
@@ -48,7 +48,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       dodgerblue, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.tablet`
     grid-template-columns: repeat(6, 1fr);
@@ -58,7 +58,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       mediumseagreen, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.phone`
     grid-template-columns: repeat(4, 1fr);
@@ -68,7 +68,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       palevioletred, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
 `
 // const ThemeSelectWrapper = styled.div`
@@ -87,7 +87,7 @@ export const Layout = ({ children }) => {
     siteLocale,
     twitterUsername,
     firstName,
-    lastName
+    lastName,
   } = useSiteMetadata()
   return (
     <ThemeSelectProvider>
@@ -119,5 +119,5 @@ export const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }

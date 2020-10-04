@@ -7,7 +7,7 @@ import {
   ItemHeader as IH,
   StyledDiv as SD,
   StyledP as SP,
-  WeightAndColour as WC
+  WeightAndColour as WC,
 } from './shared'
 
 const WorkItemWrapper = styled(SD)`
@@ -44,7 +44,7 @@ const Dates = styled(WC)`
   grid-area: date;
   margin: 0;
   padding: 0;
-  color: ${props => props.theme.fontLight};
+  color: ${(props) => props.theme.fontLight};
 `
 
 const WorkItemHeader = styled(IH)`
@@ -71,7 +71,7 @@ const WorkItemLi = styled.li`
   margin-top: 0.5rem;
 `
 
-const WorkItem = props => {
+const WorkItem = (props) => {
   const {
     startDate: propsStartDate,
     endDate: propsEndDate,
@@ -79,7 +79,7 @@ const WorkItem = props => {
     position,
     company,
     organization,
-    summary
+    summary,
   } = props.workItemData
   const getWorkDates = () => {
     const startDate = format(new Date(propsStartDate), 'MMM yyyy')
@@ -116,7 +116,8 @@ const WorkItem = props => {
     <WorkItemWrapper>
       <Position>{position}</Position>
       <Company
-        data-tip={company ? 'Employer' : 'Volunteering Organisation'}>
+        data-tip={company ? 'Employer' : 'Volunteering Organisation'}
+      >
         {company ? company : organization}
       </Company>
       <Dates>{getWorkDates()}</Dates>
@@ -136,7 +137,7 @@ const WorkItem = props => {
 }
 
 WorkItem.propTypes = {
-  workItemData: PropTypes.object
+  workItemData: PropTypes.object,
 }
 
 export default WorkItem

@@ -7,7 +7,7 @@ import {
   ItemWrapper as IW,
   StyledLi as LI,
   StyledList as SL,
-  StyledSpan as SS
+  StyledSpan as SS,
 } from './shared'
 
 const SkillsWrapper = styled(IW)`

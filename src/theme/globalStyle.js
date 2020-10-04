@@ -13,7 +13,7 @@ export const themes = {
     fontHeader: 'Nunito, sans-serif',
     fontBody: 'Poppins, sans, sans-serif',
     fontDark: '#34434b',
-    fontLight: '#586368'
+    fontLight: '#586368',
   },
 
   theme2: {
@@ -28,7 +28,7 @@ export const themes = {
     fontHeader: 'Open Sans, sans, sans-serif',
     fontBody: '"Titillium Web", sans-serif',
     fontDark: '#034544',
-    fontLight: '#596869'
+    fontLight: '#596869',
   },
 
   theme3: {
@@ -43,8 +43,8 @@ export const themes = {
     fontHeader: '"Titillium Web", sans-serif',
     fontBody: 'Open Sans, sans, sans-serif',
     fontDark: '#34434b',
-    fontLight: '#586368'
-  }
+    fontLight: '#586368',
+  },
 }
 
 const fonts = () => {
@@ -52,7 +52,7 @@ const fonts = () => {
     'Open+Sans:400,700|',
     'Titillium+Web:400,700|',
     'Nunito:400,700|',
-    'Poppins:400,700'
+    'Poppins:400,700',
   ]
   return list.join('')
 }
@@ -86,7 +86,7 @@ const sizes = {
   giant: 1500,
   desktop: 992,
   tablet: 768,
-  phone: 376
+  phone: 376,
 }
 
 // iterate through the sizes and create a media template

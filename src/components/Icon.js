@@ -4,8 +4,8 @@ import styled from 'styled-components'
 
 const StyledIcon = styled.svg`
   path {
-    fill: ${props => props.color};
-    stroke: ${props => props.color};
+    fill: ${(props) => props.color};
+    stroke: ${(props) => props.color};
     stroke-width: 0;
   }
   display: inline-flex;
@@ -14,7 +14,7 @@ const StyledIcon = styled.svg`
   position: relative;
 `
 
-const Icon = props => {
+const Icon = (props) => {
   const { color, icon, size, viewbox } = props
   return (
     <StyledIcon
@@ -22,7 +22,8 @@ const Icon = props => {
       width={size}
       height={size}
       color={color}
-      preserveAspectRatio="xMidYMid meet">
+      preserveAspectRatio="xMidYMid meet"
+    >
       <path d={icon} />
     </StyledIcon>
   )
@@ -32,14 +33,14 @@ Icon.propTypes = {
   icon: PropTypes.string.isRequired,
   color: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   size: PropTypes.number,
-  viewbox: PropTypes.string
+  viewbox: PropTypes.string,
 }
 
 Icon.defaultProps = {
   size: 100,
   viewbox: '0 0 32 32',
   width: '100%',
-  height: '100%'
+  height: '100%',
 }
 
 export default Icon
