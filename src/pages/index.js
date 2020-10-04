@@ -1,53 +1,63 @@
-import React, { useState } from 'react'
-import { Box, Button, Heading } from 'theme-ui'
-import Long from '../copy/index-long'
-import Medium from '../copy/index-medium'
-import Short from '../copy/index-short'
+import React from 'react'
+import SEO from 'react-seo-component'
+import styled from 'styled-components'
+import { About } from '../components/about'
+import { Awards } from '../components/awards'
+import { Education } from '../components/education'
+import { Interests } from '../components/interests'
+import { Languages } from '../components/languages'
+import { Layout } from '../components/layout'
+import { Publications } from '../components/publications'
+import { References } from '../components/references'
+import { Skills } from '../components/skills'
+import { ThemeSelect } from '../components/themeSelect'
+import { Volunteer } from '../components/volunteer'
+import { Work } from '../components/work'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
+
+const ThemeSelectWrapper = styled.div`
+  margin: 0.5rem;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+`
 
 export default () => {
-  const [copySize, copySizeSet] = useState('0')
-
-  const copy = {
-    0: 'Short',
-    1: 'Medium',
-    2: 'Long',
-  }
-
+  const {
+    title,
+    description,
+    siteUrl,
+    imageLink,
+    siteLanguage,
+    siteLocale,
+    twitterUsername,
+  } = useSiteMetadata()
   return (
-    <Box as="main" sx={{ maxWidth: '640px', margin: '0 auto' }}>
-      <Box
-        sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          marginTop: '1rem',
-        }}
-      >
-        <Button onClick={() => copySizeSet('0')}>Short</Button>
-        <Button onClick={() => copySizeSet('1')}>Medium</Button>
-        <Button onClick={() => copySizeSet('2')}>Long</Button>
-      </Box>
-      <Heading as="h1" variant="styles.h1">
-        {copy[copySize]}
-      </Heading>
-
-      <Box
-        as="article"
-        sx={{ display: copySize === '0' ? `block` : `none` }}
-      >
-        <Short />
-      </Box>
-      <Box
-        as="article"
-        sx={{ display: copySize === '1' ? `block` : `none` }}
-      >
-        <Medium />
-      </Box>
-      <Box
-        as="article"
-        sx={{ display: copySize === '2' ? `block` : `none` }}
-      >
-        <Long />
-      </Box>
-    </Box>
+    <Layout>
+      <SEO
+        title={`cv`}
+        titleTemplate={title}
+        description={description}
+        image={`${siteUrl}${imageLink}`}
+        pathname={siteUrl}
+        siteLanguage={siteLanguage}
+        siteLocale={siteLocale}
+        twitterUsername={twitterUsername}
+      />
+      <About />
+      <Skills />
+      <Work />
+      <Volunteer />
+      <Education />
+      <Awards />
+      <Publications />
+      <Languages />
+      <Interests />
+      <References />
+      <ThemeSelectWrapper>
+        <ThemeSelect />
+      </ThemeSelectWrapper>
+    </Layout>
   )
 }

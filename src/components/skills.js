@@ -1,23 +1,61 @@
 import React from 'react'
-import { Grid } from 'theme-ui'
+import ReactTooltip from 'react-tooltip'
+import styled from 'styled-components'
+import useCvData from './cvData'
+// import { Dump } from '../util/helpers'
+import {
+  ItemWrapper as IW,
+  StyledLi as LI,
+  StyledList as SL,
+  StyledSpan as SS,
+} from './shared'
 
-// const StyledSkills = styled.article`
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   grid-template-rows: auto;
-// `
+const SkillsWrapper = styled(IW)`
+  grid-area: sk;
+`
 
-export const Skills = ({ children }) => {
+const ContentWrapper = styled.div`
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.51rem;
+`
+
+const SkillHeader = styled(SS)`
+  margin: 0rem;
+  padding: 0rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+`
+
+const StyledList = styled(SL)``
+
+const StyledLi = styled(LI)``
+
+export const Skills = () => {
+  const { skills } = useCvData()
+  // console.log('=====================')
+  // console.log(this.props)
+  // console.log('=====================')
   return (
-    <Grid
-      as="article"
-      columns={[2, '1fr 1fr']}
-      sx={{
-        display: 'grid',
-        gridGap: 3,
-      }}
-    >
-      {children}
-    </Grid>
+    <SkillsWrapper>
+      <ContentWrapper>
+        {/* <Dump props={skills} /> */}
+        {Object.keys(skills).map((key, index) => {
+          return (
+            <React.Fragment key={index}>
+              <SkillHeader>
+                <StyledList data-tip="Skills Detail">
+                  {skills[key].name}
+                </StyledList>
+              </SkillHeader>
+              {skills[key].keywords.map((key, index) => {
+                return <StyledLi key={key + index}>{key}</StyledLi>
+              })}
+            </React.Fragment>
+          )
+        })}
+      </ContentWrapper>
+      <ReactTooltip />
+    </SkillsWrapper>
   )
 }

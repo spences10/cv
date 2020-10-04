@@ -16,7 +16,7 @@ const siteMetadata = {
   themeColour: `#755f9f`, // this is for favicon and manifest
   nameContent: `Scott Spence - cv/resume`,
   developerName: `Scott Spence`,
-  developerUrl: `https://scottspence.me`,
+  developerUrl: `https.scottspence.me`,
   descriptionContent: `Scott Spence - web developer`,
   keywordsContent: `web developer, javascript, react, cv/resmue, information`,
   imageLink: `/favicon.png`,
@@ -27,11 +27,25 @@ const siteMetadata = {
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-mdx`,
-    `gatsby-plugin-theme-ui`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-fathom`,
+      options: {
+        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CV,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -44,6 +58,36 @@ module.exports = {
         icon: siteMetadata.faviconPng,
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [
+            `Open Sans:400,700`,
+            `Titillium Web:400,700`,
+            `Nunito:400,700`,
+            `Poppins:400,700`,
+          ],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-zeit-now`,
+      options: {
+        globalHeaders: {
+          'referrer-policy': 'same-origin',
+          'feature-policy':
+            "geolocation 'self'; microphone 'self'; camera 'self'",
+          'expect-ct': 'max-age=604800, enforce',
+          'strict-transport-security':
+            'max-age=31536000; includeSubDomains',
+          'x-frame-options': 'DENY',
+          'x-xss-protection': '1; mode=block',
+          'x-content-type-options': 'nosniff',
+          'x-download-options': 'noopen',
+        },
+      },
+    },
   ],
 }

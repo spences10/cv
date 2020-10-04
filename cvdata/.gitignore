@@ -20,14 +20,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.cache/
-
-.well-known/
 cv.json
-
-# Build directory
-public/
-cv/
-
-# env files
-.env*
