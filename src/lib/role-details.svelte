@@ -1,17 +1,27 @@
 <script>
+  import { format, isValid } from 'date-fns'
+
   export let position
   export let company
   export let startDate
   export let endDate
 
   const calcDates = (startDate, endDate) => {
-    return `${startDate} - ${endDate === '' ? 'Present' : endDate}`
+    const formattedStart = format(new Date(startDate), 'MMM yyyy')
+    const formattedEndDate = () => {
+      if (isValid(new Date(endDate))) {
+        return format(new Date(endDate), 'MMM yyyy')
+      } else {
+        return 'Present'
+      }
+    }
+    return `${formattedStart} - ${formattedEndDate()}`
   }
 </script>
 
 <p class="position">{position}</p>
 <p class="company">{company}</p>
-<p class="dates">{calcDates(startDate, endDate)}</p>
+<span class="dates">{calcDates(startDate, endDate)}</span>
 
 <style>
   .position {
