@@ -4,10 +4,14 @@
 </script>
 
 <svelte:head>
+  <title>CV</title>
+
+  <link href="./global.css" rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css?family=Poppins"
     rel="stylesheet"
   />
+  <meta name="monetization" content="$ilp.uphold.com/bzPBWkMBzLmN" />
 </svelte:head>
 
 <Basics />

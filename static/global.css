@@ -1,0 +1,6 @@
+@import 'reset.css';
+@import url('reset.css');
+
+p {
+  margin-bottom: 1rem;
+}
