@@ -18,6 +18,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 16px;
+    font-family: Poppins;
   }
 
   main {
