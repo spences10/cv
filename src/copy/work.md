@@ -1,8 +1,8 @@
-## Web Developer
+<script>
+  import RoleDetails from '$lib/role-details.svelte'
+</script>
 
-### Karmarama
-
-#### Sep 2018 - Present (2yrs 9mos)
+<RoleDetails position="Web Developer" company="Karmarama" dates="Sep 2018 - Present (2yrs 9mos)" />
 
 ## SUMMARY
 
