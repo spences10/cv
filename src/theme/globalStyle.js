@@ -1,37 +1,64 @@
-import { injectGlobal, css } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
-export const theme1 = {
-  primary: '#ff0198',
-  secondary: '#01c1d6',
-  danger: '#eb238e',
-  light: '#f4f4f4',
-  dark: '#4A4A4A',
-  background: '#f9f9fd',
-  foreground: '#fefefe',
-  border: '#044040',
-  fontHeader: '"Titillium Web", sans-serif',
-  fontBody: 'Open Sans, sans, sans-serif',
-  fontDark: '#34434b',
-  fontLight: '#586368'
+export const themes = {
+  theme1: {
+    primary: '#ff0198',
+    secondary: '#01c1d6',
+    danger: '#eb238e',
+    light: '#f4f4f4',
+    dark: '#4A4A4A',
+    background: '#f9f9fd',
+    foreground: '#fefefe',
+    border: '#044040',
+    fontHeader: 'Nunito, sans-serif',
+    fontBody: 'Poppins, sans, sans-serif',
+    fontDark: '#34434b',
+    fontLight: '#586368',
+  },
+
+  theme2: {
+    primary: '#6e27c5',
+    secondary: '#ffb617',
+    danger: '#f16623',
+    light: '#f5f5f5',
+    dark: '#505050',
+    background: '#e6e6e6',
+    foreground: '#f7f0f0',
+    border: '#054545',
+    fontHeader: 'Open Sans, sans, sans-serif',
+    fontBody: '"Titillium Web", sans-serif',
+    fontDark: '#034544',
+    fontLight: '#596869',
+  },
+
+  theme3: {
+    primary: '#ff0198',
+    secondary: '#01c1d6',
+    danger: '#eb238e',
+    light: '#f4f4f4',
+    dark: '#4A4A4A',
+    background: '#f9f9fd',
+    foreground: '#fefefe',
+    border: '#044040',
+    fontHeader: '"Titillium Web", sans-serif',
+    fontBody: 'Open Sans, sans, sans-serif',
+    fontDark: '#34434b',
+    fontLight: '#586368',
+  },
 }
 
-export const theme2 = {
-  primary: '#6e27c5',
-  secondary: '#ffb617',
-  danger: '#f16623',
-  light: '#f5f5f5',
-  dark: '#505050',
-  background: '#e6e6e6',
-  foreground: '#f7f0f0',
-  border: '#054545',
-  fontHeader: 'Open Sans, sans, sans-serif',
-  fontBody: '"Titillium Web", sans-serif',
-  fontDark: '#034544',
-  fontLight: '#596869'
+const fonts = () => {
+  const list = [
+    'Open+Sans:400,700|',
+    'Titillium+Web:400,700|',
+    'Nunito:400,700|',
+    'Poppins:400,700',
+  ]
+  return list.join('')
 }
 
-injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:400,700');
+export const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=${fonts()}');
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -41,6 +68,8 @@ injectGlobal`
     margin: 0;
     font-family: sans-serif;
     /* word-wrap: break-word; */
+    line-height: 1.85rem;
+    letter-spacing: 0.06rem;
   }
 
   a {
@@ -50,21 +79,6 @@ injectGlobal`
   li {
     list-style: none;  
   }
-
-  /* remove dotted line around links in Firefox */
-  a:active, a:focus {
-    outline: 0;
-    border: none;
-    -moz-outline-style: none
-  }
-
-  :focus {
-    outline:none;
-  }
-
-  ::-moz-focus-inner {
-    border:0;
-  }
 `
 
 const sizes = {
@@ -72,7 +86,7 @@ const sizes = {
   giant: 1500,
   desktop: 992,
   tablet: 768,
-  phone: 376
+  phone: 376,
 }
 
 // iterate through the sizes and create a media template

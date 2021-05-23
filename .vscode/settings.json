@@ -17,5 +17,11 @@
     "uppercase",
     "viewbox",
     "yandex"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#aca0ea",
+    "titleBar.inactiveBackground": "#aca0ea99",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99"
+  }
 }
