@@ -2,7 +2,23 @@
   import RoleDetails from '$lib/role-details.svelte'
 </script>
 
-<RoleDetails position="Web Developer" company="Karmarama" dates="Sep 2018 - Present (2yrs 9mos)" />
+<RoleDetails 
+  position="Developer Advocate"
+  company="GraphCMS"
+  startDate="2021-04-26"
+  endDate="" 
+/>
+
+## SUMMARY
+
+## HIGHLIGHTS
+
+<RoleDetails 
+  position="Web Developer"
+  company="Karmarama"
+  startDate="2018-09-03"
+  endDate="2021-04-23" 
+/>
 
 ## SUMMARY
 
@@ -36,11 +52,12 @@ Working on exciting, well-known brands alongside having the
 opportunity for personal development time and an opportunity to learn,
 teach and work with a variety of established and new technologies.
 
-Front-End Developer
-
-Zaizi
-
-Mar 2018 - Aug 2018 (6mos)
+<RoleDetails 
+  position="Front-End Developer"
+  company="Zaizi"
+  startDate="2018-03-08"
+  endDate="2018-08-31" 
+/>
 
 SUMMARY
 
@@ -56,11 +73,17 @@ Evaluate several CMS' for use, Contentful, GraphCMS and CrafterCMS
 Working in an agile team in the delivery of initial sprints of the
 ncsc.gov.uk site.
 
-Analyst Developer
+## Previous experience non web dev related
 
-OES Technology
+<details>
+  <summary>Analyst Developer</summary>
 
-Nov 2016 - Mar 2018 (1yr 5mos)
+<RoleDetails 
+  position="Analyst Developer"
+  company="OES Technology"
+  startDate="2016-11-01"
+  endDate="2018-03-07" 
+/>
 
 SUMMARY
 
@@ -79,11 +102,17 @@ GitHub project manager for Build to Learn project with two other
 remote developers based in Serbia and Egypt building a project with
 the static site generator JavaScript framework Gatsby.
 
-VBA Developer
+</details>
 
-Mansion House Consulting
+<details>
+  <summary>VBA Developer</summary>
 
-Jan 2016 - Jul 2016 (7mos)
+<RoleDetails 
+  position="VBA Developer"
+  company="Mansion House Consulting"
+  startDate="2016-01-01"
+  endDate="2016-07-31" 
+/>
 
 SUMMARY
 
@@ -104,11 +133,17 @@ reporting framework for Insight which used the existing functionality
 to report on a SharePoint list into a preconfigured template for risk
 accountability and a heat map
 
-Senior Software Engineer
+</details>
 
-Fidelity
+<details>
+  <summary>Senior Software Engineer</summary>
 
-Dec 2014 - Dec 2015 (1yr 1mo)
+<RoleDetails 
+  position="Senior Software Engineer"
+  company="Fidelity"
+  startDate="2014-12-01"
+  endDate="2015-12-25" 
+/>
 
 SUMMARY
 
@@ -130,11 +165,17 @@ production.
 Working with large data sets extracting large data sets from the a
 Bloomberg API to Excel for importing into Oracle via SQL\*Loader.
 
-VBA Developer
+</details>
 
-Deloitte
+<details>
+  <summary>VBA Developer</summary>
 
-Aug 2013 - Dec 2014 (1yr 4mos)
+<RoleDetails 
+  position="VBA Developer"
+  company="Deloitte"
+  startDate="2013-08-01"
+  endDate="2014-12-01" 
+/>
 
 SUMMARY
 
@@ -153,11 +194,17 @@ so they can be stored individually rather than as a BLOBs
 Responsible for implementing Microsoft Test Manager (MTM) for any new
 changes which also included writing the individual tests.
 
-Support Developer
+</details>
 
-MSCI
+<details>
+  <summary>Support Developer</summary>
 
-Oct 2010 - Aug 2013 (2yrs 11mos)
+<RoleDetails 
+  position="Support Developer"
+  company="MSCI"
+  startDate="2010-10-01"
+  endDate="2013-08-01"
+/>
 
 SUMMARY
 
@@ -194,11 +241,17 @@ subscription sites. The subscription sites are used by external
 clients to access data in several ways including PDF reports and
 interactive data mining tools.
 
-Technical Project Manager
+</details>
 
-Barclays
+<details>
+  <summary>Technical Project Manager</summary>
 
-Mar 2010 - Oct 2010 (8mos)
+<RoleDetails 
+  position="Technical Project Manager"
+  company="Barclays"
+  startDate="2010-03-01"
+  endDate="2010-10-01"
+/>
 
 SUMMARY
 
@@ -219,11 +272,17 @@ Recalculating amortization profile of loan account.
 
 Producing letters of variation to clients.
 
-Technical Project Manager
+</details>
 
-Barclays
+<details>
+  <summary>Technical Project Manager</summary>
 
-Jul 2007 - Oct 2010 (3yrs 4mos)
+<RoleDetails 
+  position="Technical Project Manager"
+  company="Barclays"
+  startDate="2007-07-01"
+  endDate="2010-10-01"
+/>
 
 SUMMARY
 
@@ -256,11 +315,17 @@ replication via ADO.
 Championed implementation of VSS into the team, building add-ins for
 Excel and Access and acting as contact point for queries in the team.
 
-Business & Information Manager
+</details>
 
-Barclays
+<details>
+  <summary>Business & Information Manager</summary>
 
-Nov 2005 - Jul 2007 (1yr 9mos)
+<RoleDetails 
+  position="Business & Information Manager"
+  company="Barclays"
+  startDate="2005-11-01"
+  endDate="2007-07-01"
+/>
 
 SUMMARY
 
@@ -301,11 +366,17 @@ also been adopted by all the GLT staff as an essential piece of kit
 enabling smarter working within the teams. Feedback on this was
 phenomenal
 
-Financial & Commercial Assistant
+</details>
 
-Barclays
+<details>
+  <summary>Financial & Commercial Assistant</summary>
 
-Feb 2002 - Nov 2005 (3yrs 10mos)
+<RoleDetails 
+  position="Financial & Commercial Assistant"
+  company="Barclays"
+  startDate="2002-02-01"
+  endDate="2005-11-01"
+/>
 
 SUMMARY
 
@@ -332,3 +403,5 @@ business unit in financial terms and against key actions.
 
 Application of costs e.g. staff costs [salaries, overtime and
 allowances to appropriate cost centres].
+
+</details>
