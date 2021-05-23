@@ -13,16 +13,16 @@
     "@sveltejs/adapter-vercel": "^1.0.0-next.19",
     "@sveltejs/kit": "next",
     "date-fns": "^2.21.3",
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^3.2.0",
-    "mdsvex": "^0.9.0",
-    "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "rehype-autolink-headings": "^5.0.1",
+    "mdsvex": "^0.9.6",
+    "prettier": "~2.3.0",
+    "prettier-plugin-svelte": "^2.3.0",
+    "rehype-autolink-headings": "^5.1.0",
     "rehype-slug": "^4.0.1",
     "remark-abbr": "^1.4.1",
-    "remark-github": "^10.0.1",
-    "svelte": "^3.34.0"
+    "remark-github": "^10.1.0",
+    "svelte": "^3.38.2"
   }
 }
