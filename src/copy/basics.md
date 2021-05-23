@@ -6,12 +6,13 @@
 email={`yo@scottspence.dev`} phone={`+44 7960 86 3382`}
 website={`scottspence.me`} /> -->
 
-A front-end developer with <DateDistance  /> commercial experience in
-delivering client facing sites.
+A front-end developer with <DateDistance date="2018-03-14" />
+commercial experience in delivering client facing sites.
 
-HTML, CSS and JavaScript (<DateDistance  />)
+JavaScript, HTML and CSS (the holy trinity), <DateDistance
+date="2016-06-15" />
 
-React (<DateDistance  />)
+React (<DateDistance date="2017-05-20" />)
 
 Passionate about using modern technology and very keen to improve on
 existing skills and to learn new ones.

@@ -1,5 +1,5 @@
 <script>
-  import MD from '$lib/Example.svelte.md'
+  import Basics from '../copy/basics.md'
 </script>
 
-<MD />
+<Basics />
