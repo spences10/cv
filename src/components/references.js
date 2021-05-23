@@ -1,14 +1,11 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
-
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
-
 import {
   ItemWrapper as IW,
+  StyledDiv as SD,
   WeightAndColour as WC,
-  StyledDiv as SD
 } from './shared'
 
 const ReferenceWrapper = styled(IW)`
@@ -50,8 +47,8 @@ const Quote = styled.span`
   font-weight: 900;
 `
 
-const References = ({ data }) => {
-  const { references } = data.cvDataCv
+export const References = () => {
+  const { references } = useCvData()
   // return <Dump data={data} />
   const getReference = references.map((item, index) => {
     return (
@@ -79,19 +76,3 @@ const References = ({ data }) => {
     </React.Fragment>
   )
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query References {
-        cvDataCv {
-          references {
-            name
-            reference
-          }
-        }
-      }
-    `}
-    render={data => <References data={data} {...props} />}
-  />
-)

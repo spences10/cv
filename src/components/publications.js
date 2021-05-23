@@ -1,16 +1,13 @@
+import { format } from 'date-fns'
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
-
-import { Dump } from '../util/helpers'
-
+import useCvData from './cvData'
 import {
-  ItemWrapper as IW,
-  WeightAndColour as WC,
-  StyledDiv as SD,
   ItemHeader as IH,
-  StyledHyperLink as SHL
+  ItemWrapper as IW,
+  StyledDiv as SD,
+  StyledHyperLink as SHL,
+  WeightAndColour as WC,
 } from './shared'
 
 const PublicationsWrapper = styled(IW)`
@@ -69,17 +66,21 @@ const PublicationItemSummary = styled.span`
   padding-top: 0.5rem;
 `
 
-const Publications = ({ data }) => {
-  const { publications } = data.cvDataCv
+export const Publications = () => {
+  const { publications } = useCvData()
 
   const getPublications = publications.map((item, index) => {
-    const publicationDate = format(item.releaseDate, 'MMM yyyy')
+    const publicationDate = format(
+      new Date(item.releaseDate),
+      'MMM yyyy'
+    )
     return (
       <PublicationsItemWrapper key={index}>
         <WebsiteLink
           href={item.website}
           target="_blank"
-          rel="noopener">
+          rel="noopener"
+        >
           <PublicationName>{item.name}</PublicationName>
         </WebsiteLink>
         <Publisher>{item.publisher}</Publisher>
@@ -108,22 +109,3 @@ const Publications = ({ data }) => {
     </React.Fragment>
   )
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Publications {
-        cvDataCv {
-          publications {
-            name
-            publisher
-            releaseDate
-            website
-            summary
-          }
-        }
-      }
-    `}
-    render={data => <Publications data={data} {...props} />}
-  />
-)

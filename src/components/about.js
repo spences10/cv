@@ -1,23 +1,19 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-
-import { media } from '../theme/globalStyle'
-// import { Dump } from '../util/helpers'
-
-import {
-  UpperCaseHeading as UH,
-  Heading as H,
-  ItemWrapper as IW,
-  ItemHeader as IH,
-  StyledHyperLink as SHL,
-  StyledDiv as SD
-} from './shared'
-
-import defaultAvi from '../img/default_avatar.png'
-
-import { ICONS } from '../theme/constants'
 import Icon from '../components/Icon'
+import { ICONS } from '../theme/constants'
+import { media } from '../theme/globalStyle'
+import { AboutImage } from './aboutImage'
+import useCvData from './cvData'
+// import { Dump } from '../util/helpers'
+import {
+  Heading as H,
+  ItemHeader as IH,
+  ItemWrapper as IW,
+  StyledDiv as SD,
+  StyledHyperLink as SHL,
+  UpperCaseHeading as UH,
+} from './shared'
 
 const AboutWrapper = styled(IW)`
   grid-area: ab;
@@ -40,7 +36,9 @@ const AboutLayout = styled(SD)`
     grid-template-areas:
       'name     name     name     name     pic      pic     '
       'label    label    label    label    pic      pic     '
-      'email    email    site     site     phone    phone   '
+      'email    email    email    .        .        .       '
+      'site     site     site     .        .        .       '
+      'phone    phone    phone    .        .        .       '
       'about    about    about    about    about    about   '
       'location location location location location location'
       'profiles profiles profiles profiles profiles profiles';
@@ -102,9 +100,10 @@ const AboutLayout = styled(SD)`
 const AboutName = styled(UH)`
   grid-area: name;
   font-size: 3rem;
-  font-family: ${props => props.theme.fontHeader};
-  margin: 0.1rem 0rem 0.1rem 0rem;
-  padding: 0.1rem 0rem 0.1rem 0rem;
+  font-family: ${(props) => props.theme.fontHeader};
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 `
 // top right bottom left
 const AboutLabel = styled(H)`
@@ -114,14 +113,14 @@ const AboutLabel = styled(H)`
   padding: 0.1rem 0rem 0.1rem 0rem;
 `
 
-const AboutImg = styled.img`
+const AboutFace = styled.div`
   grid-area: pic;
   object-fit: cover;
-  margin: 1rem;
+  margin: 0 0 1rem 1rem;
   padding: 0rem;
   width: 80%;
   border-radius: 50%;
-  background-image: url(${props => props.src};);
+  background-image: url(${(props) => props.src};);
   ${media.giant`
     width: 80%;
   `};
@@ -161,8 +160,8 @@ const SummaryHeader = styled(IH)`
 
 const AboutSummary = styled(SD)`
   grid-area: about;
-  padding: 1rem 0rem 0rem 0rem;
-  margin: 0.75rem 0rem 0rem 0rem;
+  padding: 1rem 0rem;
+  margin: 1rem 0rem;
   ul {
     padding: 0rem;
     margin: 0rem;
@@ -180,7 +179,7 @@ const LocationHeader = styled(IH)`
 const Location = styled(SD)`
   grid-area: location;
   padding: 1rem 0rem 0rem 0rem;
-  margin: 0.75rem 0rem 0rem 0rem;
+  margin: 1.5rem 0rem 0rem 0rem;
   span {
     &:not(:last-child)::after {
       margin-top: 0.5rem;
@@ -206,30 +205,31 @@ const Location = styled(SD)`
 //   }
 // `
 
-const About = ({ data }) => {
+export const About = () => {
   const {
     name,
     label,
-    picture,
     email,
     phone,
     website,
     summary,
     location,
-    profiles
-  } = data.cvDataCv.basics
-
+    // profiles
+  } = useCvData().basics
   return (
     <AboutWrapper>
       {/* <Dump props={({ theme }) => theme.primary} /> */}
       <AboutLayout>
         <AboutName>{name}</AboutName>
         <AboutLabel>{label}</AboutLabel>
-        <AboutImg src={picture || defaultAvi} />
+        <AboutFace>
+          <AboutImage />
+        </AboutFace>
         <AboutEmail
           href={`mailto:${email}?subject=Hi ${name} 👋`}
           target="_blank"
-          rel="noopener">
+          rel="noopener"
+        >
           <Icon
             icon={ICONS.ENVELOPE}
             size={20}
@@ -254,9 +254,12 @@ const About = ({ data }) => {
             // color={({ theme }) => theme.primary}
             viewbox={'-5 0 32 32'}
           />
-          {website}
+          {website.replace(/(^\w+:|^)\/\//, '')}
         </AboutWebsite>
-        <SummaryHeader>about</SummaryHeader>
+        <SummaryHeader>
+          about
+          <hr />
+        </SummaryHeader>
         <AboutSummary>
           {typeof summary === 'string' ? (
             summary
@@ -268,24 +271,33 @@ const About = ({ data }) => {
             </ul>
           )}
         </AboutSummary>
-        <LocationHeader>location</LocationHeader>
+        <LocationHeader>
+          location
+          <hr />
+        </LocationHeader>
         <Location>
           {Object.values(location).map((line, index) => {
             return (
-              <React.Fragment>
+              <>
                 {line.length === 0 ? null : (
                   <span key={index}>{line}</span>
                 )}
-              </React.Fragment>
+              </>
             )
           })}
         </Location>
         {/* <Profiles>
-          TODO: fix this!
           <ul>
             {profiles.map((line, index) => {
+              // TODO: fix this! 
               // return <Dump props={line} />
-              // return <li key={index}>{line}</li>
+              // return (
+              //   <>
+              //     <li key={index}>{line.network}</li>
+              //     <li key={index}>{line.username}</li>
+              //     <li key={index}>{line.url}</li>
+              //   </>
+              // )
             })}
           </ul>
         </Profiles> */}
@@ -293,36 +305,3 @@ const About = ({ data }) => {
     </AboutWrapper>
   )
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Basics {
-        cvDataCv {
-          basics {
-            name
-            label
-            picture
-            email
-            phone
-            website
-            summary
-            location {
-              address
-              postalCode
-              city
-              countryCode
-              region
-            }
-            profiles {
-              network
-              username
-              url
-            }
-          }
-        }
-      }
-    `}
-    render={data => <About data={data} {...props} />}
-  />
-)

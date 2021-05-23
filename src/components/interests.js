@@ -1,16 +1,14 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 import ReactTooltip from 'react-tooltip'
-
+import styled from 'styled-components'
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
-
 import {
   ItemWrapper as IW,
-  WeightAndColour as WC,
-  StyledList as SL,
   StyledLi as LI,
-  StyledSpan as SS
+  StyledList as SL,
+  StyledSpan as SS,
+  WeightAndColour as WC,
 } from './shared'
 
 const InterestsWrapper = styled(IW)`
@@ -41,8 +39,8 @@ const StyledList = styled(SL)``
 
 const StyledLi = styled(LI)``
 
-const Interests = ({ data }) => {
-  const { interests } = data.cvDataCv
+export const Interests = () => {
+  const { interests } = useCvData()
   // console.log('=====================')
   // console.log(this.props)
   // console.log('=====================')
@@ -70,19 +68,3 @@ const Interests = ({ data }) => {
     </InterestsWrapper>
   )
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Interests {
-        cvDataCv {
-          interests {
-            name
-            keywords
-          }
-        }
-      }
-    `}
-    render={data => <Interests data={data} {...props} />}
-  />
-)

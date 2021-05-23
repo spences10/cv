@@ -1,14 +1,12 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
 import { format, isValid } from 'date-fns'
+import React from 'react'
 import styled from 'styled-components'
-
 // import { Dump } from '../util/helpers'
-
+import useCvData from './cvData'
 import {
   ItemWrapper as IW,
+  StyledDiv as SD,
   WeightAndColour as WC,
-  StyledDiv as SD
 } from './shared'
 
 const EducationWrapper = styled(IW)`
@@ -49,14 +47,18 @@ const EducationItemDates = styled.span`
   grid-area: date;
 `
 
-const Education = ({ data }) => {
-  const { education } = data.cvDataCv
+export const Education = () => {
+  const { education } = useCvData()
+
   // return <Dump data={data} />
   const getEducation = education.map((item, index) => {
-    const educationStartDate = format(item.startDate, 'MMM yyyy')
+    const educationStartDate = format(
+      new Date(item.startDate),
+      'MMM yyyy'
+    )
     const educationEndDate = () => {
-      if (isValid(item.endDate)) {
-        return format(item.endDate, 'MMM yyyy')
+      if (isValid(new Date(item.endDate))) {
+        return format(new Date(item.endDate), 'MMM yyyy')
       } else {
         return 'Present'
       }
@@ -83,23 +85,3 @@ const Education = ({ data }) => {
     </EducationWrapper>
   )
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Education {
-        cvDataCv {
-          education {
-            institution
-            area
-            studyType
-            startDate
-            endDate
-            gpa
-          }
-        }
-      }
-    `}
-    render={data => <Education data={data} {...props} />}
-  />
-)

@@ -1,14 +1,11 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { format, isValid } from 'date-fns'
 import styled from 'styled-components'
-
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
-
 import {
   ItemWrapper as IW,
+  StyledDiv as SD,
   WeightAndColour as WC,
-  StyledDiv as SD
 } from './shared'
 
 const LanguagesWrapper = styled(IW)`
@@ -44,8 +41,9 @@ const LanguagesItemFluency = styled.span`
   grid-area: fl;
 `
 
-const Languages = ({ data }) => {
-  const { languages } = data.cvDataCv
+export const Languages = () => {
+  const { languages } = useCvData()
+
   // return <Dump data={data} />
   const getLanguages = languages.map((item, index) => {
     return (
@@ -65,19 +63,3 @@ const Languages = ({ data }) => {
     </LanguagesWrapper>
   )
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Languages {
-        cvDataCv {
-          languages {
-            language
-            fluency
-          }
-        }
-      }
-    `}
-    render={data => <Languages data={data} {...props} />}
-  />
-)

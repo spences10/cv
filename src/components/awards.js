@@ -1,15 +1,13 @@
+import { format, isValid } from 'date-fns'
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import { format } from 'date-fns'
 import styled from 'styled-components'
-
+import useCvData from './cvData'
 // import { Dump } from '../util/helpers'
-
 import {
+  ItemHeader as IH,
   ItemWrapper as IW,
-  WeightAndColour as WC,
   StyledDiv as SD,
-  ItemHeader as IH
+  WeightAndColour as WC,
 } from './shared'
 
 const AwardsWrapper = styled(IW)`
@@ -62,16 +60,23 @@ const AwardItemSummary = styled.span`
   padding-top: 0.5rem;
 `
 
-const Awards = ({ data }) => {
-  const { awards } = data.cvDataCv
+export const Awards = ({ data }) => {
+  const { awards } = useCvData()
 
   const getAwards = awards.map((item, index) => {
-    const awardDate = format(item.date, 'MMM yyyy')
+    const awardDate = () => {
+      if (isValid(new Date(item.date))) {
+        return format(new Date(item.date), 'MMM yyyy')
+      } else {
+        return null
+      }
+    }
+
     return (
       <AwardsItemWrapper key={index}>
         <AwardItemTitle>{item.title}</AwardItemTitle>
         <AwardItemAwarder>{item.awarder}</AwardItemAwarder>
-        <AwardItemDate>{awardDate}</AwardItemDate>
+        <AwardItemDate>{awardDate()}</AwardItemDate>
         <AwardItemHeader>summary</AwardItemHeader>
         <AwardItemSummary>{item.summary}</AwardItemSummary>
       </AwardsItemWrapper>
@@ -92,21 +97,3 @@ const Awards = ({ data }) => {
     </React.Fragment>
   )
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query Awards {
-        cvDataCv {
-          awards {
-            title
-            date
-            awarder
-            summary
-          }
-        }
-      }
-    `}
-    render={data => <Awards data={data} {...props} />}
-  />
-)

@@ -1,31 +1,25 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react'
+import SEO from 'react-seo-component'
 import styled, { ThemeProvider } from 'styled-components'
-import Helmet from 'react-helmet'
-
-import SEO from './seo'
-import {
-  MainTemplateArea,
-  TabletTemplateArea,
-  PhoneTemplateArea
-} from './shared'
-
 import {
   ThemeSelectContext,
-  ThemeSelectProvider
+  ThemeSelectProvider,
 } from '../contexts/ThemeSelectContext'
-
-// import { Dump } from '../util/helpers'
-
-import { media, GlobalStyle } from '../theme/globalStyle'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
+import { GlobalStyle, media } from '../theme/globalStyle'
+import {
+  MainTemplateArea,
+  PhoneTemplateArea,
+  TabletTemplateArea,
+} from './shared'
 
 const PageContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
   grid-template-areas: ${MainTemplateArea};
-  background: ${props => props.theme.background};
+  background: ${(props) => props.theme.background};
   ${media.monitor`
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: auto;
@@ -34,7 +28,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       darkslateblue, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.giant`
     grid-template-columns: repeat(8, 1fr);
@@ -44,7 +38,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       goldenrod, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.desktop`
     grid-template-columns: repeat(8, 1fr);
@@ -54,7 +48,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       dodgerblue, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.tablet`
     grid-template-columns: repeat(6, 1fr);
@@ -64,7 +58,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       mediumseagreen, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
   ${media.phone`
     grid-template-columns: repeat(4, 1fr);
@@ -74,7 +68,7 @@ const PageContainer = styled.div`
     background: linear-gradient(
       0.25turn, 
       palevioletred, 
-      ${props => props.theme.secondary});
+      ${(props) => props.theme.secondary});
   `};
 `
 // const ThemeSelectWrapper = styled.div`
@@ -83,13 +77,18 @@ const PageContainer = styled.div`
 //   right: 0;
 // `
 
-const Layout = ({ children, data }) => {
+export const Layout = ({ children }) => {
   const {
     title,
     description,
+    siteUrl,
     imageLink,
-    siteLanguage
-  } = data.site.siteMetadata
+    siteLanguage,
+    siteLocale,
+    twitterUsername,
+    firstName,
+    lastName,
+  } = useSiteMetadata()
   return (
     <ThemeSelectProvider>
       <ThemeSelectContext.Consumer>
@@ -99,13 +98,17 @@ const Layout = ({ children, data }) => {
               <GlobalStyle />
               <SEO
                 title={title}
-                description={description || 'nothin’'}
-                image={imageLink}
+                description={description || `nothin’`}
+                image={`${siteUrl}${imageLink}`}
+                pathname={siteUrl}
+                siteLanguage={siteLanguage}
+                siteLocale={siteLocale}
+                twitterUsername={twitterUsername}
+                author={`${firstName} ${lastName}`}
+                article={true}
+                publishedDate={'2019-11-25T20:48:58.859Z'}
+                modifiedDate={new Date(Date.now()).toISOString()}
               />
-              <Helmet>
-                <html lang={siteLanguage} />
-              </Helmet>
-              {/* <Dump props={data.site.siteMetadata.siteLanguage} /> */}
               {children}
             </PageContainer>
           </ThemeProvider>
@@ -116,23 +119,5 @@ const Layout = ({ children, data }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query LayoutData {
-        site {
-          siteMetadata {
-            title
-            siteLanguage
-            description
-            imageLink
-          }
-        }
-      }
-    `}
-    render={data => <Layout data={data} {...props} />}
-  />
-)

@@ -28,3 +28,6 @@ cv.json
 # Build directory
 public/
 cv/
+
+# env files
+.env*

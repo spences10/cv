@@ -13,7 +13,7 @@ export const themes = {
     fontHeader: 'Nunito, sans-serif',
     fontBody: 'Poppins, sans, sans-serif',
     fontDark: '#34434b',
-    fontLight: '#586368'
+    fontLight: '#586368',
   },
 
   theme2: {
@@ -28,7 +28,7 @@ export const themes = {
     fontHeader: 'Open Sans, sans, sans-serif',
     fontBody: '"Titillium Web", sans-serif',
     fontDark: '#034544',
-    fontLight: '#596869'
+    fontLight: '#596869',
   },
 
   theme3: {
@@ -43,12 +43,22 @@ export const themes = {
     fontHeader: '"Titillium Web", sans-serif',
     fontBody: 'Open Sans, sans, sans-serif',
     fontDark: '#34434b',
-    fontLight: '#586368'
-  }
+    fontLight: '#586368',
+  },
+}
+
+const fonts = () => {
+  const list = [
+    'Open+Sans:400,700|',
+    'Titillium+Web:400,700|',
+    'Nunito:400,700|',
+    'Poppins:400,700',
+  ]
+  return list.join('')
 }
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Titillium+Web:400,700|Nunito:400,700|Poppins:400,700');
+  @import url('https://fonts.googleapis.com/css?family=${fonts()}');
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -58,6 +68,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: sans-serif;
     /* word-wrap: break-word; */
+    line-height: 1.85rem;
+    letter-spacing: 0.06rem;
   }
 
   a {
@@ -67,21 +79,6 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style: none;  
   }
-
-  /* remove dotted line around links in Firefox */
-  a:active, a:focus {
-    outline: 0;
-    border: none;
-    -moz-outline-style: none
-  }
-
-  :focus {
-    outline:none;
-  }
-
-  ::-moz-focus-inner {
-    border:0;
-  }
 `
 
 const sizes = {
@@ -89,7 +86,7 @@ const sizes = {
   giant: 1500,
   desktop: 992,
   tablet: 768,
-  phone: 376
+  phone: 376,
 }
 
 // iterate through the sizes and create a media template
