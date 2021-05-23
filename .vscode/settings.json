@@ -1,4 +1,24 @@
 {
   "git.enableSmartCommit": true,
-  "git.postCommitCommand": "sync"
+  "git.postCommitCommand": "sync",
+  "cSpell.words": [
+    "Contentful",
+    "DOFT",
+    "Deloitte",
+    "Dialogflow",
+    "Prebon",
+    "RAFTA",
+    "ROSCA",
+    "Sanctioners",
+    "Tullett",
+    "Xstate",
+    "Zaizi",
+    "abbr",
+    "mdsvex",
+    "ncsc",
+    "quants",
+    "rehype",
+    "sveltejs",
+    "vercel"
+  ]
 }
