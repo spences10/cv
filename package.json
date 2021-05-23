@@ -5,58 +5,22 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
-    "start": "svelte-kit start",
-    "lint": "prettier --check . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write ."
+    "preview": "svelte-kit preview",
+    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
-    "@tailwindcss/jit": "^0.1.1",
-    "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
-    "autoprefixer": "^10.2.5",
-    "cssnano": "^4.1.10",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-svelte3": "^3.1.0",
-    "mdsvex": "^0.8.9",
-    "postcss": "^8.2.7",
-    "postcss-load-config": "^3.0.1",
+    "eslint-plugin-svelte3": "^3.2.0",
+    "mdsvex": "^0.9.0",
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
     "rehype-autolink-headings": "^5.0.1",
     "rehype-slug": "^4.0.1",
     "remark-abbr": "^1.4.1",
     "remark-github": "^10.0.1",
-    "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0",
-    "svelte": "^3.29.0",
-    "svelte-preprocess": "^4.6.9",
-    "tailwindcss": "^2.0.3",
-    "tslib": "^2.0.0",
-    "typescript": "^4.0.0",
-    "vite": "^2.1.0"
-  },
-  "stylelint": {
-    "extends": [
-      "stylelint-config-standard"
-    ],
-    "rules": {
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": [
-            "tailwind",
-            "apply",
-            "variants",
-            "responsive",
-            "screen"
-          ]
-        }
-      ],
-      "declaration-block-trailing-semicolon": null,
-      "no-descending-specificity": null
-    }
+    "svelte": "^3.34.0"
   }
 }

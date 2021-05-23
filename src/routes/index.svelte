@@ -1,9 +1,5 @@
-<script lang="ts">
-  import Basics from '../copy/basics.md'
-  import MD from '../copy/example-markdown.md'
+<script>
+  import MD from '$lib/Example.svelte.md'
 </script>
 
-<main>
-  <Basics />
-  <MD />
-</main>
+<MD />
