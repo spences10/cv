@@ -1,6 +1,12 @@
 @import 'reset.css';
 @import url('reset.css');
 
+body {
+  font-family: Poppins;
+  line-height: 1.85rem;
+  letter-spacing: 0.06rem;
+}
+
 p {
   margin-bottom: 1rem;
 }
