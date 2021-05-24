@@ -1,10 +1,7 @@
 <script>
   import { format, intervalToDuration, isValid } from 'date-fns'
 
-  export let position
-  export let company
-  export let startDate
-  export let endDate
+  export let position, company, startDate, endDate
 
   const formatDates = (startDate, endDate) => {
     const formattedStart = format(new Date(startDate), 'MMM yyyy')
@@ -38,13 +35,22 @@
   }
 </script>
 
-<p class="position">{position}</p>
+<h2 class="position">{position}</h2>
 <p class="company">{company}</p>
 <span class="dates">{formatDates(startDate, endDate)}</span>
 
 <style>
   .position {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .company {
     font-size: 1.1rem;
-    margin-bottom: 0;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .dates {
+    color: rgb(88 99 104);
   }
 </style>
