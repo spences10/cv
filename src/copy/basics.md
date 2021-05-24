@@ -1,10 +1,14 @@
 <script>
   import DateDistance from '$lib/date-distance.svelte'
+  import Basics from '$lib/basics.svelte'
 </script>
 
-<!-- <Basics name={`Scott Spence`} label={`Developer`}
-email={`yo@scottspence.dev`} phone={`+44 7960 86 3382`}
-website={`scottspence.me`} /> -->
+<Basics 
+  name="Scott Spence"  
+  label="Developer" 
+  email="yo@scottspence.dev"  
+  website="scottspence.me"  
+/>
 
 A front-end developer with <DateDistance date="2018-03-14" />
 commercial experience in delivering client facing sites.
