@@ -6,8 +6,8 @@
 <Basics 
   name="Scott Spence"  
   label="Developer" 
-  email="yo@scottspence.dev"  
-  website="scottspence.me"  
+  email="yo@scottspence.com"  
+  website="scottspence.com"  
 />
 
 A front-end developer with <DateDistance date="2018-03-14" />
