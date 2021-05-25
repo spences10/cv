@@ -2,8 +2,8 @@
   export let name, label, email, phone, website
 </script>
 
-<h1>{name}</h1>
-<h2>{label}</h2>
-<p>{email}</p>
-<p>{phone}</p>
-<p>{website}</p>
+<h1 class="">{name}</h1>
+<h2 class="text-3xl">{label}</h2>
+<p class="text-md">{email}</p>
+<p class="text-md filter blur">{phone}</p>
+<p class="text-md">{website}</p>
