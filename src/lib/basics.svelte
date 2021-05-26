@@ -1,17 +1,31 @@
 <script>
-  export let name, label, email, phone, website
+  export let name, label, email, phone, website, imgSrc
 </script>
 
+{#if imgSrc !== undefined}
+  <div class="flex justify-end">
+    <div class="avatar">
+      <div
+        class="-mb-5 mt-5 w-24 h-24 mask mask-decagon filter blur hover:blur-0"
+      >
+        <img src={imgSrc} alt={name} />
+      </div>
+    </div>
+  </div>
+{/if}
+
 <div class="mb-10">
-  <h1 class="text-4xl font-bold uppercase">{name}</h1>
-  <hr />
+  <h1 class="text-4xl font-bold uppercase tracking-wide">{name}</h1>
+  <hr class="mb-3" />
 
   <div class="flex justify-between">
     <div>
-      <h2 class="text-2xl">{label}</h2>
+      <h2 class="text-2xl font-bold tracking-wide text-purple-600">
+        {label}
+      </h2>
     </div>
 
-    <div>
+    <div class="tracking-wide mt-2">
       <dt><span class="sr-only">Email address</span></dt>
       <dd class="flex text-base items-end mb-2">
         <svg

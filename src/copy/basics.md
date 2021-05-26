@@ -1,7 +1,13 @@
 <script>
-  import DateDistance from '$lib/date-distance.svelte'
   import Basics from '$lib/basics.svelte'
+  import DD from '$lib/date-distance.svelte'
 </script>
+
+<style>
+  p {
+    margin-bottom: 1rem;
+  }
+</style>
 
 <Basics 
   name="Scott Spence"  
@@ -9,15 +15,15 @@
   email="yo@scottspence.com"  
   phone="+44 0000 00 0000"
   website="scottspence.com"  
+  imgSrc="https://pbs.twimg.com/profile_images/1395712555260207107/t7hgcqOw_400x400.jpg"
 />
 
-A front-end developer with <DateDistance date="2018-03-14" />
-commercial experience in delivering client facing sites.
+A front-end developer with <DD date="2018-03-14" /> commercial
+experience in delivering client facing sites.
 
-JavaScript, HTML and CSS (the holy trinity), <DateDistance
-date="2016-06-15" />
+JavaScript, HTML and CSS, <DD date="2016-06-15" />.
 
-React (<DateDistance date="2017-05-20" />)
+React (<DD date="2017-05-20" />).
 
 Passionate about using modern technology and very keen to improve on
 existing skills and to learn new ones.
@@ -26,10 +32,4 @@ existing skills and to learn new ones.
 specialising in Microsoft Office automation for large financial
 organisations.
 
-location: Swanley, Kent
-
-GitHub: https://github.com/spences10
-
-Twitter: https://twitter.com/spences10
-
-Site: https://scottspence.com
+Location: Swanley, Kent
