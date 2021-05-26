@@ -13,10 +13,10 @@
 
     <div>
       <dt><span class="sr-only">Email address</span></dt>
-      <dd class="flex text-base">
+      <dd class="flex text-base items-end mb-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
+          class="h-5 w-5"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -35,14 +35,13 @@
 
       <div
         data-tip="No unsolicited phonecalls, email first."
-        class="tooltip tooltip-right"
+        class="tooltip tooltip-left"
       >
         <dt><span class="sr-only">Phone number</span></dt>
-        <dd class="flex text-base">
-          <!-- Heroicon name: outline/phone -->
+        <dd class="flex text-base items-end mb-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -63,11 +62,11 @@
       </div>
 
       <div>
-        <dt><span class="sr-only">Email address</span></dt>
-        <dd class="flex text-base">
+        <dt><span class="sr-only">Website</span></dt>
+        <dd class="flex text-base items-end mb-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
+            class="h-5 w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
