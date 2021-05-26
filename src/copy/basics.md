@@ -7,6 +7,7 @@
   name="Scott Spence"  
   label="Developer" 
   email="yo@scottspence.com"  
+  phone="+44 0000 00 0000"
   website="scottspence.com"  
 />
 
