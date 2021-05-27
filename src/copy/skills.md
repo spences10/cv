@@ -1,32 +1,20 @@
-WEB DEVELOPMENT
+## Web Development
 
 - HTML
 - CSS
 - JavaScript
 - React.js
 - Gatsby
-- styled-componentsNode.js
+- styled-components
+- Node.js
 
-CMS
+## CMS
 
 - GraphCMS
 - Contentful
 
-SOURCE CONTROL
+## SOURCE CONTROL
 
 - Git
 - GitHub
 - Bitbucket
-
-DATABASES
-
-- SQL Server
-- Oracle
-
-VBA
-
-- Excel
-- Word
-- Outlook
-- PowerPoint
-- Access

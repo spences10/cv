@@ -18,14 +18,14 @@
   <h1 class="text-4xl font-bold uppercase tracking-wide">{name}</h1>
   <hr class="mb-3" />
 
-  <div class="flex justify-between">
-    <div>
-      <h2 class="text-2xl font-bold tracking-wide text-purple-600">
-        {label}
-      </h2>
-    </div>
+  <div>
+    <h2 class="text-2xl font-bold tracking-wide text-purple-600">
+      {label}
+    </h2>
+  </div>
 
-    <div class="tracking-wide mt-2">
+  <div class="tracking-wide mt-2 flex justify-between">
+    <div>
       <dt><span class="sr-only">Email address</span></dt>
       <dd class="flex text-base items-end mb-2">
         <svg
@@ -46,59 +46,59 @@
           <a href="mailto: {email}" class="text-md">{email}</a>
         </span>
       </dd>
+    </div>
 
-      <div
-        data-tip="No unsolicited phonecalls, email first."
-        class="tooltip tooltip-left"
-      >
-        <dt><span class="sr-only">Phone number</span></dt>
-        <dd class="flex text-base items-end mb-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+    <div
+      data-tip="No unsolicited phonecalls, email first."
+      class="tooltip tooltip-left"
+    >
+      <dt><span class="sr-only">Phone number</span></dt>
+      <dd class="flex text-base items-end mb-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+          />
+        </svg>
+        <span class="ml-3">
+          <a href="tel: {phone}" class="text-md filter blur"
+            >{phone}</a
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-            />
-          </svg>
-          <span class="ml-3">
-            <a href="tel: {phone}" class="text-md filter blur"
-              >{phone}</a
-            >
-          </span>
-        </dd>
-      </div>
+        </span>
+      </dd>
+    </div>
 
-      <div>
-        <dt><span class="sr-only">Website</span></dt>
-        <dd class="flex text-base items-end mb-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+    <div>
+      <dt><span class="sr-only">Website</span></dt>
+      <dd class="flex text-base items-end mb-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+          />
+        </svg>
+        <span class="ml-3">
+          <a href="https://{website}" class="text-md block"
+            >{website}</a
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-            />
-          </svg>
-          <span class="ml-3">
-            <a href="https://{website}" class="text-md block"
-              >{website}</a
-            >
-          </span>
-        </dd>
-      </div>
+        </span>
+      </dd>
     </div>
   </div>
 </div>

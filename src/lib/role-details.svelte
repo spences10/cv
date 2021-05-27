@@ -35,7 +35,9 @@
   }
 </script>
 
-<h2 class="position">{position}</h2>
+{#if position.length > 0}
+  <h2 class="position">{position}</h2>
+{/if}
 <p class="company">{company}</p>
 <span class="dates">{formatDates(startDate, endDate)}</span>
 

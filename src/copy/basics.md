@@ -3,12 +3,6 @@
   import DD from '$lib/date-distance.svelte'
 </script>
 
-<style>
-  p {
-    margin-bottom: 1rem;
-  }
-</style>
-
 <Basics 
   name="Scott Spence"  
   label="Developer" 
@@ -19,6 +13,7 @@
 />
 
 A front-end developer with <DD date="2018-03-14" /> commercial
+
 experience in delivering client facing sites.
 
 JavaScript, HTML and CSS, <DD date="2016-06-15" />.

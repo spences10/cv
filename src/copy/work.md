@@ -1,5 +1,6 @@
 <script>
   import RoleDetails from '$lib/role-details.svelte'
+  import Collapse from '$lib/collapse.svelte'
 </script>
 
 <RoleDetails 
@@ -73,7 +74,75 @@ Evaluate several CMS' for use, Contentful, GraphCMS and CrafterCMS
 Working in an agile team in the delivery of initial sprints of the
 ncsc.gov.uk site.
 
-## Previous experience non web dev related
+<h2 class='text-2xl mb-4'>
+Previous experience non web dev related
+</h2>
+
+<Collapse>
+  <p slot='header'>
+    Analyst Developer
+  </p>
+  <div slot='body'>
+  <RoleDetails 
+    position=""
+    company="OES Technology"
+    startDate="2016-11-01"
+    endDate="2018-03-07" 
+  />
+
+**SUMMARY**
+
+Contract work, working on new product development as part of the ACE
+Chubb merger. Post Chubb, working on GitHub community Build to Learn
+project.
+
+**HIGHLIGHTS**
+
+Excel VBA, Word templating and coding, Cluster7 champion.
+
+Utilising CSS Grid for layout and styled-components for styling
+CSS-in-JS
+
+GitHub project manager for Build to Learn project with two other
+remote developers based in Serbia and Egypt building a project with
+the static site generator JavaScript framework Gatsby.
+
+  </div>
+</Collapse>
+
+<Collapse>
+  <p slot='header'>
+    VBA Developer
+  </p>
+  <div slot='body'>
+  <RoleDetails 
+    position=""
+    company="Mansion House Consulting"
+    startDate="2016-01-01"
+    endDate="2016-07-31" 
+  />
+
+**SUMMARY**
+
+Part of Insight framework development team. Developer of bespoke
+solutions for clients including but not limited to Deutsche Bank,
+Barclays, Old Mutual and Tullett Prebon.
+
+**HIGHLIGHTS**
+
+Developed & maintained a reusable components repository.
+
+Championed source code control integration for the product with Visual
+Studio Team Services.
+
+Implementation of using Microsoft PowerPoint as a reporting tool for
+Deutsche Bank, this incorporated a new class to be used in the
+reporting framework for Insight which used the existing functionality
+to report on a SharePoint list into a preconfigured template for risk
+accountability and a heat map
+
+</div>
+</Collapse>
 
 <details>
   <summary>Analyst Developer</summary>

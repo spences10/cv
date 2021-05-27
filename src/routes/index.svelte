@@ -10,7 +10,6 @@
 
 <svelte:head>
   <title>CV</title>
-
   <meta name="monetization" content="$ilp.uphold.com/bzPBWkMBzLmN" />
 </svelte:head>
 
