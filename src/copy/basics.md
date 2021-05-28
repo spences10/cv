@@ -12,8 +12,9 @@
   imgSrc="https://pbs.twimg.com/profile_images/1395712555260207107/t7hgcqOw_400x400.jpg"
 />
 
-A front-end developer with <DD date="2018-03-14" /> commercial
+<article class='markdown'>
 
+A front-end developer with <DD date="2018-03-14" /> commercial
 experience in delivering client facing sites.
 
 JavaScript, HTML and CSS, <DD date="2016-06-15" />.
@@ -28,3 +29,5 @@ specialising in Microsoft Office automation for large financial
 organisations.
 
 Location: Swanley, Kent
+
+</article>
