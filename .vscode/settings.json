@@ -1,27 +1,24 @@
 {
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
   "cSpell.words": [
-    "Startup",
-    "Titillium",
-    "analytics",
-    "anonymize",
-    "apps",
-    "cleanup",
-    "cvdata",
-    "cvjson",
-    "darkslateblue",
-    "dayjs",
-    "favicons",
-    "mailto",
-    "noopener",
-    "templating",
-    "uppercase",
-    "viewbox",
-    "yandex"
-  ],
-  "workbench.colorCustomizations": {
-    "titleBar.activeBackground": "#aca0ea",
-    "titleBar.inactiveBackground": "#aca0ea99",
-    "titleBar.activeForeground": "#15202b",
-    "titleBar.inactiveForeground": "#15202b99"
-  }
+    "Contentful",
+    "DOFT",
+    "Deloitte",
+    "Dialogflow",
+    "Prebon",
+    "RAFTA",
+    "ROSCA",
+    "Sanctioners",
+    "Tullett",
+    "Xstate",
+    "Zaizi",
+    "abbr",
+    "mdsvex",
+    "ncsc",
+    "quants",
+    "rehype",
+    "sveltejs",
+    "vercel"
+  ]
 }
