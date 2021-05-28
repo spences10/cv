@@ -43,12 +43,12 @@
 
 <style>
   .position {
-    font-size: 1.15rem;
+    font-size: 1.55rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
   }
   .company {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.3rem;
   }
