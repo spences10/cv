@@ -6,7 +6,7 @@
   <div class="flex justify-end">
     <div class="avatar">
       <div
-        class="-mb-5 mt-5 w-24 h-24 mask mask-decagon filter blur hover:blur-0"
+        class="-mb-11 mt-7 w-24 h-24 mask mask-decagon filter blur hover:blur-0"
       >
         <img src={imgSrc} alt={name} />
       </div>
@@ -15,7 +15,7 @@
 {/if}
 
 <div class="mb-10">
-  <h1 class="text-4xl font-bold uppercase tracking-wide">{name}</h1>
+  <h1 class="text-4xl mb-4 font-bold uppercase tracking-wide">{name}</h1>
   <hr class="mb-3" />
 
   <div>
@@ -24,7 +24,9 @@
     </h2>
   </div>
 
-  <div class="tracking-wide mt-2 flex justify-between">
+  <div
+    class="tracking-wide mt-2 flex flex-col sm:flex-row justify-between"
+  >
     <div>
       <dt><span class="sr-only">Email address</span></dt>
       <dd class="flex text-base items-end mb-2">
@@ -49,8 +51,8 @@
     </div>
 
     <div
-      data-tip="No unsolicited phonecalls, email first."
-      class="tooltip tooltip-left"
+      data-tip="Please, email first."
+      class="tooltip tooltip-bottom"
     >
       <dt><span class="sr-only">Phone number</span></dt>
       <dd class="flex text-base items-end mb-2">
