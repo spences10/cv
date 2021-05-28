@@ -1,18 +1,33 @@
-WILDLIFE
+<article class='flex flex-col sm:flex-row justify-between markdown'>
+<section>
+
+## Wildlife
 
 - Sloth
 - Otters
 
-PETS
+</section>
+<section>
+
+## Pets
 
 - Cats
 - Dogs
 
-BEER
+</section>
+<section>
+
+## Beer
 
 - Craft
 - IPA
 
-MUSIC
+</section>
+<section>
+
+## Music
 
 - Drum and Bass
+
+</section>
+</article>

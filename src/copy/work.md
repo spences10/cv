@@ -1,7 +1,14 @@
 <script>
   import RoleDetails from '$lib/role-details.svelte'
   import Collapse from '$lib/collapse.svelte'
+  import Hr from '$lib/hr.svelte'
 </script>
+
+<style>
+  hr {
+    margin: 2.5rem 0;
+  }
+</style>
 
 <RoleDetails 
   position="Developer Advocate"
@@ -32,6 +39,8 @@ Blog posts on getting started with SvelteKit and Data Binding with
 Svelte
 
 </article>
+
+<hr />
 
 <RoleDetails 
   position="Web Developer"
@@ -76,6 +85,8 @@ teach and work with a variety of established and new technologies.
 
 </article>
 
+<hr />
+
 <RoleDetails 
   position="Front-End Developer"
   company="Zaizi"
@@ -100,6 +111,8 @@ Working in an agile team in the delivery of initial sprints of the
 ncsc.gov.uk site.
 
 </article>
+
+<br />
 
 <Collapse>
   <p slot='header'>

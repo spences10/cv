@@ -1,9 +1,11 @@
-Sandra Penfold
+<article class='markdown'>
+
+## Testimonials
 
 > Scott understands business needs and rapidly meets all requirements.
 > He is great to work with and would be great on any project
 
-Paul Gorman
+-- Sandra Penfold
 
 > Scott picked up a difficult technical concept relating to the
 > reconciliation of multiple financial products very quickly,
@@ -15,3 +17,7 @@ Paul Gorman
 > on delivery. I would not only recommend him, I would seek to work
 > with him again in the future. Ah, if only he hadn't left the
 > company...
+
+-- Paul Gorman
+
+</article>

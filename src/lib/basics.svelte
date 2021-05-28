@@ -16,7 +16,7 @@
 
 <div class="mb-10">
   <h1 class="text-4xl mb-4 font-bold uppercase tracking-wide">{name}</h1>
-  <hr class="mb-3" />
+  <hr class="mb-6" />
 
   <div>
     <h2 class="text-2xl font-bold tracking-wide text-purple-600">
