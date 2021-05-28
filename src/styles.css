@@ -1,3 +1,5 @@
+@import url('./markdown.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
