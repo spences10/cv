@@ -56,7 +56,7 @@
 /* Lists */
 .markdown ul,
 .markdown ol {
-  @apply mb-4 ml-8;
+  @apply mb-4 ml-5;
 }
 .markdown li > p,
 .markdown li > ul,
