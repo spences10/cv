@@ -9,7 +9,7 @@
   email="yo@scottspence.com"  
   phone="+44 0000 00 0000"
   website="scottspence.com"  
-  imgSrc="https://pbs.twimg.com/profile_images/1395712555260207107/t7hgcqOw_400x400.jpg"
+  imgSrc="profile-pic.png"
 />
 
 <article class='markdown'>
