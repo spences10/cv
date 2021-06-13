@@ -35,7 +35,9 @@ Coordinate meet-up events to gather and energise users.
 ## HIGHLIGHTS
 
 Blog posts on getting started with SvelteKit and Data Binding with
-Svelte
+Svelte.
+
+Getting started videos for the GraphCMS examples repo on GitHub.
 
 </article>
 
@@ -53,34 +55,20 @@ Svelte
 ## SUMMARY
 
 Web Developer working in the Creative Products section of Karmarama.
-Working on experiences that engage client users and delight them in
-the process.
+Working on varied projects. Mainly front end with React.
 
 ## HIGHLIGHTS
 
-Building Good Things, the company Pinstagram where staff at Karmarama
-share articles they see as good, PR, Production, Marketing, etc. Built
-with NextJS, Prisma (GraphQL data layer) and GraphQL Yoga (Express).
+Built internal Pinstagram used for onboarding and pitchbooks where
+staff at Karmarama share articles seen as good, PR, Production,
+Marketing, etc. Built with NextJS, Prisma (GraphQL data layer) and
+GraphQL Yoga (Express).
 
-Building the company internal HR chatbot, using TypeScript and
-Xstate.js for the bot with Google Dialogflow for natural language
-processing.
+Working on the internal HR chatbot, using TypeScript and Xstate.js for
+the bot with Google Dialogflow for natural language processing.
 
-Creative products a11y champion.
-
-Team DevOps. As the longest serving member of the Web Team I have had
-this honour bestowed on me, I oversee deployments of the majority of
-the projects we host internally.
-
-Working daily in an innovative and cutting-edge Technology Team.
-
-Working within a close knit team of talented developers who evangelise
-working within a very well defined development process in an open and
-collaborative learning and sharing environment.
-
-Working on exciting, well-known brands alongside having the
-opportunity for personal development time and an opportunity to learn,
-teach and work with a variety of established and new technologies.
+Team DevOps. As the longest serving member of the Web Team overseeing
+deployments of the majority of projects hosted internally.
 
 </article>
 
@@ -97,8 +85,8 @@ teach and work with a variety of established and new technologies.
 
 ## SUMMARY
 
-Work as part of agile teams to develop new user-facing features. Using
-best practices to create front end applications. Using JavaScript
+Worked in agile teams to develop new user-facing features. Using best
+practices to create front end applications. Using JavaScript
 frameworks such as React and Gatsby and styling with styled-components
 💅
 

@@ -28,6 +28,6 @@ existing skills and to learn new ones.
 specialising in Microsoft Office automation for large financial
 organisations.
 
-Location: Swanley, Kent
+**Location**: Swanley, Kent
 
 </article>
