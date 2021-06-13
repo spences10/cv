@@ -6,7 +6,7 @@
   <div class="flex justify-end">
     <div class="avatar">
       <div
-        class="-mb-11 mt-7 w-24 h-24 mask mask-decagon filter blur hover:blur-0"
+        class="transition -mb-11 mt-7 w-24 h-24 mask mask-decagon filter blur transform hover:blur-0 "
       >
         <img src={imgSrc} alt={name} />
       </div>
@@ -15,7 +15,9 @@
 {/if}
 
 <div class="mb-10">
-  <h1 class="text-4xl mb-4 font-bold uppercase tracking-wide">{name}</h1>
+  <h1 class="text-4xl mb-4 font-bold uppercase tracking-wide">
+    {name}
+  </h1>
   <hr class="mb-6" />
 
   <div>
