@@ -34,6 +34,12 @@ Coordinate meet-up events to gather and energise users.
 
 ## HIGHLIGHTS
 
+Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
+_build a fast secure project that uses SvelteKit's features_
+
+Jamstack Explorers Mission:
+**["Building with SvelteKit and GraphCMS"](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)**
+
 Blog posts on getting started with SvelteKit and Data Binding with
 Svelte.
 
