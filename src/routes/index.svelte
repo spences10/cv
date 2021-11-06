@@ -1,3 +1,7 @@
+<script context="module">
+  export const prerender = true
+</script>
+
 <script>
   import Basics from '../copy/basics.md'
   import Education from '../copy/education.md'
