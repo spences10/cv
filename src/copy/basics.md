@@ -1,6 +1,6 @@
 <script>
-  import Basics from '$lib/basics.svelte'
-  import DD from '$lib/date-distance.svelte'
+  import Basics from '@lib/basics.svelte'
+  import DD from '@lib/date-distance.svelte'
 </script>
 
 <Basics 

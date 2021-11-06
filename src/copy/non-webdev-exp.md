@@ -1,6 +1,5 @@
 <script>
-  import RoleDetails from '$lib/role-details.svelte'
-  import Collapse from '$lib/collapse.svelte'
+  import RoleDetails from '@lib/role-details.svelte'
 </script>
 
 <style>
