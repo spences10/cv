@@ -44,5 +44,7 @@
   <span class="text-2xl font-bold text-accent-focus">{company}</span>
 </div>
 
-<span class="text-accent">{formatDates(startDate, endDate)}</span>
+<span class="text-accent font-bold"
+  >{formatDates(startDate, endDate)}</span
+>
 <div class="mb-8" />
