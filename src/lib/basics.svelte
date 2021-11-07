@@ -19,7 +19,7 @@
 {/if}
 
 <div class="mb-10">
-  <h1 class="text-4xl mb-4 font-bold uppercase tracking-wide">
+  <h1 class="text-5xl mb-4 font-bold uppercase tracking-wide">
     {name}
   </h1>
   <span class="divider before:bg-primary after:bg-primary" />
