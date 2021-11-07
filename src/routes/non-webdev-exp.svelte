@@ -10,7 +10,7 @@
 
 <Head
   title={`Non Web Development Related Experience · ${siteName}`}
-  description={`Relevant web development experience for ${authorName}`}
+  description={`Relevant past experience for ${authorName}`}
 />
 
 <Work />

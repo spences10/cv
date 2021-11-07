@@ -11,7 +11,7 @@
 </script>
 
 <Head
-  title={`Non Web Development Related Experience · ${siteName}`}
+  title={`Web Development Related Experience · ${siteName}`}
   description={`Relevant web development experience for ${authorName}`}
 />
 
