@@ -5,14 +5,12 @@
 
 <article class='all-prose'>
 
-A front-end developer with <DD date="2018-03-14" /> commercial
-experience in delivering client facing sites.
+A JavaScript developer with <DD date="2018-03-14" /> commercial
+experience in working in developement teams.
 
-JavaScript, HTML and CSS, <DD date="2016-06-15" />.
-
-React (<DD date="2017-05-20" />).
-
-Svelte (<DD date="2021-04-06" />).
+With <DD date="2016-06-15" /> experience in using JavaScript, HTML and
+CSS. With commercial experience in using frameworks like React
+(<DD date="2017-05-20" />) and Svelte (<DD date="2021-04-06" />).
 
 Passionate about using modern technology and very keen to improve on
 existing skills and to learn new ones.
