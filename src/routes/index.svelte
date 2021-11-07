@@ -12,7 +12,7 @@
 
 <Head
   title={`Web Development Related Experience · ${siteName}`}
-  description={`Relevant web development experience for ${authorName}`}
+  description={`Relevant web development experience for JavaScript developer ${authorName}`}
 />
 
 <Basics />
