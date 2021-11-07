@@ -5,6 +5,7 @@
   import * as Fathom from 'fathom-client'
   import { onMount } from 'svelte'
   import '../app.css'
+  import References from '../copy/references.md'
 
   onMount(() => {
     Fathom.load(import.meta.env.VITE_FATHOM_ID, {
@@ -26,4 +27,5 @@
     imgSrc="profile-pic.png"
   />
   <slot />
+  <References />
 </main>
