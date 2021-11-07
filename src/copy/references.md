@@ -1,4 +1,4 @@
-<article class='markdown'>
+<article class='all-prose'>
 
 ## Testimonials
 
@@ -21,3 +21,5 @@
 -- Paul Gorman
 
 </article>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />

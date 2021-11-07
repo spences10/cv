@@ -2,7 +2,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "$lib/*": ["src/lib/*"]
+      "@components/*": ["src/lib/components/*"],
+      "@icons/*": ["src/lib/icons/*"],
+      "@lib/*": ["src/lib/*"]
     }
   },
   "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.svelte"]

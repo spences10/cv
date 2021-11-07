@@ -1,11 +1,11 @@
+<script context="module">
+  export const prerender = true
+</script>
+
 <script>
   import Basics from '../copy/basics.md'
-  import Education from '../copy/education.md'
   import Interests from '../copy/interests.md'
-  import References from '../copy/references.md'
-  import Skills from '../copy/skills.md'
   import Work from '../copy/work.md'
-  import '../styles.css'
 </script>
 
 <svelte:head>
@@ -14,8 +14,5 @@
 </svelte:head>
 
 <Basics />
-<Skills />
 <Work />
 <Interests />
-<Education />
-<References />
