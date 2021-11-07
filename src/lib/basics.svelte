@@ -31,7 +31,7 @@
   </div>
 
   <div
-    class="tracking-wide mt-2 flex flex-col sm:flex-row justify-between"
+    class="tracking-wide mt-2 flex flex-col sm:flex-row justify-between text-accent-focus"
   >
     <div>
       <dt><span class="sr-only">Email address</span></dt>
