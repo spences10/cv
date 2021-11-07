@@ -20,11 +20,14 @@
   $: $page.path, browser && Fathom.trackPageview()
 </script>
 
-<main class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+<main
+  class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-8"
+>
   <ThemeSwitch />
+  <div class="mb-11 md:mb-4" />
   <Basics
     name="Scott Spence"
-    label="Developer"
+    label="JavaScript Developer"
     email="yo@scottspence.com"
     phone="+44 0000 00 0000"
     website="scottspence.com"

@@ -6,22 +6,22 @@
   export let name, label, email, phone, website, imgSrc
 </script>
 
-{#if imgSrc !== undefined}
-  <div class="flex justify-end">
+<div class="flex justify-between items-end">
+  <h1 class="text-5xl font-bold uppercase tracking-wide">
+    {name}
+  </h1>
+
+  {#if imgSrc !== undefined}
     <div class="avatar">
       <div
-        class="transition -mb-11 mt-7 w-24 h-24 mask mask-decagon filter blur transform hover:blur-0 "
+        class="transition w-24 h-24 mask mask-decagon filter blur transform hover:blur-0 "
       >
         <img src={imgSrc} alt={name} />
       </div>
     </div>
-  </div>
-{/if}
-
+  {/if}
+</div>
 <div class="mb-10">
-  <h1 class="text-5xl mb-4 font-bold uppercase tracking-wide">
-    {name}
-  </h1>
   <span class="divider before:bg-primary after:bg-primary" />
 
   <div class="mb-5">
