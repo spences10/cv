@@ -14,17 +14,17 @@
 
 ### SUMMARY
 
-Utilise blog posts, forum participation, and social-media to
-communicate with community.
+Content creation in the form of blog posts, workshops and educational
+videos.
 
-Gather feedback from end-users and communicate with product
-development to improve designs.
+Coordinating meet-up events and conference talks to gather and
+energise users.
 
-Create and maintain vital partnerships with industry leaders.
+Creating and maintaining partnerships with community and industry
+leaders.
 
-Educate users through informative posts and videos.
-
-Coordinate meet-up events to gather and energise users.
+Gathering feedback from community and end-users to communicate with
+product development to improve product designs.
 
 ### HIGHLIGHTS
 
@@ -32,7 +32,7 @@ Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
 _build a fast secure project that uses SvelteKit's features_
 
 Jamstack Explorers Mission:
-**["Building with SvelteKit and GraphCMS"](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)**
+"**[Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)**"
 
 Blog posts on getting started with SvelteKit and Data Binding with
 Svelte.
