@@ -24,8 +24,8 @@
   </h1>
   <span class="divider" />
 
-  <div>
-    <h2 class="text-2xl font-bold tracking-wide text-purple-600">
+  <div class="mb-5">
+    <h2 class="text-3xl font-bold tracking-wide text-purple-600">
       {label}
     </h2>
   </div>
