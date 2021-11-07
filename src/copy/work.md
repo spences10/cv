@@ -3,12 +3,6 @@
   import Collapse from '@lib/collapse.svelte'
 </script>
 
-<style>
-  hr {
-    margin: 2.5rem 0;
-  }
-</style>
-
 <RoleDetails 
   position="Developer Advocate"
   company="GraphCMS"
@@ -16,9 +10,9 @@
   endDate="" 
 />
 
-<article class='markdown'>
+<section class='all-prose'>
 
-## SUMMARY
+### SUMMARY
 
 Utilise blog posts, forum participation, and social-media to
 communicate with community.
@@ -32,7 +26,7 @@ Educate users through informative posts and videos.
 
 Coordinate meet-up events to gather and energise users.
 
-## HIGHLIGHTS
+### HIGHLIGHTS
 
 Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
 _build a fast secure project that uses SvelteKit's features_
@@ -45,9 +39,9 @@ Svelte.
 
 Getting started videos for the GraphCMS examples repo on GitHub.
 
-</article>
+</section>
 
-<hr />
+<span class="divider before:bg-primary after:bg-primary mb-8" />
 
 <RoleDetails 
   position="Web Developer"
@@ -56,14 +50,14 @@ Getting started videos for the GraphCMS examples repo on GitHub.
   endDate="2021-04-23" 
 />
 
-<article class='markdown'>
+<section class='all-prose'>
 
-## SUMMARY
+### SUMMARY
 
 Web Developer working in the Creative Products section of Karmarama.
 Working on varied projects. Mainly front end with React.
 
-## HIGHLIGHTS
+### HIGHLIGHTS
 
 Built internal Pinstagram used for onboarding and pitchbooks where
 staff at Karmarama share articles seen as good, PR, Production,
@@ -76,9 +70,9 @@ the bot with Google Dialogflow for natural language processing.
 Team DevOps. As the longest serving member of the Web Team overseeing
 deployments of the majority of projects hosted internally.
 
-</article>
+</section>
 
-<hr />
+<span class="divider before:bg-primary after:bg-primary mb-8" />
 
 <RoleDetails 
   position="Front-End Developer"
@@ -87,20 +81,20 @@ deployments of the majority of projects hosted internally.
   endDate="2018-08-31" 
 />
 
-<article class='markdown'>
+<section class='all-prose'>
 
-## SUMMARY
+### SUMMARY
 
 Worked in agile teams to develop new user-facing features. Using best
 practices to create front end applications. Using JavaScript
 frameworks such as React and Gatsby and styling with styled-components
 💅
 
-## HIGHLIGHTS
+### HIGHLIGHTS
 
 Evaluate several CMS' for use, Contentful, GraphCMS and CrafterCMS
 
 Working in an agile team in the delivery of initial sprints of the
 ncsc.gov.uk site.
 
-</article>
+</section>
