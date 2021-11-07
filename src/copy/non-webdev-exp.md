@@ -2,6 +2,15 @@
   import RoleDetails from '@lib/role-details.svelte'
 </script>
 
+<section class='all-prose mb-10'>
+
+_This is past experience not related to web development_, there is a
+lot of past experience on working on projects with stakeholders.
+
+Go back to the [main page](/) for web dev related details.
+
+</section>
+
 <RoleDetails 
   position="Analyst Developer"
   company="OES Technology"

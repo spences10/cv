@@ -3,15 +3,17 @@
 </script>
 
 <script>
+  import Head from '@components/head.svelte'
+  import { authorName, siteName } from '@lib/config'
   import Basics from '../copy/basics.md'
   import Interests from '../copy/interests.md'
   import Work from '../copy/work.md'
 </script>
 
-<svelte:head>
-  <title>CV</title>
-  <meta name="monetization" content="$ilp.uphold.com/bzPBWkMBzLmN" />
-</svelte:head>
+<Head
+  title={`Non Web Development Related Experience · ${siteName}`}
+  description={`Relevant web development experience for ${authorName}`}
+/>
 
 <Basics />
 <Work />
