@@ -1,5 +1,5 @@
 <script>
-  import At from '@icons/at.svelte'
+  import Email from '@icons/email.svelte'
   import Globe from '@icons/globe.svelte'
   import Mobile from '@icons/mobile.svelte'
 
@@ -36,7 +36,7 @@
     <div>
       <dt><span class="sr-only">Email address</span></dt>
       <dd class="flex text-base items-end mb-2">
-        <At />
+        <Email />
         <span class="ml-3">
           <a href="mailto: {email}" class="text-md">{email}</a>
         </span>
