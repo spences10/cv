@@ -3,16 +3,7 @@
   import DD from '@lib/date-distance.svelte'
 </script>
 
-<Basics 
-  name="Scott Spence"  
-  label="Developer" 
-  email="yo@scottspence.com"  
-  phone="+44 0000 00 0000"
-  website="scottspence.com"  
-  imgSrc="profile-pic.png"
-/>
-
-<article class='markdown'>
+<article class='all-prose'>
 
 A front-end developer with <DD date="2018-03-14" /> commercial
 experience in delivering client facing sites.
