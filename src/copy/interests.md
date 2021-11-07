@@ -1,33 +1,16 @@
-<article class='flex flex-col sm:flex-row justify-between markdown'>
-<section>
+<section class='all-prose'>
 
-## Wildlife
+### Interests
 
-- Sloth
-- Otters
+Mechanical keyboards, a never ending rabbit hole!
 
-</section>
-<section>
+Writing how-to's and guides on
+[scottspence.com](https://scottspence.com/post).
 
-## Pets
+Watching YouTube videos on mechanical engineering and restorations.
 
-- Cats
-- Dogs
+Massive Drum and Bass fan!
 
-</section>
-<section>
+</section >
 
-## Beer
-
-- Craft
-- IPA
-
-</section>
-<section>
-
-## Music
-
-- Drum and Bass
-
-</section>
-</article>
+<span class="divider before:bg-primary after:bg-primary mb-10" />
