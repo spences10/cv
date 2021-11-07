@@ -12,7 +12,7 @@
 
 <section class='all-prose mb-8'>
 
-### SUMMARY
+### Summary
 
 Content creation in the form of blog posts, workshops and educational
 videos.
@@ -26,13 +26,13 @@ leaders.
 Gathering feedback from community and end-users to communicate with
 product development to improve product designs.
 
-### HIGHLIGHTS
+### Highlights
 
 Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
-_build a fast secure project that uses SvelteKit's features_
+_build a fast secure project that uses SvelteKit's features_.
 
 Jamstack Explorers Mission:
-"**[Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)**"
+"**[Building with SvelteKit and GraphCMS](https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms)**".
 
 Blog posts on getting started with SvelteKit and Data Binding with
 Svelte.
@@ -52,12 +52,12 @@ Getting started videos for the GraphCMS examples repo on GitHub.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Web Developer working in the Creative Products section of Karmarama.
 Working on varied projects. Mainly front end with React.
 
-### HIGHLIGHTS
+### Highlights
 
 Built internal Pinstagram used for onboarding and pitchbooks where
 staff at Karmarama share articles seen as good, PR, Production,
@@ -83,14 +83,14 @@ deployments of the majority of projects hosted internally.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Worked in agile teams to develop new user-facing features. Using best
 practices to create front end applications. Using JavaScript
 frameworks such as React and Gatsby and styling with styled-components
 💅
 
-### HIGHLIGHTS
+### Highlights
 
 Evaluate several CMS' for use, Contentful, GraphCMS and CrafterCMS
 

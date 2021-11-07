@@ -11,13 +11,13 @@
 
 <section class='all-prose mb-8'>
 
-### SUMMARY
+### Summary
 
 Contract work, working on new product development as part of the ACE
 Chubb merger. Post Chubb, working on GitHub community Build to Learn
 project.
 
-### HIGHLIGHTS
+### Highlights
 
 Excel VBA, Word templating and coding, Cluster7 champion.
 
@@ -41,13 +41,13 @@ the static site generator JavaScript framework Gatsby.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Part of Insight framework development team. Developer of bespoke
 solutions for clients including but not limited to Deutsche Bank,
 Barclays, Old Mutual and Tullett Prebon.
 
-### HIGHLIGHTS
+### Highlights
 
 Developed & maintained a reusable components repository.
 
@@ -73,7 +73,7 @@ accountability and a heat map
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Situated on the Fixed Income Global trading Desk Primary
 responsibilities include ensuring start of day isn't impacted,
@@ -81,7 +81,7 @@ monitoring batch machines carrying out triage for any issues that
 arise. Build and maintain relationships with operations, trading teams
 and quants to deliver reports.
 
-### HIGHLIGHTS
+### Highlights
 
 Extract tool which was basically a query tool in Excel for the trade
 data on bonds, fx and cash, this was stored SQL with Excel building
@@ -106,13 +106,13 @@ Bloomberg API to Excel for importing into Oracle via SQL\*Loader.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Redesign, development and maintenance of existing desktop application.
 Involvement in client meetings and liaising with clients to gather
 requirements and deliver products.
 
-### HIGHLIGHTS
+### Highlights
 
 Migrating all source code from Microsoft Visual SourceSafe (VSS) to
 Team Foundation Server (TFS)
@@ -136,7 +136,7 @@ changes which also included writing the individual tests.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Company develops software applications in-house and the Application
 Support team is responsible for supporting these systems internally.
@@ -150,7 +150,7 @@ emphasis on understanding complex business logic behind these systems.
 Technical knowledge requires use of SQL to diagnose and fix issues and
 maintain data.
 
-### HIGHLIGHTS
+### Highlights
 
 Data collection. Excel-based data collected from multiple client
 sources and imported into the database. Data is moved through several
@@ -184,13 +184,13 @@ interactive data mining tools.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Seconded to Barclays Capital to project manage, build and test a tool
 used to ‘link up’ Barclays Capital base rate hedges with Barclays
 Corporate loan data for the Risk Solutions Group in Credit Markets.
 
-### HIGHLIGHTS
+### Highlights
 
 Front office role.
 
@@ -216,7 +216,7 @@ Producing letters of variation to clients.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Project manage the development of new systems and enhancements of
 existing systems within the banks Risk function. Main achievements
@@ -233,7 +233,7 @@ classes. Participate in and improve all aspects of the application
 development life cycle, to ensure efficient and effective use of
 processes, standards tools and resources.
 
-### HIGHLIGHTS
+### Highlights
 
 Most recent project [Financial Crime Unit Sanctions Workflow Database
 (Workflow Tool)] winning a Gold ROSCA [Barclays internal award for
@@ -260,13 +260,13 @@ Excel and Access and acting as contact point for queries in the team.
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Working in the banks' risk function looking after cost centres,
 involving monthly reconciliation/attestation and financial planning
 [£5.4m budget].
 
-### HIGHLIGHTS
+### Highlights
 
 Winning a Gold RAFTA award [Barclays internal award for excellence]
 for the creation of the MB&A and Generalist Credit New to Role
@@ -312,14 +312,14 @@ phenomenal
 
 <section class='all-prose'>
 
-### SUMMARY
+### Summary
 
 Reporting directly to the Head of Director's Office Finance Team
 [DOFT], Shared Client Services [SCS]. With specific responsibilities
 to assist in the day to day management of all financial administration
 within 17 SCS teams [HO and Network].
 
-### HIGHLIGHTS
+### Highlights
 
 High level of MS Office experience gained whilst on DOFT particularly
 with Excel & Excel VBA Assisted the Head of DOFT in the collation of
