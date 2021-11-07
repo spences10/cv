@@ -22,7 +22,7 @@
   <h1 class="text-4xl mb-4 font-bold uppercase tracking-wide">
     {name}
   </h1>
-  <span class="divider" />
+  <span class="divider before:bg-primary after:bg-primary" />
 
   <div class="mb-5">
     <h2 class="text-3xl font-bold tracking-wide text-purple-600">
