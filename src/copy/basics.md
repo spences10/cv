@@ -17,9 +17,9 @@ Svelte (<DD date="2021-04-06" />).
 Passionate about using modern technology and very keen to improve on
 existing skills and to learn new ones.
 
-10+ years previous experience as a senior level Analyst Developer
-specialising in Microsoft Office automation for large financial
-organisations.
+10+ years [previous experience](./non-webdev-exp) as a senior level
+Analyst Developer specialising in Microsoft Office automation for
+large financial organisations.
 
 **Location**: Swanley, Kent
 
