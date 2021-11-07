@@ -3,6 +3,7 @@
   "git.postCommitCommand": "sync",
   "cSpell.words": [
     "abbr",
+    "color",
     "Contentful",
     "Deloitte",
     "Dialogflow",
