@@ -19,7 +19,7 @@
     })
     const yearsAndMonths = () => {
       const intervalYears = years ? `${years}yrs` : ''
-      const intervalMonths = months ? `${months}mos` : ''
+      const intervalMonths = months ? `${months + 1}mos` : '' // Months is zero based!
       if (intervalYears === '' && intervalMonths !== '') {
         return `(${intervalMonths})`
       }
@@ -35,24 +35,10 @@
   }
 </script>
 
-{#if position.length > 0}
-  <h2 class="position">{position}</h2>
-{/if}
-<p class="company">{company}</p>
-<span class="dates">{formatDates(startDate, endDate)}</span>
+<div class="flex flex-col sm:flex-row justify-between items-end mb-2">
+  <h2 class="text-4xl font-bold tracking-wide">{position}</h2>
+  <span class="text-2xl font-bold">{company}</span>
+</div>
 
-<style>
-  .position {
-    font-size: 1.55rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-  }
-  .company {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-  }
-  .dates {
-    color: rgb(88 99 104);
-  }
-</style>
+<span class="text-gray-500">{formatDates(startDate, endDate)}</span>
+<div class="mb-4" />
