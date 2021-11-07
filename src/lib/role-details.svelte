@@ -35,7 +35,9 @@
   }
 </script>
 
-<div class="flex flex-row justify-between items-end mb-2">
+<div
+  class="flex flex-col md:flex-row justify-between md:items-end mb-2"
+>
   <h2 class="text-4xl font-bold tracking-wide text-primary">
     {position}
   </h2>
