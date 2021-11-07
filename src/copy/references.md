@@ -1,4 +1,4 @@
-<article class='markdown'>
+<article class='all-prose'>
 
 ## Testimonials
 
