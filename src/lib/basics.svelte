@@ -25,7 +25,7 @@
   <span class="divider before:bg-primary after:bg-primary" />
 
   <div class="mb-5">
-    <h2 class="text-3xl font-bold tracking-wide text-purple-600">
+    <h2 class="text-3xl font-bold tracking-wide text-primary">
       {label}
     </h2>
   </div>

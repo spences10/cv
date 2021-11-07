@@ -10,7 +10,7 @@
   endDate="" 
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### SUMMARY
 
@@ -41,7 +41,7 @@ Getting started videos for the GraphCMS examples repo on GitHub.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-8" />
+<span class="divider before:bg-primary after:bg-primary mb-10" />
 
 <RoleDetails 
   position="Web Developer"
@@ -72,7 +72,7 @@ deployments of the majority of projects hosted internally.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-8" />
+<span class="divider before:bg-primary after:bg-primary mb-10" />
 
 <RoleDetails 
   position="Front-End Developer"
@@ -98,3 +98,5 @@ Working in an agile team in the delivery of initial sprints of the
 ncsc.gov.uk site.
 
 </section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />

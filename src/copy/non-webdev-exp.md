@@ -30,6 +30,8 @@ the static site generator JavaScript framework Gatsby.
 
 </section>
 
+<span class="divider before:bg-primary after:bg-primary mb-10" />
+
 <RoleDetails 
   position="VBA Developer"
   company="Mansion House Consulting"
@@ -59,6 +61,8 @@ to report on a SharePoint list into a preconfigured template for risk
 accountability and a heat map
 
 </section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />
 
 <RoleDetails 
   position="Senior Software Engineer"
@@ -91,6 +95,8 @@ Bloomberg API to Excel for importing into Oracle via SQL\*Loader.
 
 </section>
 
+<span class="divider before:bg-primary after:bg-primary mb-10" />
+
 <RoleDetails 
   position="VBA Developer"
   company="Deloitte"
@@ -118,6 +124,8 @@ Responsible for implementing Microsoft Test Manager (MTM) for any new
 changes which also included writing the individual tests.
 
 </section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />
 
 <RoleDetails 
   position="Support Developer"
@@ -165,6 +173,8 @@ interactive data mining tools.
 
 </section>
 
+<span class="divider before:bg-primary after:bg-primary mb-10" />
+
 <RoleDetails 
   position="Technical Project Manager"
   company="Barclays"
@@ -194,6 +204,8 @@ Recalculating amortization profile of loan account.
 Producing letters of variation to clients.
 
 </section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />
 
 <RoleDetails 
   position="Technical Project Manager"
@@ -236,6 +248,8 @@ Championed implementation of VSS into the team, building add-ins for
 Excel and Access and acting as contact point for queries in the team.
 
 </section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />
 
 <RoleDetails 
   position="Business & Information Manager"
@@ -287,6 +301,8 @@ phenomenal
 
 </section>
 
+<span class="divider before:bg-primary after:bg-primary mb-10" />
+
 <RoleDetails 
   position="Financial & Commercial Assistant"
   company="Barclays"
@@ -323,3 +339,5 @@ Application of costs e.g. staff costs [salaries, overtime and
 allowances to appropriate cost centres].
 
 </section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />

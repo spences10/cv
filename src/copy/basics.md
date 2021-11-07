@@ -22,3 +22,5 @@ large financial organisations.
 **Location**: Swanley, Kent
 
 </article>
+
+<span class="divider before:bg-primary after:bg-primary mb-10" />
