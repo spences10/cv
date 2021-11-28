@@ -1,12 +1,16 @@
+import remarkExternalLinks from 'remark-external-links'
+
 const config = {
-	extensions: ['.svelte.md', '.md', '.svx'],
+  extensions: ['.svelte.md', '.md', '.svx'],
 
-	smartypants: {
-		dashes: 'oldschool'
-	},
+  smartypants: {
+    dashes: 'oldschool',
+  },
 
-	remarkPlugins: [],
-	rehypePlugins: []
-};
+  remarkPlugins: [
+    [remarkExternalLinks, { target: '_blank', rel: 'noopener' }],
+  ],
+  rehypePlugins: [],
+}
 
-export default config;
+export default config
