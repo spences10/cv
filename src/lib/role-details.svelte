@@ -49,7 +49,8 @@
   >
 </div>
 
-<span class="text-accent font-bold print:text-black"
+<span
+  class="text-accent font-bold print:font-medium print:text-black print:text-xs"
   >{formatDates(startDate, endDate)}</span
 >
 <div class="mb-8 print:mb-2" />

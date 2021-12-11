@@ -1,5 +1,6 @@
 <select
   data-choose-theme
+  aria-label="Theme Select"
   class="pr-9 select select-bordered select-primary bg-base-100 select-xs text-base-content print:hidden"
 >
   <option disabled="disabled" selected="selected"

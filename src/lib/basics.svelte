@@ -6,7 +6,7 @@
   export let name, label, email, phone, website, imgSrc
 </script>
 
-<div class="flex justify-between items-end">
+<div class="flex justify-between items-end print:-mt-6">
   <h1
     class="text-5xl print:text-2xl print:text-black font-bold uppercase tracking-wide"
   >

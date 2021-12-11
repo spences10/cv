@@ -24,7 +24,6 @@
   class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-8 print:bg-black"
 >
   <ThemeSwitch />
-  <div class="mb-11 md:mb-4" />
   <Basics
     name="Scott Spence"
     label="JavaScript Developer"
