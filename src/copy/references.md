@@ -1,4 +1,4 @@
-<article class='all-prose'>
+<article class='all-prose print:hidden'>
 
 ## Testimonials
 
@@ -22,4 +22,4 @@
 
 </article>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />

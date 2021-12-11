@@ -1,5 +1,4 @@
 <script>
-  import Basics from '@lib/basics.svelte'
   import DD from '@lib/date-distance.svelte'
 </script>
 
@@ -23,4 +22,4 @@ large financial organisations.
 
 </article>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />

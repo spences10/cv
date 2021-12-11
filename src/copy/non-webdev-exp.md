@@ -39,7 +39,7 @@ the static site generator JavaScript framework Gatsby.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="VBA Developer"
@@ -48,7 +48,7 @@ the static site generator JavaScript framework Gatsby.
   endDate="2016-07-31" 
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -71,7 +71,7 @@ accountability and a heat map
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Senior Software Engineer"
@@ -80,7 +80,7 @@ accountability and a heat map
   endDate="2015-12-25" 
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -104,7 +104,7 @@ Bloomberg API to Excel for importing into Oracle via SQL\*Loader.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="VBA Developer"
@@ -113,7 +113,7 @@ Bloomberg API to Excel for importing into Oracle via SQL\*Loader.
   endDate="2014-12-01" 
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -134,7 +134,7 @@ changes which also included writing the individual tests.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Support Developer"
@@ -143,7 +143,7 @@ changes which also included writing the individual tests.
   endDate="2013-08-01"
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -182,7 +182,7 @@ interactive data mining tools.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Technical Project Manager"
@@ -191,7 +191,7 @@ interactive data mining tools.
   endDate="2010-10-01"
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -214,7 +214,7 @@ Producing letters of variation to clients.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Technical Project Manager"
@@ -223,7 +223,7 @@ Producing letters of variation to clients.
   endDate="2010-10-01"
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -258,7 +258,7 @@ Excel and Access and acting as contact point for queries in the team.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Business & Information Manager"
@@ -267,7 +267,7 @@ Excel and Access and acting as contact point for queries in the team.
   endDate="2007-07-01"
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -310,7 +310,7 @@ phenomenal
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Financial & Commercial Assistant"
@@ -319,7 +319,7 @@ phenomenal
   endDate="2005-11-01"
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -349,4 +349,4 @@ allowances to appropriate cost centres].
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />

@@ -3,7 +3,7 @@
 @tailwind components;
 
 .all-prose {
-  @apply prose prose-lg lg:prose-xl;
+  @apply prose prose-lg lg:prose-xl print:prose-sm print:text-black;
 }
 
 @tailwind utilities;

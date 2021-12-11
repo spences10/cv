@@ -42,7 +42,7 @@ Svelte.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <!-- Links -->
 
@@ -59,7 +59,7 @@ Svelte.
   endDate="2021-04-23" 
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -91,7 +91,7 @@ Worked on custom built CMS for client using vanilla React.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Front-End Developer"
@@ -100,7 +100,7 @@ Worked on custom built CMS for client using vanilla React.
   endDate="2018-08-31" 
 />
 
-<section class='all-prose'>
+<section class='all-prose mb-8'>
 
 ### Summary
 
@@ -118,4 +118,4 @@ Working in an agile team in the delivery of initial sprints of the
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />

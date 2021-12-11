@@ -36,15 +36,20 @@
 </script>
 
 <div
-  class="flex flex-col md:flex-row justify-between md:items-end mb-2"
+  class="flex flex-col md:flex-row print:flex-row justify-between md:items-end mb-2 print:mb-0"
 >
-  <h2 class="text-4xl font-bold tracking-wide text-primary">
+  <h2
+    class="text-4xl print:text-2xl font-bold tracking-wide text-primary print:text-black"
+  >
     {position}
   </h2>
-  <span class="text-2xl font-bold text-accent-focus">{company}</span>
+  <span
+    class="text-2xl print:text-xl font-bold text-accent-focus print:text-black"
+    >{company}</span
+  >
 </div>
 
-<span class="text-accent font-bold"
+<span class="text-accent font-bold print:text-black"
   >{formatDates(startDate, endDate)}</span
 >
-<div class="mb-8" />
+<div class="mb-8 print:mb-2" />
