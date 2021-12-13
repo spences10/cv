@@ -5,7 +5,7 @@
 <article class='all-prose'>
 
 A JavaScript developer with <DD date="2018-03-14" /> commercial
-experience in working in developement teams delivering projects.
+experience in working in development teams delivering projects.
 
 With <DD date="2016-06-15" /> experience in using JavaScript, HTML and
 CSS, and commercial experience in using frameworks like React
