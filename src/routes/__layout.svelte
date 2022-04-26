@@ -18,8 +18,14 @@
   })
 
   $: $page.path, browser && Fathom.trackPageview()
+  function Print() {
+    window.print()
+  }
 </script>
 
+<button class="btn btn-xs focus:outline" on:click={Print}>
+  Download
+</button>
 <main
   class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-8 print:bg-black"
 >
