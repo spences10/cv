@@ -1,11 +1,9 @@
 <select
   data-choose-theme
   aria-label="Theme Select"
-  class="pr-9 select select-bordered select-primary bg-base-100 select-xs text-base-content print:hidden"
+  class="uppercase select select-bordered select-primary bg-base-100 select-xs text-base-content print:hidden"
 >
-  <option disabled="disabled" selected="selected"
-    >Choose a theme</option
-  >
+  <option disabled="disabled" selected="selected">Theme</option>
   <option value="aqua">Aqua</option>
   <option value="black">Black</option>
   <option value="bumblebee">Bumblebee</option>
