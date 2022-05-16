@@ -17,7 +17,7 @@
     })
   })
 
-  $: $page.path, browser && Fathom.trackPageview()
+  $: $page.pathname, browser && Fathom.trackPageview()
   function Print() {
     window.print()
   }
