@@ -15,6 +15,7 @@
   <option value="forest">Forest</option>
   <option value="halloween">Halloween</option>
   <option value="light">Light</option>
+  <option value="night">Night</option>
   <option value="synthwave">Synthwave</option>
   <option value="wireframe">Wireframe</option>
 </select>

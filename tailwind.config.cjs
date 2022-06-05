@@ -29,6 +29,7 @@ const config = {
       'forest',
       'halloween',
       'light',
+      'night',
       'synthwave',
       'wireframe',
     ],
