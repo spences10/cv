@@ -28,6 +28,9 @@ product development to improve product designs.
 
 ### Highlights
 
+Svelte Society London co-organiser, co-ordinated the Svelte London
+meet-up for the last seven months now.
+
 Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
 _build a fast secure project that uses SvelteKit's features_.
 
