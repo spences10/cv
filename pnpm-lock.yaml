@@ -1,24 +1,24 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sveltejs/adapter-vercel': ^1.0.0-next.58
+  '@sveltejs/adapter-vercel': 1.0.0-next.58
   '@sveltejs/kit': next
-  '@tailwindcss/typography': ^0.5.2
-  autoprefixer: ^10.4.7
-  cssnano: ^5.1.11
-  daisyui: ^2.15.2
-  date-fns: ^2.28.0
-  fathom-client: ^3.4.1
-  mdsvex: ^0.10.6
-  postcss: ^8.4.14
-  postcss-load-config: ^4.0.1
-  prettier: ^2.6.2
-  prettier-plugin-svelte: ^2.7.0
-  remark-external-links: ^9.0.1
-  svelte: ^3.48.0
-  svelte-preprocess: ^4.10.7
-  tailwindcss: ^3.0.24
-  theme-change: ^2.0.2
+  '@tailwindcss/typography': 0.5.2
+  autoprefixer: 10.4.7
+  cssnano: 5.1.11
+  daisyui: 2.15.2
+  date-fns: 2.28.0
+  fathom-client: 3.4.1
+  mdsvex: 0.10.6
+  postcss: 8.4.14
+  postcss-load-config: 4.0.1
+  prettier: 2.6.2
+  prettier-plugin-svelte: 2.7.0
+  remark-external-links: 9.0.1
+  svelte: 3.48.0
+  svelte-preprocess: 4.10.7
+  tailwindcss: 3.0.24
+  theme-change: 2.0.2
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.58
@@ -448,7 +448,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /console-control-strings/1.1.0:
@@ -2464,7 +2464,7 @@ packages:
   /wide-align/1.1.5:
     resolution: {integrity: sha512-eDMORYaPNZ4sQIuuYPDHdQvf4gyCF9rEEV/yPxGfwPkRodwEgiMUUXTx/dex+Me0wxx53S+NgUHaP7y3MGlDmg==}
     dependencies:
-      string-width: 1.0.2
+      string-width: 4.2.3
     dev: true
 
   /wrappy/1.0.2:
