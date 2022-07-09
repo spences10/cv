@@ -10,15 +10,6 @@ const config = {
 
   kit: {
     adapter: adapter(),
-    vite: {
-      resolve: {
-        alias: {
-          '@components': path.resolve('./src/lib/components'),
-          '@icons': path.resolve('./src/lib/icons'),
-          '@lib': path.resolve('./src/lib'),
-        },
-      },
-    },
   },
 
   preprocess: [
