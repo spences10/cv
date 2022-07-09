@@ -3,8 +3,8 @@
 </script>
 
 <script>
-  import Head from '@components/head.svelte'
   import { authorName, siteName } from '@lib/config'
+  import { Head } from 'svead'
   import Work from '../copy/non-webdev-exp.md'
 </script>
 

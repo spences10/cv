@@ -3,8 +3,8 @@
 </script>
 
 <script>
-  import Head from '@components/head.svelte'
   import { authorName, siteName } from '@lib/config'
+  import { Head } from 'svead'
   import Basics from '../copy/basics.md'
   import Interests from '../copy/interests.md'
   import Work from '../copy/work.md'
