@@ -1,11 +1,7 @@
-<script context="module">
-  export const prerender = true
-</script>
-
 <script>
   import Head from '@components/head.svelte'
   import { authorName, siteName } from '@lib/config'
-  import Work from '../copy/non-webdev-exp.md'
+  import Work from '../../copy/non-webdev-exp.md'
 </script>
 
 <Head
