@@ -4,10 +4,23 @@
 </script>
 
 <RoleDetails 
+  position="Developer Relations Engineer"
+  company="Storyblok"
+  startDate="2022-08-22"
+  endDate="" 
+/>
+
+<section class='all-prose mb-8'>
+
+</section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+
+<RoleDetails 
   position="Developer Advocate"
   company="GraphCMS"
   startDate="2021-04-26"
-  endDate="" 
+  endDate="2022-07-30" 
 />
 
 <section class='all-prose mb-8'>
