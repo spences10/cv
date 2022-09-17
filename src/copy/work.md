@@ -12,6 +12,25 @@
 
 <section class='all-prose mb-8'>
 
+### Summary
+
+Helping enterprise customers to understand and get value out of
+Storyblok in workshops, tutorials, and customer demos.
+
+Write sample applications, prototypes, and code samples to showcase
+the power and flexibility of Storyblok and the headless approach to
+content management.
+
+Help external developers to overcome missing functionalities or
+technical issues by using plugins, tools, apps, or custom scripts.
+
+Contribute code updates and bug fixes to Storyblok’s public projects
+(e.g. SDKs, sample applications, starter kits).
+
+### Highlights
+
+Representing Storyblok at Svelte Summit Fall 2022.
+
 </section>
 
 <span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
