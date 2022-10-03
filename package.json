@@ -19,7 +19,7 @@
     "date-fns": "2.29.3",
     "fathom-client": "3.5.0",
     "mdsvex": "0.10.6",
-    "postcss": "8.4.16",
+    "postcss": "8.4.17",
     "postcss-load-config": "4.0.1",
     "prettier": "2.7.1",
     "prettier-plugin-svelte": "2.7.0",
