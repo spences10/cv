@@ -45,12 +45,14 @@
   </h2>
   <span
     class="text-2xl print:text-xl font-bold text-accent-focus print:text-black"
-    >{company}</span
   >
+    {company}
+  </span>
 </div>
 
 <span
   class="text-accent font-bold print:font-medium print:text-black print:text-xs"
-  >{formatDates(startDate, endDate)}</span
 >
+  {formatDates(startDate, endDate)}
+</span>
 <div class="mb-8 print:mb-2" />
