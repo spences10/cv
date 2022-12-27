@@ -8,7 +8,10 @@ const config = {
   },
 
   remarkPlugins: [
-    [remarkExternalLinks, { target: '_blank', rel: 'noopener' }],
+    [
+      remarkExternalLinks,
+      { target: '_blank', rel: 'noopener noreferrer' },
+    ],
   ],
   rehypePlugins: [],
 }
