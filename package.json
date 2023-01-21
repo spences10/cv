@@ -10,7 +10,7 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-vercel": "1.0.4",
+    "@sveltejs/adapter-vercel": "1.0.5",
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "0.5.9",
     "autoprefixer": "10.4.13",
