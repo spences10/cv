@@ -6,7 +6,6 @@
 		PUBLIC_FATHOM_URL,
 	} from '$env/static/public'
 	import { Basics, ThemeSwitch } from '$lib/components'
-	import { References } from '$lib/copy'
 	import * as Fathom from 'fathom-client'
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
@@ -47,5 +46,4 @@
 		imgSrc="profile-pic.png"
 	/>
 	<slot />
-	<References />
 </main>
