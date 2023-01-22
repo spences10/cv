@@ -2,41 +2,41 @@ const daisyui = require('daisyui')
 const typography = require('@tailwindcss/typography')
 
 const config = {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 
-  theme: {
-    extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: null,
-          },
-        },
-      },
-    },
-  },
+	theme: {
+		extend: {
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: null,
+					},
+				},
+			},
+		},
+	},
 
-  plugins: [typography, daisyui],
+	plugins: [typography, daisyui],
 
-  daisyui: {
-    // included themes
-    themes: [
-      'dracula',
-      'aqua',
-      'black',
-      'bumblebee',
-      'corporate',
-      'cupcake',
-      'cyberpunk',
-      'dark',
-      'forest',
-      'halloween',
-      'light',
-      'night',
-      'synthwave',
-      'wireframe',
-    ],
-  },
+	daisyui: {
+		// included themes
+		themes: [
+			'dracula',
+			'aqua',
+			'black',
+			'bumblebee',
+			'corporate',
+			'cupcake',
+			'cyberpunk',
+			'dark',
+			'forest',
+			'halloween',
+			'light',
+			'night',
+			'synthwave',
+			'wireframe',
+		],
+	},
 }
 
 module.exports = config

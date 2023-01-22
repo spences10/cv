@@ -5,30 +5,30 @@
 
 /* Firefox */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: hsl(var(--s)) hsl(var(--p));
+	scrollbar-width: thin;
+	scrollbar-color: hsl(var(--s)) hsl(var(--p));
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 15px;
+	width: 15px;
 }
 
 *::-webkit-scrollbar-track {
-  background: hsl(var(--p));
-  border-radius: 5px;
+	background: hsl(var(--p));
+	border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: hsl(var(--s));
-  border-radius: 14px;
-  border: 3px solid hsl(var(--p));
+	background-color: hsl(var(--s));
+	border-radius: 14px;
+	border: 3px solid hsl(var(--p));
 }
 
 @tailwind components;
 
 .all-prose {
-  @apply prose prose-lg lg:prose-xl print:prose-sm print:text-black;
+	@apply prose prose-lg lg:prose-xl print:prose-sm print:text-black;
 }
 
 @tailwind utilities;
