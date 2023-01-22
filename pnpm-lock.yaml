@@ -20,6 +20,7 @@ specifiers:
   prettier: 2.8.3
   prettier-plugin-svelte: 2.9.0
   remark-external-links: 9.0.1
+  svead: ^0.0.4
   svelte: 3.55.1
   svelte-check: ^3.0.2
   svelte-preprocess: 5.0.1
@@ -50,6 +51,7 @@ devDependencies:
   prettier: 2.8.3
   prettier-plugin-svelte: 2.9.0_kdmmghgdi3ngrsq6otxkjilbry
   remark-external-links: 9.0.1
+  svead: 0.0.4
   svelte: 3.55.1
   svelte-check: 3.0.2_gqx7lw3sljhsd4bstor5m2aa2u
   svelte-preprocess: 5.0.1_awginupsaj455aehf5x365sh44
@@ -2357,6 +2359,10 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: true
+
+  /svead/0.0.4:
+    resolution: {integrity: sha512-BrS8WAvrdUs6nbXyZN/kABjLBcPFqA1QBnbpJQiRzxfdA/8XchNJmiRmcPFTElw5NA5k7AG/eYWjj91V+8+Heg==}
     dev: true
 
   /svelte-check/3.0.2_gqx7lw3sljhsd4bstor5m2aa2u:
