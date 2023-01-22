@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import { authorName, siteName } from '$lib/config'
-	import { Work } from '$lib/copy'
+	import { NonWebDevExp } from '$lib/copy'
 	import { Head } from 'svead'
 
 	let title = `Non Web Development Related Experience · ${siteName}`
@@ -12,4 +12,4 @@
 
 <Head {title} {description} {url} {paymentPointer} />
 
-<Work />
+<NonWebDevExp />
