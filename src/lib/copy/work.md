@@ -1,6 +1,5 @@
-<script>
-  import RoleDetails from '@lib/role-details.svelte'
-  import Collapse from '@lib/collapse.svelte'
+<script lang="ts">
+  import { RoleDetails, Collapse } from '$lib/components'
 </script>
 
 <RoleDetails 
@@ -82,9 +81,9 @@ Svelte.
 <!-- Links -->
 
 [building with sveltekit and graphcms]:
-  https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms
+	https://explorers.netlify.com/learn/building-with-sveltekit-and-graphcms
 [getting started videos]:
-  https://www.youtube.com/watch?v=C8M-JhhYaBs&list=PL5SvzogSTpeH1Szqw4tPi9ZfgXDbY8GU-
+	https://www.youtube.com/watch?v=C8M-JhhYaBs&list=PL5SvzogSTpeH1Szqw4tPi9ZfgXDbY8GU-
 [examples repo]: https://github.com/GraphCMS/graphcms-examples/
 
 <RoleDetails 

@@ -1,5 +1,5 @@
-<script>
-  import DD from '@lib/date-distance.svelte'
+<script lang="ts">
+  import { DD } from '$lib/components'
 </script>
 
 <article class='all-prose'>

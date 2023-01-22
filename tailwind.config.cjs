@@ -1,3 +1,6 @@
+const daisyui = require('daisyui')
+const typography = require('@tailwindcss/typography')
+
 const config = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
 
@@ -13,7 +16,7 @@ const config = {
     },
   },
 
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  plugins: [typography, daisyui],
 
   daisyui: {
     // included themes
