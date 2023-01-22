@@ -1,5 +1,5 @@
-<script>
-  import RoleDetails from '@lib/role-details.svelte'
+<script lang="ts">
+  import { RoleDetails } from '$lib/components'
 </script>
 
 <section class='all-prose mb-10'>
