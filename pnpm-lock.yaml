@@ -8,7 +8,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.48.2
   '@typescript-eslint/parser': ^5.48.2
   autoprefixer: 10.4.13
-  daisyui: 2.50.2
+  daisyui: 2.51.0
   date-fns: 2.29.3
   eslint: ^8.32.0
   eslint-config-prettier: ^8.6.0
@@ -39,7 +39,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.48.2_caon6io6stgpr7lz2rtbhekxqy
   '@typescript-eslint/parser': 5.48.2_7uibuqfxkfaozanbtbziikiqje
   autoprefixer: 10.4.13_postcss@8.4.21
-  daisyui: 2.50.2_gbtt6ss3tbiz4yjtvdr6fbrj44
+  daisyui: 2.51.0_gbtt6ss3tbiz4yjtvdr6fbrj44
   date-fns: 2.29.3
   eslint: 8.32.0
   eslint-config-prettier: 8.6.0_eslint@8.32.0
@@ -1022,8 +1022,8 @@ packages:
     hasBin: true
     dev: true
 
-  /daisyui/2.50.2_gbtt6ss3tbiz4yjtvdr6fbrj44:
-    resolution: {integrity: sha512-CzyTsqdkpP2Zwk5Fl+1pFfL7XewRn/COm4TyKx4DbdITpzADMe01j6YZRG/D0kAOyd7t4rXA3zvkqNc7Ak9ukQ==}
+  /daisyui/2.51.0_gbtt6ss3tbiz4yjtvdr6fbrj44:
+    resolution: {integrity: sha512-HGM89+VzZ/KDsH4cK6OhizIscXOVzkEENynovL6bXPfJDOKZQz0V2CuTGEoQmN8FeuGxrZiz/He1P9p+E9Qr5A==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6
