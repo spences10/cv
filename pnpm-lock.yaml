@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@playwright/test': ^1.29.2
-  '@sveltejs/adapter-vercel': 2.0.1
+  '@sveltejs/adapter-vercel': 2.1.1
   '@sveltejs/kit': 1.8.3
   '@tailwindcss/typography': 0.5.9
   '@typescript-eslint/eslint-plugin': ^5.48.2
@@ -33,7 +33,7 @@ specifiers:
 
 devDependencies:
   '@playwright/test': 1.29.2
-  '@sveltejs/adapter-vercel': 2.0.1_@sveltejs+kit@1.8.3
+  '@sveltejs/adapter-vercel': 2.1.1_@sveltejs+kit@1.8.3
   '@sveltejs/kit': 1.8.3_svelte@3.55.1+vite@4.1.4
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.7
   '@typescript-eslint/eslint-plugin': 5.48.2_caon6io6stgpr7lz2rtbhekxqy
@@ -375,8 +375,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-vercel/2.0.1_@sveltejs+kit@1.8.3:
-    resolution: {integrity: sha512-pIFUcOui3jFGA12hvsgcCYWDhQc1XlvLZ/VScAxoRBvSgnGvIhXELmzB01AAm36MYZG16HZPn5LRA0TOwcjpcg==}
+  /@sveltejs/adapter-vercel/2.1.1_@sveltejs+kit@1.8.3:
+    resolution: {integrity: sha512-itrsBExc3J208+X1cTFJUlkOJaMl6ZfDVZRMeka2unWMZ7DNXXLg4mq1REC/nvhl5g2he7HSZvqGh6n7z/kuQQ==}
     peerDependencies:
       '@sveltejs/kit': ^1.5.0
     dependencies:
