@@ -39,8 +39,8 @@
 	</div>
 	<Basics
 		name="Scott Spence"
-		label="JavaScript Developer"
-		email="yo@scottspence.com"
+		label="JavaScript Developer & Developer Advocate"
+		email="cv@scottspence.com"
 		phone="+44 0000 00 0000"
 		website="scottspence.com"
 		imgSrc="profile-pic.png"

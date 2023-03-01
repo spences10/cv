@@ -1,6 +1,39 @@
 <script lang="ts">
-  import { RoleDetails, Collapse } from '$lib/components'
+  import { DD, Collapse, RoleDetails } from '$lib/components'
 </script>
+
+<RoleDetails 
+  position="Consultant"
+  company="OES Technology"
+  startDate="2021-04-26"
+  endDate="" 
+/>
+
+<section class='all-prose mb-8'>
+
+### Summary
+
+Highly qualified developer advocate that has played significant roles
+in increasing the visibility and adoption of headless CMS platforms,
+namely Storyblok and GraphCMS.
+
+A Svelte ambassador, organising monthly Svelte Society London events
+for <DD date_from="2021-03-14" /> now. International conference
+speaker with content to gather and energize users. Continually
+nurturing and building relationships with community and industry
+leaders.
+
+Helping customers understand and leverage the power of the specified
+platforms by conducting workshops creating tutorials, demos,
+educational videos and blog posts. Contributing toward the development
+of the platforms by creating sample applications and code samples.
+
+A demonstrable deep commitment to educating and supporting the
+community.
+
+</section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
   position="Developer Relations Engineer"
@@ -28,7 +61,9 @@ Contribute code updates and bug fixes to Storyblok’s public projects
 
 ### Highlights
 
-Representing Storyblok at Svelte Summit Fall 2022.
+Building with SvelteKit at Connect Tech 2022, Atlanta.
+
+Representing Storyblok at Svelte Summit Fall 2022, Sweden.
 
 </section>
 
@@ -59,19 +94,16 @@ product development to improve product designs.
 
 ### Highlights
 
-Svelte Society London co-organiser, co-ordinated the Svelte London
-meet-up for the last seven months now.
-
 Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
 _build a fast secure project that uses SvelteKit's features_.
 
 Jamstack Explorers Mission: "**[Building with SvelteKit and
 GraphCMS]**".
 
-Recorded 26 (and counting) [getting started videos] for the GraphCMS
-[examples repo] on GitHub.
+Recorded 26 [getting started videos] for the GraphCMS [examples repo]
+on GitHub.
 
-Blog posts on getting started with SvelteKit and Data Binding with
+Deep dives on getting started with SvelteKit and Data Binding with
 Svelte.
 
 </section>
