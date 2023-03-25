@@ -31,7 +31,7 @@
 		"postcss": "8.4.21",
 		"postcss-load-config": "4.0.1",
 		"prettier": "2.8.6",
-		"prettier-plugin-svelte": "2.9.0",
+		"prettier-plugin-svelte": "2.10.0",
 		"remark-external-links": "9.0.1",
 		"svead": "^0.0.4",
 		"svelte": "3.57.0",
