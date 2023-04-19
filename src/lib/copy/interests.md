@@ -5,7 +5,7 @@
 Mechanical keyboards, a never ending rabbit hole!
 
 Writing how-to's and guides on
-[scottspence.com](https://scottspence.com/post).
+[scottspence.com](https://scottspence.com/posts).
 
 Watching YouTube videos on mechanical engineering and restorations.
 
