@@ -6,10 +6,10 @@ devDependencies:
     version: 1.29.2
   '@sveltejs/adapter-vercel':
     specifier: 2.4.3
-    version: 2.4.3(@sveltejs/kit@1.16.2)
+    version: 2.4.3(@sveltejs/kit@1.16.3)
   '@sveltejs/kit':
-    specifier: 1.16.2
-    version: 1.16.2(svelte@3.59.1)(vite@4.3.5)
+    specifier: 1.16.3
+    version: 1.16.3(svelte@3.59.1)(vite@4.3.5)
   '@tailwindcss/typography':
     specifier: 0.5.9
     version: 0.5.9(tailwindcss@3.3.2)
@@ -428,12 +428,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-vercel@2.4.3(@sveltejs/kit@1.16.2):
+  /@sveltejs/adapter-vercel@2.4.3(@sveltejs/kit@1.16.3):
     resolution: {integrity: sha512-3k/3udwaioFYdKDAgQcWSByB+KCbtjX+ARonYGCtYE0iuxWLStrESxy3SaU+17XD5Frh8w7tfY8ft4TV3ej3Dg==}
     peerDependencies:
       '@sveltejs/kit': ^1.5.0
     dependencies:
-      '@sveltejs/kit': 1.16.2(svelte@3.59.1)(vite@4.3.5)
+      '@sveltejs/kit': 1.16.3(svelte@3.59.1)(vite@4.3.5)
       '@vercel/nft': 0.22.6
       esbuild: 0.17.18
     transitivePeerDependencies:
@@ -441,8 +441,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit@1.16.2(svelte@3.59.1)(vite@4.3.5):
-    resolution: {integrity: sha512-yxcpA4nvlVlJ+VyYnj0zD3QN05kfmoh4OyitlPrVG34nnZSHzFpE4eZ33X1A/tc9prslSFRhpM6rWngCs0nM8w==}
+  /@sveltejs/kit@1.16.3(svelte@3.59.1)(vite@4.3.5):
+    resolution: {integrity: sha512-8uv0udYRpVuE1BweFidcWHfL+u2gAANKmvIal1dN/FWPBl7DJYbt9zYEtr3bNTiXystT8Sn0Wp54RfwpbPqHjQ==}
     engines: {node: ^16.14 || >=18}
     hasBin: true
     requiresBuild: true
