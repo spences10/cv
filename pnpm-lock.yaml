@@ -27,8 +27,8 @@ devDependencies:
     specifier: 10.4.14
     version: 10.4.14(postcss@8.4.25)
   daisyui:
-    specifier: 3.1.7
-    version: 3.1.7(postcss@8.4.25)
+    specifier: 3.2.1
+    version: 3.2.1
   date-fns:
     specifier: 2.30.0
     version: 2.30.0
@@ -1321,11 +1321,9 @@ packages:
     hasBin: true
     dev: true
 
-  /daisyui@3.1.7(postcss@8.4.25):
-    resolution: {integrity: sha512-VQhaunQlB7Buo+AbE+S3i6H/eYknKEuKVHG67y7sbG58uEjeLK6n2rojG3YE7fwoOss6ldbUL8Oy0MyoJi0CHw==}
+  /daisyui@3.2.1:
+    resolution: {integrity: sha512-gIqE6wiqoJt9G8+n3R/SwLeUnpNCE2eDhT73rP0yZYVaM7o6zVcakBH3aEW5RGpx3UkonPiLuvcgxRcb2lE8TA==}
     engines: {node: '>=16.9.0'}
-    peerDependencies:
-      postcss: ^8
     dependencies:
       colord: 2.9.3
       css-selector-tokenizer: 0.8.0
