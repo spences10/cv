@@ -30,7 +30,7 @@
 		"mdsvex": "0.11.0",
 		"postcss": "8.4.27",
 		"postcss-load-config": "4.0.1",
-		"prettier": "3.0.1",
+		"prettier": "3.0.2",
 		"prettier-plugin-svelte": "3.0.3",
 		"remark-external-links": "9.0.1",
 		"svead": "^0.0.4",
