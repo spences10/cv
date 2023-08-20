@@ -16,6 +16,7 @@ Sanctioners
 scottspence
 Storyblok
 Strapi
+svead
 tailwindcss
 Tullett
 Zaizi
