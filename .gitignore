@@ -10,3 +10,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vercel_build_output
 .vercel
+.env*.local
