@@ -1,0 +1,38 @@
+name: 'Tests: Unit'
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+
+jobs:
+  unit-tests:
+    name: Run unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-store
+          key:
+            # prettier-ignore
+            ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.4.0
+        with:
+          version: 6.0.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build
+        run: pnpm run build
+        env:
+          PUBLIC_FATHOM_ID: ${{ secrets.PUBLIC_FATHOM_ID }}
+          PUBLIC_FATHOM_URL: ${{ secrets.PUBLIC_FATHOM_URL }}
+      - name: Test
+        run: pnpm run test:ci
