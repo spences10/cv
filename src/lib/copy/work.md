@@ -39,8 +39,10 @@ community.
   position="Developer Relations Engineer"
   company="Storyblok"
   startDate="2022-08-22"
-  endDate="" 
+  endDate="2023-08-22" 
 />
+
+<!-- actual Storyblok end date 2023-08-08 -->
 
 <section class='all-prose mb-8'>
 
@@ -139,7 +141,7 @@ using a mixture of old Ubuntu servers (v16) and Rackspace servers
 
 ### Highlights
 
-Built internal Pinstagram used for onboarding and pitchbooks where
+Built internal Pinstagram used for onboarding and pitch books where
 staff at Karmarama share articles seen as good, PR, Production,
 Marketing, etc. Built with NextJS, Prisma (GraphQL data layer) and
 GraphQL Yoga (Express).
