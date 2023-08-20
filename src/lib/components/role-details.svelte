@@ -24,8 +24,13 @@
 			end: new Date(intervalEndDate),
 		})
 		const yearsAndMonths = () => {
-			const intervalYears = years ? `${years}yrs` : ''
-			const intervalMonths = months ? `${months + 1}mos` : '' // Months is zero based!
+			const intervalYears = years
+				? `${years}${years === 1 ? 'yr' : 'yrs'}`
+				: ''
+			const intervalMonths = months
+				? `${months}${months === 1 ? 'mo' : 'mos'}`
+				: ''
+
 			if (intervalYears === '' && intervalMonths !== '') {
 				return `(${intervalMonths})`
 			}
@@ -37,6 +42,7 @@
 			}
 			return ``
 		}
+
 		return `${formattedStart} - ${formattedEndDate()} ${yearsAndMonths()}`
 	}
 </script>
