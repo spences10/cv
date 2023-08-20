@@ -4,7 +4,7 @@
 	export let position: string
 	export let company: string
 	export let startDate: Date
-	export let endDate: Date
+	export let endDate: string | number | Date | null
 
 	const formatDates = (
 		startDate: string | number | Date,
@@ -65,6 +65,6 @@
 <span
 	class="text-accent font-bold print:font-medium print:text-black print:text-xs"
 >
-	{formatDates(startDate, endDate)}
+	{formatDates(startDate, endDate === null ? '' : endDate)}
 </span>
 <div class="mb-8 print:mb-2" />
