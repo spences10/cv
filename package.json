@@ -26,7 +26,7 @@
 		"@typescript-eslint/parser": "^6.4.0",
 		"autoprefixer": "10.4.15",
 		"cspell": "^7.0.0",
-		"daisyui": "3.7.5",
+		"daisyui": "3.7.6",
 		"date-fns": "2.30.0",
 		"eslint": "^8.47.0",
 		"eslint-config-prettier": "^9.0.0",
