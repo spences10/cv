@@ -1,49 +1,54 @@
 <script lang="ts">
-	import { format, intervalToDuration, isValid } from 'date-fns'
+	import dayjs from 'dayjs'
+	import duration from 'dayjs/plugin/duration'
+	dayjs.extend(duration)
 
 	export let position: string
 	export let company: string
 	export let startDate: Date
 	export let endDate: string | number | Date | null
 
-	const formatDates = (
-		startDate: string | number | Date,
-		endDate: string | number | Date
+	const format_dates = (
+		start_date: string | number | Date,
+		end_date: string | number | Date | null
 	) => {
-		const formattedStart = format(new Date(startDate), 'MMM yyyy')
-		const formattedEndDate = () => {
-			if (isValid(new Date(endDate))) {
-				return format(new Date(endDate), 'MMM yyyy')
+		const formatted_start = dayjs(start_date).format('MMM YYYY')
+		const formatted_end_date = () => {
+			if (dayjs(end_date).isValid()) {
+				return dayjs(end_date).format('MMM YYYY')
 			} else {
 				return 'Present'
 			}
 		}
-		const intervalEndDate = endDate === '' ? new Date() : endDate
-		const { years, months } = intervalToDuration({
-			start: new Date(startDate),
-			end: new Date(intervalEndDate),
-		})
-		const yearsAndMonths = () => {
-			const intervalYears = years
+		const interval_end_date =
+			end_date === null ? new Date() : end_date
+		const duration_interval = dayjs.duration(
+			dayjs(interval_end_date).diff(dayjs(start_date))
+		)
+		const years = duration_interval.years()
+		const months = duration_interval.months()
+
+		const years_and_months = () => {
+			const interval_years = years
 				? `${years}${years === 1 ? 'yr' : 'yrs'}`
 				: ''
-			const intervalMonths = months
+			const interval_months = months
 				? `${months}${months === 1 ? 'mo' : 'mos'}`
 				: ''
 
-			if (intervalYears === '' && intervalMonths !== '') {
-				return `(${intervalMonths})`
+			if (interval_years === '' && interval_months !== '') {
+				return `(${interval_months})`
 			}
-			if (intervalYears !== '' && intervalMonths === '') {
-				return `(${intervalYears})`
+			if (interval_years !== '' && interval_months === '') {
+				return `(${interval_years})`
 			}
-			if (intervalYears !== '' && intervalMonths !== '') {
-				return `(${intervalYears} ${intervalMonths})`
+			if (interval_years !== '' && interval_months !== '') {
+				return `(${interval_years} ${interval_months})`
 			}
-			return ``
+			return ''
 		}
 
-		return `${formattedStart} - ${formattedEndDate()} ${yearsAndMonths()}`
+		return `${formatted_start} - ${formatted_end_date()} ${years_and_months()}`
 	}
 </script>
 
@@ -65,6 +70,6 @@
 <span
 	class="text-accent font-bold print:font-medium print:text-black print:text-xs"
 >
-	{formatDates(startDate, endDate === null ? '' : endDate)}
+	{format_dates(startDate, endDate === null ? '' : endDate)}
 </span>
 <div class="mb-8 print:mb-2" />

@@ -1,13 +1,12 @@
 <script lang="ts">
-	import { formatDistance } from 'date-fns'
+	import dayjs from 'dayjs'
+	import relative_time from 'dayjs/plugin/relativeTime'
+	dayjs.extend(relative_time)
 
-	export let date_from = Date.now()
-	export let date_to = Date.now()
+	export let date_from: number = Date.now()
+	export let date_to: number = Date.now()
 
-	const distance = formatDistance(
-		new Date(date_from),
-		new Date(date_to)
-	)
+	$: distance = dayjs(date_to).from(dayjs(date_from))
 </script>
 
 <span>{distance}</span>
