@@ -48,7 +48,7 @@ throughout the development lifecycle.
 
 ### Highlights
 
-- Implementation of a UI package for multiple applications
+Implementation of a UI package for multiple applications
 
 </section>
 
