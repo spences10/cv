@@ -36,9 +36,26 @@ community.
 <span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
 
 <RoleDetails 
+  position="Application Team Lead"
+  company="XtendOps"
+  startDate="2023-09-11"
+  endDate="" 
+/>
+
+<section class='all-prose mb-8'>
+
+### Summary
+
+### Highlights
+
+</section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+
+<RoleDetails 
   position="Developer Relations Engineer"
   company="Storyblok"
-  startDate="2022-08-22"
+  startDate="2022-08-08"
   endDate="2023-08-22" 
 />
 

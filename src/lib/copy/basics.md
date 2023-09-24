@@ -12,6 +12,9 @@ HTML and CSS, and commercial experience in using frameworks like
 Svelte (<DD date_from="2021-04-06" />) and React
 (<DD date_from="2018-03-14" date_to="2021-04-06" />).
 
+With an overall <DD date_from="2007-09-11" /> of experience as a
+developer working with stakeholders to deliver projects.
+
 Enthusiastic about using modern technology and very keen to improve on
 existing skills and to learn new ones.
 

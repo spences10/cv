@@ -3,52 +3,64 @@
 	import duration from 'dayjs/plugin/duration'
 	dayjs.extend(duration)
 
+	// Define a custom type for dayjs.Duration
+	type DayjsDuration = {
+		years: () => number
+		months: () => number
+	}
+
 	export let position: string
 	export let company: string
 	export let startDate: Date
 	export let endDate: string | number | Date | null
 
+	const format_date = (
+		date: string | number | Date | null,
+		format: string
+	): string => {
+		return dayjs(date).isValid()
+			? dayjs(date).format(format)
+			: 'Present'
+	}
+
+	const calculate_duration = (
+		start_date: string | number | Date,
+		end_date: string | number | Date | null
+	): DayjsDuration => {
+		const interval_end_date =
+			end_date === null ? new Date() : end_date
+		return dayjs.duration(
+			dayjs(interval_end_date).diff(dayjs(start_date))
+		) as DayjsDuration
+	}
+
+	const format_duration = (duration_interval: DayjsDuration) => {
+		const years = duration_interval.years()
+		const months = duration_interval.months()
+		const interval_years = years
+			? `${years}${years === 1 ? 'yr' : 'yrs'}`
+			: ''
+		const interval_months = months
+			? `${months}${months === 1 ? 'mo' : 'mos'}`
+			: ''
+
+		if (interval_years && interval_months)
+			return `(${interval_years} ${interval_months})`
+		if (interval_years) return `(${interval_years})`
+		if (interval_months) return `(${interval_months})`
+		return ''
+	}
+
 	const format_dates = (
 		start_date: string | number | Date,
 		end_date: string | number | Date | null
 	) => {
-		const formatted_start = dayjs(start_date).format('MMM YYYY')
-		const formatted_end_date = () => {
-			if (dayjs(end_date).isValid()) {
-				return dayjs(end_date).format('MMM YYYY')
-			} else {
-				return 'Present'
-			}
-		}
-		const interval_end_date =
-			end_date === null ? new Date() : end_date
-		const duration_interval = dayjs.duration(
-			dayjs(interval_end_date).diff(dayjs(start_date))
-		)
-		const years = duration_interval.years()
-		const months = duration_interval.months()
+		const formatted_start = format_date(start_date, 'MMM YYYY')
+		const formatted_end = format_date(end_date, 'MMM YYYY')
+		const duration_interval = calculate_duration(start_date, end_date)
+		const formatted_duration = format_duration(duration_interval)
 
-		const years_and_months = () => {
-			const interval_years = years
-				? `${years}${years === 1 ? 'yr' : 'yrs'}`
-				: ''
-			const interval_months = months
-				? `${months}${months === 1 ? 'mo' : 'mos'}`
-				: ''
-
-			if (interval_years === '' && interval_months !== '') {
-				return `(${interval_months})`
-			}
-			if (interval_years !== '' && interval_months === '') {
-				return `(${interval_years})`
-			}
-			if (interval_years !== '' && interval_months !== '') {
-				return `(${interval_years} ${interval_months})`
-			}
-			return ''
-		}
-
-		return `${formatted_start} - ${formatted_end_date()} ${years_and_months()}`
+		return `${formatted_start} - ${formatted_end} ${formatted_duration}`
 	}
 </script>
 
