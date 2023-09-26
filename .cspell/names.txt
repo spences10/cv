@@ -1,9 +1,11 @@
 Contentful
+daisyui
 DOFT
 Gorman
 Jamstack
 Karmarama
 Lottie
+mdsvex
 ncsc
 Penfold
 Pinstagram

@@ -4,20 +4,23 @@
 
 <article class='all-prose'>
 
-JavaScript developer with <DD date_from="2018-03-14" /> of commercial
-experience in working in development teams delivering projects.
+Seasoned developer with <DD from="2005-11-01" /> of experience in the
+tech industry.
 
-With <DD date_from="2016-06-15" /> experience in using JavaScript,
-HTML and CSS, and commercial experience in using frameworks like
-Svelte (<DD date_from="2021-04-06" />) and React
-(<DD date_from="2018-03-14" date_to="2021-04-06" />).
+Expertise spans JavaScript, HTML, and CSS, and JavaScript frameworks
+with <DD from="2016-06-15" /> years of hands-on experience.
 
-Enthusiastic about using modern technology and very keen to improve on
-existing skills and to learn new ones.
+Holds <DD from="2018-03-14" /> years of commercial experience in
+development teams, delivering projects across various frameworks like
+Svelte and React.
 
-10+ years [previous experience] as a senior-level Analyst Developer
-specialising in Microsoft Office automation for large financial
-organisations.
+Previous career of <DD from="2005-11-01" to="2018-03-08" /> as a
+[senior-level Analyst Developer], focusing on Microsoft Office
+automation for large financial organisations.
+
+In addition to technical skills, a proven track record in leadership
+and advocacy roles exists. Passionate about using modern technology
+and continually keen to improve existing skills and learn new ones.
 
 **Location**: UK (Swanley, Kent)
 
@@ -27,4 +30,4 @@ organisations.
 
 <!-- Links -->
 
-[previous experience]: ./non-webdev-exp
+[senior-level Analyst Developer]: ./non-webdev-exp

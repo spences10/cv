@@ -13,23 +13,42 @@
 
 ### Summary
 
-Highly qualified developer advocate that has played significant roles
-in increasing the visibility and adoption of headless CMS platforms,
-namely Storyblok and GraphCMS.
+Team lead and developer advocate that has played significant roles in
+increasing best practices, visibility and adoption of clients
+platforms.
 
 A Svelte ambassador, organising monthly Svelte Society London events
-for <DD date_from="2021-03-14" /> now. International conference
-speaker with content to gather and energize users. Continually
-nurturing and building relationships with community and industry
-leaders.
+for <DD from="2021-11-14" /> now.
 
-Helping customers understand and leverage the power of the specified
-platforms by conducting workshops creating tutorials, demos,
-educational videos and blog posts. Contributing toward the development
-of the platforms by creating sample applications and code samples.
+International conference speaker. Workshop host (in person and
+remote).
 
-A demonstrable deep commitment to educating and supporting the
-community.
+Continually nurturing and building relationships with community and
+industry leaders. A demonstrable deep commitment to educating and
+supporting the Svelte community.
+
+</section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+
+<RoleDetails 
+  position="Application Team Lead"
+  company="XtendOps"
+  startDate="2023-09-11"
+  endDate="" 
+/>
+
+<section class='all-prose mb-8'>
+
+### Summary
+
+Oversee a large SvelteKit monorepo codebase. Responsibilities include
+leading a team of talented developers and ensuring best practices
+throughout the development lifecycle.
+
+### Highlights
+
+Implementation of a UI package for multiple applications
 
 </section>
 

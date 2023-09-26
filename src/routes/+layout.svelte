@@ -20,26 +20,30 @@
 	})
 
 	$: $page.url.pathname, browser && Fathom.trackPageview()
-	function Print() {
+
+	const print_page = () => {
 		window.print()
 	}
 </script>
 
+<header
+	class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 md:mt-8 flex justify-between mb-4"
+>
+	<button
+		class="btn btn-primary btn-xs border print:hidden"
+		on:click={print_page}
+	>
+		Download
+	</button>
+	<ThemeSwitch />
+</header>
+
 <main
 	class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-8 print:bg-black"
 >
-	<div class="flex justify-between mb-4 ">
-		<button
-			class="btn btn-primary btn-xs border print:hidden"
-			on:click={Print}
-		>
-			Download
-		</button>
-		<ThemeSwitch />
-	</div>
 	<Basics
 		name="Scott Spence"
-		label="JavaScript Developer & Developer Advocate"
+		label="Senior Developer & Community Leader"
 		email="cv@scottspence.com"
 		phone="+44 0000 00 0000"
 		website="scottspence.com"
