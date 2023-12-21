@@ -1,19 +1,18 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
 	import { page } from '$app/stores'
-	import {
-		PUBLIC_FATHOM_ID,
-		PUBLIC_FATHOM_URL,
-	} from '$env/static/public'
+	import { env } from '$env/dynamic/public'
 	import { Basics, ThemeSwitch } from '$lib/components'
 	import * as Fathom from 'fathom-client'
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
 	import '../app.css'
 
+	const { PUBLIC_FATHOM_ID, PUBLIC_FATHOM_URL } = env
+
 	onMount(() => {
 		themeChange(false)
-		Fathom.load(PUBLIC_FATHOM_ID, {
+		Fathom.load(PUBLIC_FATHOM_ID?.toString() || ``, {
 			url: PUBLIC_FATHOM_URL,
 			excludedDomains: ['localhost'],
 		})
