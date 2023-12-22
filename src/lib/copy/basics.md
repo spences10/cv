@@ -19,8 +19,8 @@ Previous career of <DD from="2005-11-01" to="2018-03-08" /> as a
 automation for large financial organisations.
 
 In addition to technical skills, a proven track record in leadership
-and advocacy roles exists. Passionate about using modern technology
-and continually keen to improve existing skills and learn new ones.
+and advocacy roles. Passionate about using modern technology and
+continually keen to improve existing skills and learn new ones.
 
 **Location**: UK (Swanley, Kent)
 
