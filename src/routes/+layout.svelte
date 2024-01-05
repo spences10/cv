@@ -6,7 +6,7 @@
 	import * as Fathom from 'fathom-client'
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
-	import '../app.css'
+	import '../app.postcss'
 
 	const { PUBLIC_FATHOM_ID, PUBLIC_FATHOM_URL } = env
 
@@ -26,7 +26,7 @@
 </script>
 
 <header
-	class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 md:mt-8 flex justify-between mb-4"
+	class="container mx-auto mb-4 flex max-w-3xl justify-between px-4 sm:px-6 md:mt-8 lg:px-8"
 >
 	<button
 		class="btn btn-primary btn-xs border print:hidden"
@@ -38,11 +38,11 @@
 </header>
 
 <main
-	class="container max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 md:mt-8 print:bg-black"
+	class="container mx-auto mt-4 max-w-3xl px-4 print:bg-black sm:px-6 md:mt-8 lg:px-8"
 >
 	<Basics
 		name="Scott Spence"
-		label="Senior Developer & Community Leader"
+		label="Senior Developer &amp; Community Leader"
 		email="cv@scottspence.com"
 		phone="+44 0000 00 0000"
 		website="scottspence.com"

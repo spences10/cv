@@ -1,17 +1,19 @@
 <script lang="ts">
 	import { Email, Globe, Mobile } from '$lib/icons'
 
-	export let name: string
-	export let label: string
-	export let email: string
-	export let phone: string
-	export let website: string
-	export let imgSrc: string
+	const { name, label, email, phone, website, imgSrc } = $props<{
+		name: string
+		label: string
+		email: string
+		phone: string
+		website: string
+		imgSrc: string
+	}>()
 </script>
 
-<div class="flex justify-between items-end print:-mt-6">
+<div class="flex items-end justify-between print:-mt-6">
 	<h1
-		class="text-5xl print:text-2xl print:text-black font-bold uppercase tracking-wide"
+		class="text-5xl font-bold uppercase tracking-wide print:text-2xl print:text-black"
 	>
 		{name}
 	</h1>
@@ -19,7 +21,7 @@
 	{#if imgSrc !== undefined}
 		<div class="avatar print:hidden">
 			<div
-				class="transition w-24 h-24 mask mask-decagon filter blur transform hover:blur-0"
+				class="mask mask-decagon h-24 w-24 transform blur filter transition hover:blur-0"
 			>
 				<img src={imgSrc} alt={name} />
 			</div>
@@ -34,19 +36,19 @@
 
 	<div class="mb-5 print:mb-1">
 		<h2
-			class="text-3xl print:text-xl print:text-black font-bold tracking-wide text-primary"
+			class="text-3xl font-bold tracking-wide text-primary print:text-xl print:text-black"
 		>
 			{label}
 		</h2>
 	</div>
 
 	<div
-		class="tracking-wide mt-2 print:mb-4 flex flex-col sm:flex-row print:flex-row justify-between print:justify-start text-accent-focus"
+		class="text-accent-focus mt-2 flex flex-col justify-between tracking-wide print:mb-4 print:flex-row print:justify-start sm:flex-row"
 	>
 		<div class="print:text-black">
 			<dt><span class="sr-only">Email address</span></dt>
 			<dd
-				class="flex text-base print:text-sm items-end mb-2 print:mr-2"
+				class="mb-2 flex items-end text-base print:mr-2 print:text-sm"
 			>
 				<Email />
 				<span class="ml-3 print:ml-0">
@@ -60,10 +62,10 @@
 			class="tooltip tooltip-bottom print:hidden"
 		>
 			<dt><span class="sr-only">Phone number</span></dt>
-			<dd class="flex text-base items-end mb-2">
+			<dd class="mb-2 flex items-end text-base">
 				<Mobile />
 				<span class="ml-3">
-					<a href="tel: {phone}" class="text-md filter blur">
+					<a href="tel: {phone}" class="text-md blur filter">
 						{phone}
 					</a>
 				</span>
@@ -72,7 +74,7 @@
 
 		<div class="print:text-black">
 			<dt><span class="sr-only">Website</span></dt>
-			<dd class="flex text-base print:text-sm items-end mb-2">
+			<dd class="mb-2 flex items-end text-base print:text-sm">
 				<Globe />
 				<span class="ml-3 print:ml-0">
 					<a href="https://{website}" class="text-md block">

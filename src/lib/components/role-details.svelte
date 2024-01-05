@@ -1,14 +1,16 @@
 <script lang="ts">
 	import { format, intervalToDuration, isValid } from 'date-fns'
 
-	export let position: string
-	export let company: string
-	export let startDate: Date
-	export let endDate: string | number | Date | null
+	const { position, company, startDate, endDate } = $props<{
+		position: string
+		company: string
+		startDate: string | number | Date
+		endDate: string | number | Date | null
+	}>()
 
 	const formatDates = (
 		startDate: string | number | Date,
-		endDate: string | number | Date
+		endDate: string | number | Date,
 	) => {
 		const formattedStart = format(new Date(startDate), 'MMM yyyy')
 		const formattedEndDate = () => {
@@ -48,22 +50,22 @@
 </script>
 
 <div
-	class="flex flex-col md:flex-row print:flex-row justify-between md:items-end mb-2 print:mb-0"
+	class="mb-2 flex flex-col justify-between print:mb-0 print:flex-row md:flex-row md:items-end"
 >
 	<h2
-		class="text-4xl print:text-2xl font-bold tracking-wide text-primary print:text-black"
+		class="text-4xl font-bold tracking-wide text-primary print:text-2xl print:text-black"
 	>
 		{position}
 	</h2>
 	<span
-		class="text-2xl print:text-xl font-bold text-accent-focus print:text-black"
+		class="text-accent-focus text-2xl font-bold print:text-xl print:text-black"
 	>
 		{company}
 	</span>
 </div>
 
 <span
-	class="text-accent font-bold print:font-medium print:text-black print:text-xs"
+	class="font-bold text-accent print:text-xs print:font-medium print:text-black"
 >
 	{formatDates(startDate, endDate === null ? '' : endDate)}
 </span>

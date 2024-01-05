@@ -1,13 +1,12 @@
 <script lang="ts">
 	import { formatDistance } from 'date-fns'
 
-	export let from = Date.now()
-	export let to = Date.now()
+	const { from = Date.now(), to = Date.now() } = $props<{
+		from: string | number
+		to: string | number
+	}>()
 
-	const distance = formatDistance(
-		new Date(from),
-		new Date(to)
-	)
+	const distance = formatDistance(new Date(from), new Date(to))
 </script>
 
 <span>{distance}</span>
