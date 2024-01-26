@@ -1,5 +1,5 @@
 {
 	"css.validate": false,
 	"git.enableSmartCommit": true,
-	"git.postCommitCommand": "sync",
+	"git.postCommitCommand": "sync"
 }

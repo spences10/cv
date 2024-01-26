@@ -1,7 +1,7 @@
 import { cleanup, render } from '@testing-library/svelte'
+import { differenceInMonths } from 'date-fns'
 import { afterEach, describe, expect, it } from 'vitest'
 import RoleDetails from './role-details.svelte'
-import { differenceInMonths } from 'date-fns'
 
 describe('RoleDetails', () => {
 	const defaultProps = {
@@ -26,11 +26,11 @@ describe('RoleDetails', () => {
 		const { getByText } = render(RoleDetails, { ...defaultProps })
 
 		expect(
-			getByText('Jan 2020 - Dec 2022 (2yrs 11mos)')
+			getByText('Jan 2020 - Dec 2022 (2yrs 11mos)'),
 		).not.toBeNull()
 	})
 
-  it('shows "Present" for an invalid end date', () => {
+	it('shows "Present" for an invalid end date', () => {
 		const { getByText } = render(RoleDetails, {
 			...defaultProps,
 			endDate: null,
@@ -39,13 +39,13 @@ describe('RoleDetails', () => {
 		const currentDate = new Date()
 		const totalMonths = differenceInMonths(
 			currentDate,
-			defaultProps.startDate
+			defaultProps.startDate,
 		)
 		const years = Math.floor(totalMonths / 12)
 		const months = totalMonths % 12
 
 		expect(
-			getByText(`Jan 2020 - Present (${years}yrs ${months}mos)`)
+			getByText(`Jan 2020 - Present (${years}yrs ${months}mos)`),
 		).not.toBeNull()
 	})
 

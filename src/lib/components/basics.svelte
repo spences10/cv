@@ -43,7 +43,7 @@
 	</div>
 
 	<div
-		class="text-accent-focus mt-2 flex flex-col justify-between tracking-wide print:mb-4 print:flex-row print:justify-start sm:flex-row"
+		class="text-accent-focus mt-2 flex flex-col justify-between tracking-wide sm:flex-row print:mb-4 print:flex-row print:justify-start"
 	>
 		<div class="print:text-black">
 			<dt><span class="sr-only">Email address</span></dt>

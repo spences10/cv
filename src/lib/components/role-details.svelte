@@ -50,7 +50,7 @@
 </script>
 
 <div
-	class="mb-2 flex flex-col justify-between print:mb-0 print:flex-row md:flex-row md:items-end"
+	class="mb-2 flex flex-col justify-between md:flex-row md:items-end print:mb-0 print:flex-row"
 >
 	<h2
 		class="text-4xl font-bold tracking-wide text-primary print:text-2xl print:text-black"

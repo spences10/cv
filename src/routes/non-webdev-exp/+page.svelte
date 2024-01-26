@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import { authorName, siteName } from '$lib/config'
-	import { NonWebDevExp } from '$lib/copy'
+	import { NonWebDevExp, References } from '$lib/copy'
 	import { Head } from 'svead'
-	import { References } from '$lib/copy'
 
 	let title = `Non Web Development Related Experience · ${siteName}`
 	let description = `Relevant past experience for ${authorName}`

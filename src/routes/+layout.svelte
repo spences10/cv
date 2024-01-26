@@ -38,7 +38,7 @@
 </header>
 
 <main
-	class="container mx-auto mt-4 max-w-3xl px-4 print:bg-black sm:px-6 md:mt-8 lg:px-8"
+	class="container mx-auto mt-4 max-w-3xl px-4 sm:px-6 md:mt-8 lg:px-8 print:bg-black"
 >
 	<Basics
 		name="Scott Spence"
