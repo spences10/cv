@@ -13,6 +13,8 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
+		"test:ci": "vitest run",
+		"cspell": "cspell '**/*.md' --config cspell.json --wordsOnly",
 		"postinstall": "patch-package"
 	},
 	"devDependencies": {
