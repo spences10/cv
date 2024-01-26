@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ~/.cache/ms-playwright
           key: Linux-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: Linux-playwright-
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         with:
           path: ~/.pnpm-store
           # prettier-ignore
@@ -25,7 +25,7 @@ jobs:
           restore-keys: ${{ runner.os }}-pnpm-
       - uses: pnpm/action-setup@v2.4.0
         with:
-          version: 6.0.2
+          version: 8.0.0
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
