@@ -43,9 +43,11 @@ describe('RoleDetails', () => {
 		)
 		const years = Math.floor(totalMonths / 12)
 		const months = totalMonths % 12
+		const durationText =
+			months === 0 ? `${years}yrs` : `${years}yrs ${months}mos`
 
 		expect(
-			getByText(`Jan 2020 - Present (${years}yrs ${months}mos)`),
+			getByText(`Jan 2020 - Present (${durationText})`),
 		).not.toBeNull()
 	})
 
