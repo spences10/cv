@@ -23,7 +23,7 @@
 		"@sveltejs/kit": "^2.5.5",
 		"@sveltejs/vite-plugin-svelte": "^3.1.0",
 		"@tailwindcss/typography": "^0.5.12",
-		"@testing-library/svelte": "^4.1.0",
+		"@testing-library/svelte": "^5.0.0",
 		"@types/eslint": "8.56.9",
 		"@typescript-eslint/eslint-plugin": "^7.6.0",
 		"@typescript-eslint/parser": "^7.6.0",
