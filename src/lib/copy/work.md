@@ -46,9 +46,14 @@ Oversee a large SvelteKit monorepo codebase. Responsibilities include
 leading a team of talented developers and ensuring best practices
 throughout the development lifecycle.
 
+Code owner across several apps ensuring code quality and consistency
+working with the team via Slack and GitHub.
+
 ### Highlights
 
 Implementation of a UI package for multiple applications
+
+Slashing CI/CD times using Vercel prebuilt assets
 
 </section>
 
@@ -82,9 +87,9 @@ Contribute code updates and bug fixes to Storyblok’s public projects
 
 ### Highlights
 
-Building with SvelteKit at Connect Tech 2022, Atlanta.
+Building with SvelteKit, main stage at Connect Tech 2022, Atlanta.
 
-Representing Storyblok at Svelte Summit Fall 2022, Sweden.
+Svelte Summit Fall 2022, Sweden.
 
 </section>
 
