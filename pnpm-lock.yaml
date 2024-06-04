@@ -61,7 +61,7 @@ devDependencies:
     version: 24.1.0
   mdsvex:
     specifier: ^0.11.0
-    version: 0.11.0(svelte@5.0.0-next.148)
+    version: 0.11.1(svelte@5.0.0-next.148)
   postcss:
     specifier: ^8.4.38
     version: 8.4.38
@@ -3014,10 +3014,10 @@ packages:
       unist-util-visit: 4.1.2
     dev: true
 
-  /mdsvex@0.11.0(svelte@5.0.0-next.148):
-    resolution: {integrity: sha512-gJF1s0N2nCmdxcKn8HDn0LKrN8poStqAicp6bBcsKFd/zkUBGLP5e7vnxu+g0pjBbDFOscUyI1mtHz+YK2TCDw==}
+  /mdsvex@0.11.1(svelte@5.0.0-next.148):
+    resolution: {integrity: sha512-8g1WIKP8AD+KyW6EOSXkEUkxuKL3uX+Tqpv6MUyMFCXvDOb8FDuTFoaOSqi/1CKXVXTLdP/RZU2WS4W9pnuOmA==}
     peerDependencies:
-      svelte: '>=3 <5'
+      svelte: '>=3 <6'
     dependencies:
       '@types/unist': 2.0.10
       prism-svelte: 0.4.7
