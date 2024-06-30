@@ -1,28 +1,36 @@
 <script lang="ts">
-	import { browser } from '$app/environment'
-	import { page } from '$app/stores'
-	import { env } from '$env/dynamic/public'
-	import { Basics, ThemeSwitch } from '$lib/components'
-	import * as Fathom from 'fathom-client'
-	import { onMount } from 'svelte'
-	import { themeChange } from 'theme-change'
-	import '../app.postcss'
+	import { browser } from '$app/environment';
+	import { page } from '$app/stores';
+	import { env } from '$env/dynamic/public';
+	import { Basics, ThemeSwitch } from '$lib/components';
+	import * as Fathom from 'fathom-client';
+	import { onMount } from 'svelte';
+	import { themeChange } from 'theme-change';
+	import '../app.css';
 
-	const { PUBLIC_FATHOM_ID, PUBLIC_FATHOM_URL } = env
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
+
+	const { PUBLIC_FATHOM_ID, PUBLIC_FATHOM_URL } = env;
 
 	onMount(() => {
-		themeChange(false)
+		themeChange(false);
 		Fathom.load(PUBLIC_FATHOM_ID?.toString() || ``, {
 			url: PUBLIC_FATHOM_URL,
 			excludedDomains: ['localhost'],
-		})
-	})
+		});
+	});
 
-	$: $page.url.pathname, browser && Fathom.trackPageview()
+	$effect(() => {
+		$page.url.pathname, browser && Fathom.trackPageview();
+	});
 
 	const print_page = () => {
-		window.print()
-	}
+		window.print();
+	};
 </script>
 
 <header
@@ -30,7 +38,7 @@
 >
 	<button
 		class="btn btn-primary btn-xs border print:hidden"
-		on:click={print_page}
+		onclick={print_page}
 	>
 		Download
 	</button>
@@ -48,5 +56,5 @@
 		website="scottspence.com"
 		imgSrc="profile-pic.png"
 	/>
-	<slot />
+	{@render children?.()}
 </main>

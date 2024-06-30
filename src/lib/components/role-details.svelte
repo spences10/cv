@@ -1,52 +1,52 @@
 <script lang="ts">
-	import { format, intervalToDuration, isValid } from 'date-fns'
+	import { format, intervalToDuration, isValid } from 'date-fns';
 
 	const { position, company, startDate, endDate } = $props<{
-		position: string
-		company: string
-		startDate: string | number | Date
-		endDate: string | number | Date | null
-	}>()
+		position: string;
+		company: string;
+		startDate: string | number | Date;
+		endDate: string | number | Date | null;
+	}>();
 
 	const formatDates = (
 		startDate: string | number | Date,
 		endDate: string | number | Date,
 	) => {
-		const formattedStart = format(new Date(startDate), 'MMM yyyy')
+		const formattedStart = format(new Date(startDate), 'MMM yyyy');
 		const formattedEndDate = () => {
 			if (isValid(new Date(endDate))) {
-				return format(new Date(endDate), 'MMM yyyy')
+				return format(new Date(endDate), 'MMM yyyy');
 			} else {
-				return 'Present'
+				return 'Present';
 			}
-		}
-		const intervalEndDate = endDate === '' ? new Date() : endDate
+		};
+		const intervalEndDate = endDate === '' ? new Date() : endDate;
 		const { years, months } = intervalToDuration({
 			start: new Date(startDate),
 			end: new Date(intervalEndDate),
-		})
+		});
 		const yearsAndMonths = () => {
 			const intervalYears = years
 				? `${years}${years === 1 ? 'yr' : 'yrs'}`
-				: ''
+				: '';
 			const intervalMonths = months
 				? `${months}${months === 1 ? 'mo' : 'mos'}`
-				: ''
+				: '';
 
 			if (intervalYears === '' && intervalMonths !== '') {
-				return `(${intervalMonths})`
+				return `(${intervalMonths})`;
 			}
 			if (intervalYears !== '' && intervalMonths === '') {
-				return `(${intervalYears})`
+				return `(${intervalYears})`;
 			}
 			if (intervalYears !== '' && intervalMonths !== '') {
-				return `(${intervalYears} ${intervalMonths})`
+				return `(${intervalYears} ${intervalMonths})`;
 			}
-			return ``
-		}
+			return ``;
+		};
 
-		return `${formattedStart} - ${formattedEndDate()} ${yearsAndMonths()}`
-	}
+		return `${formattedStart} - ${formattedEndDate()} ${yearsAndMonths()}`;
+	};
 </script>
 
 <div

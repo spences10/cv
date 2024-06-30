@@ -123,11 +123,11 @@ product development to improve product designs.
 Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
 _build a fast secure project that uses SvelteKit's features_.
 
-Jamstack Explorers Mission: "**[Building with SvelteKit and
-GraphCMS]**".
+Jamstack Explorers Mission: "**[Building with SvelteKit
+and GraphCMS]**".
 
-Recorded 26 [getting started videos] for the GraphCMS [examples repo]
-on GitHub.
+Recorded 26 [getting started videos] for the GraphCMS [examples repo] on
+GitHub.
 
 Deep dives on getting started with SvelteKit and Data Binding with
 Svelte.

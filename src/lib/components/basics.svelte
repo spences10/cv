@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { Email, Globe, Mobile } from '$lib/icons'
+	import { Email, Globe, Mobile } from '$lib/icons';
 
 	const { name, label, email, phone, website, imgSrc } = $props<{
-		name: string
-		label: string
-		email: string
-		phone: string
-		website: string
-		imgSrc: string
-	}>()
+		name: string;
+		label: string;
+		email: string;
+		phone: string;
+		website: string;
+		imgSrc: string;
+	}>();
 </script>
 
 <div class="flex items-end justify-between print:-mt-6">
