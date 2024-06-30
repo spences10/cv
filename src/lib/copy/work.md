@@ -29,7 +29,7 @@ supporting the Svelte community.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Application Team Lead"
@@ -57,7 +57,7 @@ Slashing CI/CD times using Vercel prebuilt assets
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Developer Relations Engineer"
@@ -93,7 +93,7 @@ Svelte Summit Fall 2022, Sweden.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Developer Advocate"
@@ -134,7 +134,7 @@ Svelte.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <!-- Links -->
 
@@ -183,7 +183,7 @@ Worked on custom built CMS for client using vanilla React.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Front-End Developer"
@@ -210,4 +210,4 @@ Working in an agile team in the delivery of initial sprints of the
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>

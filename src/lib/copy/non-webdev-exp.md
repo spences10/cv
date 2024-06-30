@@ -39,7 +39,7 @@ the static site generator JavaScript framework Gatsby.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="VBA Developer"
@@ -71,7 +71,7 @@ accountability and a heat map
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Senior Software Engineer"
@@ -104,7 +104,7 @@ Bloomberg API to Excel for importing into Oracle via SQL\*Loader.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="VBA Developer"
@@ -134,7 +134,7 @@ changes which also included writing the individual tests.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Support Developer"
@@ -182,7 +182,7 @@ interactive data mining tools.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Technical Project Manager"
@@ -214,7 +214,7 @@ Producing letters of variation to clients.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Technical Project Manager"
@@ -259,7 +259,7 @@ Excel and Access and acting as contact point for queries in the team.
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Business & Information Manager"
@@ -310,7 +310,7 @@ smarter working within the teams. Feedback on this was phenomenal
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails 
   position="Financial & Commercial Assistant"
@@ -349,4 +349,4 @@ allowances to appropriate cost centres].
 
 </section>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>

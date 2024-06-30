@@ -26,7 +26,7 @@ continually keen to improve existing skills and learn new ones.
 
 </article>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <!-- Links -->
 

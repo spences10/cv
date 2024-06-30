@@ -69,4 +69,4 @@
 >
 	{formatDates(startDate, endDate === null ? '' : endDate)}
 </span>
-<div class="mb-8 print:mb-2" />
+<div class="mb-8 print:mb-2"></div>

@@ -15,4 +15,4 @@
 </section>
 </article>
 
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0" />
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
