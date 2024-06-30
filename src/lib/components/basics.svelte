@@ -32,7 +32,7 @@
 <div class="mb-10 print:mb-4">
 	<span
 		class="divider before:bg-primary after:bg-primary print:hidden"
-	/>
+	></span>
 
 	<div class="mb-5 print:mb-1">
 		<h2
