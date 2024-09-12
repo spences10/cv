@@ -82,7 +82,7 @@ devDependencies:
     version: 5.0.0-next.240
   svelte-check:
     specifier: ^4.0.0
-    version: 4.0.1(svelte@5.0.0-next.240)(typescript@5.5.4)
+    version: 4.0.2(svelte@5.0.0-next.240)(typescript@5.5.4)
   tailwindcss:
     specifier: ^3.4.10
     version: 3.4.10
@@ -125,7 +125,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.0.1
+      picocolors: 1.1.0
     dev: true
 
   /@babel/helper-validator-identifier@7.24.7:
@@ -140,7 +140,7 @@ packages:
       '@babel/helper-validator-identifier': 7.24.7
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
     dev: true
 
   /@babel/runtime@7.24.7:
@@ -3451,8 +3451,8 @@ packages:
     resolution: {integrity: sha512-BrS8WAvrdUs6nbXyZN/kABjLBcPFqA1QBnbpJQiRzxfdA/8XchNJmiRmcPFTElw5NA5k7AG/eYWjj91V+8+Heg==}
     dev: true
 
-  /svelte-check@4.0.1(svelte@5.0.0-next.240)(typescript@5.5.4):
-    resolution: {integrity: sha512-AuWnCZdREoOzMhoptHPUUPYUxLNdXSkoZnPnlv19SZJJimRzLmjjZLKsOiRB4AnhgX+56/WSEdvkWXI/q2BSsA==}
+  /svelte-check@4.0.2(svelte@5.0.0-next.240)(typescript@5.5.4):
+    resolution: {integrity: sha512-w2yqcG9ELJe2RJCnAvB7v0OgkHhL3czzz/tVoxGFfO6y4mOrF6QHCDhXijeXzsU7LVKEwWS3Qd9tza4JBuDxqA==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:
