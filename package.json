@@ -39,7 +39,7 @@
 		"prettier": "^3.3.3",
 		"prettier-plugin-svelte": "^3.2.7",
 		"prettier-plugin-tailwindcss": "^0.6.8",
-		"remark-external-links": "^9.0.1",
+		"remark-external-links": "^10.0.0",
 		"svead": "^0.0.4",
 		"svelte": "^5.0.0-next.1",
 		"svelte-check": "^4.0.4",
