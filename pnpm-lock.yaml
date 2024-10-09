@@ -52,7 +52,7 @@ devDependencies:
     version: 3.7.2
   globals:
     specifier: ^15.10.0
-    version: 15.10.0
+    version: 15.11.0
   jsdom:
     specifier: ^25.0.1
     version: 25.0.1
@@ -2359,8 +2359,8 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
-  /globals@15.10.0:
-    resolution: {integrity: sha512-tqFIbz83w4Y5TCbtgjZjApohbuh7K9BxGYFm7ifwDR240tvdb7P9x+/9VvUKlmkPoiknoJtanI8UOrqxS3a7lQ==}
+  /globals@15.11.0:
+    resolution: {integrity: sha512-yeyNSjdbyVaWurlwCpcA6XNBrHTMIeDdj0/hnvX/OLJ9ekOXYbLsLinH/MucQyGvNnXhidTdNhTtJaffL2sMfw==}
     engines: {node: '>=18'}
     dev: true
 
