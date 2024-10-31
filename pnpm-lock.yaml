@@ -57,8 +57,8 @@ devDependencies:
     specifier: ^25.0.1
     version: 25.0.1
   mdsvex:
-    specifier: ^0.11.2
-    version: 0.11.2(svelte@5.1.9)
+    specifier: ^0.12.0
+    version: 0.12.3(svelte@5.1.9)
   prettier:
     specifier: ^3.3.3
     version: 3.3.3
@@ -2651,8 +2651,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
 
-  /mdsvex@0.11.2(svelte@5.1.9):
-    resolution: {integrity: sha512-Y4ab+vLvTJS88196Scb/RFNaHMHVSWw6CwfsgWIQP8f42D57iDII0/qABSu530V4pkv8s6T2nx3ds0MC1VwFLA==}
+  /mdsvex@0.12.3(svelte@5.1.9):
+    resolution: {integrity: sha512-C/uIJamjNo5PHHnR3JHqsBPoLcfUBpzRmAEB6FLMXI/s7XHOceswjDMKqSPEW2WHmYpKm0taZ3U20GSyhMridA==}
     peerDependencies:
       svelte: ^3.56.0 || ^4.0.0 || ^5.0.0-next.120
     dependencies:
