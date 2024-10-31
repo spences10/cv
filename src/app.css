@@ -1,33 +1,26 @@
-@tailwind base;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-/* Scrollbar styles */
-
-/* Firefox */
+/* 
+Scrollbar styles:
+	scrollbar-color Two valid colors. thumb and track
+	scrollbar-gutter padding when there's no scrollbar
+	scrollbar-width auto | thin | none
+*/
 * {
 	scrollbar-width: thin;
-	scrollbar-color: hsl(var(--s)) hsl(var(--p));
+	scrollbar-color: oklch(var(--s)) oklch(var(--p)) !important;
 }
 
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-	width: 15px;
+::-webkit-scrollbar-track {
+	background: oklch(var(--p));
 }
 
-*::-webkit-scrollbar-track {
-	background: hsl(var(--p));
-	border-radius: 5px;
+::-webkit-scrollbar-thumb {
+	background-color: oklch(var(--s));
 }
-
-*::-webkit-scrollbar-thumb {
-	background-color: hsl(var(--s));
-	border-radius: 14px;
-	border: 3px solid hsl(var(--p));
-}
-
-@tailwind components;
 
 .all-prose {
 	@apply prose prose-lg lg:prose-xl print:prose-sm print:text-black;
 }
-
-@tailwind utilities;

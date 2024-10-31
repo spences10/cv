@@ -10,7 +10,7 @@
 	let paymentPointer = `$ilp.uphold.com/bzPBWkMBzLmN`;
 </script>
 
-<Head {title} {description} {url} {paymentPointer} />
+<!-- <Head {title} {description} {url} {paymentPointer} /> -->
 
 <Basics />
 <Work />

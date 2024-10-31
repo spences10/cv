@@ -8,11 +8,7 @@
 	import { themeChange } from 'theme-change';
 	import '../app.css';
 
-	interface Props {
-		children?: import('svelte').Snippet;
-	}
-
-	let { children }: Props = $props();
+	let { children } = $props();
 
 	const { PUBLIC_FATHOM_ID, PUBLIC_FATHOM_URL } = env;
 

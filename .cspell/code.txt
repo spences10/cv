@@ -1,2 +1,5 @@
 nocheck
+noopener
+noreferrer
+rehype
 webdev

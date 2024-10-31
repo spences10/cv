@@ -1,4 +1,4 @@
-import { render, screen, cleanup } from '@testing-library/svelte';
+import { cleanup, render, screen } from '@testing-library/svelte';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import Basics from './basics.svelte';
 

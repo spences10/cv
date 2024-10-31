@@ -1,8 +1,8 @@
-const daisyui = require('daisyui');
-const typography = require('@tailwindcss/typography');
+import typography from '@tailwindcss/typography';
+import daisyui from 'daisyui';
+import type { Config } from 'tailwindcss';
 
-/** @type {import('tailwindcss').Config}*/
-const config = {
+export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
@@ -10,11 +10,11 @@ const config = {
 			typography: {
 				DEFAULT: {
 					css: {
-						maxWidth: null,
-					},
-				},
-			},
-		},
+						maxWidth: null
+					}
+				}
+			}
+		}
 	},
 
 	plugins: [typography, daisyui],
@@ -35,9 +35,7 @@ const config = {
 			'light',
 			'night',
 			'synthwave',
-			'wireframe',
-		],
-	},
-};
-
-module.exports = config;
+			'wireframe'
+		]
+	}
+} satisfies Config;
