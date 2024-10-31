@@ -6,13 +6,13 @@ settings:
 
 devDependencies:
   '@playwright/test':
-    specifier: ^1.45.3
+    specifier: ^1.48.2
     version: 1.48.2
   '@sveltejs/adapter-auto':
-    specifier: ^3.0.0
+    specifier: ^3.3.1
     version: 3.3.1(@sveltejs/kit@2.7.3)
   '@sveltejs/kit':
-    specifier: ^2.0.0
+    specifier: ^2.7.3
     version: 2.7.3(@sveltejs/vite-plugin-svelte@4.0.0)(svelte@5.1.9)(vite@5.4.10)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^4.0.0
@@ -24,7 +24,7 @@ devDependencies:
     specifier: ^5.2.4
     version: 5.2.4(svelte@5.1.9)(vite@5.4.10)(vitest@2.1.4)
   '@types/eslint':
-    specifier: ^9.6.0
+    specifier: ^9.6.1
     version: 9.6.1
   autoprefixer:
     specifier: ^10.4.20
@@ -39,19 +39,19 @@ devDependencies:
     specifier: ^4.1.0
     version: 4.1.0
   eslint:
-    specifier: ^9.7.0
+    specifier: ^9.13.0
     version: 9.13.0
   eslint-config-prettier:
     specifier: ^9.1.0
     version: 9.1.0(eslint@9.13.0)
   eslint-plugin-svelte:
-    specifier: ^2.36.0
+    specifier: ^2.46.0
     version: 2.46.0(eslint@9.13.0)(svelte@5.1.9)
   fathom-client:
     specifier: ^3.7.2
     version: 3.7.2
   globals:
-    specifier: ^15.0.0
+    specifier: ^15.11.0
     version: 15.11.0
   jsdom:
     specifier: ^25.0.1
@@ -60,10 +60,10 @@ devDependencies:
     specifier: ^0.11.2
     version: 0.11.2(svelte@5.1.9)
   prettier:
-    specifier: ^3.3.2
+    specifier: ^3.3.3
     version: 3.3.3
   prettier-plugin-svelte:
-    specifier: ^3.2.6
+    specifier: ^3.2.7
     version: 3.2.7(prettier@3.3.3)(svelte@5.1.9)
   prettier-plugin-tailwindcss:
     specifier: ^0.6.5
@@ -75,28 +75,28 @@ devDependencies:
     specifier: ^0.0.13
     version: 0.0.13(svelte@5.1.9)
   svelte:
-    specifier: ^5.0.0
+    specifier: ^5.1.9
     version: 5.1.9
   svelte-check:
-    specifier: ^4.0.0
+    specifier: ^4.0.5
     version: 4.0.5(svelte@5.1.9)(typescript@5.6.3)
   tailwindcss:
-    specifier: ^3.4.9
+    specifier: ^3.4.14
     version: 3.4.14
   theme-change:
     specifier: ^2.5.0
     version: 2.5.0
   typescript:
-    specifier: ^5.0.0
+    specifier: ^5.6.3
     version: 5.6.3
   typescript-eslint:
-    specifier: ^8.0.0
+    specifier: ^8.12.2
     version: 8.12.2(eslint@9.13.0)(typescript@5.6.3)
   vite:
-    specifier: ^5.0.3
+    specifier: ^5.4.10
     version: 5.4.10
   vitest:
-    specifier: ^2.0.4
+    specifier: ^2.1.4
     version: 2.1.4(jsdom@25.0.1)
 
 packages:
