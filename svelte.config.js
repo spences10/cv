@@ -10,6 +10,7 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
+			extensions: ['.md'],
 			smartypants: true,
 			remarkPlugins: [
 				[
