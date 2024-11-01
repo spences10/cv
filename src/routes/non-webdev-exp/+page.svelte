@@ -2,15 +2,19 @@
 	import { page } from '$app/stores';
 	import { authorName, siteName } from '$lib/config';
 	import { NonWebDevExp, References } from '$lib/copy';
-	import { Head } from 'svead';
+	import { Head, type SeoConfig } from 'svead';
 
-	let title = `Non Web Development Related Experience · ${siteName}`;
-	let description = `Relevant past experience for ${authorName}`;
-	let url = $page.url.toString();
-	let paymentPointer = `$ilp.uphold.com/bzPBWkMBzLmN`;
+	const seo_config: SeoConfig = {
+		title: `Non Web Development Related Experience · ${siteName}`,
+		description: `Relevant past experience for ${authorName}`,
+		url: $page.url.href,
+		site_name: siteName,
+		author_name: authorName,
+		payment_pointer: '$ilp.uphold.com/bzPBWkMBzLmN',
+	};
 </script>
 
-<!-- <Head {title} {description} {url} {paymentPointer} /> -->
+<Head {seo_config} />
 
 <NonWebDevExp />
 <References />
