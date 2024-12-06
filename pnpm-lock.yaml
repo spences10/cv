@@ -10,10 +10,10 @@ devDependencies:
     version: 1.49.0
   '@sveltejs/adapter-auto':
     specifier: ^3.3.1
-    version: 3.3.1(@sveltejs/kit@2.8.1)
+    version: 3.3.1(@sveltejs/kit@2.8.3)
   '@sveltejs/kit':
     specifier: ^2.8.1
-    version: 2.8.1(@sveltejs/vite-plugin-svelte@4.0.1)(svelte@5.6.2)(vite@5.4.11)
+    version: 2.8.3(@sveltejs/vite-plugin-svelte@4.0.1)(svelte@5.6.2)(vite@5.4.11)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^4.0.1
     version: 4.0.1(svelte@5.6.2)(vite@5.4.11)
@@ -1009,17 +1009,17 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.8.1):
+  /@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.8.3):
     resolution: {integrity: sha512-5Sc7WAxYdL6q9j/+D0jJKjGREGlfIevDyHSQ2eNETHcB1TKlQWHcAo8AS8H1QdjNvSXpvOwNjykDUHPEAyGgdQ==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
     dependencies:
-      '@sveltejs/kit': 2.8.1(@sveltejs/vite-plugin-svelte@4.0.1)(svelte@5.6.2)(vite@5.4.11)
+      '@sveltejs/kit': 2.8.3(@sveltejs/vite-plugin-svelte@4.0.1)(svelte@5.6.2)(vite@5.4.11)
       import-meta-resolve: 4.1.0
     dev: true
 
-  /@sveltejs/kit@2.8.1(@sveltejs/vite-plugin-svelte@4.0.1)(svelte@5.6.2)(vite@5.4.11):
-    resolution: {integrity: sha512-uuOfFwZ4xvnfPsiTB6a4H1ljjTUksGhWnYq5X/Y9z4x5+3uM2Md8q/YVeHL+7w+mygAwoEFdgKZ8YkUuk+VKww==}
+  /@sveltejs/kit@2.8.3(@sveltejs/vite-plugin-svelte@4.0.1)(svelte@5.6.2)(vite@5.4.11):
+    resolution: {integrity: sha512-DVBVwugfzzn0SxKA+eAmKqcZ7aHZROCHxH7/pyrOi+HLtQ721eEsctGb9MkhEuqj6q/9S/OFYdn37vdxzFPdvw==}
     engines: {node: '>=18.13'}
     hasBin: true
     requiresBuild: true
@@ -1032,10 +1032,10 @@ packages:
       '@types/cookie': 0.6.0
       cookie: 0.6.0
       devalue: 5.1.1
-      esm-env: 1.1.4
+      esm-env: 1.2.1
       import-meta-resolve: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.30.12
+      magic-string: 0.30.14
       mrmime: 2.0.0
       sade: 1.8.1
       set-cookie-parser: 2.7.1
@@ -2098,10 +2098,6 @@ packages:
       optionator: 0.9.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /esm-env@1.1.4:
-    resolution: {integrity: sha512-oO82nKPHKkzIj/hbtuDYy/JHqBHFlMIW36SDiPCVsj87ntDLcWN+sJ1erdVryd4NxODacFTsdrIE3b7IamqbOg==}
     dev: true
 
   /esm-env@1.2.1:
