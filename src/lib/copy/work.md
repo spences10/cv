@@ -3,6 +3,59 @@
 </script>
 
 <RoleDetails 
+  position="Application Team Lead"
+  company="XtendOps"
+  startDate="2023-09-11"
+  endDate="" 
+/>
+
+<section class='all-prose mb-8'>
+
+### Summary
+
+Technical leader overseeing a sophisticated SvelteKit monorepo
+ecosystem powering multiple customer-facing applications. Primary
+architect for core infrastructure decisions and technical standards,
+while mentoring and growing engineering teams across multiple product
+areas. Responsible for code quality, security standards, and technical
+architecture decisions across the platform, driving both team
+excellence and product innovation through hands-on leadership and
+strategic technical planning.
+
+### Highlights
+
+Leading development teams across Customer Portal (8 developers) and
+Smart Agent (4 developers) projects in a Svelte monorepo environment,
+focusing on technical excellence and team growth
+
+Architected and maintained a comprehensive UI component package used
+across multiple applications, including development of a showcase
+application for component documentation and usage examples
+
+Spearheaded significant infrastructure improvements including
+implementation of Vercel CLI in GitHub workflows, resulting in
+optimized build times and deployment efficiency
+
+Architected and implementing Trigger.dev integration for handling
+long-running processes, improving platform reliability and
+time-to-detection for critical issues
+
+Established robust code review processes as monorepo code owner,
+implementing Svelte best practices and security standards across all
+projects
+
+Driving continuous improvement through bi-weekly one-on-ones,
+strategic project allocation for skill development, and regular
+knowledge sharing sessions
+
+Leading technical initiatives including SDK adapter streamlining,
+agent builder improvements, and preparation for Svelte 5 migration
+
+</section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
+
+<RoleDetails 
   position="Consultant"
   company="OES Technology"
   startDate="2021-04-26"
@@ -26,34 +79,6 @@ remote).
 Continually nurturing and building relationships with community and
 industry leaders. A demonstrable deep commitment to educating and
 supporting the Svelte community.
-
-</section>
-
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
-
-<RoleDetails 
-  position="Application Team Lead"
-  company="XtendOps"
-  startDate="2023-09-11"
-  endDate="" 
-/>
-
-<section class='all-prose mb-8'>
-
-### Summary
-
-Oversee a large SvelteKit monorepo codebase. Responsibilities include
-leading a team of talented developers and ensuring best practices
-throughout the development lifecycle.
-
-Code owner across several apps ensuring code quality and consistency
-working with the team via Slack and GitHub.
-
-### Highlights
-
-Implementation of a UI package for multiple applications
-
-Slashing CI/CD times using Vercel prebuilt assets
 
 </section>
 
@@ -123,11 +148,11 @@ product development to improve product designs.
 Jamstack Conf 2021 Workshop, **"Build with SvelteKit and GraphQL"**
 _build a fast secure project that uses SvelteKit's features_.
 
-Jamstack Explorers Mission: "**[Building with SvelteKit
-and GraphCMS]**".
+Jamstack Explorers Mission: "**[Building with SvelteKit and
+GraphCMS]**".
 
-Recorded 26 [getting started videos] for the GraphCMS [examples repo] on
-GitHub.
+Recorded 26 [getting started videos] for the GraphCMS [examples repo]
+on GitHub.
 
 Deep dives on getting started with SvelteKit and Data Binding with
 Svelte.
