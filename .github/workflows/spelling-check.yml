@@ -18,7 +18,7 @@ jobs:
           node-version: 20.x
       - uses: pnpm/action-setup@v4.0.0
         with:
-          version: 8.0.0
+          version: 9.0.0
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
       - name: Check spelling
