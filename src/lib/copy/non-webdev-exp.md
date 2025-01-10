@@ -244,10 +244,9 @@ processes, standards tools and resources.
 
 ### Highlights
 
-Most recent project [Financial Crime Unit Sanctions Workflow
-Database (Workflow Tool)] winning a Gold ROSCA [Barclays internal
-award for excellence formerly known as a RAFTA] award for process
-enhancement.
+Most recent project [Financial Crime Unit Sanctions Workflow Database
+(Workflow Tool)] winning a Gold ROSCA [Barclays internal award for
+excellence formerly known as a RAFTA] award for process enhancement.
 
 Redeveloping two key systems within the team, both of which had
 reached the end of their current lifecycle. Both projects were MS
@@ -304,9 +303,10 @@ plan for Larger Business sector found on the Business Banking Risk
 Learning intranet.
 
 Construction of the Sanctioners Toolkit also won a Silver RAFTA, this
-also was delivered within a tight timescale [two weeks!] which has also
-been adopted by all the GLT staff as an essential piece of kit enabling
-smarter working within the teams. Feedback on this was phenomenal
+also was delivered within a tight timescale [two weeks!] which has
+also been adopted by all the GLT staff as an essential piece of kit
+enabling smarter working within the teams. Feedback on this was
+phenomenal
 
 </section>
 

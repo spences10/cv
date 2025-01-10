@@ -1,6 +1,7 @@
 {
 	"name": "cv",
-	"version": "0.4.0",
+	"private": true,
+	"version": "0.5.0",
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
@@ -11,19 +12,19 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run && npm run test:integration",
-		"test:integration": "playwright test",
+		"test": "npm run test:unit -- --run && npm run test:e2e",
+		"test:e2e": "playwright test",
 		"test:ci": "vitest run",
 		"cspell": "cspell '**/*.md' --config cspell.json --wordsOnly"
 	},
 	"devDependencies": {
+		"@eslint/compat": "^1.2.4",
 		"@playwright/test": "^1.49.1",
 		"@sveltejs/adapter-auto": "^3.3.1",
 		"@sveltejs/kit": "^2.15.2",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/typography": "^0.5.16",
 		"@testing-library/svelte": "^5.2.6",
-		"@types/eslint": "^9.6.1",
 		"autoprefixer": "^10.4.20",
 		"cspell": "^8.17.1",
 		"daisyui": "^4.12.23",
