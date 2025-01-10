@@ -31,7 +31,7 @@ jobs:
         with:
           node-version: 20.x
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
       - name: Install playwright browsers
         run: npx playwright install --with-deps
       - name: Test

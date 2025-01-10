@@ -20,6 +20,6 @@ jobs:
         with:
           version: 9.0.0
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
       - name: Check spelling
         run: pnpm run cspell
