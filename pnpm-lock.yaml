@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  cssstyle@4.2.1:
+    hash: cmsyhro4eg364f72h7tdxxy7uq
+    path: patches/cssstyle@4.2.1/fix-esm-import.patch
+
 importers:
 
   .:
@@ -3580,7 +3585,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  cssstyle@4.2.1:
+  cssstyle@4.2.1(patch_hash=cmsyhro4eg364f72h7tdxxy7uq):
     dependencies:
       '@asamuzakjp/css-color': 2.8.2
       rrweb-cssom: 0.8.0
@@ -4026,7 +4031,7 @@ snapshots:
 
   jsdom@26.0.0:
     dependencies:
-      cssstyle: 4.2.1
+      cssstyle: 4.2.1(patch_hash=cmsyhro4eg364f72h7tdxxy7uq)
       data-urls: 5.0.0
       decimal.js: 10.4.3
       form-data: 4.0.1

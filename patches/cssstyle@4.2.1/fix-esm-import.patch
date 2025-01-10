@@ -1,0 +1,19 @@
+diff --git a/lib/parsers.js b/lib/parsers.js
+index 123456..789012 100644
+--- a/lib/parsers.js
++++ b/lib/parsers.js
+@@ -4,7 +4,13 @@
+  ********************************************************************/
+ 'use strict';
+ 
+-const { cssCalc, isColor, resolve } = require('@asamuzakjp/css-color');
++let cssCalc, isColor, resolve;
++
++import('@asamuzakjp/css-color').then(module => {
++  cssCalc = module.cssCalc;
++  isColor = module.isColor;
++  resolve = module.resolve;
++}).catch(console.error);
+ 
+ exports.TYPES = {
+   INTEGER: 1,
