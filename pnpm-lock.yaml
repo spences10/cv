@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   cssstyle@4.2.1:
-    hash: cmsyhro4eg364f72h7tdxxy7uq
+    hash: 9ce1165a34996f11acea3bab2457229d5665e8a78cc099aa3b8414a3013d9647
     path: patches/cssstyle@4.2.1/fix-esm-import.patch
 
 importers:
@@ -33,7 +33,7 @@ importers:
         version: 0.5.16(tailwindcss@3.4.17)
       '@testing-library/svelte':
         specifier: ^5.2.6
-        version: 5.2.6(svelte@5.19.6)(vite@6.0.11(jiti@1.21.7)(yaml@2.7.0))(vitest@3.0.4(jiti@1.21.7)(jsdom@26.0.0)(yaml@2.7.0))
+        version: 5.2.7(svelte@5.19.6)(vite@6.0.11(jiti@1.21.7)(yaml@2.7.0))(vitest@3.0.4(jiti@1.21.7)(jsdom@26.0.0)(yaml@2.7.0))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -128,8 +128,8 @@ packages:
     resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/runtime@7.26.0':
-    resolution: {integrity: sha512-FDSOghenHTiToteC/QRlv2q3DhPZ/oOXTBoirfWNx1Cx3TMVcGWQtMMmQcSvb/JjpNeGzx8Pq/b4fKEJuWm1sw==}
+  '@babel/runtime@7.26.7':
+    resolution: {integrity: sha512-AOPI3D+a8dXnja+iwsUqGRjr1BbZIe771sXdapOtYI531gSqpi92vXivKcq2asu/DFpdl1ceFAKZyRzK2PCVcQ==}
     engines: {node: '>=6.9.0'}
 
   '@cspell/cspell-bundled-dicts@8.17.3':
@@ -771,8 +771,8 @@ packages:
     resolution: {integrity: sha512-pemlzrSESWbdAloYml3bAJMEfNh1Z7EduzqPKprCH5S341frlpYnUEW0H72dLxa6IsYr+mPno20GiSm+h9dEdQ==}
     engines: {node: '>=18'}
 
-  '@testing-library/svelte@5.2.6':
-    resolution: {integrity: sha512-1Y8cEg/BtV4J6g9irkY0ksz+ueDFYLiikjTLiqvQPkOUeDzR4gg2zECBf8yrOrCy3e2TAOYMcaysFa0bQMyk1w==}
+  '@testing-library/svelte@5.2.7':
+    resolution: {integrity: sha512-aGhUaFmEXEVost4QOsbHUUbHLwi7ZZRRxAHFDO2Cmr0BZD3/3+XvaYEPq70Rdw0NRNjdqZHdARBEcrCOkPuAqw==}
     engines: {node: '>= 10'}
     peerDependencies:
       svelte: ^3 || ^4 || ^5 || ^5.0.0-next.0
@@ -2401,7 +2401,7 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.25.9': {}
 
-  '@babel/runtime@7.26.0':
+  '@babel/runtime@7.26.7':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -2929,7 +2929,7 @@ snapshots:
   '@testing-library/dom@10.4.0':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@babel/runtime': 7.26.0
+      '@babel/runtime': 7.26.7
       '@types/aria-query': 5.0.4
       aria-query: 5.3.0
       chalk: 4.1.2
@@ -2937,7 +2937,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/svelte@5.2.6(svelte@5.19.6)(vite@6.0.11(jiti@1.21.7)(yaml@2.7.0))(vitest@3.0.4(jiti@1.21.7)(jsdom@26.0.0)(yaml@2.7.0))':
+  '@testing-library/svelte@5.2.7(svelte@5.19.6)(vite@6.0.11(jiti@1.21.7)(yaml@2.7.0))(vitest@3.0.4(jiti@1.21.7)(jsdom@26.0.0)(yaml@2.7.0))':
     dependencies:
       '@testing-library/dom': 10.4.0
       svelte: 5.19.6
@@ -3352,7 +3352,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  cssstyle@4.2.1(patch_hash=cmsyhro4eg364f72h7tdxxy7uq):
+  cssstyle@4.2.1(patch_hash=9ce1165a34996f11acea3bab2457229d5665e8a78cc099aa3b8414a3013d9647):
     dependencies:
       '@asamuzakjp/css-color': 2.8.2
       rrweb-cssom: 0.8.0
@@ -3770,7 +3770,7 @@ snapshots:
 
   jsdom@26.0.0:
     dependencies:
-      cssstyle: 4.2.1(patch_hash=cmsyhro4eg364f72h7tdxxy7uq)
+      cssstyle: 4.2.1(patch_hash=9ce1165a34996f11acea3bab2457229d5665e8a78cc099aa3b8414a3013d9647)
       data-urls: 5.0.0
       decimal.js: 10.4.3
       form-data: 4.0.1
