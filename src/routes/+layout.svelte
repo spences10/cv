@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { env } from '$env/dynamic/public';
-	import { Basics, ThemeSwitch } from '$lib/components';
+	import { Basics, ThemeSelect } from '$lib/components';
 	import * as Fathom from 'fathom-client';
 	import { onMount } from 'svelte';
 	import '../app.css';
@@ -19,7 +19,7 @@
 	});
 
 	$effect(() => {
-		$page.url.pathname, browser && Fathom.trackPageview();
+		page.url.pathname, browser && Fathom.trackPageview();
 	});
 
 	const print_page = () => {
@@ -36,7 +36,7 @@
 	>
 		Download
 	</button>
-	<ThemeSwitch />
+	<ThemeSelect />
 </header>
 
 <main
