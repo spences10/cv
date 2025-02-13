@@ -53,7 +53,7 @@
 	class="mb-2 flex flex-col justify-between md:flex-row md:items-end print:mb-0 print:flex-row"
 >
 	<h2
-		class="text-4xl font-bold tracking-wide text-primary print:text-2xl print:text-black"
+		class="text-primary text-4xl font-bold tracking-wide print:text-2xl print:text-black"
 	>
 		{position}
 	</h2>
@@ -65,7 +65,7 @@
 </div>
 
 <span
-	class="font-bold text-accent print:text-xs print:font-medium print:text-black"
+	class="text-accent font-bold print:text-xs print:font-medium print:text-black"
 >
 	{formatDates(startDate, endDate === null ? '' : endDate)}
 </span>

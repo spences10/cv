@@ -1,7 +1,7 @@
 <select
 	data-choose-theme
 	aria-label="Theme Select"
-	class="select select-bordered select-primary select-xs bg-base-100 uppercase text-base-content print:hidden"
+	class="select select-bordered select-primary select-xs bg-base-100 text-base-content uppercase print:hidden"
 >
 	<option disabled selected>Theme</option>
 	<option value="aqua">Aqua</option>
