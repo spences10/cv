@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { authorName, siteName, siteUrl } from '$lib/config';
 	import { Basics, Interests, Work } from '$lib/copy';
 	import {
@@ -12,7 +12,7 @@
 	const seo_config: SeoConfig = {
 		title: `Web Development Related Experience · ${siteName}`,
 		description: `Relevant web development experience for JavaScript developer ${authorName}`,
-		url: $page.url.href,
+		url: page.url.href,
 		site_name: siteName,
 		author_name: authorName,
 		payment_pointer: '$ilp.uphold.com/bzPBWkMBzLmN',

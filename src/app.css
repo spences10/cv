@@ -1,26 +1,42 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
 
-/* 
-Scrollbar styles:
-	scrollbar-color Two valid colors. thumb and track
-	scrollbar-gutter padding when there's no scrollbar
-	scrollbar-width auto | thin | none
-*/
-* {
-	scrollbar-width: thin;
-	scrollbar-color: oklch(var(--s)) oklch(var(--p)) !important;
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		word-break: break-word;
+	}
+
+	::selection {
+		color: var(--color-primary-content);
+		background: var(--color-primary);
+	}
+
+	/* Scrollbar styles using modern syntax */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-secondary) var(--color-primary) !important;
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--color-primary) !important;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: var(--color-secondary) !important;
+	}
 }
 
-::-webkit-scrollbar-track {
-	background: oklch(var(--p));
+/* Custom components */
+@layer components {
+	.all-prose {
+		@apply prose prose-lg lg:prose-xl prose-headings:scroll-mt-16 prose-a:text-primary prose-a:transition prose-a:hover:text-accent max-w-none;
+	}
 }
 
-::-webkit-scrollbar-thumb {
-	background-color: oklch(var(--s));
-}
-
-.all-prose {
-	@apply prose prose-lg lg:prose-xl print:prose-sm print:text-black;
+/* Plugin configurations */
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+	themes:
+		dracula, aqua, black, bumblebee, corporate, cupcake, cyberpunk,
+		dark, forest, halloween, light, night, synthwave, wireframe;
 }

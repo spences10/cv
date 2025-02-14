@@ -1,0 +1,16 @@
+export const themes = [
+	'dracula',
+	'aqua',
+	'black',
+	'bumblebee',
+	'corporate',
+	'cupcake',
+	'cyberpunk',
+	'dark',
+	'forest',
+	'halloween',
+	'light',
+	'night',
+	'synthwave',
+	'wireframe',
+];

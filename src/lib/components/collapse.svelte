@@ -1,6 +1,6 @@
 <div
 	data-theme="light"
-	class="collapse collapse-arrow mb-4 min-w-full rounded-box border border-base-300"
+	class="collapse-arrow rounded-box border-base-300 collapse mb-4 min-w-full border"
 >
 	<input type="checkbox" />
 	<div class="collapse-title text-xl font-medium">
