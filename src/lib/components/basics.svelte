@@ -21,7 +21,7 @@
 	{#if imgSrc !== undefined}
 		<div class="avatar print:hidden">
 			<div
-				class="mask mask-decagon hover:blur-0 h-24 w-24 transform blur filter transition"
+				class="mask mask-decagon h-24 w-24 blur transition-all duration-200 hover:blur-none"
 			>
 				<img src={imgSrc} alt={name} />
 			</div>
