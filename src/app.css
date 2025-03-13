@@ -37,6 +37,18 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
 	themes:
-		dracula, aqua, black, bumblebee, corporate, cupcake, cyberpunk,
-		dark, forest, halloween, light, night, synthwave, wireframe;
+		dracula,
+		aqua,
+		black,
+		bumblebee,
+		corporate,
+		cupcake,
+		cyberpunk,
+		dark,
+		forest,
+		halloween,
+		light --default,
+		night,
+		synthwave,
+		wireframe;
 }
