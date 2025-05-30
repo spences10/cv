@@ -36,7 +36,7 @@
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.8",
 		"cspell": "^8.19.3",
-		"daisyui": "5.0.37",
+		"daisyui": "5.0.43",
 		"date-fns": "^4.1.0",
 		"eslint": "^9.27.0",
 		"eslint-config-prettier": "^10.1.5",
