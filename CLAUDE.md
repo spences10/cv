@@ -2,6 +2,8 @@
 
 Unbreakable rules:
 
+<!-- cspell:ignore behavior -->
+
 - prioritize AI engineering positioning above all other technical
   skills
 - NEVER read, write, or access .env files - this is a critical
