@@ -10,6 +10,10 @@ jobs:
   unit-tests:
     name: Run unit tests
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.54.2-noble
+      options: --user 1001
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
@@ -25,8 +29,6 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
-      - name: Install browsers
-        run: pnpm exec playwright install --with-deps
       - name: Build
         run: pnpm run build
         env:
