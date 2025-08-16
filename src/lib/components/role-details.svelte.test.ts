@@ -1,6 +1,7 @@
-import { cleanup, render } from '@testing-library/svelte';
+import { page } from '@vitest/browser/context';
 import { differenceInMonths } from 'date-fns';
-import { afterEach, describe, expect, it } from 'vitest';
+import { describe, expect, it } from 'vitest';
+import { render } from 'vitest-browser-svelte';
 import RoleDetails from './role-details.svelte';
 
 describe('RoleDetails', () => {
@@ -11,27 +12,27 @@ describe('RoleDetails', () => {
 		endDate: new Date('2022-12-31'),
 	};
 
-	afterEach(() => {
-		cleanup();
+	it('renders the position and company', async () => {
+		render(RoleDetails, defaultProps);
+
+		const position = page.getByText('Software Developer');
+		const company = page.getByText('Tech Corp');
+
+		await expect.element(position).toBeInTheDocument();
+		await expect.element(company).toBeInTheDocument();
 	});
 
-	it('renders the position and company', () => {
-		const { getByText } = render(RoleDetails, { ...defaultProps });
+	it('formats dates correctly when both start and end dates are valid', async () => {
+		render(RoleDetails, defaultProps);
 
-		expect(getByText('Software Developer')).not.toBeNull();
-		expect(getByText('Tech Corp')).not.toBeNull();
+		const dateRange = page.getByText(
+			'Jan 2020 - Dec 2022 (2yrs 11mos)',
+		);
+		await expect.element(dateRange).toBeInTheDocument();
 	});
 
-	it('formats dates correctly when both start and end dates are valid', () => {
-		const { getByText } = render(RoleDetails, { ...defaultProps });
-
-		expect(
-			getByText('Jan 2020 - Dec 2022 (2yrs 11mos)'),
-		).not.toBeNull();
-	});
-
-	it('shows "Present" for an invalid end date', () => {
-		const { getByText } = render(RoleDetails, {
+	it('shows "Present" for an invalid end date', async () => {
+		render(RoleDetails, {
 			...defaultProps,
 			endDate: null,
 		});
@@ -44,39 +45,45 @@ describe('RoleDetails', () => {
 		const years = Math.floor(totalMonths / 12);
 		const months = totalMonths % 12;
 		const durationText =
-			months === 0 ? `${years}yrs` : `${years}yrs ${months}${months === 1 ? 'mo' : 'mos'}`;
+			months === 0
+				? `${years}yrs`
+				: `${years}yrs ${months}${months === 1 ? 'mo' : 'mos'}`;
 
-		expect(
-			getByText(`Jan 2020 - Present (${durationText})`),
-		).not.toBeNull();
+		const dateRange = page.getByText(
+			`Jan 2020 - Present (${durationText})`,
+		);
+		await expect.element(dateRange).toBeInTheDocument();
 	});
 
-	it('shows duration correctly for 1 year', () => {
-		const { getByText } = render(RoleDetails, {
+	it('shows duration correctly for 1 year', async () => {
+		render(RoleDetails, {
 			...defaultProps,
 			endDate: new Date('2021-01-01'),
 		});
 
-		expect(getByText('Jan 2020 - Jan 2021 (1yr)')).not.toBeNull();
+		const dateRange = page.getByText('Jan 2020 - Jan 2021 (1yr)');
+		await expect.element(dateRange).toBeInTheDocument();
 	});
 
-	it('shows duration correctly for 1 month', () => {
-		const { getByText } = render(RoleDetails, {
+	it('shows duration correctly for 1 month', async () => {
+		render(RoleDetails, {
 			...defaultProps,
 			startDate: new Date('2022-01-01'),
 			endDate: new Date('2022-02-01'),
 		});
 
-		expect(getByText('Jan 2022 - Feb 2022 (1mo)')).not.toBeNull();
+		const dateRange = page.getByText('Jan 2022 - Feb 2022 (1mo)');
+		await expect.element(dateRange).toBeInTheDocument();
 	});
 
-	it('shows duration correctly for a combination of years and months', () => {
-		const { getByText } = render(RoleDetails, {
+	it('shows duration correctly for a combination of years and months', async () => {
+		render(RoleDetails, {
 			...defaultProps,
 			startDate: new Date('2020-01-01'),
 			endDate: new Date('2021-02-01'),
 		});
 
-		expect(getByText('Jan 2020 - Feb 2021 (1yr 1mo)')).not.toBeNull();
+		const dateRange = page.getByText('Jan 2020 - Feb 2021 (1yr 1mo)');
+		await expect.element(dateRange).toBeInTheDocument();
 	});
 });
