@@ -1,15 +1,7 @@
-import { cleanup, render, screen } from '@testing-library/svelte';
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { page } from '@vitest/browser/context';
+import { describe, expect, it } from 'vitest';
+import { render } from 'vitest-browser-svelte';
 import Basics from './basics.svelte';
-
-// Mock $props
-vi.mock('svelte', async () => {
-	const actual = await vi.importActual('svelte');
-	return {
-		...actual,
-		$props: vi.fn(),
-	};
-});
 
 describe('Basics', () => {
 	// Define default props
@@ -22,28 +14,37 @@ describe('Basics', () => {
 		imgSrc: 'path/to/image.jpg',
 	};
 
-	afterEach(() => {
-		cleanup();
-	});
-
-	it('should render the name and label', () => {
+	it('should render the name and label', async () => {
 		render(Basics, { props: defaultProps });
 
-		expect(screen.getByText('John Doe')).toBeTruthy();
-		expect(screen.getByText('Software Developer')).toBeTruthy();
+		const name = page.getByText('John Doe');
+		const label = page.getByText('Software Developer');
+
+		await expect.element(name).toBeInTheDocument();
+		await expect.element(label).toBeInTheDocument();
 	});
 
-	it('should render the avatar if imgSrc is provided', () => {
+	it('should render the avatar if imgSrc is provided', async () => {
 		render(Basics, { props: defaultProps });
 
-		expect(screen.getByAltText('John Doe')).toBeTruthy();
+		const avatar = page.getByAltText('John Doe');
+		await expect.element(avatar).toBeInTheDocument();
 	});
 
-	it('should render email, phone, and website details', () => {
+	it('should render email, phone, and website details', async () => {
 		render(Basics, { props: defaultProps });
 
-		expect(screen.getByText('john@example.com')).toBeTruthy();
-		expect(screen.getByText('+1234567890')).toBeTruthy();
-		expect(screen.getByText('example.com')).toBeTruthy();
+		const email = page.getByRole('link', {
+			name: 'john@example.com',
+		});
+		const phone = page.getByText('+1234567890');
+		const website = page.getByRole('link', {
+			name: 'example.com',
+			exact: true,
+		});
+
+		await expect.element(email).toBeInTheDocument();
+		await expect.element(phone).toBeInTheDocument();
+		await expect.element(website).toBeInTheDocument();
 	});
 });
