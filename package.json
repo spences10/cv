@@ -49,7 +49,7 @@
 		"prettier-plugin-svelte": "^3.4.0",
 		"prettier-plugin-tailwindcss": "^0.6.14",
 		"rehype-external-links": "^3.0.0",
-		"svead": "^0.0.13",
+		"svead": "^0.0.15",
 		"svelte": "^5.39.5",
 		"svelte-check": "^4.3.2",
 		"tailwindcss": "^4.1.13",
