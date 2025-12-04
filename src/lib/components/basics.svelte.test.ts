@@ -1,6 +1,6 @@
-import { page } from 'vitest/browser';
 import { describe, expect, it } from 'vitest';
 import { render } from 'vitest-browser-svelte';
+import { page } from 'vitest/browser';
 import Basics from './basics.svelte';
 
 describe('Basics', () => {
@@ -15,7 +15,7 @@ describe('Basics', () => {
 	};
 
 	it('should render the name and label', async () => {
-		render(Basics, { props: defaultProps });
+		render(Basics, defaultProps);
 
 		const name = page.getByText('John Doe');
 		const label = page.getByText('Software Developer');
@@ -25,14 +25,14 @@ describe('Basics', () => {
 	});
 
 	it('should render the avatar if imgSrc is provided', async () => {
-		render(Basics, { props: defaultProps });
+		render(Basics, defaultProps);
 
 		const avatar = page.getByAltText('John Doe');
 		await expect.element(avatar).toBeInTheDocument();
 	});
 
 	it('should render email, phone, and website details', async () => {
-		render(Basics, { props: defaultProps });
+		render(Basics, defaultProps);
 
 		const email = page.getByRole('link', {
 			name: 'john@example.com',
