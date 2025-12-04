@@ -1,5 +1,6 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
+import { playwright } from '@vitest/browser-playwright';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -17,7 +18,7 @@ export default defineConfig({
 					testTimeout: 2000,
 					browser: {
 						enabled: true,
-						provider: 'playwright',
+						provider: playwright(),
 						// Multiple browser instances for better performance
 						// Uses single Vite server with shared caching
 						instances: [

@@ -1,4 +1,4 @@
-import { page } from '@vitest/browser/context';
+import { page } from 'vitest/browser';
 import { differenceInMonths } from 'date-fns';
 import { describe, expect, it } from 'vitest';
 import { render } from 'vitest-browser-svelte';
