@@ -30,7 +30,7 @@
 	<select
 		bind:value={current_theme}
 		data-choose-theme
-		class="select select-xs select-bordered select-primary w-full max-w-3xl text-xl capitalize"
+		class="select select-xs select-bordered select-primary w-full max-w-3xl capitalize"
 		onchange={set_theme}
 	>
 		<option value="" disabled={current_theme !== ''}>
