@@ -1,26 +1,19 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { themes } from '$lib/themes';
 
-	let current_theme = $state('');
-
-	$effect(() => {
-		if (typeof window !== 'undefined') {
-			const theme = window.localStorage.getItem('theme');
-			if (theme && themes.includes(theme)) {
-				document.documentElement.setAttribute('data-theme', theme);
-				current_theme = theme;
-			}
-		}
-	});
+	// Read from DOM since server already set it via hooks.server.ts
+	let current_theme = $state(
+		browser ? (document.documentElement.dataset.theme ?? '') : '',
+	);
 
 	function set_theme(event: Event) {
-		const select = event.target as HTMLSelectElement;
-		const theme = select.value;
+		const theme = (event.target as HTMLSelectElement).value;
 		if (themes.includes(theme)) {
 			const one_year = 60 * 60 * 24 * 365;
-			window.localStorage.setItem('theme', theme);
+			localStorage.setItem('theme', theme);
 			document.cookie = `theme=${theme}; max-age=${one_year}; path=/; SameSite=Lax`;
-			document.documentElement.setAttribute('data-theme', theme);
+			document.documentElement.dataset.theme = theme;
 			current_theme = theme;
 		}
 	}
