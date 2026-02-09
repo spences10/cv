@@ -39,8 +39,8 @@ importers:
         specifier: ^9.6.4
         version: 9.6.4
       daisyui:
-        specifier: 5.5.17
-        version: 5.5.17
+        specifier: 5.5.18
+        version: 5.5.18
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -1539,8 +1539,8 @@ packages:
     resolution: {integrity: sha512-2z+rWdzbbSZv6/rhtvzvqeZQHrBaqgogqt85sqFNbabZOuFbCVFb8kPeEtZjiKkbrm395irpNKiYeFeLiQnFPg==}
     engines: {node: '>=18'}
 
-  daisyui@5.5.17:
-    resolution: {integrity: sha512-Y8QWps/990Epp0Gn+7ReeALSXgwrd3W36waokJvHgqUdYx6t2sj0e1krW3+YqviBa57XTJqHJNTt8HMvcODL2Q==}
+  daisyui@5.5.18:
+    resolution: {integrity: sha512-VVzjpOitMGB6DWIBeRSapbjdOevFqyzpk9u5Um6a4tyId3JFrU5pbtF0vgjXDth76mJZbueN/j9Ok03SPrh/og==}
 
   data-uri-to-buffer@2.0.2:
     resolution: {integrity: sha512-ND9qDTLc6diwj+Xe5cdAgVTbLVdXbtxTJRXRhli8Mowuaan+0EJOtdqJ0QCHNSSPyoXGx9HX2/VMnKeC34AChA==}
@@ -3894,7 +3894,7 @@ snapshots:
       rrweb-cssom: 0.8.0
     optional: true
 
-  daisyui@5.5.17: {}
+  daisyui@5.5.18: {}
 
   data-uri-to-buffer@2.0.2: {}
 
