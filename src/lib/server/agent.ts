@@ -9,13 +9,16 @@ const SNAPSHOT = 'cv-agent';
 const DB_PATH = '/data/cv-agent.db';
 
 // Persistent sandbox — created once, reused for all requests
-let sandbox: Awaited<
-	ReturnType<InstanceType<typeof Daytona>['create']>
-> | null = null;
+type Sandbox = Awaited<ReturnType<InstanceType<typeof Daytona>['create']>>;
+let sandbox: Sandbox | null = null;
+let sandbox_promise: Promise<Sandbox> | null = null;
 let daytona_client: InstanceType<typeof Daytona> | null = null;
 
 async function get_sandbox() {
-	if (!sandbox) {
+	if (sandbox) return sandbox;
+	if (sandbox_promise) return sandbox_promise;
+
+	sandbox_promise = (async () => {
 		daytona_client = new Daytona({ apiKey: DAYTONA_API_KEY });
 		sandbox = await daytona_client.create(
 			{
@@ -25,8 +28,10 @@ async function get_sandbox() {
 			},
 			{ timeout: 60 },
 		);
-	}
-	return sandbox;
+		return sandbox;
+	})();
+
+	return sandbox_promise;
 }
 
 async function cleanup_sandbox() {
@@ -37,6 +42,7 @@ async function cleanup_sandbox() {
 			// best effort — sandbox may already be gone
 		}
 		sandbox = null;
+		sandbox_promise = null;
 		daytona_client = null;
 	}
 }
