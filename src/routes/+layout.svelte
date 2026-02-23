@@ -19,7 +19,7 @@
 	});
 
 	$effect(() => {
-		page.url.pathname, browser && Fathom.trackPageview();
+		(page.url.pathname, browser && Fathom.trackPageview());
 	});
 
 	const print_page = () => {
@@ -44,9 +44,8 @@
 >
 	<Basics
 		name="Scott Spence"
-		label="Senior Developer &amp; Community Leader"
+		label="Engineering Lead | AI Builder | Svelte Ambassador"
 		email="cv@scottspence.com"
-		phone="+44 0000 00 0000"
 		website="scottspence.com"
 		imgSrc="profile-pic.png"
 	/>

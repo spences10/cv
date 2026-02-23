@@ -2,83 +2,89 @@
   import { DD, Collapse, RoleDetails } from '$lib/components'
 </script>
 
-<RoleDetails 
+<RoleDetails
   position="Engineering Team Lead"
   company="XtendOps"
   startDate="2023-09-11"
-  endDate="" 
+  endDate="2026-02-23"
 />
 
 <section class='all-prose mb-8'>
 
 ### Summary
 
-Technical leader overseeing a sophisticated SvelteKit monorepo
-ecosystem powering multiple customer-facing applications. Primary
-architect for core infrastructure decisions and technical standards,
-while mentoring and growing engineering teams across multiple product
-areas. Responsible for code quality, security standards, and technical
-architecture decisions across the platform, driving both team
-excellence and product innovation through hands-on leadership and
-strategic technical planning.
+Engineering team lead for a SvelteKit monorepo ecosystem powering AI
+customer service agents. Led 12 developers across Customer Portal (8)
+and Smart Agent (4) teams. Primary architect for infrastructure,
+security, and AI integration decisions across the platform.
 
 ### Highlights
 
-Leading development teams across Customer Portal (8 developers) and
-Smart Agent (4 developers) projects in a Svelte monorepo environment,
-focusing on technical excellence and team growth
+Built claude-sdk-runtime, an AI customer service agent deployed on AWS
+ECS for enterprise clients. Reduced average handle time (AHT) by 40%
+through intelligent skill-based routing across chat, email, and SMS
+channels
 
-Architected and maintained a comprehensive UI component package used
-across multiple applications, including development of a showcase
-application for component documentation and usage examples
+Pioneered AI agent orchestration workflows with Claude Code. Built
+reusable engineering skills and coordinated multi-agent teams for
+parallel development across security, infrastructure, and architecture
+workstreams
 
-Spearheaded significant infrastructure improvements including
-implementation of Vercel CLI in GitHub workflows, resulting in
-optimized build times and deployment efficiency
+Led a major UI architecture decoupling, migrating the primary
+application from a shared monorepo UI package to shadcn-svelte.
+Resolved 928 build errors and unblocked 4 dependent applications to
+ship independently
 
-Architected and implementing Trigger.dev integration for handling
-long-running processes, improving platform reliability and
-time-to-detection for critical issues
+Migrated the agent builder to Svelte 5, establishing modern reactivity
+patterns that Claude Code adheres to when generating new code. This
+reduced bad practices creeping back into the codebase and freed up the
+team to move faster
 
-Established robust code review processes as monorepo code owner,
-implementing Svelte best practices and security standards across all
-projects
+Proactively evaluated Vite 8 / Rolldown / OXC toolchain ahead of
+release, benchmarking build performance and plugin compatibility to
+prepare the team for migration
 
-Driving continuous improvement through bi-weekly one-on-ones,
-strategic project allocation for skill development, and regular
-knowledge sharing sessions
-
-Leading technical initiatives including SDK adapter streamlining,
-agent builder improvements, and preparation for Svelte 5 migration
+Built reusable security middleware for ownership validation across all
+API routes, and automated GDPR-compliant trace cleanup for AI
+observability data
 
 </section>
 
 <span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
-<RoleDetails 
+<RoleDetails
   position="Consultant"
-  company="OES Technology"
+  company="OES Technology Ltd"
   startDate="2021-04-26"
-  endDate="" 
+  endDate=""
 />
 
 <section class='all-prose mb-8'>
 
 ### Summary
 
-Team lead and developer advocate that has played significant roles in
-increasing best practices, visibility and adoption of clients
-platforms.
+Independent consultancy providing contract engineering leadership,
+developer relations, and Svelte expertise to technology companies.
 
-A Svelte ambassador, organising monthly Svelte Society London events
-for <DD from="2021-11-14" /> now.
+Recognised by the Svelte core team as a Svelte Ambassador for
+sustained community contributions and helping grow a welcoming
+ecosystem. Co-founder and organiser of Svelte Society London, running
+monthly community events for <DD from="2021-11-14" />. International
+conference speaker at Connect Tech (Atlanta), CityJS, Modern
+Frontends, NXT Nordics (Oslo), and Jamstack Conf.
 
-International conference speaker. Workshop host (in person and
-remote).
+Technical content creator at scottspence.com with 1.4M+ page views,
+791K+ unique visitors across 244 posts, and 22K+ monthly readers.
+Writing about SvelteKit, TypeScript, AI tooling, and developer
+experience.
 
-Continually nurturing and building relationships with community and
-industry leaders. A demonstrable deep commitment to educating and
-supporting the Svelte community.
+Open source contributor. Notable projects include MCP Sequential
+Thinking Tools (550+ GitHub stars), Sveltest (Svelte testing docs
+built to generate AI coding assistant rules for CLAUDE.md, Cursor, and
+Windsurf, helping teams write effective tests faster), Svead
+(SvelteKit SEO metadata, used by Ashley Furniture), AudioMind (AI
+audio-to-chat with Claude and Deepgram), SvelteKit Embed, SkyKit, and
+DevHub CRM.
 
 </section>
 
@@ -113,8 +119,6 @@ Contribute code updates and bug fixes to Storyblok’s public projects
 ### Highlights
 
 Building with SvelteKit, main stage at Connect Tech 2022, Atlanta.
-
-Svelte Summit Fall 2022, Sweden.
 
 </section>
 

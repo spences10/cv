@@ -5,7 +5,7 @@
 		name: string;
 		label: string;
 		email: string;
-		phone: string;
+		phone?: string;
 		website: string;
 		imgSrc: string;
 	}>();
@@ -57,6 +57,7 @@
 			</dd>
 		</div>
 
+		{#if phone}
 		<div
 			data-tip="Please, email first."
 			class="tooltip tooltip-bottom print:hidden"
@@ -71,6 +72,7 @@
 				</span>
 			</dd>
 		</div>
+		{/if}
 
 		<div class="print:text-black">
 			<dt><span class="sr-only">Website</span></dt>

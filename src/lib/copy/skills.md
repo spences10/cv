@@ -3,29 +3,30 @@
 
 ## Web Development
 
-- HTML, CSS, JavaScript
-- React
-- Gatsby
-- Svelte
+- SvelteKit, Svelte 5
+- TypeScript, JavaScript
+- HTML, CSS, Tailwind
+- React, Node.js
 
 </section>
 <section>
 
-## CMS
+## AI & Tooling
 
-- GraphCMS
-- Contentful
-- Strapi
-- Sanity
+- Claude API, Agent SDK
+- MCP (Model Context Protocol)
+- Prompt Engineering
+- Langfuse, OpenTelemetry
 
 </section>
 <section>
 
-## SOURCE CONTROL
+## Infrastructure
 
-- Git
-- GitHub
-- Bitbucket
+- AWS ECS, Terraform
+- Vercel, GitHub Actions
+- Docker, Trigger.dev
+- Git, Monorepo (pnpm)
 
 </section>
 </article>

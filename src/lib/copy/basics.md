@@ -4,23 +4,26 @@
 
 <article class='all-prose'>
 
-Seasoned developer with <DD from="2005-11-01" /> of experience in the
-tech industry.
+<!-- prettier-ignore -->
+AI engineering leader and full-stack developer with <DD from="2016-06-15" /> of hands-on JavaScript experience and <DD from="2018-03-14" /> in commercial development teams.
 
-Expertise spans JavaScript, HTML, and CSS, and JavaScript frameworks
-with <DD from="2016-06-15" /> years of hands-on experience.
+I build AI-powered products, from customer service agent runtimes that
+reduced average handle time by 40%, to multi-agent orchestration
+systems and MCP tooling. I ship fast, lead teams, and care deeply
+about developer experience.
 
-Holds <DD from="2018-03-14" /> years of commercial experience in
-development teams, delivering projects across various frameworks like
-Svelte and React.
+Currently operating through OES Technology Ltd, specialising in
+SvelteKit, TypeScript, AI integration, and developer relations.
+Previously engineering team lead at XtendOps, leading 12 developers
+across two product teams in a SvelteKit monorepo powering AI customer
+service agents.
 
-Previous career of <DD from="2005-11-01" to="2018-03-08" /> as a
-[senior-level Analyst Developer], focusing on Microsoft Office
-automation for large financial organisations.
+<!-- prettier-ignore -->
+Co-founder of Svelte Society London (monthly events for <DD from="2021-11-14" />). International conference speaker (Connect Tech, Jamstack Conf). Svelte Ambassador.
 
-In addition to technical skills, a proven track record in leadership
-and advocacy roles. Passionate about using modern technology and
-continually keen to improve existing skills and learn new ones.
+Prior career of <DD from="2005-11-01" to="2018-03-08" /> as a
+[senior-level Analyst Developer], building Microsoft Office automation
+for large financial organisations.
 
 **Location**: UK (Swanley, Kent)
 
