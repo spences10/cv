@@ -19,7 +19,11 @@ across two product teams in a SvelteKit monorepo powering AI customer
 service agents.
 
 <!-- prettier-ignore -->
-Co-founder of Svelte Society London (monthly events for <DD from="2021-11-14" />). International conference speaker (Connect Tech, Jamstack Conf). Svelte Ambassador.
+Co-founder of Svelte Society London (monthly events for <DD from="2021-11-14" />). International conference speaker.
+
+Technical blogger at scottspence.com with 1.4M+ page views and 791K+
+unique visitors. Author of 20+ MCP (Model Context Protocol) tools
+with 1,200+ combined GitHub stars.
 
 Prior career of <DD from="2005-11-01" to="2018-03-08" /> as a
 [senior-level Analyst Developer], building Microsoft Office automation
