@@ -53,7 +53,7 @@ observability data
 <span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
 
 <RoleDetails
-  position="Consultant"
+  position="AI & Svelte Consultant"
   company="OES Technology Ltd"
   startDate="2021-04-26"
   endDate=""
