@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { env } from '$env/dynamic/public';
-	import { Basics, ThemeSelect } from '$lib/components';
+	import { Basics, ChatWidget, ThemeSelect } from '$lib/components';
 	import * as Fathom from 'fathom-client';
 	import { onMount } from 'svelte';
 	import '../app.css';
@@ -52,3 +52,4 @@
 	/>
 	{@render children?.()}
 </main>
+<ChatWidget />
