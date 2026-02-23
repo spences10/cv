@@ -82,10 +82,10 @@
 
 {#if is_open}
 	<div
-		class="border-base-300 bg-base-100 fixed right-4 bottom-4 z-50 flex h-[500px] w-[380px] flex-col rounded-2xl border shadow-2xl sm:right-6 sm:bottom-6 print:hidden"
+		class="bg-base-100 border-base-content/10 fixed right-4 bottom-4 z-50 flex h-[500px] w-[380px] flex-col rounded-box border shadow-2xl sm:right-6 sm:bottom-6 print:hidden"
 	>
 		<div
-			class="bg-primary text-primary-content flex items-center justify-between rounded-t-2xl px-4 py-3"
+			class="bg-primary text-primary-content flex items-center justify-between rounded-t-box px-4 py-3"
 		>
 			<div>
 				<h3 class="text-sm font-bold">Ask about Scott</h3>
@@ -158,7 +158,7 @@
 		</div>
 
 		<form
-			class="border-base-300 flex gap-2 border-t p-3"
+			class="border-base-content/10 flex gap-2 border-t p-3"
 			onsubmit={handle_submit}
 		>
 			<input
