@@ -79,18 +79,8 @@ Writing about SvelteKit, TypeScript, AI tooling, and developer
 experience.
 
 Author of 20+ MCP (Model Context Protocol) tools with 1,200+ combined
-GitHub stars, covering search (mcp-omnisearch), memory
-(mcp-memory-libsql), workflow automation (mcp-n8n-builder), and
-documentation access (mcp-svelte-docs).
-
-Building and shipping live products: Svortie (svortie.com, AI agent
-orchestration platform with sandboxed execution via Daytona and Claude
-Agent SDK), Sveltest (sveltest.dev, Svelte testing docs built to
-generate AI coding assistant rules for CLAUDE.md, Cursor, and
-Windsurf), DevHub CRM (devhub.party, developer relationship
-management), SkyKit (skykit.blue, Bluesky analytics), Svead (SvelteKit
-SEO metadata, used by Ashley Furniture), AudioMind (AI audio-to-chat
-with Claude and Deepgram), and SvelteKit Embed.
+GitHub stars, covering search, memory, workflow automation, and
+documentation access.
 
 </section>
 

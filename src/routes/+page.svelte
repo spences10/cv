@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/state';
 	import { authorName, siteName, siteUrl } from '$lib/config';
-	import { Basics, Interests, Work } from '$lib/copy';
+	import { Basics, Interests, Projects, Work } from '$lib/copy';
 	import {
 		Head,
 		SchemaOrg,
@@ -75,4 +75,5 @@
 
 <Basics />
 <Work />
+<Projects />
 <Interests />

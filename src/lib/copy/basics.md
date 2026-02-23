@@ -5,7 +5,7 @@
 <article class='all-prose'>
 
 <!-- prettier-ignore -->
-AI engineering leader and full-stack developer with <DD from="2016-06-15" /> of hands-on JavaScript experience, <DD from="2020-04-01" /> of TypeScript, and <DD from="2018-03-14" /> in commercial development teams.
+AI engineering leader and full-stack developer with <DD from="2020-04-01" /> of TypeScript experience and <DD from="2018-03-14" /> in commercial development teams.
 
 I build AI-powered products, from customer service agent runtimes that
 reduced average handle time by 40%, to multi-agent orchestration
@@ -22,8 +22,7 @@ service agents.
 Co-founder of Svelte Society London (monthly events for <DD from="2021-11-14" />). International conference speaker.
 
 Technical blogger at scottspence.com with 1.4M+ page views and 791K+
-unique visitors. Author of 20+ MCP (Model Context Protocol) tools with
-1,200+ combined GitHub stars.
+unique visitors.
 
 Previous roles include Developer Relations at Storyblok, Developer
 Advocate at GraphCMS (now Hygraph), and Web Developer at Karmarama and
