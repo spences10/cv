@@ -5,7 +5,7 @@
 <article class='all-prose'>
 
 <!-- prettier-ignore -->
-AI engineering leader and full-stack developer with <DD from="2016-06-15" /> of hands-on JavaScript experience and <DD from="2018-03-14" /> in commercial development teams.
+AI engineering leader and full-stack developer with <DD from="2016-06-15" /> of hands-on JavaScript experience, <DD from="2020-04-01" /> of TypeScript, and <DD from="2018-03-14" /> in commercial development teams.
 
 I build AI-powered products, from customer service agent runtimes that
 reduced average handle time by 40%, to multi-agent orchestration
@@ -22,19 +22,20 @@ service agents.
 Co-founder of Svelte Society London (monthly events for <DD from="2021-11-14" />). International conference speaker.
 
 Technical blogger at scottspence.com with 1.4M+ page views and 791K+
-unique visitors. Author of 20+ MCP (Model Context Protocol) tools
-with 1,200+ combined GitHub stars.
+unique visitors. Author of 20+ MCP (Model Context Protocol) tools with
+1,200+ combined GitHub stars.
+
+Previous roles include Developer Relations at Storyblok, Developer
+Advocate at GraphCMS (now Hygraph), and Web Developer at Karmarama and
+Zaizi. See [early web development roles](./early-webdev-exp) for
+details.
 
 Prior career of <DD from="2005-11-01" to="2018-03-08" /> as a
-[senior-level Analyst Developer], building Microsoft Office automation
-for large financial organisations.
+[senior-level Analyst Developer](./non-webdev-exp), building Microsoft
+Office automation for large financial organisations.
 
 **Location**: UK (Swanley, Kent)
 
 </article>
 
 <span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
-
-<!-- Links -->
-
-[senior-level Analyst Developer]: ./non-webdev-exp

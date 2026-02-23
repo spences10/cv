@@ -1,5 +1,6 @@
 // @ts-nocheck
 export { default as Basics } from './basics.md';
+export { default as EarlyWebDevExp } from './early-webdev-exp.md';
 export { default as Education } from './education.md';
 export { default as Interests } from './interests.md';
 export { default as NonWebDevExp } from './non-webdev-exp.md';

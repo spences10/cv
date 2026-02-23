@@ -196,7 +196,7 @@ interactive data mining tools.
 ### Summary
 
 Seconded to Barclays Capital to project manage, build and test a tool
-used to ‘link up’ Barclays Capital base rate hedges with Barclays
+used to 'link up' Barclays Capital base rate hedges with Barclays
 Corporate loan data for the Risk Solutions Group in Credit Markets.
 
 ### Highlights

@@ -44,8 +44,9 @@
 >
 	<Basics
 		name="Scott Spence"
-		label="Engineering Lead | AI Builder | Svelte Ambassador"
+		label="Engineering Lead | AI Product Engineer | Svelte Ambassador"
 		email="cv@scottspence.com"
+		github="spences10"
 		website="scottspence.com"
 		imgSrc="profile-pic.png"
 	/>

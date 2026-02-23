@@ -1,11 +1,13 @@
 <script lang="ts">
-	import { Email, Globe, Mobile } from '$lib/icons';
+	import Github from '@lucide/svelte/icons/github';
+	import Globe from '@lucide/svelte/icons/globe';
+	import Mail from '@lucide/svelte/icons/mail';
 
-	const { name, label, email, phone, website, imgSrc } = $props<{
+	const { name, label, email, github, website, imgSrc } = $props<{
 		name: string;
 		label: string;
 		email: string;
-		phone?: string;
+		github?: string;
 		website: string;
 		imgSrc: string;
 	}>();
@@ -50,34 +52,33 @@
 			<dd
 				class="mb-2 flex items-end text-base print:mr-2 print:text-sm"
 			>
-				<Email />
+				<Mail class="h-5 w-5 print:hidden" />
 				<span class="ml-3 print:ml-0">
 					<a href="mailto: {email}" class="text-md">{email}</a>
 				</span>
 			</dd>
 		</div>
 
-		{#if phone}
-		<div
-			data-tip="Please, email first."
-			class="tooltip tooltip-bottom print:hidden"
-		>
-			<dt><span class="sr-only">Phone number</span></dt>
-			<dd class="mb-2 flex items-end text-base">
-				<Mobile />
-				<span class="ml-3">
-					<a href="tel: {phone}" class="text-md blur filter">
-						{phone}
-					</a>
-				</span>
-			</dd>
-		</div>
+		{#if github}
+			<div class="print:text-black">
+				<dt><span class="sr-only">GitHub</span></dt>
+				<dd
+					class="mb-2 flex items-end text-base print:mr-2 print:text-sm"
+				>
+					<Github class="h-5 w-5 print:hidden" />
+					<span class="ml-3 print:ml-0">
+						<a href="https://github.com/{github}" class="text-md">
+							{github}
+						</a>
+					</span>
+				</dd>
+			</div>
 		{/if}
 
 		<div class="print:text-black">
 			<dt><span class="sr-only">Website</span></dt>
 			<dd class="mb-2 flex items-end text-base print:text-sm">
-				<Globe />
+				<Globe class="h-5 w-5 print:hidden" />
 				<span class="ml-3 print:ml-0">
 					<a href="https://{website}" class="text-md block">
 						{website}
