@@ -20,16 +20,16 @@ vi.mock('svelte-turnstile', () => ({
 }));
 
 describe('ChatWidget', () => {
-	it('should render open by default with welcome message', async () => {
+	it('should render expanded by default with header', async () => {
 		render(ChatWidget);
 
-		const welcome = page.getByText(
-			/I can answer questions about Scott/,
+		const title = page.getByText(
+			/Got questions about my experience/,
 		);
-		await expect.element(welcome).toBeInTheDocument();
+		await expect.element(title).toBeInTheDocument();
 	});
 
-	it('should show suggested questions', async () => {
+	it('should show suggested questions when expanded', async () => {
 		render(ChatWidget);
 
 		const q1 = page.getByRole('button', {
@@ -59,20 +59,22 @@ describe('ChatWidget', () => {
 		await expect.element(send).toBeDisabled();
 	});
 
-	it('should have a close button', async () => {
+	it('should have a collapse toggle', async () => {
 		render(ChatWidget);
 
-		const close = page.getByRole('button', { name: 'Close chat' });
-		await expect.element(close).toBeInTheDocument();
+		const toggle = page.getByRole('button', {
+			name: /Got questions about my experience/,
+		});
+		await expect.element(toggle).toHaveAttribute(
+			'aria-expanded',
+			'true',
+		);
 	});
 
-	it('should show header with title', async () => {
+	it('should show subtitle text', async () => {
 		render(ChatWidget);
 
-		const title = page.getByText('Ask about Scott');
-		const subtitle = page.getByText('AI-powered CV assistant');
-
-		await expect.element(title).toBeInTheDocument();
+		const subtitle = page.getByText('Ask my AI assistant anything');
 		await expect.element(subtitle).toBeInTheDocument();
 	});
 });

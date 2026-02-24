@@ -50,6 +50,6 @@
 		website="scottspence.com"
 		imgSrc="profile-pic.png"
 	/>
+	<ChatWidget />
 	{@render children?.()}
 </main>
-<ChatWidget />
