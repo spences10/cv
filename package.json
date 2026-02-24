@@ -24,7 +24,9 @@
 		"test": "npm run test:unit -- --run && npm run test:e2e",
 		"test:e2e": "playwright test",
 		"test:ci": "vitest run",
-		"cspell": "cspell '**/*.md' --config cspell.json --wordsOnly"
+		"cspell": "cspell '**/*.md' --config cspell.json --wordsOnly",
+		"db:regenerate": "npx tsx scripts/regenerate-db.ts",
+		"snapshot:create": "npx tsx scripts/create-snapshot.ts"
 	},
 	"devDependencies": {
 		"@anthropic-ai/sdk": "^0.78.0",
