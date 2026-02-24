@@ -15,6 +15,13 @@ function get_db(): Database.Database {
 	return db;
 }
 
+export function close_db() {
+	if (db) {
+		db.close();
+		db = null;
+	}
+}
+
 const STOP_WORDS = new Set([
 	'what',
 	'how',
