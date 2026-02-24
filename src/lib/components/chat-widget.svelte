@@ -202,6 +202,7 @@
 				<Turnstile
 					siteKey={env.PUBLIC_TURNSTILE_SITE_KEY ?? ''}
 					size="flexible"
+					appearance="interaction-only"
 					on:turnstile-callback={(e) => {
 						turnstile_token = e.detail.token;
 					}}
