@@ -130,3 +130,22 @@ INSERT INTO search_index VALUES ('content text', 'table_name', 'row_id');
 Verify: `SELECT COUNT(*) FROM search_index;` should return ~140. Test
 BM25:
 `SELECT content, source, bm25(search_index) as rank FROM search_index WHERE search_index MATCH 'agent orchestration' ORDER BY rank LIMIT 5;`
+
+## Deployment (push to prod)
+
+mcp-sqlite-tools uses WAL mode — edits live in `cv-agent.db-wal`, not
+the main `.db` file. SCP only copies the main file.
+
+**Before any push**: close DB in mcp-sqlite-tools, then:
+
+```python
+python3 -c "import sqlite3; c=sqlite3.connect('data/cv-agent.db'); c.execute('PRAGMA wal_checkpoint(TRUNCATE)'); c.close()"
+```
+
+**Push process** (see MEMORY.md for full commands):
+
+1. Checkpoint WAL locally
+2. Stop prod container
+3. SCP `.db` to prod volume
+4. Delete `.db-shm` and `.db-wal` on prod
+5. Start prod container

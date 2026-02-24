@@ -41,6 +41,10 @@ mcp-sqlite-tools.
 ## Critical Rules
 
 - Use mcp-sqlite-tools for all DB operations
+- **ALWAYS checkpoint WAL before SCP push**: mcp-sqlite-tools uses WAL
+  mode. Edits go to `.db-wal`, not the main file. Run
+  `PRAGMA wal_checkpoint(TRUNCATE)` before any file-based transfer.
+- Push process: stop container → SCP → delete WAL/SHM on prod → start
 - XtendOps ccrecall (`~/Downloads/ccrecall.db`) contains customer PII
   — extract AGGREGATE stats ONLY
 - Personal ccrecall (`~/.claude/ccrecall.db`) — per-project session
