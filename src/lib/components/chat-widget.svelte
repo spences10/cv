@@ -206,7 +206,7 @@
 							<div
 								class="chat-bubble text-sm {msg.role === 'user'
 									? 'chat-bubble-primary'
-									: 'prose prose-sm'}"
+									: 'prose'}"
 							>
 								{#if msg.role === 'assistant'}
 									{@html marked.parse(msg.content)}
@@ -241,7 +241,7 @@
 						type="text"
 						bind:value={input_value}
 						placeholder="Ask about Scott's experience..."
-						class="input input-bordered input-sm flex-1"
+						class="input input-sm flex-1"
 						maxlength={500}
 						disabled={is_loading}
 					/>
