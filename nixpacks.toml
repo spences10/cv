@@ -1,3 +1,6 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "pnpm-9_x"]
+
 [phases.install]
 cmds = ["pnpm i --frozen-lockfile --config.engine-strict=false"]
 
