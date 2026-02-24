@@ -7,6 +7,18 @@ vi.mock('$lib/chat.remote', () => ({
 	ask: vi.fn().mockResolvedValue({ answer: 'Mock response' }),
 }));
 
+vi.mock('fathom-client', () => ({
+	trackEvent: vi.fn(),
+}));
+
+vi.mock('$env/dynamic/public', () => ({
+	env: { PUBLIC_TURNSTILE_SITE_KEY: '1x00000000000000000000AA' },
+}));
+
+vi.mock('svelte-turnstile', () => ({
+	Turnstile: vi.fn(),
+}));
+
 describe('ChatWidget', () => {
 	it('should render open by default with welcome message', async () => {
 		render(ChatWidget);
