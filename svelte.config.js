@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import rehypeExternalLinks from 'rehype-external-links';
@@ -23,7 +23,9 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+		experimental: { remoteFunctions: true },
 	},
+	compilerOptions: { experimental: { async: true } },
 
 	extensions: ['.svelte', '.md'],
 };
