@@ -6,4 +6,7 @@ noopener
 omnisearch
 noreferrer
 rehype
+remoteip
+siteverify
+turnstile
 webdev

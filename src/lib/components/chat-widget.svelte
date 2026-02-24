@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { ask } from '$lib/chat.remote';
+	import { env } from '$env/dynamic/public';
+	import * as Fathom from 'fathom-client';
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
 	import Send from '@lucide/svelte/icons/send';
 	import X from '@lucide/svelte/icons/x';
 	import { marked } from 'marked';
+	import { Turnstile } from 'svelte-turnstile';
 
 	marked.setOptions({ breaks: true, gfm: true });
 
@@ -18,6 +21,7 @@
 	let is_loading = $state(false);
 	let error_message = $state('');
 	let messages_el = $state<HTMLDivElement>();
+	let turnstile_token = $state('');
 
 	const suggested_questions = [
 		'What AI tools has Scott built?',
@@ -35,7 +39,7 @@
 	}
 
 	async function send_message(question: string) {
-		if (!question.trim() || is_loading) return;
+		if (!question.trim() || is_loading || !turnstile_token) return;
 
 		error_message = '';
 		messages.push({ role: 'user', content: question.trim() });
@@ -43,8 +47,13 @@
 		is_loading = true;
 		scroll_to_bottom();
 
+		Fathom.trackEvent('chat_message_sent');
+
 		try {
-			const { answer } = await ask(question.trim());
+			const { answer } = await ask({
+				question: question.trim(),
+				turnstile_token,
+			});
 			messages.push({ role: 'assistant', content: answer });
 		} catch (err) {
 			const msg =
@@ -66,6 +75,11 @@
 			is_open = false;
 		}
 	}
+
+	function handle_suggested(q: string) {
+		Fathom.trackEvent('chat_suggested_click');
+		send_message(q);
+	}
 </script>
 
 <svelte:window onkeydown={handle_keydown} />
@@ -73,7 +87,10 @@
 {#if !is_open}
 	<button
 		class="btn btn-primary btn-circle fixed right-6 bottom-6 z-50 shadow-lg print:hidden"
-		onclick={() => (is_open = true)}
+		onclick={() => {
+			is_open = true;
+			Fathom.trackEvent('chat_opened');
+		}}
 		aria-label="Ask about Scott's experience"
 	>
 		<MessageCircle class="h-6 w-6" />
@@ -93,7 +110,10 @@
 			</div>
 			<button
 				class="btn btn-ghost btn-circle btn-sm"
-				onclick={() => (is_open = false)}
+				onclick={() => {
+					is_open = false;
+					Fathom.trackEvent('chat_closed');
+				}}
 				aria-label="Close chat"
 			>
 				<X class="h-4 w-4" />
@@ -112,7 +132,7 @@
 					{#each suggested_questions as q}
 						<button
 							class="btn btn-outline btn-xs"
-							onclick={() => send_message(q)}
+							onclick={() => handle_suggested(q)}
 						>
 							{q}
 						</button>
@@ -157,26 +177,37 @@
 			{/if}
 		</div>
 
-		<form
-			class="border-base-content/10 flex gap-2 border-t p-3"
-			onsubmit={handle_submit}
-		>
-			<input
-				type="text"
-				bind:value={input_value}
-				placeholder="Ask about Scott's experience..."
-				class="input input-bordered input-sm flex-1"
-				maxlength={500}
-				disabled={is_loading}
-			/>
-			<button
-				type="submit"
-				class="btn btn-primary btn-sm btn-circle"
-				disabled={is_loading || !input_value.trim()}
-				aria-label="Send message"
-			>
-				<Send class="h-4 w-4" />
-			</button>
-		</form>
+		<div class="border-base-content/10 border-t p-3">
+			<form class="flex gap-2" onsubmit={handle_submit}>
+				<input
+					type="text"
+					bind:value={input_value}
+					placeholder="Ask about Scott's experience..."
+					class="input input-bordered input-sm flex-1"
+					maxlength={500}
+					disabled={is_loading}
+				/>
+				<button
+					type="submit"
+					class="btn btn-primary btn-sm btn-circle"
+					disabled={is_loading ||
+						!input_value.trim() ||
+						!turnstile_token}
+					aria-label="Send message"
+				>
+					<Send class="h-4 w-4" />
+				</button>
+			</form>
+			<div class="mt-2">
+				<Turnstile
+					siteKey={env.PUBLIC_TURNSTILE_SITE_KEY ?? ''}
+					size="flexible"
+					appearance="interaction-only"
+					on:turnstile-callback={(e) => {
+						turnstile_token = e.detail.token;
+					}}
+				/>
+			</div>
+		</div>
 	</div>
 {/if}
