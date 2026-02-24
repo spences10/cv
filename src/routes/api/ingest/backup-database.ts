@@ -11,7 +11,9 @@ import path from 'node:path';
 const MAX_BACKUPS = 28;
 
 function get_db_path() {
-	return env.DB_PATH || path.join(process.cwd(), 'cv-agent.db');
+	return (
+		env.DB_PATH || path.join(process.cwd(), 'data', 'cv-agent.db')
+	);
 }
 
 function get_backup_dir() {

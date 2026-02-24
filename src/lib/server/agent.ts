@@ -4,7 +4,7 @@ import Database from 'better-sqlite3';
 import path from 'node:path';
 
 const DB_PATH =
-	env.DB_PATH || path.join(process.cwd(), 'cv-agent.db');
+	env.DB_PATH || path.join(process.cwd(), 'data', 'cv-agent.db');
 
 let db: Database.Database | null = null;
 
