@@ -1,5 +1,6 @@
 Contentful
 daisyui
+Hygraph
 DOFT
 Gorman
 Jamstack
@@ -20,6 +21,8 @@ spences
 Storyblok
 Strapi
 svead
+Sveltest
+Svortie
 tailwindcss
 Tullett
 Zaizi
