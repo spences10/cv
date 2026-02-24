@@ -30,11 +30,22 @@
 	let inline_el = $state<HTMLDivElement>();
 	let is_inline_visible = $state(true);
 
-	const suggested_questions = [
-		'What AI tools has Scott built?',
-		'Tell me about his experience',
-		'What tech stack does he use?',
+	const logistics_questions = [
+		'Available now? Notice period?',
+		'Contract or permanent?',
+		'Remote only or open to hybrid?',
 	];
+
+	const depth_questions = [
+		'What AI products has Scott shipped?',
+		'How does Scott run engineering teams?',
+		'What sets Scott apart?',
+	];
+
+	let has_interacted = $state(false);
+	const active_questions = $derived(
+		has_interacted ? depth_questions : logistics_questions,
+	);
 
 	$effect(() => {
 		if (!inline_el) return;
@@ -99,11 +110,13 @@
 
 	function handle_submit(event: Event) {
 		event.preventDefault();
+		has_interacted = true;
 		send_message(input_value);
 	}
 
 	function handle_suggested(q: string) {
 		Fathom.trackEvent('chat_suggested_click');
+		has_interacted = true;
 		send_message(q);
 	}
 </script>
@@ -153,31 +166,36 @@
 			transition:slide={{ duration: 300, easing: cubicOut }}
 		>
 			<div class="border-base-content/10 border-t px-5 pt-4 pb-2">
-				<!-- Messages area -->
-				<!-- Suggested questions - always visible -->
-				<div class="mb-3 flex flex-wrap gap-2">
-					{#each suggested_questions as q, i}
-						<button
-							class="btn btn-outline btn-sm"
-							in:fly={{
-								y: 10,
-								delay: 100 + i * 80,
-								duration: 300,
-								easing: cubicOut,
-							}}
-							disabled={is_loading}
-							onclick={() => handle_suggested(q)}
-						>
-							{q}
-						</button>
-					{/each}
+				<!-- Suggested questions - contextual, swap after first interaction -->
+				<div class="mb-3">
+					<p
+						class="text-base-content/50 mb-2 text-xs font-medium tracking-wide uppercase"
+					>
+						{has_interacted ? 'Go deeper' : 'Quick questions'}
+					</p>
+					{#key has_interacted}
+						<div class="flex flex-wrap gap-2">
+							{#each active_questions as q, i}
+								<button
+									class="btn btn-outline btn-sm"
+									in:fly={{
+										y: 10,
+										delay: 100 + i * 80,
+										duration: 300,
+										easing: cubicOut,
+									}}
+									disabled={is_loading}
+									onclick={() => handle_suggested(q)}
+								>
+									{q}
+								</button>
+							{/each}
+						</div>
+					{/key}
 				</div>
 
 				<!-- Messages area -->
-				<div
-					bind:this={messages_el}
-					class="max-h-80 overflow-y-auto"
-				>
+				<div bind:this={messages_el} class="max-h-80 overflow-y-auto">
 					{#each messages as msg}
 						<div
 							class="chat {msg.role === 'user'

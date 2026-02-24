@@ -34,8 +34,8 @@
 }
 
 /* Plugin configurations */
-@plugin "@tailwindcss/typography";
-@plugin "daisyui" {
+@plugin '@tailwindcss/typography';
+@plugin 'daisyui' {
 	themes:
 		dracula,
 		aqua,

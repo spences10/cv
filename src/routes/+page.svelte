@@ -58,7 +58,8 @@
 				'@type': 'City',
 				name: 'London',
 			},
-			skills: 'TypeScript, SvelteKit, AI Integration, Claude API, MCP',
+			skills:
+				'TypeScript, SvelteKit, AI Integration, Claude API, MCP',
 		},
 	};
 </script>
