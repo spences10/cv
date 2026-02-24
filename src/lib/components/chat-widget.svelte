@@ -17,7 +17,7 @@
 	let messages: Message[] = $state([]);
 	let is_loading = $state(false);
 	let error_message = $state('');
-	let messages_el: HTMLDivElement;
+	let messages_el = $state<HTMLDivElement>();
 
 	const suggested_questions = [
 		'What AI tools has Scott built?',
@@ -82,10 +82,10 @@
 
 {#if is_open}
 	<div
-		class="bg-base-100 border-base-content/10 fixed right-4 bottom-4 z-50 flex h-[500px] w-[380px] flex-col rounded-box border shadow-2xl sm:right-6 sm:bottom-6 print:hidden"
+		class="bg-base-100 border-base-content/10 rounded-box fixed right-4 bottom-4 z-50 flex h-[500px] w-[380px] flex-col border shadow-2xl sm:right-6 sm:bottom-6 print:hidden"
 	>
 		<div
-			class="bg-primary text-primary-content flex items-center justify-between rounded-t-box px-4 py-3"
+			class="bg-primary text-primary-content rounded-t-box flex items-center justify-between px-4 py-3"
 		>
 			<div>
 				<h3 class="text-sm font-bold">Ask about Scott</h3>
