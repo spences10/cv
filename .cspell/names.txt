@@ -1,5 +1,6 @@
 Contentful
 daisyui
+Hygraph
 DOFT
 Gorman
 Jamstack
@@ -16,9 +17,12 @@ RAFTA
 ROSCA
 Sanctioners
 scottspence
+spences
 Storyblok
 Strapi
 svead
+Sveltest
+Svortie
 tailwindcss
 Tullett
 Zaizi

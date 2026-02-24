@@ -1,5 +1,9 @@
+daytonaio
+evals
+libsql
 nocheck
 noopener
+omnisearch
 noreferrer
 rehype
 webdev
