@@ -9,7 +9,6 @@ describe('Basics', () => {
 		name: 'John Doe',
 		label: 'Software Developer',
 		email: 'john@example.com',
-		phone: '+1234567890',
 		website: 'example.com',
 		imgSrc: 'path/to/image.jpg',
 	};
@@ -31,20 +30,18 @@ describe('Basics', () => {
 		await expect.element(avatar).toBeInTheDocument();
 	});
 
-	it('should render email, phone, and website details', async () => {
+	it('should render email and website details', async () => {
 		render(Basics, defaultProps);
 
 		const email = page.getByRole('link', {
 			name: 'john@example.com',
 		});
-		const phone = page.getByText('+1234567890');
 		const website = page.getByRole('link', {
 			name: 'example.com',
 			exact: true,
 		});
 
 		await expect.element(email).toBeInTheDocument();
-		await expect.element(phone).toBeInTheDocument();
 		await expect.element(website).toBeInTheDocument();
 	});
 });
