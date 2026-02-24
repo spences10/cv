@@ -6,7 +6,9 @@ const SNAPSHOT = 'cv-agent';
 const DB_PATH = '/data/cv-agent.db';
 
 // Persistent sandbox — created once, reused for all requests
-type Sandbox = Awaited<ReturnType<InstanceType<typeof Daytona>['create']>>;
+type Sandbox = Awaited<
+	ReturnType<InstanceType<typeof Daytona>['create']>
+>;
 let sandbox: Sandbox | null = null;
 let sandbox_promise: Promise<Sandbox> | null = null;
 let daytona_client: InstanceType<typeof Daytona> | null = null;
@@ -32,15 +34,16 @@ async function get_sandbox() {
 }
 
 async function cleanup_sandbox() {
-	if (sandbox) {
+	const sb = sandbox;
+	sandbox = null;
+	sandbox_promise = null;
+	daytona_client = null;
+	if (sb) {
 		try {
-			await sandbox.delete();
+			await sb.delete();
 		} catch {
 			// best effort — sandbox may already be gone
 		}
-		sandbox = null;
-		sandbox_promise = null;
-		daytona_client = null;
 	}
 }
 
@@ -51,13 +54,32 @@ for (const signal of ['SIGTERM', 'SIGINT', 'beforeExit'] as const) {
 	});
 }
 
-async function query_db(sql: string): Promise<string> {
-	const sb = await get_sandbox();
-	const result = await sb.process.executeCommand(
-		`sqlite3 -json ${DB_PATH} ${JSON.stringify(sql)}`,
-	);
+async function query_db(
+	sql: string,
+	is_retry = false,
+): Promise<string> {
+	let sb: Sandbox;
+	try {
+		sb = await get_sandbox();
+	} catch (err) {
+		if (is_retry) throw err;
+		await cleanup_sandbox();
+		return query_db(sql, true);
+	}
+
+	let result;
+	try {
+		result = await sb.process.executeCommand(
+			`sqlite3 -json ${DB_PATH} ${JSON.stringify(sql)}`,
+		);
+	} catch (err) {
+		// Sandbox died (auto-stop, auth expired, etc.) — reset and retry once
+		if (is_retry) throw err;
+		await cleanup_sandbox();
+		return query_db(sql, true);
+	}
+
 	if (result.exitCode !== 0) {
-		// Sandbox may have died — reset and let next call retry
 		await cleanup_sandbox();
 		throw new Error(`DB query failed: ${result.result}`);
 	}
