@@ -22,6 +22,7 @@
 	let error_message = $state('');
 	let messages_el = $state<HTMLDivElement>();
 	let turnstile_token = $state('');
+	let turnstile_reset = $state<() => void>();
 
 	const suggested_questions = [
 		'What AI tools has Scott built?',
@@ -61,6 +62,8 @@
 			error_message = msg;
 		} finally {
 			is_loading = false;
+			turnstile_token = '';
+			turnstile_reset?.();
 			scroll_to_bottom();
 		}
 	}
@@ -203,6 +206,7 @@
 					siteKey={env.PUBLIC_TURNSTILE_SITE_KEY ?? ''}
 					size="flexible"
 					appearance="interaction-only"
+					bind:reset={turnstile_reset}
 					on:turnstile-callback={(e) => {
 						turnstile_token = e.detail.token;
 					}}
