@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { ask } from '$lib/chat.remote';
+	import { env } from '$env/dynamic/public';
 	import * as Fathom from 'fathom-client';
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
 	import Send from '@lucide/svelte/icons/send';
 	import X from '@lucide/svelte/icons/x';
 	import { marked } from 'marked';
+	import { Turnstile } from 'svelte-turnstile';
 
 	marked.setOptions({ breaks: true, gfm: true });
 
@@ -19,8 +21,7 @@
 	let is_loading = $state(false);
 	let error_message = $state('');
 	let messages_el = $state<HTMLDivElement>();
-	// TODO: re-add Turnstile once debug page confirms working combo
-	let turnstile_token = $state('bypass');
+	let turnstile_token = $state('');
 
 	const suggested_questions = [
 		'What AI tools has Scott built?',
@@ -197,6 +198,14 @@
 					<Send class="h-4 w-4" />
 				</button>
 			</form>
+			<div class="mt-2 flex justify-center">
+				<Turnstile
+					siteKey={env.PUBLIC_TURNSTILE_SITE_KEY ?? ''}
+					on:turnstile-callback={(e) => {
+						turnstile_token = e.detail.token;
+					}}
+				/>
+			</div>
 		</div>
 	</div>
 {/if}
