@@ -19,7 +19,7 @@
 	}
 </script>
 
-<div class="mb-8">
+<div class="mb-8 print:hidden">
 	<select
 		bind:value={current_theme}
 		data-choose-theme
