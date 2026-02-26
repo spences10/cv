@@ -52,7 +52,7 @@
 			<dd
 				class="mb-2 flex items-end text-base print:mr-2 print:text-sm"
 			>
-				<Mail class="h-5 w-5 print:hidden" />
+				<Mail class="print:black h-5 w-5 print:mr-1" />
 				<span class="ml-3 print:ml-0">
 					<a href="mailto: {email}" class="text-md">{email}</a>
 				</span>
@@ -65,7 +65,7 @@
 				<dd
 					class="mb-2 flex items-end text-base print:mr-2 print:text-sm"
 				>
-					<Github class="h-5 w-5 print:hidden" />
+					<Github class="print:black h-5 w-5 print:mr-1" />
 					<span class="ml-3 print:ml-0">
 						<a href="https://github.com/{github}" class="text-md">
 							{github}
@@ -78,7 +78,7 @@
 		<div class="print:text-black">
 			<dt><span class="sr-only">Website</span></dt>
 			<dd class="mb-2 flex items-end text-base print:text-sm">
-				<Globe class="h-5 w-5 print:hidden" />
+				<Globe class="print:black h-5 w-5 print:mr-1" />
 				<span class="ml-3 print:ml-0">
 					<a href="https://{website}" class="text-md block">
 						{website}
