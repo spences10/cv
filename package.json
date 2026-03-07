@@ -32,7 +32,7 @@
 		"@anthropic-ai/sdk": "^0.78.0",
 		"@eslint/compat": "^2.0.2",
 		"@eslint/js": "^10.0.1",
-		"@lucide/svelte": "^0.576.0",
+		"@lucide/svelte": "^0.577.0",
 		"@playwright/test": "^1.58.2",
 		"@sveltejs/adapter-node": "^5.5.3",
 		"@sveltejs/kit": "^2.53.2",
