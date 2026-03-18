@@ -29,7 +29,7 @@
 		"snapshot:create": "npx tsx scripts/create-snapshot.ts"
 	},
 	"devDependencies": {
-		"@anthropic-ai/sdk": "^0.78.0",
+		"@anthropic-ai/sdk": "^0.80.0",
 		"@eslint/compat": "^2.0.2",
 		"@eslint/js": "^10.0.1",
 		"@lucide/svelte": "^0.577.0",
