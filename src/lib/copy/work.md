@@ -3,6 +3,48 @@
 </script>
 
 <RoleDetails
+  position="Product Engineer"
+  company="Cloud Lobsters"
+  startDate="2026-03-16"
+  endDate=""
+/>
+
+<section class='all-prose mb-8'>
+
+### Summary
+
+Product engineer building client-facing platforms, internal tools, and
+AI-assisted engineering workflows across SvelteKit, TypeScript, cloud
+infrastructure, and LLM tooling.
+
+### Highlights
+
+Built and shipped branded product journeys with admin workflows,
+order/journey management, payment-adjacent customer flows, and
+production QA across multiple tenant experiences
+
+Implemented cloud deployment and operational changes across AWS and
+Azure, including ECS services, RDS-backed applications, SES email,
+Secrets Manager/environment configuration, Terraform PRs, DNS, and
+production debugging
+
+Integrated address, mapping, email, sanctions, and customer workflow
+services, evaluating providers, checking implementation details, and
+turning ambiguous product requirements into shippable changes
+
+Used browser automation, MCP tools, recall databases, and agentic
+coding workflows to test production journeys, diagnose failures, and
+coordinate fast delivery without losing review control
+
+Built and refined internal AI-agent tooling, skills, observability,
+session recall, and developer workflows used to make AI-assisted
+engineering safer and more repeatable
+
+</section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
+
+<RoleDetails
   position="Engineering Team Lead"
   company="XtendOps"
   startDate="2023-09-11"

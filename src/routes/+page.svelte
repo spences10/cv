@@ -31,7 +31,7 @@
 		email: 'cv@scottspence.com',
 		worksFor: {
 			'@type': 'Organization',
-			name: 'OES Technology',
+			name: 'Cloud Lobsters',
 		},
 		alumniOf: {
 			'@type': 'EducationalOrganization',
@@ -53,7 +53,7 @@
 		},
 		hasOccupation: {
 			'@type': 'Occupation',
-			name: 'Engineering Lead & AI Product Engineer',
+			name: 'Product Engineer',
 			occupationLocation: {
 				'@type': 'City',
 				name: 'London',

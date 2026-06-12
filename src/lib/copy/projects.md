@@ -2,6 +2,12 @@
 
 ## Projects
 
+**[Pi Coding Agent](https://github.com/earendil-works/pi-coding-agent)**:
+terminal coding-agent harness with session recall, MCP/tooling
+integration, skills, observability, theming, and multi-agent workflows.
+Used heavily for real product engineering work and for developing
+safer AI-assisted delivery patterns.
+
 **[Svortie](https://svortie.com)**: AI agent orchestration platform
 with sandboxed execution via Daytona and Claude Agent SDK. Run
 autonomous coding agents safely in isolated environments.
