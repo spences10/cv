@@ -15,30 +15,44 @@
 
 Product engineer building client-facing platforms, internal tools, and
 AI-assisted engineering workflows across SvelteKit, TypeScript, cloud
-infrastructure, and LLM tooling.
+infrastructure, and LLM tooling. Built a greenfield insurance workflow
+platform intended to process roughly $20m in business when fully live,
+with the codebase designed from the outset for safe, high-standard AI
+agent collaboration.
 
 ### Highlights
 
-Built and shipped branded product journeys with admin workflows,
-order/journey management, payment-adjacent customer flows, and
-production QA across multiple tenant experiences
+Built a multi-tenant insurance workflow platform from scratch,
+covering submission intake, document processing, extraction/evaluation
+flows, quote lifecycle support, operational tooling, audit history,
+and controlled deployment into client infrastructure
+
+Designed the repo for agent-assisted team delivery: canonical agent
+onboarding, local project skills, branch workflow rules,
+module-boundary guidance, service-layer patterns, code-style rules,
+MVP readiness gates, and explicit “read docs before changing code”
+entrypoints
+
+Created a local documentation package that indexes project docs into a
+SQLite/FTS search layer, giving agents fast, cited access to business
+requirements, schema notes, communications, workflow maps, meeting
+notes, and implementation context before touching code
+
+Added guardrail tooling to keep standards high, including import and
+module-boundary checks, route data audits, runtime configuration
+checks, release verification/export tooling, required Svelte/type
+checks, and guidance for keeping routes thin and business logic inside
+services/packages
 
 Implemented cloud deployment and operational changes across AWS and
-Azure, including ECS services, RDS-backed applications, SES email,
-Secrets Manager/environment configuration, Terraform PRs, DNS, and
-production debugging
+Azure, including ECS/container app services, RDS/Postgres-backed
+applications, SES/email infrastructure, storage, secrets/environment
+configuration, Terraform PRs, DNS, and production debugging
 
-Integrated address, mapping, email, sanctions, and customer workflow
-services, evaluating providers, checking implementation details, and
-turning ambiguous product requirements into shippable changes
-
-Used browser automation, MCP tools, recall databases, and agentic
-coding workflows to test production journeys, diagnose failures, and
-coordinate fast delivery without losing review control
-
-Built and refined internal AI-agent tooling, skills, observability,
-session recall, and developer workflows used to make AI-assisted
-engineering safer and more repeatable
+Used browser automation, MCP tools, recall databases, documentation
+search, and agentic coding workflows to test production journeys,
+diagnose failures, coordinate parallel work, and preserve review
+control while moving quickly
 
 </section>
 
