@@ -1,14 +1,5 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": ["config:recommended"],
-	"minimumReleaseAge": "2 days",
-	"packageRules": [
-		{
-			"description": "Do not open PRs for temporary/security pins in pnpm-workspace overrides",
-			"matchManagers": ["npm"],
-			"matchFileNames": ["pnpm-workspace.yaml"],
-			"matchDepTypes": ["pnpm-workspace.overrides"],
-			"enabled": false
-		}
-	]
+	"minimumReleaseAge": "2 days"
 }

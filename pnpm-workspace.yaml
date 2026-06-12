@@ -3,20 +3,6 @@ packages:
 
 minimumReleaseAge: 2880
 
-# Temporary/security pins. Keep Renovate from opening override PRs for these.
-overrides:
-  '@sveltejs/kit': '2.60.1'
-  '@vitest/browser': '4.1.6'
-  brace-expansion: '5.0.6'
-  cookie: '0.7.0'
-  devalue: '5.8.1'
-  esbuild: '0.28.1'
-  flatted: '3.4.2'
-  smol-toml: '1.6.1'
-  svelte: '5.55.7'
-  ws: '8.20.1'
-  yaml: '2.8.3'
-
 allowBuilds:
   '@tailwindcss/oxide': true
   better-sqlite3: true
