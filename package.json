@@ -35,7 +35,7 @@
 		"@types/better-sqlite3": "^7.6.13",
 		"@vitest/browser-playwright": "^4.1.6",
 		"cspell": "^9.7.0",
-		"daisyui": "5.5.19",
+		"daisyui": "5.5.23",
 		"date-fns": "^4.1.0",
 		"eslint": "^10.0.2",
 		"eslint-config-prettier": "^10.1.8",
