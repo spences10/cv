@@ -14,7 +14,7 @@ importers:
     devDependencies:
       '@anthropic-ai/sdk':
         specifier: ^0.104.1
-        version: 0.104.1
+        version: 0.104.2
       '@eslint/compat':
         specifier: ^2.1.0
         version: 2.1.0(eslint@10.4.1(jiti@2.6.1))
@@ -132,8 +132,8 @@ importers:
 
 packages:
 
-  '@anthropic-ai/sdk@0.104.1':
-    resolution: {integrity: sha512-gGACa/+IaiXzRRmF96aOhamoBgapKRBiFWbmmTFP8aMkpaEcuStF+Q61bjo4vPxBM7gqWJNZqsngslRdnLHv0Q==}
+  '@anthropic-ai/sdk@0.104.2':
+    resolution: {integrity: sha512-s1wEVDAtEwkS7Ajgep6PZKJLFqybRkmD3Byz+iVVsSpbDY0gjROXE9aOft6V3PMqynn3NTcycV5whga9tCzmKA==}
     hasBin: true
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
@@ -141,8 +141,8 @@ packages:
       zod:
         optional: true
 
-  '@babel/runtime@7.28.6':
-    resolution: {integrity: sha512-05WQkdpL9COIMz4LjTxGpPNCdlpyimKppYNoJ5Di5EUObifl8t4tuLuUBBZEpoLYOmfvIWrsp9fCl0HoPRVTdA==}
+  '@babel/runtime@7.29.7':
+    resolution: {integrity: sha512-Nq8OhGWiZIZGV6hLHoyAKLLcJihP/xFeBMGJoUrxTX2psI8dCifzLhZISFb+VWS3wFMRDmCGw5R+dOySCqPLhw==}
     engines: {node: '>=6.9.0'}
 
   '@blazediff/core@1.9.1':
@@ -2300,12 +2300,12 @@ packages:
 
 snapshots:
 
-  '@anthropic-ai/sdk@0.104.1':
+  '@anthropic-ai/sdk@0.104.2':
     dependencies:
       json-schema-to-ts: 3.1.1
       standardwebhooks: 1.0.0
 
-  '@babel/runtime@7.28.6': {}
+  '@babel/runtime@7.29.7': {}
 
   '@blazediff/core@1.9.1': {}
 
@@ -3599,7 +3599,7 @@ snapshots:
 
   json-schema-to-ts@3.1.1:
     dependencies:
-      '@babel/runtime': 7.28.6
+      '@babel/runtime': 7.29.7
       ts-algebra: 2.0.0
 
   json-schema-traverse@0.4.1: {}
