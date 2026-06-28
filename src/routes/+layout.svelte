@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { env } from '$env/dynamic/public';
-	import { Basics, ChatWidget, ThemeSelect } from '$lib/components';
+	import { Basics, ThemeSelect } from '$lib/components';
 	import * as Fathom from 'fathom-client';
 	import { onMount } from 'svelte';
 	import '../app.css';
@@ -14,12 +13,18 @@
 	onMount(() => {
 		Fathom.load(PUBLIC_FATHOM_ID?.toString() || ``, {
 			url: PUBLIC_FATHOM_URL,
+			auto: false,
 			excludedDomains: ['localhost'],
 		});
 	});
 
 	$effect(() => {
-		(page.url.pathname, browser && Fathom.trackPageview());
+		const url = `${page.url.pathname}${page.url.search}`;
+
+		Fathom.trackPageview({
+			url,
+			referrer: document.referrer,
+		});
 	});
 
 	const print_page = () => {
@@ -50,6 +55,5 @@
 		website="scottspence.com"
 		imgSrc="profile-pic.png"
 	/>
-	<ChatWidget />
 	{@render children?.()}
 </main>
