@@ -6,7 +6,9 @@
 		to: string | number;
 	}>();
 
-	const distance = formatDistanceStrict(new Date(from), new Date(to));
+	const distance = $derived(
+		formatDistanceStrict(new Date(from), new Date(to)),
+	);
 </script>
 
 <span>{distance}</span>
