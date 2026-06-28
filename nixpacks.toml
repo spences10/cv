@@ -1,5 +1,6 @@
 [phases.setup]
 nixPkgs = ["nodejs_24"]
+nixpkgsArchive = "cf93ceb06388f5714302b702cccf2c77f6064442"
 aptPkgs = ["curl", "wget"]
 
 [phases.install]
