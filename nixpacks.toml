@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["nodejs_24"]
+aptPkgs = ["curl", "wget"]
+
+[phases.install]
+cmds = [
+	"npm exec --yes pnpm@11.5.3 -- pnpm i --frozen-lockfile",
+]
+
+[phases.build]
+cmds = ["npm exec --yes pnpm@11.5.3 -- pnpm run build"]
+
+[start]
+cmd = "node ./build/index.js"
