@@ -1,5 +1,44 @@
 {
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": ["config:recommended"],
-	"minimumReleaseAge": "2 days"
+	"minimumReleaseAge": "2 days",
+	"packageRules": [
+		{
+			"description": "Keep Svelte packages aligned across the workspace",
+			"matchManagers": ["npm"],
+			"matchPackageNames": [
+				"/^@sveltejs\\//",
+				"svelte",
+				"svelte-check"
+			],
+			"groupName": "Svelte packages",
+			"groupSlug": "svelte-packages"
+		},
+		{
+			"description": "Keep test tooling aligned across the workspace",
+			"matchManagers": ["npm"],
+			"matchPackageNames": [
+				"/^@playwright\\//",
+				"playwright",
+				"/^@vitest\\//",
+				"vitest",
+				"vitest-browser-svelte"
+			],
+			"groupName": "Test tooling",
+			"groupSlug": "test-tooling"
+		},
+		{
+			"description": "Group GitHub Actions updates",
+			"matchManagers": ["github-actions"],
+			"groupName": "GitHub Actions",
+			"groupSlug": "github-actions"
+		},
+		{
+			"description": "Do not open PRs for temporary/security pins in pnpm-workspace overrides",
+			"matchManagers": ["npm"],
+			"matchFileNames": ["pnpm-workspace.yaml"],
+			"matchDepTypes": ["pnpm-workspace.overrides"],
+			"enabled": false
+		}
+	]
 }
