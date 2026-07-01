@@ -34,7 +34,7 @@
 		"@types/node": "^26.0.1",
 		"@vitest/browser-playwright": "^4.1.9",
 		"cspell": "^10.0.1",
-		"daisyui": "5.6.3",
+		"daisyui": "5.6.6",
 		"date-fns": "^4.4.0",
 		"eslint": "^10.5.0",
 		"eslint-config-prettier": "^10.1.8",
