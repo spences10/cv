@@ -49,7 +49,7 @@
 >
 	<Basics
 		name="Scott Spence"
-		label="Engineering Lead | AI Product Engineer | Svelte Ambassador"
+		label="Product Engineer | AI Engineering Lead | Svelte Ambassador"
 		email="cv@scottspence.com"
 		github="spences10"
 		website="scottspence.com"

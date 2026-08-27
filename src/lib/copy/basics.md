@@ -4,13 +4,11 @@
 
 <article class='all-prose'>
 
-<!-- prettier-ignore -->
-AI engineering leader and full-stack developer with <DD from="2020-04-01" /> of TypeScript experience and <DD from="2018-03-14" /> in commercial development teams.
+UK-based product engineer building production AI systems, coding-agent
+infrastructure, MCP tools, and SvelteKit products.
 
-I build AI-powered products, from customer service agent runtimes that
-reduced average handle time by 40%, to multi-agent orchestration
-systems and MCP tooling. I ship fast, lead teams, and care deeply
-about developer experience.
+<!-- prettier-ignore -->
+I bring <DD from="2020-04-01" /> of TypeScript experience and <DD from="2018-03-14" /> in commercial development teams. My work ranges from customer service agent runtimes that reduced average handle time by 40% to multi-agent orchestration systems and MCP tooling.
 
 Currently product engineer at Cloud Lobsters, building AI-adjacent
 product systems, client platforms, automation, and internal agent
