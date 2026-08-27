@@ -1,12 +1,17 @@
-self.addEventListener('install', function (e) {
-	self.skipWaiting();
+/// <reference lib="webworker" />
+
+/** @type {ServiceWorkerGlobalScope} */
+const service_worker = self;
+
+service_worker.addEventListener('install', function () {
+	void service_worker.skipWaiting();
 });
 
-self.addEventListener('activate', function (e) {
-	self.registration
+service_worker.addEventListener('activate', function () {
+	void service_worker.registration
 		.unregister()
 		.then(function () {
-			return self.clients.matchAll();
+			return service_worker.clients.matchAll();
 		})
 		.then(function (clients) {
 			clients.forEach((client) => client.navigate(client.url));

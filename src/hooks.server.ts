@@ -1,6 +1,7 @@
 import { themes } from '$lib/themes';
+import type { Handle } from '@sveltejs/kit';
 
-export const handle = async ({ event, resolve }) => {
+export const handle: Handle = async ({ event, resolve }) => {
 	const theme = event.cookies.get('theme');
 
 	if (!theme || !themes.includes(theme)) {

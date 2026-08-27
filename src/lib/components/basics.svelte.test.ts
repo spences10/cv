@@ -14,7 +14,7 @@ describe('Basics', () => {
 	};
 
 	it('should render the name and label', async () => {
-		render(Basics, defaultProps);
+		await render(Basics, defaultProps);
 
 		const name = page.getByText('John Doe');
 		const label = page.getByText('Software Developer');
@@ -24,14 +24,14 @@ describe('Basics', () => {
 	});
 
 	it('should render the avatar if imgSrc is provided', async () => {
-		render(Basics, defaultProps);
+		await render(Basics, defaultProps);
 
 		const avatar = page.getByAltText('John Doe');
 		await expect.element(avatar).toBeInTheDocument();
 	});
 
 	it('should render email and website details', async () => {
-		render(Basics, defaultProps);
+		await render(Basics, defaultProps);
 
 		const email = page.getByRole('link', {
 			name: 'john@example.com',

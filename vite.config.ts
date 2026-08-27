@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { playwright } from '@vitest/browser-playwright';
 import { defineConfig } from 'vitest/config';
 
-export default defineConfig({
+const config = defineConfig({
 	plugins: [sveltekit(), tailwindcss()],
 
 	test: {
@@ -64,3 +64,42 @@ export default defineConfig({
 		},
 	},
 });
+
+export default {
+	...config,
+	fmt: {
+		useTabs: true,
+		singleQuote: true,
+		printWidth: 70,
+		trailingComma: 'all',
+		proseWrap: 'always',
+		svelte: true,
+		sortTailwindcss: {
+			stylesheet: './src/app.css',
+		},
+		ignorePatterns: [
+			'.svelte-kit/**',
+			'build/**',
+			'coverage/**',
+			'playwright-report/**',
+			'test-results/**',
+			'package-lock.json',
+			'pnpm-lock.yaml',
+			'yarn.lock',
+			'.claude/settings.local.json',
+		],
+	},
+	lint: {
+		ignorePatterns: [
+			'.svelte-kit/**',
+			'build/**',
+			'coverage/**',
+			'playwright-report/**',
+			'test-results/**',
+		],
+		options: {
+			typeAware: true,
+			typeCheck: true,
+		},
+	},
+};

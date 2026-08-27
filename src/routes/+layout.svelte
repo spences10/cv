@@ -36,7 +36,7 @@
 	class="container mx-auto mb-4 flex max-w-3xl justify-between px-4 sm:px-6 md:mt-8 lg:px-8"
 >
 	<button
-		class="btn btn-primary btn-xs border print:hidden"
+		class="btn border btn-primary btn-xs print:hidden"
 		onclick={print_page}
 	>
 		Download

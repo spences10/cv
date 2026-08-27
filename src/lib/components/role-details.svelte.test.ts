@@ -13,7 +13,7 @@ describe('RoleDetails', () => {
 	};
 
 	it('renders the position and company', async () => {
-		render(RoleDetails, defaultProps);
+		await render(RoleDetails, defaultProps);
 
 		const position = page.getByText('Software Developer');
 		const company = page.getByText('Tech Corp');
@@ -23,7 +23,7 @@ describe('RoleDetails', () => {
 	});
 
 	it('formats dates correctly when both start and end dates are valid', async () => {
-		render(RoleDetails, defaultProps);
+		await render(RoleDetails, defaultProps);
 
 		const dateRange = page.getByText(
 			'Jan 2020 - Dec 2022 (2yrs 11mos)',
@@ -32,7 +32,7 @@ describe('RoleDetails', () => {
 	});
 
 	it('shows "Present" for an invalid end date', async () => {
-		render(RoleDetails, {
+		await render(RoleDetails, {
 			...defaultProps,
 			endDate: null,
 		});
@@ -56,7 +56,7 @@ describe('RoleDetails', () => {
 	});
 
 	it('shows duration correctly for 1 year', async () => {
-		render(RoleDetails, {
+		await render(RoleDetails, {
 			...defaultProps,
 			endDate: new Date('2021-01-01'),
 		});
@@ -66,7 +66,7 @@ describe('RoleDetails', () => {
 	});
 
 	it('shows duration correctly for 1 month', async () => {
-		render(RoleDetails, {
+		await render(RoleDetails, {
 			...defaultProps,
 			startDate: new Date('2022-01-01'),
 			endDate: new Date('2022-02-01'),
@@ -77,7 +77,7 @@ describe('RoleDetails', () => {
 	});
 
 	it('shows duration correctly for a combination of years and months', async () => {
-		render(RoleDetails, {
+		await render(RoleDetails, {
 			...defaultProps,
 			startDate: new Date('2020-01-01'),
 			endDate: new Date('2021-02-01'),
