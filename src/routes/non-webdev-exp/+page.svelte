@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { NonWebDevExp, References } from '$lib/copy';
-	import { create_page_schema, create_seo_config } from '$lib/seo';
+	import { NonWebDevExp, References } from '#lib/copy/index.js';
+	import { create_page_schema, create_seo_config } from '#lib/seo.js';
 	import { Head, SchemaOrg } from 'svead';
 
 	const title = `Analyst Developer Experience | Scott Spence CV`;

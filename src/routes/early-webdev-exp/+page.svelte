@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { EarlyWebDevExp } from '$lib/copy';
-	import { create_page_schema, create_seo_config } from '$lib/seo';
+	import { EarlyWebDevExp } from '#lib/copy/index.js';
+	import { create_page_schema, create_seo_config } from '#lib/seo.js';
 	import { Head, SchemaOrg } from 'svead';
 
 	const title = `Early Web Development Experience | Scott Spence CV`;

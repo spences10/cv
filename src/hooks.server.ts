@@ -1,5 +1,5 @@
-import { themes } from '$lib/themes';
-import type { Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit/hooks';
+import { themes } from '#lib/themes/index.js';
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const theme = event.cookies.get('theme');

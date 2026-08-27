@@ -1,7 +1,12 @@
 <script lang="ts">
-	import { site_description } from '$lib/config';
-	import { Basics, Interests, Projects, Work } from '$lib/copy';
-	import { create_page_schema, create_seo_config } from '$lib/seo';
+	import { site_description } from '#lib/config.js';
+	import {
+		Basics,
+		Interests,
+		Projects,
+		Work,
+	} from '#lib/copy/index.js';
+	import { create_page_schema, create_seo_config } from '#lib/seo.js';
 	import { Head, SchemaOrg } from 'svead';
 
 	const title = `Scott Spence CV — Product Engineer & AI Engineering Lead`;

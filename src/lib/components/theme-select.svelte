@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import { themes } from '$lib/themes';
+	import { browser } from '$app/env';
+	import { themes } from '#lib/themes/index.js';
 
 	// Read from DOM since server already set it via hooks.server.ts
 	let current_theme = $state(

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { DD, Collapse, RoleDetails } from '$lib/components'
+  import { DD, Collapse, RoleDetails } from '#lib/components/index.js'
 </script>
 
 <RoleDetails

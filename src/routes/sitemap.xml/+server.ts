@@ -1,4 +1,4 @@
-import { canonical_url } from '$lib/seo';
+import { canonical_url } from '#lib/seo.js';
 
 const sitemap_paths = [`/`, `/early-webdev-exp`, `/non-webdev-exp`];
 

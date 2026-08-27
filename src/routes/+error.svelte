@@ -13,6 +13,6 @@
 	<p>{page.error?.message}</p>
 	<p>It looks like <code>{page.url}</code> doesn't exist</p>
 	<p>
-		Maybe check out the <a href={resolve('/')}>homepage</a>?
+		Maybe check out the <a href={resolve('')}>homepage</a>?
 	</p>
 </main>

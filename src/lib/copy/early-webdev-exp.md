@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { RoleDetails } from '$lib/components'
+  import { RoleDetails } from '#lib/components/index.js'
 </script>
 
 <section class='all-prose mb-10'>

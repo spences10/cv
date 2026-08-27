@@ -7,7 +7,7 @@ import {
 	site_name,
 	site_url,
 	social_image,
-} from '$lib/config';
+} from '#lib/config.js';
 import type { SchemaOrgProps, SeoConfig } from 'svead';
 
 export const same_as = [

@@ -1,14 +1,15 @@
 <script lang="ts">
+	import {
+		PUBLIC_FATHOM_ID,
+		PUBLIC_FATHOM_URL,
+	} from '$app/env/public';
 	import { page } from '$app/state';
-	import { env } from '$env/dynamic/public';
-	import { Basics, ThemeSelect } from '$lib/components';
+	import { Basics, ThemeSelect } from '#lib/components/index.js';
 	import * as Fathom from 'fathom-client';
 	import { onMount } from 'svelte';
 	import '../app.css';
 
 	let { children } = $props();
-
-	const { PUBLIC_FATHOM_ID, PUBLIC_FATHOM_URL } = env;
 
 	onMount(() => {
 		Fathom.load(PUBLIC_FATHOM_ID?.toString() || ``, {
