@@ -1,0 +1,10 @@
+[phases.install]
+cmds = [
+	"npm install -g pnpm@11.24.0 && $(npm prefix -g)/bin/pnpm install --frozen-lockfile --config.engine-strict=false --config.optional=true",
+]
+
+[phases.build]
+cmds = ["$(npm prefix -g)/bin/pnpm run build"]
+
+[start]
+cmd = "node ./build/index.js"
