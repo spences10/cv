@@ -1,3 +1,6 @@
+[phases.setup]
+nixpkgsArchive = "23f9169c4ccce521379e602cc82ed873a1f1b52b"
+
 [phases.install]
 cmds = [
 	"npm install -g pnpm@11.24.0 && $(npm prefix -g)/bin/pnpm install --frozen-lockfile --config.engine-strict=false --config.optional=true",
