@@ -51,5 +51,5 @@
 		"vitest": "4.1.11",
 		"vitest-browser-svelte": "^3.0.0"
 	},
-	"packageManager": "pnpm@11.24.0"
+	"packageManager": "pnpm@11.25.0"
 }
