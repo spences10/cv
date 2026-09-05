@@ -35,7 +35,7 @@
 		"@typescript/native": "npm:typescript@^7.0.2",
 		"@vitest/browser-playwright": "^4.1.11",
 		"cspell": "^10.1.1",
-		"daisyui": "5.7.22",
+		"daisyui": "5.7.28",
 		"date-fns": "^4.4.0",
 		"fathom-client": "^3.7.2",
 		"mdsvex": "^0.12.8",
