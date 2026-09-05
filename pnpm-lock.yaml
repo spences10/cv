@@ -42,8 +42,8 @@ importers:
         specifier: ^10.1.1
         version: 10.1.1
       daisyui:
-        specifier: 5.7.22
-        version: 5.7.22
+        specifier: 5.7.28
+        version: 5.7.28
       date-fns:
         specifier: ^4.4.0
         version: 4.4.0
@@ -1472,8 +1472,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  daisyui@5.7.22:
-    resolution: {integrity: sha512-pYii+2NCN0+OIL6Lpuc054LK0QJeNv+GRK9UzN1GRmjdYhYO6WFl0QLoj5oPcitPD7o+okiiI0SKFkn641TxmA==}
+  daisyui@5.7.28:
+    resolution: {integrity: sha512-BxQap2QOj7NQy5nEsjTHRmybmUZP3t+O5G6vfdidZuptBsh/QyKN9wbdrGDZk198fMI3UyYnA/rCWlggZIhGnw==}
 
   date-fns@4.4.0:
     resolution: {integrity: sha512-+1UMbeh68lH1SegH83CGWwpb6OHHbpSgr3+s5Eww5M4CAgswBpoWS0AjTOfEJ33HiYKz1hdj/KTFprzXHmq/6w==}
@@ -3183,7 +3183,7 @@ snapshots:
 
   cssesc@3.0.0: {}
 
-  daisyui@5.7.22: {}
+  daisyui@5.7.28: {}
 
   date-fns@4.4.0: {}
 
