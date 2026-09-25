@@ -21,11 +21,14 @@ safe, high-standard AI agent collaboration.
 
 ### Highlights
 
-Architected a live reinsurance underwriting platform, from first
-commit to production in the client's private Azure network in about
-six weeks. After handover, the team raised the underwriting cap from a
-flat $15m to up to $35m in one week through rules and configuration
-changes, not a rebuild
+Took a live reinsurance underwriting platform from a clickable
+prototype with no backend to production in the client's private Azure
+network in about six weeks, working alone for the first two months
+(520 of the first 523 commits). Set up the monorepo and wrote the core
+web app, worker, rules, database, and domain packages that the team
+joining later built on. After handover, the team raised the
+underwriting cap from a flat $15m to up to $35m in one week through
+rules and configuration changes, not a rebuild
 
 Owned and maintained a live UK deposit-replacement insurance platform,
 releasing every production change since March and catching failures
