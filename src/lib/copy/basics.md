@@ -20,8 +20,8 @@ AI customer service agents.
 <!-- prettier-ignore -->
 Co-founder of Svelte Society London (monthly events for <DD from="2021-11-14" />). International conference speaker.
 
-Technical blogger at scottspence.com with 1.4M+ page views and 791K+
-unique visitors.
+Technical blogger at scottspence.com with more than 2.1 million page
+views across 240+ practical articles.
 
 Previous roles include Developer Relations at Storyblok, Developer
 Advocate at GraphCMS (now Hygraph), and Web Developer at Karmarama and

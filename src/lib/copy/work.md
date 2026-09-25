@@ -15,12 +15,24 @@
 
 Product engineer building client-facing platforms, internal tools, and
 AI-assisted engineering workflows across SvelteKit, TypeScript, cloud
-infrastructure, and LLM tooling. Built a greenfield insurance workflow
-platform intended to process roughly $20m in business when fully live,
-with the codebase designed from the outset for safe, high-standard AI
-agent collaboration.
+infrastructure, and LLM tooling. Architected a live reinsurance
+underwriting platform, with the codebase designed from the outset for
+safe, high-standard AI agent collaboration.
 
 ### Highlights
+
+Architected a live reinsurance underwriting platform, from first
+commit to production in the client's private Azure network in about
+six weeks. After handover, the team raised the underwriting cap from a
+flat $15m to up to $35m in one week through rules and configuration
+changes, not a rebuild
+
+Owned and maintained a live UK deposit-replacement insurance platform,
+releasing every production change since March and catching failures
+nobody had flagged, including off-site backups that had stopped and
+PDF generation breaking in production. Built its claims platform from
+spec to production in about five weeks. The client was very positive
+at the demo and plans to train sales staff to sell it
 
 Built a multi-tenant insurance workflow platform from scratch,
 covering submission intake, document processing, extraction/evaluation
