@@ -37,27 +37,26 @@ PDF generation breaking in production. Built its claims platform from
 spec to production in about five weeks. The client was very positive
 at the demo and plans to train sales staff to sell it
 
-Built a multi-tenant insurance workflow platform from scratch,
-covering submission intake, document processing, extraction/evaluation
-flows, quote lifecycle support, operational tooling, audit history,
-and controlled deployment into client infrastructure
+Built deterministic guardrails so coding agents could not erode the
+architecture: 36 blocking module-boundary rules parsed from the code,
+plus data-ownership, route-data, and lint checks. After handover they
+still gate the client's production deploys, have blocked 8 deploys
+that broke the rules, and the team has extended them rather than
+switching them off. The same checker was adopted in a second product
+and wired into its CI
 
-Designed the repo for agent-assisted team delivery: canonical agent
-onboarding, local project skills, branch workflow rules,
-module-boundary guidance, service-layer patterns, code-style rules,
-MVP readiness gates, and explicit “read docs before changing code”
-entrypoints
+Built a docs search CLI (SQLite FTS5, fact extraction, zero
+dependencies) so agents pull the right requirements, schema notes, and
+client decisions on demand instead of re-reading a growing docs
+folder. Agents called it 1,122 times across 327 sessions as the corpus
+grew to 291 documents and 4,307 extracted facts. A teammate adopted
+the approach for another project, and it led to my open-source tool
+wiki0
 
-Created a local documentation package that indexes project docs into a
-SQLite/FTS search layer, giving agents fast, cited access to business
-requirements, schema notes, communications, workflow maps, meeting
-notes, and implementation context before touching code
-
-Added guardrail tooling to keep standards high, including import and
-module-boundary checks, route data audits, runtime configuration
-checks, release verification/export tooling, required Svelte/type
-checks, and guidance for keeping routes thin and business logic inside
-services/packages
+Designed the client release as a verified export: the client receives
+exactly the application they bought, while the docs corpus, agent
+skills, and delivery tooling remain agency IP. The export fails if
+internal paths or references leak into the client repository
 
 Implemented cloud deployment and operational changes across AWS and
 Azure, including ECS/container app services, RDS/Postgres-backed
