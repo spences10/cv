@@ -8,10 +8,14 @@ session recall, evals, telemetry, secret handling, and multi-agent
 workflows. Used for real product delivery and for testing safer
 AI-assisted engineering patterns.
 
-**[mcp-omnisearch](https://github.com/spences10/mcp-omnisearch)**:
-unified search, AI answers, and content extraction across several
-providers through one MCP interface. Designed so agent workflows are
-not tied to one search vendor.
+**[MCP ecosystem](https://github.com/spences10?tab=repositories&q=mcp&type=source)**:
+21 Model Context Protocol servers and tools built since January 2025,
+with more than 1,400 GitHub stars, 260 forks, and 11,000 npm downloads
+a month. Two remain in daily use:
+[mcp-omnisearch](https://github.com/spences10/mcp-omnisearch) for
+unified search across providers, and
+[mcp-sqlite-tools](https://github.com/spences10/mcp-sqlite-tools) for
+safe SQLite access.
 
 **[pirecall](https://github.com/spences10/pirecall),
 [MCPick](https://github.com/spences10/mcpick), and
