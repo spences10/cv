@@ -25,7 +25,7 @@
 	},
 	"devDependencies": {
 		"@lucide/svelte": "^1.48.0",
-		"@playwright/test": "1.62.1",
+		"@playwright/test": "1.63.0",
 		"@sveltejs/adapter-node": "6.0.0-next.14",
 		"@sveltejs/kit": "3.0.0-next.30",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
@@ -39,7 +39,7 @@
 		"date-fns": "^4.4.0",
 		"fathom-client": "^3.7.2",
 		"mdsvex": "^0.12.8",
-		"playwright": "1.62.1",
+		"playwright": "1.63.0",
 		"rehype-external-links": "^3.0.0",
 		"svead": "^0.0.16",
 		"svelte": "^5.57.1",
