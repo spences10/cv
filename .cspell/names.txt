@@ -6,6 +6,7 @@ Gorman
 Jamstack
 Karmarama
 Lottie
+Malmvärn
 mdsvex
 ncsc
 Penfold

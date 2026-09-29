@@ -4,6 +4,7 @@
 		Basics,
 		Interests,
 		Projects,
+		WebDevReferences,
 		Work,
 	} from '#lib/copy/index.js';
 	import { create_page_schema, create_seo_config } from '#lib/seo.js';
@@ -26,5 +27,6 @@
 
 <Basics />
 <Work />
+<WebDevReferences />
 <Projects />
 <Interests />
