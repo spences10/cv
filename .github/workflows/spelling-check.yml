@@ -24,6 +24,6 @@ jobs:
           node-version: 24
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
       - name: Check spelling
         run: pnpm run cspell

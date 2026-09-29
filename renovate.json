@@ -15,29 +15,39 @@
 			"groupSlug": "svelte-packages"
 		},
 		{
-			"description": "Keep test tooling aligned across the workspace",
-			"matchManagers": ["npm"],
+			"description": "Keep installed Playwright packages aligned with the CI browser images.",
 			"matchPackageNames": [
-				"/^@playwright\\//",
+				"@playwright/test",
 				"playwright",
-				"/^@vitest\\//",
-				"vitest",
-				"vitest-browser-svelte"
+				"mcr.microsoft.com/playwright"
 			],
-			"groupName": "Test tooling",
-			"groupSlug": "test-tooling"
+			"groupName": "playwright",
+			"rangeStrategy": "pin"
 		},
 		{
 			"description": "Group GitHub Actions updates",
 			"matchManagers": ["github-actions"],
+			"matchDatasources": ["github-tags", "github-releases"],
 			"groupName": "GitHub Actions",
 			"groupSlug": "github-actions"
 		},
 		{
-			"description": "Do not open PRs for temporary/security pins in pnpm-workspace overrides",
-			"matchManagers": ["npm"],
-			"matchFileNames": ["pnpm-workspace.yaml"],
-			"matchDepTypes": ["pnpm-workspace.overrides"],
+			"description": "Keep the JavaScript compiler API on TypeScript 6 until SvelteKit supports TypeScript 7. The native compiler alias is separate.",
+			"matchDepNames": ["typescript"],
+			"allowedVersions": "<7"
+		},
+		{
+			"description": "Update Vite+ and its aliased Vite core together; align bundled test dependencies when upgrading.",
+			"matchPackageNames": [
+				"vite-plus",
+				"@voidzero-dev/vite-plus-core"
+			],
+			"groupName": "vite-plus-toolchain",
+			"rangeStrategy": "pin"
+		},
+		{
+			"description": "Managed by Vite+'s bundled Vitest version, not independent runner or plugin updates.",
+			"matchPackageNames": ["vitest", "/^@vitest\\//"],
 			"enabled": false
 		}
 	]

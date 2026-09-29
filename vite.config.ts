@@ -4,10 +4,10 @@ import { mdsvex } from 'mdsvex';
 import rehypeExternalLinks from 'rehype-external-links';
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
-import { playwright } from '@vitest/browser-playwright';
-import { defineConfig } from 'vitest/config';
+import { playwright } from 'vite-plus/test/browser-playwright';
+import { defineConfig } from 'vite-plus';
 
-const config = defineConfig({
+export default defineConfig({
 	plugins: [
 		tailwindcss(),
 		sveltekit({
@@ -44,7 +44,7 @@ const config = defineConfig({
 						provider: playwright(),
 						// Multiple browser instances for better performance
 						// Uses single Vite server with shared caching
-						instances: [{ browser: 'chromium' }],
+						instances: [{ browser: 'chromium', headless: true }],
 					},
 					// { browser: 'firefox' },
 					// { browser: 'webkit' },
@@ -83,10 +83,6 @@ const config = defineConfig({
 		// instead of scanning the entire project
 		coverage: { include: ['src'] },
 	},
-});
-
-export default {
-	...config,
 	fmt: {
 		useTabs: true,
 		singleQuote: true,
@@ -122,4 +118,4 @@ export default {
 			typeCheck: true,
 		},
 	},
-};
+});
