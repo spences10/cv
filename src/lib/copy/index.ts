@@ -7,4 +7,5 @@ export { default as NonWebDevExp } from './non-webdev-exp.md';
 export { default as Projects } from './projects.md';
 export { default as References } from './references.md';
 export { default as Skills } from './skills.md';
+export { default as WebDevReferences } from './webdev-references.md';
 export { default as Work } from './work.md';
