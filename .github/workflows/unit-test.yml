@@ -11,24 +11,38 @@ jobs:
     name: Run unit tests
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/playwright:v1.60.0-noble
+      image: mcr.microsoft.com/playwright:v1.63.0-noble
       options: --user 1001
     timeout-minutes: 10
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
       - name: Install pnpm
         uses: pnpm/action-setup@v6
         with:
           run_install: false
       - name: Install Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+      - name: Verify Playwright versions match
+        run: |
+          playwright_version=$(node -p "require('playwright/package.json').version")
+          test_version=$(node -p "require('@playwright/test/package.json').version")
+          container_version=$(grep -o 'playwright:v[0-9.]*' .github/workflows/unit-test.yml | sed 's/playwright:v//')
+
+          echo "Installed playwright: $playwright_version"
+          echo "Installed @playwright/test: $test_version"
+          echo "Container: $container_version"
+
+          if [ "$playwright_version" != "$container_version" ] || [ "$test_version" != "$container_version" ]; then
+            echo "Update the installed Playwright packages and CI images together."
+            exit 1
+          fi
       - name: Build
         run: pnpm run build
         env:

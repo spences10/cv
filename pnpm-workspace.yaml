@@ -5,10 +5,13 @@ minimumReleaseAge: 2880
 
 allowBuilds:
   '@tailwindcss/oxide': true
-  better-sqlite3: true
   esbuild: true
 
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - better-sqlite3
-  - esbuild
+overrides:
+  vite@*: npm:@voidzero-dev/vite-plus-core@0.3.3
+  vitest@*: 4.1.11
+
+peerDependencyRules:
+  allowedVersions:
+    # Vite+ core exposes Vite 8 APIs under Vite+'s package version.
+    vite: ^0.3.3
