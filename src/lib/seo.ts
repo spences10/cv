@@ -59,7 +59,7 @@ export const person_schema = {
 	jobTitle: 'Product Engineer',
 	worksFor: {
 		'@type': 'Organization',
-		name: 'Cloud Lobsters',
+		name: 'OES Technology Ltd',
 	},
 	alumniOf: {
 		'@type': 'EducationalOrganization',

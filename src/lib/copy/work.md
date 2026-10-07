@@ -3,9 +3,9 @@
 </script>
 
 <RoleDetails
-  position="Product Engineer"
-  company="Cloud Lobsters"
-  startDate="2026-03-16"
+  position="Product Engineer | AI & Svelte Consultant"
+  company="OES Technology Ltd"
+  startDate="2021-04-26"
   endDate=""
 />
 
@@ -13,9 +13,49 @@
 
 ### Summary
 
-Product engineer building client-facing platforms, internal tools, and
-AI-assisted engineering workflows across SvelteKit, TypeScript, cloud
-infrastructure, and LLM tooling. Architected a live reinsurance
+Independent consultancy. I take products from prototype to production
+and help engineering teams use coding agents without lowering their
+standards. Contract product engineering, engineering leadership, and
+Svelte expertise.
+
+Product delivery covers SvelteKit and TypeScript platforms, cloud
+infrastructure, and AI features, from first prototype to a supported
+production system. Coding-agent engineering covers guardrails,
+architecture checks, searchable project knowledge, and review
+workflows that let teams move fast with agents and keep control.
+
+Recognised by the Svelte core team as a Svelte Ambassador for
+sustained community contributions and helping grow a welcoming
+ecosystem. Co-founder and organiser of Svelte Society London, running
+monthly community events for <DD from="2021-11-14" />.
+
+Technical content creator at scottspence.com with 1.4M+ page views,
+791K+ unique visitors across 244 posts, and 22K+ monthly readers.
+Writing about SvelteKit, TypeScript, AI tooling, and developer
+experience.
+
+Author of 21 MCP (Model Context Protocol) servers and tools with
+1,400+ combined GitHub stars, covering search, memory, workflow
+automation, and documentation access.
+
+</section>
+
+<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
+
+<RoleDetails
+  position="Product Engineer"
+  company="Cloud Lobsters"
+  startDate="2026-03-16"
+  endDate="2026-09-30"
+/>
+
+<section class='all-prose mb-8'>
+
+### Summary
+
+Product engineer who built client-facing platforms, internal tools,
+and AI-assisted engineering workflows across SvelteKit, TypeScript,
+cloud infrastructure, and LLM tooling. Architected a live reinsurance
 underwriting platform built to support roughly $20m in business, with
 the codebase designed from the outset for safe, high-standard AI agent
 collaboration.
@@ -33,7 +73,7 @@ increase, in one week through rules and configuration changes, not a
 rebuild
 
 Owned and maintained a live UK deposit-replacement insurance platform,
-releasing every production change since March and catching failures
+releasing every production change from March and catching failures
 nobody had flagged, including off-site backups that had stopped and
 PDF generation breaking in production. Built its claims platform from
 spec to production in about five weeks. The client was very positive
@@ -42,10 +82,9 @@ at the demo and plans to train sales staff to sell it
 Built deterministic guardrails so coding agents could not erode the
 architecture: 36 blocking module-boundary rules parsed from the code,
 plus data-ownership, route-data, and lint checks. After handover they
-still gate the client's production deploys, have blocked 8 deploys
-that broke the rules, and the team has extended them rather than
-switching them off. The same checker was adopted in a second product
-and wired into its CI
+still gate the client's production deploys, and the team has extended
+them rather than switching them off. The same checker was adopted in a
+second product and wired into its CI
 
 Built a docs search CLI (SQLite FTS5, fact extraction, zero
 dependencies) so agents pull the right requirements, schema notes, and
@@ -119,40 +158,6 @@ prepare the team for migration
 Built reusable security middleware for ownership validation across all
 API routes, and automated GDPR-compliant trace cleanup for AI
 observability data
-
-</section>
-
-<span class="divider before:bg-primary after:bg-primary mb-10 print:mb-0"></span>
-
-<RoleDetails
-  position="AI & Svelte Consultant"
-  company="OES Technology Ltd"
-  startDate="2021-04-26"
-  endDate=""
-/>
-
-<section class='all-prose mb-8'>
-
-### Summary
-
-Independent consultancy providing contract engineering leadership,
-developer relations, and Svelte expertise to technology companies.
-
-Recognised by the Svelte core team as a Svelte Ambassador for
-sustained community contributions and helping grow a welcoming
-ecosystem. Co-founder and organiser of Svelte Society London, running
-monthly community events for <DD from="2021-11-14" />. International
-conference speaker at Connect Tech (Atlanta), CityJS, Modern
-Frontends, NXT Nordics (Oslo), and Jamstack Conf.
-
-Technical content creator at scottspence.com with 1.4M+ page views,
-791K+ unique visitors across 244 posts, and 22K+ monthly readers.
-Writing about SvelteKit, TypeScript, AI tooling, and developer
-experience.
-
-Author of 20+ MCP (Model Context Protocol) tools with 1,200+ combined
-GitHub stars, covering search, memory, workflow automation, and
-documentation access.
 
 </section>
 
