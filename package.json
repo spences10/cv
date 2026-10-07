@@ -24,17 +24,17 @@
 		"snapshot:create": "npx tsx scripts/create-snapshot.ts"
 	},
 	"devDependencies": {
-		"@lucide/svelte": "^1.48.0",
+		"@lucide/svelte": "^1.52.0",
 		"@playwright/test": "1.63.0",
 		"@sveltejs/adapter-node": "6.0.0",
 		"@sveltejs/kit": "3.0.0",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
 		"@tailwindcss/typography": "^0.5.20",
 		"@tailwindcss/vite": "^4.3.3",
-		"@types/node": "^26.6.3",
+		"@types/node": "^26.6.4",
 		"@typescript/native": "npm:typescript@^7.0.2",
 		"@vitest/browser-playwright": "4.1.11",
-		"cspell": "^10.3.4",
+		"cspell": "^10.3.6",
 		"daisyui": "5.7.47",
 		"date-fns": "^4.4.0",
 		"fathom-client": "^3.7.2",
@@ -51,5 +51,5 @@
 		"vitest": "4.1.11",
 		"vitest-browser-svelte": "^3.1.0"
 	},
-	"packageManager": "pnpm@12.9.0"
+	"packageManager": "pnpm@12.9.1"
 }
