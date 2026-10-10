@@ -53,7 +53,10 @@
 			>
 				<Mail class="print:black h-5 w-5 print:mr-1" />
 				<span class="ml-3 print:ml-0">
-					<a href="mailto: {email}" class="text-md">{email}</a>
+					<!-- opt this link out of Cloudflare email obfuscation -->
+					{@html '<!--email_off-->'}
+					<a href="mailto:{email}" class="text-md">{email}</a>
+					{@html '<!--/email_off-->'}
 				</span>
 			</dd>
 		</div>

@@ -29,8 +29,8 @@ sustained community contributions and helping grow a welcoming
 ecosystem. Co-founder and organiser of Svelte Society London, running
 monthly community events for <DD from="2021-11-14" />.
 
-Technical content creator at scottspence.com with 1.4M+ page views,
-791K+ unique visitors across 244 posts, and 22K+ monthly readers.
+Technical content creator at scottspence.com with 2.1M+ page views,
+791K+ unique visitors across 240+ posts, and 22K+ monthly readers.
 Writing about SvelteKit, TypeScript, AI tooling, and developer
 experience.
 
