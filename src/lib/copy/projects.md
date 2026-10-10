@@ -17,11 +17,12 @@ unified search across providers, and
 [mcp-sqlite-tools](https://github.com/spences10/mcp-sqlite-tools) for
 safe SQLite access.
 
-**[pirecall](https://github.com/spences10/pirecall),
+**[omnirecall](https://github.com/spences10/omnirecall),
 [MCPick](https://github.com/spences10/mcpick), and
 [nopeek](https://github.com/spences10/nopeek)**: focused tools for
-session recall, portable MCP and skill configuration, and reducing
-accidental secret disclosure in coding-agent sessions.
+searching past sessions across Pi, Codex, Claude Code, and OpenCode
+from one local archive, portable MCP and skill configuration, and
+reducing accidental secret disclosure in coding-agent sessions.
 
 **[Svortie](https://svortie.com)**: AI agent orchestration platform
 with provider-agnostic execution, scheduled workflows, MCP servers,
