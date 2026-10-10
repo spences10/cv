@@ -58,7 +58,7 @@
 		{position}
 	</h2>
 	<span
-		class="text-accent-focus text-2xl font-bold print:text-xl print:text-black"
+		class="text-accent-focus text-2xl font-bold md:shrink-0 md:whitespace-nowrap print:text-xl print:text-black"
 	>
 		{company}
 	</span>
