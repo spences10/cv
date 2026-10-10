@@ -8,20 +8,20 @@ UK-based product engineer building production AI systems, coding-agent
 infrastructure, MCP tools, and SvelteKit products.
 
 <!-- prettier-ignore -->
-I bring <DD from="2020-04-01" /> of TypeScript experience and <DD from="2018-03-14" /> in commercial development teams. My work ranges from customer service agent runtimes that reduced average handle time by 40% to multi-agent orchestration systems and MCP tooling.
+I bring <strong><DD from="2020-04-01" /> of TypeScript experience</strong> and <strong><DD from="2018-03-14" /> in commercial development teams</strong>. My work ranges from customer service agent runtimes that <strong>reduced average handle time by 40%</strong> to multi-agent orchestration systems and MCP tooling.
 
 Most recently product engineer at Cloud Lobsters, building AI-adjacent
 product systems, client platforms, automation, and internal agent
 workflows across SvelteKit, TypeScript, cloud infrastructure, and LLM
-engineering. Before that, engineering team lead at XtendOps, leading
-12 developers across two product teams in a SvelteKit monorepo
+engineering. Before that, engineering team lead at XtendOps, **leading
+12 developers across two product teams** in a SvelteKit monorepo
 powering AI customer service agents.
 
 <!-- prettier-ignore -->
-Co-founder of Svelte Society London (monthly events for <DD from="2021-11-14" />). International conference speaker.
+<strong>Co-founder of Svelte Society London</strong> (monthly events for <DD from="2021-11-14" />). International conference speaker.
 
-Technical blogger at scottspence.com with more than 2.1 million page
-views across 240+ practical articles.
+Technical blogger at scottspence.com with **more than 2.1 million page
+views** across 240+ practical articles.
 
 Previous roles include Developer Relations at Storyblok, Developer
 Advocate at GraphCMS (now Hygraph), and Web Developer at Karmarama and

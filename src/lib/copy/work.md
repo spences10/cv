@@ -24,7 +24,7 @@ production system. Coding-agent engineering covers guardrails,
 architecture checks, searchable project knowledge, and review
 workflows that let teams move fast with agents and keep control.
 
-Recognised by the Svelte core team as a Svelte Ambassador for
+Recognised by the Svelte core team as a **Svelte Ambassador** for
 sustained community contributions and helping grow a welcoming
 ecosystem. Co-founder and organiser of Svelte Society London, running
 monthly community events for <DD from="2021-11-14" />.
@@ -34,8 +34,8 @@ Technical content creator at scottspence.com with 2.1M+ page views,
 Writing about SvelteKit, TypeScript, AI tooling, and developer
 experience.
 
-Author of 21 MCP (Model Context Protocol) servers and tools with
-1,400+ combined GitHub stars, covering search, memory, workflow
+Author of **21 MCP (Model Context Protocol) servers and tools** with
+**1,400+ combined GitHub stars**, covering search, memory, workflow
 automation, and documentation access.
 
 </section>
@@ -56,35 +56,35 @@ automation, and documentation access.
 Product engineer who built client-facing platforms, internal tools,
 and AI-assisted engineering workflows across SvelteKit, TypeScript,
 cloud infrastructure, and LLM tooling. Architected a live reinsurance
-underwriting platform built to support roughly $20m in business, with
-the codebase designed from the outset for safe, high-standard AI agent
-collaboration.
+underwriting platform built to support **roughly $20m in business**,
+with the codebase designed from the outset for safe, high-standard AI
+agent collaboration.
 
 ### Highlights
 
 Took a live reinsurance underwriting platform from a clickable
-prototype with no backend to production in the client's private Azure
-network in about six weeks, working alone for the first two months
-(520 of the first 523 commits). Set up the monorepo and wrote the core
-web app, worker, rules, database, and domain packages that the team
-joining later built on. After handover, the team raised the platform's
-maximum underwriting capacity by more than 130%, an eight-figure
-increase, in one week through rules and configuration changes, not a
-rebuild
+prototype with no backend to **production in the client's private
+Azure network in about six weeks**, working alone for the first two
+months (520 of the first 523 commits). Set up the monorepo and wrote
+the core web app, worker, rules, database, and domain packages that
+the team joining later built on. After handover, the team raised the
+platform's **maximum underwriting capacity by more than 130%**, an
+eight-figure increase, in one week through rules and configuration
+changes, not a rebuild
 
 Owned and maintained a live UK deposit-replacement insurance platform,
 releasing every production change from March and catching failures
 nobody had flagged, including off-site backups that had stopped and
-PDF generation breaking in production. Built its claims platform from
-spec to production in about five weeks. The client was very positive
-at the demo and plans to train sales staff to sell it
+PDF generation breaking in production. Built its claims platform
+**from spec to production in about five weeks**. The client was very
+positive at the demo and plans to train sales staff to sell it
 
 Built deterministic guardrails so coding agents could not erode the
-architecture: 36 blocking module-boundary rules parsed from the code,
-plus data-ownership, route-data, and lint checks. After handover they
-still gate the client's production deploys, and the team has extended
-them rather than switching them off. The same checker was adopted in a
-second product and wired into its CI
+architecture: **36 blocking module-boundary rules** parsed from the
+code, plus data-ownership, route-data, and lint checks. After handover
+they still gate the client's production deploys, and the team has
+extended them rather than switching them off. The same checker was
+adopted in a second product and wired into its CI
 
 Built a docs search CLI (SQLite FTS5, fact extraction, zero
 dependencies) so agents pull the right requirements, schema notes, and
@@ -125,16 +125,16 @@ control while moving quickly
 ### Summary
 
 Engineering team lead for a SvelteKit monorepo ecosystem powering AI
-customer service agents. Led 12 developers across Customer Portal (8)
-and Smart Agent (4) teams. Primary architect for infrastructure,
+customer service agents. **Led 12 developers** across Customer Portal
+(8) and Smart Agent (4) teams. Primary architect for infrastructure,
 security, and AI integration decisions across the platform.
 
 ### Highlights
 
 Built claude-sdk-runtime, an AI customer service agent deployed on AWS
-ECS for enterprise clients. Reduced average handle time (AHT) by 40%
-through intelligent skill-based routing across chat, email, and SMS
-channels
+ECS for enterprise clients. **Reduced average handle time (AHT) by
+40%** through intelligent skill-based routing across chat, email, and
+SMS channels
 
 Pioneered AI agent orchestration workflows with Claude Code. Built
 reusable engineering skills and coordinated multi-agent teams for
@@ -143,8 +143,8 @@ workstreams
 
 Led a major UI architecture decoupling, migrating the primary
 application from a shared monorepo UI package to shadcn-svelte.
-Resolved 928 build errors and unblocked 4 dependent applications to
-ship independently
+**Resolved 928 build errors and unblocked 4 dependent applications**
+to ship independently
 
 Migrated the agent builder to Svelte 5, establishing modern reactivity
 patterns that Claude Code adheres to when generating new code. This
