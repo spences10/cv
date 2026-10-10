@@ -3,7 +3,7 @@
 </script>
 
 <RoleDetails
-  position="Product Engineer | AI & Svelte Consultant"
+  position="AI & Svelte Consultant"
   company="OES Technology Ltd"
   startDate="2021-04-26"
   endDate=""
