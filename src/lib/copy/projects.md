@@ -2,11 +2,16 @@
 
 ## Projects
 
-**[my-pi](https://github.com/spences10/my-pi)**: composable terminal
-coding-agent environment with MCP, LSP diagnostics, reusable skills,
-session recall, evals, telemetry, secret handling, and multi-agent
-workflows. Used for real product delivery and for testing safer
-AI-assisted engineering patterns.
+**[my-pi](https://my-pi.dev)**: composable terminal coding-agent
+environment with MCP, LSP diagnostics, reusable skills, session
+recall, evals, telemetry, secret handling, and multi-agent workflows.
+Used for real product delivery and for testing safer AI-assisted
+engineering patterns.
+
+**[wiki0](https://wiki0.app)**: docs search for coding agents. It
+indexes a repo's docs into SQLite full-text search and returns the
+cited section, so agents read only what they need. Grew out of the
+docs search I built for a client platform.
 
 **[MCP ecosystem](https://github.com/spences10?tab=repositories&q=mcp&type=source)**:
 21 Model Context Protocol servers and tools built since January 2025,

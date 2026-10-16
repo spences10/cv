@@ -65,39 +65,38 @@ agent collaboration.
 Took a live reinsurance underwriting platform from a clickable
 prototype with no backend to **production in the client's private
 Azure network in about six weeks**, working alone for the first two
-months (520 of the first 523 commits). Set up the monorepo and wrote
-the core web app, worker, rules, database, and domain packages that
-the team joining later built on. After handover, the team raised the
-platform's **maximum underwriting capacity by more than 130%**, an
-eight-figure increase, in one week through rules and configuration
-changes, not a rebuild
+months. Set up the monorepo and wrote the core web app, worker, rules,
+database, and domain packages that the team joining later built on.
+After handover, the team raised the platform's **maximum underwriting
+capacity by more than 130%**, an eight-figure increase, in one week
+through underwriting rules and configuration, not a rebuild
 
-Owned and maintained a live UK deposit-replacement insurance platform,
-releasing every production change from March and catching failures
-nobody had flagged, including off-site backups that had stopped and
-PDF generation breaking in production. Built its claims platform
-**from spec to production in about five weeks**. The client was very
-positive at the demo and plans to train sales staff to sell it
+Maintained and extended a live UK deposit-replacement insurance
+platform from March, then built its claims platform **from spec to
+production in about five weeks**: mobile-only video evidence with
+location checks, transcription, tenant responses, and adjuster
+decisions. Found the platform's existing off-site backups had stopped
+running and got them working again
 
 Built deterministic guardrails so coding agents could not erode the
-architecture: **36 blocking module-boundary rules** parsed from the
-code, plus data-ownership, route-data, and lint checks. After handover
-they still gate the client's production deploys, and the team has
-extended them rather than switching them off. The same checker was
-adopted in a second product and wired into its CI
+architecture: **blocking module-boundary rules** parsed from the code,
+plus data-ownership, route-data, and lint checks. After handover they
+still gate the client's production deploys, and the team has extended
+them rather than switching them off. The same checker was adopted in a
+second product and wired into its CI
 
 Built a docs search CLI (SQLite FTS5, fact extraction, zero
 dependencies) so agents pull the right requirements, schema notes, and
 client decisions on demand instead of re-reading a growing docs
-folder. Agents called it 1,122 times across 327 sessions as the corpus
-grew to 291 documents and 4,307 extracted facts. A teammate adopted
-the approach for another project, and it led to my open-source tool
-wiki0
+folder, as the project's docs grew to 291 documents. A teammate
+adopted the approach for another project, and it became its own
+open-source tool, wiki0
 
-Designed the client release as a verified export: the client receives
-exactly the application they bought, while the docs corpus, agent
-skills, and delivery tooling remain agency IP. The export fails if
-internal paths or references leak into the client repository
+Designed the client release as a verified export: the end client
+receives exactly the application they paid for, while the agency's
+docs corpus, agent skills, and delivery tooling stay with the agency.
+The export fails if internal paths or references leak into the client
+repository
 
 Implemented cloud deployment and operational changes across AWS and
 Azure, including ECS/container app services, RDS/Postgres-backed
@@ -141,10 +140,9 @@ reusable engineering skills and coordinated multi-agent teams for
 parallel development across security, infrastructure, and architecture
 workstreams
 
-Led a major UI architecture decoupling, migrating the primary
-application from a shared monorepo UI package to shadcn-svelte.
-**Resolved 928 build errors and unblocked 4 dependent applications**
-to ship independently
+Led the Svelte 5 migration of the primary application off a shared
+Svelte 4 UI package onto native shadcn-svelte components, so **4
+dependent applications could ship independently**
 
 Migrated the agent builder to Svelte 5, establishing modern reactivity
 patterns that Claude Code adheres to when generating new code. This
