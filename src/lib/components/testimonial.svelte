@@ -8,14 +8,14 @@
 		relationship,
 		paragraphs,
 		preview = 1,
-	} = $props<{
+	}: {
 		name: string;
 		title: string;
 		date: string | number | Date;
 		relationship: string;
 		paragraphs: string[];
 		preview?: number;
-	}>();
+	} = $props();
 
 	let expanded = $state(false);
 

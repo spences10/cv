@@ -2,14 +2,21 @@
 	import Globe from '@lucide/svelte/icons/globe';
 	import Mail from '@lucide/svelte/icons/mail';
 
-	const { name, label, email, github, website, imgSrc } = $props<{
+	const {
+		name,
+		label,
+		email,
+		github,
+		website,
+		imgSrc,
+	}: {
 		name: string;
 		label: string;
 		email: string;
 		github?: string;
 		website: string;
 		imgSrc: string;
-	}>();
+	} = $props();
 </script>
 
 <div class="flex items-end justify-between print:-mt-6">

@@ -1,12 +1,17 @@
 <script lang="ts">
 	import { format, intervalToDuration, isValid } from 'date-fns';
 
-	const { position, company, startDate, endDate } = $props<{
+	const {
+		position,
+		company,
+		startDate,
+		endDate,
+	}: {
 		position: string;
 		company: string;
 		startDate: string | number | Date;
 		endDate: string | number | Date | null;
-	}>();
+	} = $props();
 
 	const formatDates = (
 		startDate: string | number | Date,

@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { formatDistanceStrict } from 'date-fns';
 
-	const { from = Date.now(), to = Date.now() } = $props<{
+	const {
+		from = Date.now(),
+		to = Date.now(),
+	}: {
 		from: string | number;
 		to: string | number;
-	}>();
+	} = $props();
 
 	const distance = $derived(
 		formatDistanceStrict(new Date(from), new Date(to)),
