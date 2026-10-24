@@ -24,7 +24,7 @@
 		"snapshot:create": "npx tsx scripts/create-snapshot.ts"
 	},
 	"devDependencies": {
-		"@lucide/svelte": "^1.52.0",
+		"@lucide/svelte": "^1.61.0",
 		"@playwright/test": "1.63.0",
 		"@sveltejs/adapter-node": "6.0.0",
 		"@sveltejs/kit": "3.0.0",
