@@ -41,7 +41,7 @@
 		"mdsvex": "^0.12.8",
 		"playwright": "1.65.1",
 		"rehype-external-links": "^3.0.0",
-		"svead": "^0.1.0",
+		"svead": "^0.2.0",
 		"svelte": "^5.57.2",
 		"svelte-check": "^4.7.7",
 		"tailwindcss": "^4.3.3",
