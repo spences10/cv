@@ -1,7 +1,6 @@
 import adapter from '@sveltejs/adapter-node';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
-import rehypeExternalLinks from 'rehype-external-links';
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { playwright } from 'vite-plus/test/browser-playwright';
@@ -10,24 +9,13 @@ import { defineConfig } from 'vite-plus';
 export default defineConfig({
 	plugins: [
 		tailwindcss(),
+		mdsvex({ extensions: ['.md'] }),
 		sveltekit({
 			adapter: adapter(),
 			compilerOptions: { experimental: { async: true } },
 			experimental: { remoteFunctions: true },
 			extensions: ['.svelte', '.md'],
-			preprocess: [
-				mdsvex({
-					extensions: ['.md'],
-					smartypants: true,
-					remarkPlugins: [
-						[
-							rehypeExternalLinks,
-							{ target: '_blank', rel: 'noopener noreferrer' },
-						],
-					],
-				}),
-				vitePreprocess(),
-			],
+			preprocess: [vitePreprocess()],
 		}),
 	],
 	test: {
